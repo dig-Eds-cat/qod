@@ -62,7 +62,7 @@ id,URL,status,error
 61,http://courses.washington.edu/otap/svoboda/public/index.html,404,
 62,http://godwindiary.bodleian.ox.ac.uk/index2.html,200,
 63,http://www.math.uni-augsburg.de/stochastik/llull/,200,
-64,http://www.digitalmishnah.org/,404,"Cannot connect to host www.digitalmishnah.org:443 ssl:True [SSLCertVerificationError: (1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.digitalmishnah.org'. (_ssl.c:1000)"")]"
+64,http://www.digitalmishnah.org/,404,"Cannot connect to host www.digitalmishnah.org:443 ssl:True [SSLCertVerificationError: (1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.digitalmishnah.org'. (_ssl.c:1010)"")]"
 65,http://ocp.tyndale.ca/,200,
 66,http://dss.collections.imj.org.il/,200,
 67,http://www.historici.nl/Onderzoek/Projecten/RegistersVanDeHollandseGrafelijkheid1299-1345,200,
@@ -89,7 +89,7 @@ id,URL,status,error
 88,http://www.sd-editions.com/AnaAdditional/HengwrtEx/images/hgopen.html,200,
 89,http://www.weber-gesamtausgabe.de/en/Index,200,
 90,http://livingstone.library.ucla.edu/1871diary/manuscript1.htm,404,
-91,http://hyperdonat.ens-lyon.fr/,200,
+91,http://hyperdonat.ens-lyon.fr/,404,
 92,http://insaph.kcl.ac.uk/index.html,200,
 93,http://ircyr.kcl.ac.uk/,404,Cannot connect to host ircyr.kcl.ac.uk:80 ssl:default [Name or service not known]
 94,http://irt.kcl.ac.uk/irt2009/,404,Cannot connect to host irt.kcl.ac.uk:80 ssl:default [No address associated with hostname]
@@ -100,8 +100,8 @@ id,URL,status,error
 99,http://cancionerovirtual.liv.ac.uk/,404,Cannot connect to host cancionerovirtual.liv.ac.uk:80 ssl:default [Name or service not known]
 100,http://pom.bbaw.de/cmg/,200,
 101,http://www.benedictus.mgh.de/,200,
-102,http://oracc.museum.upenn.edu/rinap/,404,"Cannot connect to host oracc.museum.upenn.edu:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]"
-103,http://english.selu.edu/humanitiesonline/kempe/index.php,404,
+102,http://oracc.museum.upenn.edu/rinap/,404,"Cannot connect to host oracc.museum.upenn.edu:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]"
+103,http://english.selu.edu/humanitiesonline/kempe/index.php,503,
 104,http://www.britac.ac.uk/pubs/dialogus/ockdial.html,403,
 105,http://www.domesdaybook.net,200,
 106,http://www.cfeo.org.uk/index.html,404,
@@ -228,7 +228,7 @@ id,URL,status,error
 227,http://fleischmanndiaries.ucc.ie/,200,
 228,http://www.deutschestextarchiv.de/,200,
 229,http://tarsian.vital-it.ch/,200,
-230,http://dh.tcd.ie/letters1916/,404,"Cannot connect to host dh.tcd.ie:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]"
+230,http://dh.tcd.ie/letters1916/,404,"Cannot connect to host dh.tcd.ie:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]"
 231,http://www.ittig.cnr.it,200,
 232,http://wjc.bodleian.ox.ac.uk,200,
 233,https://romaninscriptionsofbritain.org/,200,
