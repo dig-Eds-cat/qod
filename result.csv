@@ -19,7 +19,7 @@ id,URL,status,error
 18,http://omacl.org/Heimskringla/,200,
 19,https://hridigital.shef.ac.uk/partonopeus/,200,
 20,http://www.finerollshenry3.org.uk/,200,
-21,http://www.ub.unibas.ch/bernoulli/index.php/Hauptseite,404,Connection timeout to host http://www.ub.unibas.ch/bernoulli/index.php/Hauptseite
+21,http://www.ub.unibas.ch/bernoulli/index.php/Hauptseite,200,
 22,http://www.intratext.com/X/ITA0763.HTM,200,
 23,http://orosius.monumenta.ch/,200,
 24,http://iospe.kcl.ac.uk/corpus/index.html,200,
@@ -89,7 +89,7 @@ id,URL,status,error
 88,http://www.sd-editions.com/AnaAdditional/HengwrtEx/images/hgopen.html,200,
 89,http://www.weber-gesamtausgabe.de/en/Index,200,
 90,http://livingstone.library.ucla.edu/1871diary/manuscript1.htm,404,Connection timeout to host http://livingstone.library.ucla.edu/1871diary/manuscript1.htm
-91,http://hyperdonat.ens-lyon.fr/,404,Connection timeout to host http://hyperdonat.ens-lyon.fr/
+91,http://hyperdonat.ens-lyon.fr/,200,
 92,http://insaph.kcl.ac.uk/index.html,200,
 93,http://ircyr.kcl.ac.uk/,404,Cannot connect to host ircyr.kcl.ac.uk:80 ssl:default [Name or service not known]
 94,http://irt.kcl.ac.uk/irt2009/,404,Cannot connect to host irt.kcl.ac.uk:80 ssl:default [No address associated with hostname]
@@ -167,7 +167,7 @@ id,URL,status,error
 166,http://ctb.kantl.be/publicaties/de-teleurgang-van-den-waterhoek-elektronisch-kritische-editie-electronic-c,200,
 167,http://rotunda.upress.virginia.edu/founders/ADMS.html,200,
 168,http://drapier.dho.ie/node/232,404,
-169,http://hridigital.shef.ac.uk/gide,500,
+169,http://hridigital.shef.ac.uk/gide,200,
 170,http://www.lib.unb.ca/Texts/marston/,404,
 171,http://rth.org.uk/collections/bevan-dewar-letters,200,
 172,http://www.abdn.ac.uk/diss/historic/collects/bps/index.html,200,
