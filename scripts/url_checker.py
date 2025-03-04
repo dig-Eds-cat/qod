@@ -27,6 +27,7 @@ async def check_url(session: aiohttp.ClientSession, url_data: Dict) -> Dict:
                 return url_data
         except Exception as e:
             if attempt < MAX_RETRIES - 1:
+                print(f"try to fetch {url_data['URL']}")
                 await asyncio.sleep(RETRY_DELAY)
                 continue
             url_data["status"] = 404
