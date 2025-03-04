@@ -17,6 +17,7 @@ async def check_url(session: aiohttp.ClientSession, url_data: Dict) -> Dict:
             headers={
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"  # noqa:
             },
+            timeout=aiohttp.ClientTimeout(total=15)  # 15 seconds timeout
         ) as response:
             url_data["status"] = response.status
             url_data["error"] = ""
