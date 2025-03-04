@@ -4,7 +4,7 @@ import aiohttp
 from typing import List, Dict
 
 GITHUB_BASE = (
-    "https://raw.githubusercontent.com/dig-Eds-cat/digEds_cat/refs/heads/main/"
+    "https://raw.githubusercontent.com/dig-Eds-cat/digEds_cat/refs/heads/main"
 )
 EDITIONS = f"{GITHUB_BASE}/digEds_cat.csv"
 MAX_RETRIES = 3
