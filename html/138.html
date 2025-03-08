@@ -1,0 +1,3300 @@
+<!doctype html>
+<html class="no-js">
+<head>
+ <script type="application/vnd.locksmith+json" data-locksmith>{"version":"v194","locked":false,"initialized":true,"scope":"404","access_granted":true,"access_denied":false,"requires_customer":false,"manual_lock":false,"remote_lock":false,"has_timeout":false,"remote_rendered":null,"hide_resource":false,"hide_links_to_resource":false,"transparent":true,"locks":{"all":[],"opened":[]},"keys":[],"keys_signature":"efa5feebae506536bd9bbc9c9c5e7c9f23a12c8dd1f311927465df313d39f638","state":{"template":"404","theme":14442233915,"product":null,"collection":null,"page":null,"blog":null,"article":null,"app":null},"now":1741420122,"path":null,"locale_root_url":"\/","canonical_url":"https:\/\/bodleianshop.co.uk\/404","customer_id":null,"customer_id_signature":"efa5feebae506536bd9bbc9c9c5e7c9f23a12c8dd1f311927465df313d39f638","cart":null}</script><script data-locksmith>!function(){var require=undefined,reqwest=function(){function succeed(e){var t=protocolRe.exec(e.url);return t=t&&t[1]||context.location.protocol,httpsRe.test(t)?twoHundo.test(e.request.status):!!e.request.response}function handleReadyState(e,t,n){return function(){return e._aborted?n(e.request):e._timedOut?n(e.request,"Request is aborted: timeout"):void(e.request&&4==e.request[readyState]&&(e.request.onreadystatechange=noop,succeed(e)?t(e.request):n(e.request)))}}function setHeaders(e,t){var n,s=t.headers||{};s.Accept=s.Accept||defaultHeaders.accept[t.type]||defaultHeaders.accept["*"];var r="undefined"!=typeof FormData&&t.data instanceof FormData;for(n in!t.crossOrigin&&!s[requestedWith]&&(s[requestedWith]=defaultHeaders.requestedWith),!s[contentType]&&!r&&(s[contentType]=t.contentType||defaultHeaders.contentType),s)s.hasOwnProperty(n)&&"setRequestHeader"in e&&e.setRequestHeader(n,s[n])}function setCredentials(e,t){"undefined"!=typeof t.withCredentials&&"undefined"!=typeof e.withCredentials&&(e.withCredentials=!!t.withCredentials)}function generalCallback(e){lastValue=e}function urlappend(e,t){return e+(/[?]/.test(e)?"&":"?")+t}function handleJsonp(e,t,n,s){var r=uniqid++,a=e.jsonpCallback||"callback",o=e.jsonpCallbackName||reqwest.getcallbackPrefix(r),i=new RegExp("((^|[?]|&)"+a+")=([^&]+)"),l=s.match(i),c=doc.createElement("script"),u=0,d=-1!==navigator.userAgent.indexOf("MSIE 10.0");return l?"?"===l[3]?s=s.replace(i,"$1="+o):o=l[3]:s=urlappend(s,a+"="+o),context[o]=generalCallback,c.type="text/javascript",c.src=s,c.async=!0,"undefined"!=typeof c.onreadystatechange&&!d&&(c.htmlFor=c.id="_reqwest_"+r),c.onload=c.onreadystatechange=function(){if(c[readyState]&&"complete"!==c[readyState]&&"loaded"!==c[readyState]||u)return!1;c.onload=c.onreadystatechange=null,c.onclick&&c.onclick(),t(lastValue),lastValue=undefined,head.removeChild(c),u=1},head.appendChild(c),{abort:function(){c.onload=c.onreadystatechange=null,n({},"Request is aborted: timeout",{}),lastValue=undefined,head.removeChild(c),u=1}}}function getRequest(e,t){var n,s=this.o,r=(s.method||"GET").toUpperCase(),a="string"==typeof s?s:s.url,o=!1!==s.processData&&s.data&&"string"!=typeof s.data?reqwest.toQueryString(s.data):s.data||null,i=!1;return("jsonp"==s.type||"GET"==r)&&o&&(a=urlappend(a,o),o=null),"jsonp"==s.type?handleJsonp(s,e,t,a):((n=s.xhr&&s.xhr(s)||xhr(s)).open(r,a,!1!==s.async),setHeaders(n,s),setCredentials(n,s),context[xDomainRequest]&&n instanceof context[xDomainRequest]?(n.onload=e,n.onerror=t,n.onprogress=function(){},i=!0):n.onreadystatechange=handleReadyState(this,e,t),s.before&&s.before(n),i?setTimeout(function(){n.send(o)},200):n.send(o),n)}function Reqwest(e,t){this.o=e,this.fn=t,init.apply(this,arguments)}function setType(e){return null===e?undefined:e.match("json")?"json":e.match("javascript")?"js":e.match("text")?"html":e.match("xml")?"xml":void 0}function init(o,fn){function complete(e){for(o.timeout&&clearTimeout(self.timeout),self.timeout=null;0<self._completeHandlers.length;)self._completeHandlers.shift()(e)}function success(resp){var type=o.type||resp&&setType(resp.getResponseHeader("Content-Type"));resp="jsonp"!==type?self.request:resp;var filteredResponse=globalSetupOptions.dataFilter(resp.responseText,type),r=filteredResponse;try{resp.responseText=r}catch(e){}if(r)switch(type){case"json":try{resp=context.JSON?context.JSON.parse(r):eval("("+r+")")}catch(err){return error(resp,"Could not parse JSON in response",err)}break;case"js":resp=eval(r);break;case"html":resp=r;break;case"xml":resp=resp.responseXML&&resp.responseXML.parseError&&resp.responseXML.parseError.errorCode&&resp.responseXML.parseError.reason?null:resp.responseXML}for(self._responseArgs.resp=resp,self._fulfilled=!0,fn(resp),self._successHandler(resp);0<self._fulfillmentHandlers.length;)resp=self._fulfillmentHandlers.shift()(resp);complete(resp)}function timedOut(){self._timedOut=!0,self.request.abort()}function error(e,t,n){for(e=self.request,self._responseArgs.resp=e,self._responseArgs.msg=t,self._responseArgs.t=n,self._erred=!0;0<self._errorHandlers.length;)self._errorHandlers.shift()(e,t,n);complete(e)}this.url="string"==typeof o?o:o.url,this.timeout=null,this._fulfilled=!1,this._successHandler=function(){},this._fulfillmentHandlers=[],this._errorHandlers=[],this._completeHandlers=[],this._erred=!1,this._responseArgs={};var self=this;fn=fn||function(){},o.timeout&&(this.timeout=setTimeout(function(){timedOut()},o.timeout)),o.success&&(this._successHandler=function(){o.success.apply(o,arguments)}),o.error&&this._errorHandlers.push(function(){o.error.apply(o,arguments)}),o.complete&&this._completeHandlers.push(function(){o.complete.apply(o,arguments)}),this.request=getRequest.call(this,success,error)}function reqwest(e,t){return new Reqwest(e,t)}function normalize(e){return e?e.replace(/\r?\n/g,"\r\n"):""}function serial(e,t){var n,s,r,a,o=e.name,i=e.tagName.toLowerCase(),l=function(e){e&&!e.disabled&&t(o,normalize(e.attributes.value&&e.attributes.value.specified?e.value:e.text))};if(!e.disabled&&o)switch(i){case"input":/reset|button|image|file/i.test(e.type)||(n=/checkbox/i.test(e.type),s=/radio/i.test(e.type),r=e.value,(!n&&!s||e.checked)&&t(o,normalize(n&&""===r?"on":r)));break;case"textarea":t(o,normalize(e.value));break;case"select":if("select-one"===e.type.toLowerCase())l(0<=e.selectedIndex?e.options[e.selectedIndex]:null);else for(a=0;e.length&&a<e.length;a++)e.options[a].selected&&l(e.options[a])}}function eachFormElement(){var e,t,a=this,n=function(e,t){var n,s,r;for(n=0;n<t.length;n++)for(r=e[byTag](t[n]),s=0;s<r.length;s++)serial(r[s],a)};for(t=0;t<arguments.length;t++)e=arguments[t],/input|select|textarea/i.test(e.tagName)&&serial(e,a),n(e,["input","select","textarea"])}function serializeQueryString(){return reqwest.toQueryString(reqwest.serializeArray.apply(null,arguments))}function serializeHash(){var n={};return eachFormElement.apply(function(e,t){e in n?(n[e]&&!isArray(n[e])&&(n[e]=[n[e]]),n[e].push(t)):n[e]=t},arguments),n}function buildParams(e,t,n,s){var r,a,o,i=/\[\]$/;if(isArray(t))for(a=0;t&&a<t.length;a++)o=t[a],n||i.test(e)?s(e,o):buildParams(e+"["+("object"==typeof o?a:"")+"]",o,n,s);else if(t&&"[object Object]"===t.toString())for(r in t)buildParams(e+"["+r+"]",t[r],n,s);else s(e,t)}var context=this,XHR2;if("window"in context)var doc=document,byTag="getElementsByTagName",head=doc[byTag]("head")[0];else try{XHR2=require("xhr2")}catch(ex){throw new Error("Peer dependency `xhr2` required! Please npm install xhr2")}var httpsRe=/^http/,protocolRe=/(^\w+):\/\//,twoHundo=/^(20\d|1223)$/,readyState="readyState",contentType="Content-Type",requestedWith="X-Requested-With",uniqid=0,callbackPrefix="reqwest_"+ +new Date,lastValue,xmlHttpRequest="XMLHttpRequest",xDomainRequest="XDomainRequest",noop=function(){},isArray="function"==typeof Array.isArray?Array.isArray:function(e){return e instanceof Array},defaultHeaders={contentType:"application/x-www-form-urlencoded",requestedWith:xmlHttpRequest,accept:{"*":"text/javascript, text/html, application/xml, text/xml, */*",xml:"application/xml, text/xml",html:"text/html",text:"text/plain",json:"application/json, text/javascript",js:"application/javascript, text/javascript"}},xhr=function(e){if(!0!==e.crossOrigin)return context[xmlHttpRequest]?new XMLHttpRequest:XHR2?new XHR2:new ActiveXObject("Microsoft.XMLHTTP");var t=context[xmlHttpRequest]?new XMLHttpRequest:null;if(t&&"withCredentials"in t)return t;if(context[xDomainRequest])return new XDomainRequest;throw new Error("Browser does not support cross-origin requests")},globalSetupOptions={dataFilter:function(e){return e}};return Reqwest.prototype={abort:function(){this._aborted=!0,this.request.abort()},retry:function(){init.call(this,this.o,this.fn)},then:function(e,t){return e=e||function(){},t=t||function(){},this._fulfilled?this._responseArgs.resp=e(this._responseArgs.resp):this._erred?t(this._responseArgs.resp,this._responseArgs.msg,this._responseArgs.t):(this._fulfillmentHandlers.push(e),this._errorHandlers.push(t)),this},always:function(e){return this._fulfilled||this._erred?e(this._responseArgs.resp):this._completeHandlers.push(e),this},fail:function(e){return this._erred?e(this._responseArgs.resp,this._responseArgs.msg,this._responseArgs.t):this._errorHandlers.push(e),this},"catch":function(e){return this.fail(e)}},reqwest.serializeArray=function(){var n=[];return eachFormElement.apply(function(e,t){n.push({name:e,value:t})},arguments),n},reqwest.serialize=function(){if(0===arguments.length)return"";var e,t=Array.prototype.slice.call(arguments,0);return(e=t.pop())&&e.nodeType&&t.push(e)&&(e=null),e&&(e=e.type),("map"==e?serializeHash:"array"==e?reqwest.serializeArray:serializeQueryString).apply(null,t)},reqwest.toQueryString=function(e,t){var n,s,r=t||!1,a=[],o=encodeURIComponent,i=function(e,t){t="function"==typeof t?t():null==t?"":t,a[a.length]=o(e)+"="+o(t)};if(isArray(e))for(s=0;e&&s<e.length;s++)i(e[s].name,e[s].value);else for(n in e)e.hasOwnProperty(n)&&buildParams(n,e[n],r,i);return a.join("&").replace(/%20/g,"+")},reqwest.getcallbackPrefix=function(){return callbackPrefix},reqwest.compat=function(e,t){return e&&(e.type&&(e.method=e.type)&&delete e.type,e.dataType&&(e.type=e.dataType),e.jsonpCallback&&(e.jsonpCallbackName=e.jsonpCallback)&&delete e.jsonpCallback,e.jsonp&&(e.jsonpCallback=e.jsonp)),new Reqwest(e,t)},reqwest.ajaxSetup=function(e){for(var t in e=e||{})globalSetupOptions[t]=e[t]},reqwest}();
+/*!
+  * Reqwest! A general purpose XHR connection manager
+  * license MIT (c) Dustin Diaz 2015
+  * https://github.com/ded/reqwest
+  */!function(){var o=window.Locksmith={},e=document.querySelector('script[type="application/vnd.locksmith+json"]'),n=e&&e.innerHTML;if(o.state={},o.util={},o.loading=!1,n)try{o.state=JSON.parse(n)}catch(u){}if(document.addEventListener&&document.querySelector){var s,r,a,t=[76,79,67,75,83,77,73,84,72,49,49],i=function(){r=t.slice(0)},l="style",c=function(e){e&&27!==e.keyCode&&"click"!==e.type||(document.removeEventListener("keydown",c),document.removeEventListener("click",c),s&&document.body.removeChild(s),s=null)};i(),document.addEventListener("keyup",function(e){if(e.keyCode===r[0]){if(clearTimeout(a),r.shift(),0<r.length)return void(a=setTimeout(i,1e3));i(),c(),(s=document.createElement("div"))[l].width="50%",s[l].maxWidth="1000px",s[l].height="85%",s[l].border="1px rgba(0, 0, 0, 0.2) solid",s[l].background="rgba(255, 255, 255, 0.99)",s[l].borderRadius="4px",s[l].position="fixed",s[l].top="50%",s[l].left="50%",s[l].transform="translateY(-50%) translateX(-50%)",s[l].boxShadow="0 2px 5px rgba(0, 0, 0, 0.3), 0 0 100vh 100vw rgba(0, 0, 0, 0.5)",s[l].zIndex="2147483645";var t=document.createElement("textarea");t.value=JSON.stringify(JSON.parse(n),null,2),t[l].border="none",t[l].display="block",t[l].boxSizing="border-box",t[l].width="100%",t[l].height="100%",t[l].background="transparent",t[l].padding="22px",t[l].fontFamily="monospace",t[l].fontSize="14px",t[l].color="#333",t[l].resize="none",t[l].outline="none",t.readOnly=!0,s.appendChild(t),document.body.appendChild(s),t.addEventListener("click",function(e){e.stopImmediatePropagation()}),t.select(),document.addEventListener("keydown",c),document.addEventListener("click",c)}})}o.isEmbedded=-1!==window.location.search.indexOf("_ab=0&_fd=0&_sc=1"),o.path=o.state.path||window.location.pathname,o.basePath=o.state.locale_root_url.concat("/apps/locksmith").replace(/^\/\//,"/"),o.reloading=!1,o.util.console=window.console||{log:function(){},error:function(){}},o.util.makeUrl=function(e,t){var n,s=o.basePath+e,r=[],a=o.cache();for(n in a)r.push(n+"="+encodeURIComponent(a[n]));for(n in t)r.push(n+"="+encodeURIComponent(t[n]));return o.state.customer_id&&(r.push("customer_id="+encodeURIComponent(o.state.customer_id)),r.push("customer_id_signature="+encodeURIComponent(o.state.customer_id_signature))),s+=(-1===s.indexOf("?")?"?":"&")+r.join("&")},o._initializeCallbacks=[],o.on=function(e,t){if("initialize"!==e)throw'Locksmith.on() currently only supports the "initialize" event';o._initializeCallbacks.push(t)},o.initializeSession=function(e){if(!o.isEmbedded){var t=!1,n=!0,s=!0;(e=e||{}).silent&&(s=n=!(t=!0)),o.ping({silent:t,spinner:n,reload:s,callback:function(){o._initializeCallbacks.forEach(function(e){e()})}})}},o.cache=function(e){var t={};try{var n=function r(e){return(document.cookie.match("(^|; )"+e+"=([^;]*)")||0)[2]};t=JSON.parse(decodeURIComponent(n("locksmith-params")||"{}"))}catch(u){}if(e){for(var s in e)t[s]=e[s];document.cookie="locksmith-params=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/",document.cookie="locksmith-params="+encodeURIComponent(JSON.stringify(t))+"; path=/"}return t},o.cache.cart=o.state.cart,o.cache.cartLastSaved=null,o.params=o.cache(),o.util.reload=function(){o.reloading=!0;try{window.location.href=window.location.href.replace(/#.*/,"")}catch(u){o.util.console.error("Preferred reload method failed",u),window.location.reload()}},o.cache.saveCart=function(e){if(!o.cache.cart||o.cache.cart===o.cache.cartLastSaved)return e?e():null;var t=o.cache.cartLastSaved;o.cache.cartLastSaved=o.cache.cart,reqwest({url:"/cart/update.json",method:"post",type:"json",data:{attributes:{locksmith:o.cache.cart}},complete:e,error:function(e){if(o.cache.cartLastSaved=t,!o.reloading)throw e}})},o.util.spinnerHTML='<style>body{background:#FFF}@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}#loading{display:flex;width:100%;height:50vh;color:#777;align-items:center;justify-content:center}#loading .spinner{display:block;animation:spin 600ms linear infinite;position:relative;width:50px;height:50px}#loading .spinner-ring{stroke:currentColor;stroke-dasharray:100%;stroke-width:2px;stroke-linecap:round;fill:none}</style><div id="loading"><div class="spinner"><svg width="100%" height="100%"><svg preserveAspectRatio="xMinYMin"><circle class="spinner-ring" cx="50%" cy="50%" r="45%"></circle></svg></svg></div></div>',o.util.clobberBody=function(e){document.body.innerHTML=e},o.util.clobberDocument=function(e){e.responseText&&(e=e.responseText),document.documentElement&&document.removeChild(document.documentElement);var t=document.open("text/html","replace");t.writeln(e),t.close(),setTimeout(function(){var e=t.querySelector("[autofocus]");e&&e.focus()},100)},o.util.serializeForm=function(e){if(e&&"FORM"===e.nodeName){var t,n,s={};for(t=e.elements.length-1;0<=t;t-=1)if(""!==e.elements[t].name)switch(e.elements[t].nodeName){case"INPUT":switch(e.elements[t].type){default:case"text":case"hidden":case"password":case"button":case"reset":case"submit":s[e.elements[t].name]=e.elements[t].value;break;case"checkbox":case"radio":e.elements[t].checked&&(s[e.elements[t].name]=e.elements[t].value);break;case"file":}break;case"TEXTAREA":s[e.elements[t].name]=e.elements[t].value;break;case"SELECT":switch(e.elements[t].type){case"select-one":s[e.elements[t].name]=e.elements[t].value;break;case"select-multiple":for(n=e.elements[t].options.length-1;0<=n;n-=1)e.elements[t].options[n].selected&&(s[e.elements[t].name]=e.elements[t].options[n].value)}break;case"BUTTON":switch(e.elements[t].type){case"reset":case"submit":case"button":s[e.elements[t].name]=e.elements[t].value}}return s}},o.util.on=function(e,a,o,t){t=t||document;var i="locksmith-"+e+a,n=function(e){var t=e.target,n=e.target.parentElement,s=t.className.baseVal||t.className||"",r=n.className.baseVal||n.className||"";("string"==typeof s&&-1!==s.split(/\s+/).indexOf(a)||"string"==typeof r&&-1!==r.split(/\s+/).indexOf(a))&&!e[i]&&(e[i]=!0,o(e))};t.attachEvent?t.attachEvent(e,n):t.addEventListener(e,n,!1)},o.util.enableActions=function(e){o.util.on("click","locksmith-action",function(e){e.preventDefault();var t=e.target;t.dataset.confirmWith&&!confirm(t.dataset.confirmWith)||(t.disabled=!0,t.innerText=t.dataset.disableWith,o.post("/action",t.dataset.locksmithParams,{spinner:!1,type:"text",success:function(e){(e=JSON.parse(e.responseText)).message&&alert(e.message),o.util.reload()}}))},e)},o.util.inject=function(e,t){var n=["data","locksmith","append"];if(-1!==t.indexOf(n.join("-"))){var s=document.createElement("div");s.innerHTML=t,e.appendChild(s)}else e.innerHTML=t;var r,a,o=e.querySelectorAll("script");for(a=0;a<o.length;++a){r=o[a];var i=document.createElement("script");if(r.type&&(i.type=r.type),r.src)i.src=r.src;else{var l=document.createTextNode(r.innerHTML);i.appendChild(l)}e.appendChild(i)}var c=e.querySelector("[autofocus]");c&&c.focus()},o.post=function(e,t,n){!1!==(n=n||{}).spinner&&o.util.clobberBody(o.util.spinnerHTML);var s={};n.container===document?(s.layout=1,n.success=function(e){document.getElementById(n.container);o.util.clobberDocument(e)}):n.container&&(s.layout=0,n.success=function(e){var t=document.getElementById(n.container);o.util.inject(t,e),t.id===t.firstChild.id&&t.parentElement.replaceChild(t.firstChild,t)}),n.form_type&&(t.form_type=n.form_type),n.include_layout_classes!==undefined&&(t.include_layout_classes=n.include_layout_classes),n.lock_id!==undefined&&(t.lock_id=n.lock_id),o.loading=!0;var r=o.util.makeUrl(e,s);reqwest({url:r,method:"post",type:n.type||"html",data:t,complete:function(){o.loading=!1},error:function(e){if(!o.reloading)if("dashboard.weglot.com"!==window.location.host){if(!n.silent)throw alert("Something went wrong! Please refresh and try again."),e;console.error(e)}else console.error(e)},success:n.success||o.util.clobberDocument})},o.postResource=function(e,t){e.path=o.path,e.search=window.location.search,e.state=o.state,e.passcode&&(e.passcode=e.passcode.trim()),e.email&&(e.email=e.email.trim()),e.state.cart=o.cache.cart,e.locksmith_json=o.jsonTag,e.locksmith_json_signature=o.jsonTagSignature,o.post("/resource",e,t)},o.ping=function(e){if(!o.isEmbedded){e=e||{};var t=function(){e.reload?o.util.reload():"function"==typeof e.callback&&e.callback()};o.post("/ping",{path:o.path,search:window.location.search,state:o.state},{spinner:!!e.spinner,silent:"undefined"==typeof e.silent||e.silent,type:"text",success:function(e){(e=JSON.parse(e.responseText)).messages&&0<e.messages.length&&o.showMessages(e.messages),e.cart&&o.cache.cart!==e.cart?(o.cache.cart=e.cart,o.cache.saveCart(function(){t(),e.cart&&e.cart.match(/^.+:/)&&o.util.reload()})):t()}})}},o.timeoutMonitor=function(){var e=o.cache.cart;o.ping({callback:function(){e!==o.cache.cart||setTimeout(function(){o.timeoutMonitor()},6e4)}})},o.showMessages=function(e){var t=document.createElement("div");t.style.position="fixed",t.style.left=0,t.style.right=0,t.style.bottom="-50px",t.style.opacity=0,t.style.background="#191919",t.style.color="#ddd",t.style.transition="bottom 0.2s, opacity 0.2s",t.style.zIndex=999999,t.innerHTML="        <style>          .locksmith-ab .locksmith-b { display: none; }          .locksmith-ab.toggled .locksmith-b { display: flex; }          .locksmith-ab.toggled .locksmith-a { display: none; }          .locksmith-flex { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 10px 20px; }          .locksmith-message + .locksmith-message { border-top: 1px #555 solid; }          .locksmith-message a { color: inherit; font-weight: bold; }          .locksmith-message a:hover { color: inherit; opacity: 0.8; }          a.locksmith-ab-toggle { font-weight: inherit; text-decoration: underline; }          .locksmith-text { flex-grow: 1; }          .locksmith-cta { flex-grow: 0; text-align: right; }          .locksmith-cta button { transform: scale(0.8); transform-origin: left; }          .locksmith-cta > * { display: block; }          .locksmith-cta > * + * { margin-top: 10px; }          .locksmith-message a.locksmith-close { flex-grow: 0; text-decoration: none; margin-left: 15px; font-size: 30px; font-family: monospace; display: block; padding: 2px 10px; }                    @media screen and (max-width: 600px) {            .locksmith-wide-only { display: none !important; }            .locksmith-flex { padding: 0 15px; }            .locksmith-flex > * { margin-top: 5px; margin-bottom: 5px; }            .locksmith-cta { text-align: left; }          }                    @media screen and (min-width: 601px) {            .locksmith-narrow-only { display: none !important; }          }        </style>      "+e.map(function(e){return'<div class="locksmith-message">'+e+"</div>"}).join(""),document.body.appendChild(t),document.body.style.position="relative",document.body.parentElement.style.paddingBottom=t.offsetHeight+"px",setTimeout(function(){t.style.bottom=0,t.style.opacity=1},50),o.util.on("click","locksmith-ab-toggle",function(e){e.preventDefault();for(var t=e.target.parentElement;-1===t.className.split(" ").indexOf("locksmith-ab");)t=t.parentElement;-1!==t.className.split(" ").indexOf("toggled")?t.className=t.className.replace("toggled",""):t.className=t.className+" toggled"}),o.util.enableActions(t)}}()}();</script>
+      <script data-locksmith>Locksmith.cache.cart=null</script>
+
+
+  <script data-locksmith>Locksmith.jsonTag="\u003cscript type=\"application\/vnd.locksmith+json\" data-locksmith\u003e{\"version\":\"v194\",\"locked\":false,\"initialized\":true,\"scope\":\"404\",\"access_granted\":true,\"access_denied\":false,\"requires_customer\":false,\"manual_lock\":false,\"remote_lock\":false,\"has_timeout\":false,\"remote_rendered\":null,\"hide_resource\":false,\"hide_links_to_resource\":false,\"transparent\":true,\"locks\":{\"all\":[],\"opened\":[]},\"keys\":[],\"keys_signature\":\"efa5feebae506536bd9bbc9c9c5e7c9f23a12c8dd1f311927465df313d39f638\",\"state\":{\"template\":\"404\",\"theme\":14442233915,\"product\":null,\"collection\":null,\"page\":null,\"blog\":null,\"article\":null,\"app\":null},\"now\":1741420122,\"path\":null,\"locale_root_url\":\"\\\/\",\"canonical_url\":\"https:\\\/\\\/bodleianshop.co.uk\\\/404\",\"customer_id\":null,\"customer_id_signature\":\"efa5feebae506536bd9bbc9c9c5e7c9f23a12c8dd1f311927465df313d39f638\",\"cart\":null}\u003c\/script\u003e";Locksmith.jsonTagSignature="b3a2ae958fdda91969843457555a8612e5dba81a86cfc3102421232551464e01"</script>
+
+ 
+<!-- Canopy v2.5.0 -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="theme-color" content="#f5d55a">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+
+  <title>
+  404 Not Found &ndash; Bodleian Libraries
+  </title>
+
+  
+
+  <link rel="canonical" href="https://bodleianshop.co.uk/404" />
+
+  
+
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="404 Not Found" />
+
+
+
+
+<meta property="og:url" content="https://bodleianshop.co.uk/404" />
+<meta property="og:site_name" content="Bodleian Libraries" />
+
+  
+
+
+  <meta name="twitter:card" content="summary">
+
+
+
+  
+
+
+
+
+<link href="//fonts.googleapis.com/css?family=PT+Sans:400,600,700,900|Cardo:400,600,700,900|PT+Sans:400,600,700,900|Cardo:400,600,700,900" rel="stylesheet" type="text/css">
+
+
+  <link href="//bodleianshop.co.uk/cdn/shop/t/5/assets/bodleian.scss.css?v=16546449008108647251527598255" rel="stylesheet" type="text/css" media="all" />
+
+  <link href="//bodleianshop.co.uk/cdn/shop/t/5/assets/styles.scss.css?v=54032370519858744001709656932" rel="stylesheet" type="text/css" media="all" />
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+  <script src="//bodleianshop.co.uk/cdn/shopifycloud/shopify/assets/themes_support/option_selection-86cdd286ddf3be7e25d68b9fc5965d7798a3ff6228ff79af67b3f4e41d6a34be.js" type="text/javascript"></script>
+  <script src="//bodleianshop.co.uk/cdn/shopifycloud/shopify/assets/themes_support/api.jquery-b0af070cfe3f5cf7c92f9e2a5da2665ee07ed2aad63bb408f8d6672f894a5996.js" type="text/javascript"></script>
+
+  
+
+
+  <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/2018508859/digital_wallets/dialog">
+<meta name="shopify-checkout-api-token" content="1bd32a23c9ecd1b765c0f7108f5fe17e">
+<script async="async" src="/checkouts/internal/preloads.js?locale=en-GB"></script>
+<link rel="preconnect" href="https://shop.app" crossorigin="anonymous">
+<script async="async" src="https://shop.app/checkouts/internal/preloads.js?locale=en-GB&shop_id=2018508859" crossorigin="anonymous"></script>
+<script id="apple-pay-shop-capabilities" type="application/json">{"shopId":2018508859,"countryCode":"GB","currencyCode":"GBP","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/2018508859","merchantName":"Bodleian Libraries","requiredBillingContactFields":["postalAddress","email","phone"],"requiredShippingContactFields":["postalAddress","email","phone"],"shippingType":"shipping","supportedNetworks":["visa","maestro","masterCard"],"total":{"type":"pending","label":"Bodleian Libraries","amount":"1.00"},"shopifyPaymentsEnabled":true,"supportsSubscriptions":false}</script>
+<script id="shopify-features" type="application/json">{"accessToken":"1bd32a23c9ecd1b765c0f7108f5fe17e","betas":["rich-media-storefront-analytics"],"domain":"bodleianshop.co.uk","predictiveSearch":true,"shopId":2018508859,"smart_payment_buttons_url":"https:\/\/bodleianshop.co.uk\/cdn\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/bodleianshop.co.uk\/cdn\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js","locale":"en"}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "bodleian-library.myshopify.com";
+Shopify.locale = "en";
+Shopify.currency = {"active":"GBP","rate":"1.0"};
+Shopify.country = "GB";
+Shopify.theme = {"name":"bodleian-1-1-canopy","id":14442233915,"schema_name":"Canopy","schema_version":"2.5.0","theme_store_id":null,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};
+Shopify.cdnHost = "bodleianshop.co.uk/cdn";
+Shopify.routes = Shopify.routes || {};
+Shopify.routes.root = "/";</script>
+<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+<script>window.ShopifyPay = window.ShopifyPay || {};
+window.ShopifyPay.apiHost = "shop.app\/pay";</script>
+<script id="shop-js-analytics" type="application/json">{"pageType":"404"}</script>
+<script>
+  window.Shopify = window.Shopify || {};
+  if (!window.Shopify.featureAssets) window.Shopify.featureAssets = {};
+  window.Shopify.featureAssets['shop-js'] = {"init-fed-cm":["modules/v2/client.init-fed-cm_DRADbZpF.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js"],"init-shop-email-lookup-coordinator":["modules/v2/client.init-shop-email-lookup-coordinator_CdlcoBQc.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js"],"shop-cash-offers":["modules/v2/client.shop-cash-offers_DPVRNuJh.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js","modules/v2/chunk.modal_gCt8VyrK.esm.js"],"avatar":["modules/v2/client.avatar_BTnouDA3.en.esm.js"],"pay-button":["modules/v2/client.pay-button_rnZO9PYG.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js"],"shop-toast-manager":["modules/v2/client.shop-toast-manager_CdHvkueY.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js"],"checkout-modal":["modules/v2/client.checkout-modal_yicd7lo0.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js","modules/v2/chunk.modal_gCt8VyrK.esm.js"],"init-customer-accounts-sign-up":["modules/v2/client.init-customer-accounts-sign-up_8Xtqww3f.en.esm.js","modules/v2/client.shop-login-button_-iQhKGII.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js","modules/v2/chunk.modal_gCt8VyrK.esm.js"],"shop-login-button":["modules/v2/client.shop-login-button_-iQhKGII.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js","modules/v2/chunk.modal_gCt8VyrK.esm.js"],"init-customer-accounts":["modules/v2/client.init-customer-accounts_CUDUajOM.en.esm.js","modules/v2/client.shop-login-button_-iQhKGII.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js","modules/v2/chunk.modal_gCt8VyrK.esm.js"],"shop-follow-button":["modules/v2/client.shop-follow-button_mCgyq22c.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js","modules/v2/chunk.modal_gCt8VyrK.esm.js"],"init-shop-for-new-customer-accounts":["modules/v2/client.init-shop-for-new-customer-accounts_AxwU6uW1.en.esm.js","modules/v2/client.shop-login-button_-iQhKGII.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js","modules/v2/chunk.modal_gCt8VyrK.esm.js"],"lead-capture":["modules/v2/client.lead-capture_DoxgAVqx.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js","modules/v2/chunk.modal_gCt8VyrK.esm.js"],"payment-terms":["modules/v2/client.payment-terms_DRnN4XU8.en.esm.js","modules/v2/chunk.common_B46DHYVK.esm.js","modules/v2/chunk.modal_gCt8VyrK.esm.js"]};
+</script>
+<script>(function() {
+  function asyncLoad() {
+    var urls = ["https:\/\/chimpstatic.com\/mcjs-connected\/js\/users\/35a01a4e0d958ec46a679617e\/dfc2fbd06d2db8336db9943c9.js?shop=bodleian-library.myshopify.com","https:\/\/client.lifteragecheck.com\/js\/age.js?shop=bodleian-library.myshopify.com"];
+    for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  };
+  if(window.attachEvent) {
+    window.attachEvent('onload', asyncLoad);
+  } else {
+    window.addEventListener('load', asyncLoad, false);
+  }
+})();</script>
+<script id="__st">var __st={"a":2018508859,"offset":0,"reqid":"17c6927d-e660-4659-bac1-e4859843d358-1741420122","pageurl":"bodleianshop.co.uk\/404","u":"7be095f45d0c"};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(','),a=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];function s(){const t=[...o],e=r(t);return a(e)}const i='password',u='form_key',d=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',i],f=()=>{try{return window.sessionStorage}catch{return}},m='__shopify_v',_=t=>t.elements[u];function p(t,e,n=!1){try{const o=window.sessionStorage,c=JSON.parse(o.getItem(e)),{data:r}=function(t){const{data:e,action:n}=t;return t[m]||n?{data:e,action:n}:{data:t,action:n}}(c);for(const[e,n]of Object.entries(r))t.elements[e]&&(t.elements[e].value=n);n&&o.removeItem(e)}catch(o){console.error('form repopulation failed',{error:o})}}const l='form_type',E='cptcha';function T(t){t.dataset[E]=!0}const w=window,h=w.document,L='Shopify',v='ce_forms',y='captcha';let A=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe',I='https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.5.2.iife.js',D={infoText:'Protected by hCaptcha',privacyText:'Privacy',termsText:'Terms'},(t,e,n)=>{const o=w[L][v],c=o.bindForm;if(c)return c(t,g,e,D).then(n);var r;o.q.push([[t,g,e,D],n]),r=I,A||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:r})),A=!0)});var g,I,D;w[L]=w[L]||{},w[L][v]=w[L][v]||{},w[L][v].q=[],w[L][y]=w[L][y]||{},w[L][y].protect=function(t,e){n(t,void 0,e),T(t)},Object.freeze(w[L][y]),function(t,e,n,w,h,L){const[v,y,A,g]=function(t,e,n){const i=e?o:[],u=t?c:[],d=[...i,...u],f=r(d),m=r(i),_=r(d.filter((([t,e])=>n.includes(e))));return[a(f),a(m),a(_),s()]}(w,h,L),I=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},D=t=>v().includes(t);t.addEventListener('submit',(t=>{const e=I(t);if(!e)return;const n=D(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=_(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!f())return;!function(t){const e=f();if(!e)return;const n=_(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){_(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:u})),t.elements[u].value=e}(t,e),function(t,e){const n=f();if(!n)return;const o=[...t.querySelectorAll(`input[type='${i}']`)].map((({name:t})=>t)),c=[...d,...o],r={};for(const[a,s]of new FormData(t).entries())c.includes(a)||(r[a]=s);n.setItem(e,JSON.stringify({[m]:1,action:t.action,data:r}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const S=(t,e)=>{t&&!t.dataset[E]&&(n(t,e.some((e=>e===t))),T(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=I(t);D(e)&&S(e,y())}));const B=e.get('form_key'),M=e.get(l),P=B&&M;t.addEventListener('DOMContentLoaded',(()=>{const t=y();if(P)for(const e of t)e.elements[l].value===M&&p(e,B);[...new Set([...A(),...v().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>S(e,t)))}))}(h,new URLSearchParams(w.location.search),n,t,e,['guest_login'])})(!0,!0)}();</script>
+<script integrity="sha256-EGCDRYTvIEOXsReXgqGwkAR+5Dl8tickSrieA/ZcQwc=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//bodleianshop.co.uk/cdn/shopifycloud/shopify/assets/storefront/load_feature-1060834584ef204397b1179782a1b090047ee4397cb627244ab89e03f65c4307.js" crossorigin="anonymous"></script>
+<script crossorigin="anonymous" defer="defer" src="//bodleianshop.co.uk/cdn/shopifycloud/shopify/assets/shopify_pay/storefront-80e528be853eac23af2454534897ca9536b1d3d04aa043b042f34879a3c111c8.js?v=20220906"></script>
+<script data-source-attribution="shopify.dynamic_checkout.dynamic.init">var Shopify=Shopify||{};Shopify.PaymentButton=Shopify.PaymentButton||{isStorefrontPortableWallets:!0,init:function(){window.Shopify.PaymentButton.init=function(){};var t=document.createElement("script");t.src="https://bodleianshop.co.uk/cdn/shopifycloud/portable-wallets/latest/portable-wallets.en.js",t.type="module",document.head.appendChild(t)}};
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.buyer_consent">
+  function portableWalletsHideBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.add("hidden"),t.setAttribute("aria-hidden","true"),n.removeEventListener("click",e))}function portableWalletsShowBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.remove("hidden"),t.removeAttribute("aria-hidden"),n.addEventListener("click",e))}window.Shopify?.PaymentButton&&(window.Shopify.PaymentButton.hideBuyerConsent=portableWalletsHideBuyerConsent,window.Shopify.PaymentButton.showBuyerConsent=portableWalletsShowBuyerConsent);
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.cart.bootstrap">document.addEventListener("DOMContentLoaded",(function(){function t(){return document.querySelector("shopify-accelerated-checkout-cart, shopify-accelerated-checkout")}if(t())Shopify.PaymentButton.init();else{new MutationObserver((function(e,n){t()&&(Shopify.PaymentButton.init(),n.disconnect())})).observe(document.body,{childList:!0,subtree:!0})}}));
+</script>
+
+<link rel="stylesheet" media="screen" href="https://bodleianshop.co.uk/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css" crossorigin="anonymous">
+
+<style id="shopify-accelerated-checkout-cart">
+        #shopify-buyer-consent {
+  margin-top: 1em;
+  display: inline-block;
+  width: 100%;
+}
+
+#shopify-buyer-consent.hidden {
+  display: none;
+}
+
+#shopify-subscription-policy-button {
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+#shopify-subscription-policy-button::before {
+  box-shadow: none;
+}
+
+      </style>
+<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', '');
+    Shopify.money_format = "£{{amount}}";
+    window.theme = window.theme || {};
+    theme.jQuery = jQuery;
+    theme.money_container = 'span.theme-money';
+    theme.money_format = "£{{amount}}";
+  </script>
+<!-- BEGIN app block: shopify://apps/frequently-bought-together/blocks/app-embed-block/b1a8cbea-c844-4842-9529-7c62dbab1b1f --><script src="//cdn.codeblackbelt.com/scripts/frequently-bought-together/bootstrap.min.js?version=2025030807+0000" async></script>
+<!-- END app block --><!-- BEGIN app block: shopify://apps/order-limits-minmaxify/blocks/app-embed-block/3acfba32-89f3-4377-ae20-cbb9abc48475 --><script type="text/javascript" src="https://limits.minmaxify.com/bodleian-library.myshopify.com?v=55j&r=20220811194143"></script>
+
+<!-- END app block --><meta property="og:image" content="https://cdn.shopify.com/s/files/1/0020/1850/8859/files/Logo_Header_v2.jpg?height=628&pad_color=fff&v=1613764790&width=1200" />
+<meta property="og:image:secure_url" content="https://cdn.shopify.com/s/files/1/0020/1850/8859/files/Logo_Header_v2.jpg?height=628&pad_color=fff&v=1613764790&width=1200" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="628" />
+<meta property="og:image:alt" content="Bodleian Library Shop" />
+<link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {var session_token = document.cookie.match(/_shopify_s=([^;]*)/);function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 2018508859,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token: session_token && session_token.length === 2 ? session_token[1] : "",page_type: "404"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
+<script id="web-pixels-manager-setup">(function d(d,e,n,o,r,i){if(!Boolean(null===(t=null===(a=window.Shopify)||void 0===a?void 0:a.analytics)||void 0===t?void 0:t.replayQueue)){var a,t,s=function(){var d={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(13[2-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(13[2-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/},e=d.modern,n=d.legacy,o=navigator.userAgent;return e.test(o)?"modern":(n.test(o),"legacy")}(),l=null!=i?i:{modern:"",legacy:""};window.Shopify=window.Shopify||{};var u=window.Shopify;u.analytics=u.analytics||{};var c=u.analytics;c.replayQueue=[],c.publish=function(d,e,n){return c.replayQueue.push([d,e,n]),!0};try{self.performance.mark("wpm:start")}catch(d){}var f=[n,"/wpm","/b",r,s.substring(0,1),".js"].join(""),h=l[s];!function(d){var e=d.src,n=d.async,o=void 0===n||n,r=d.onload,i=d.onerror,a=d.sri,t=document.createElement("script"),s=document.head,l=document.body;t.async=o,t.src=e,a&&(t.integrity=a,t.crossOrigin="anonymous"),r&&t.addEventListener("load",r),i&&t.addEventListener("error",i),s?s.appendChild(t):l?l.appendChild(t):console.error("Did not find a head or body element to append the script")}({src:f,async:!0,onload:function(){if(!function(){var d,e;return Boolean(null===(e=null===(d=window.Shopify)||void 0===d?void 0:d.analytics)||void 0===e?void 0:e.initialized)}()){var n=window.webPixelsManager.init(d)||void 0;if(n){e(n);var o=window.Shopify.analytics;o.replayQueue.forEach((function(d){var e=d[0],o=d[1],r=d[2];n.publishCustomEvent(e,o,r)})),o.replayQueue=[],o.publish=n.publishCustomEvent,o.visitor=n.visitor,o.initialized=!0}}},onerror:function(){var e=d.storefrontBaseUrl.replace(/\/$/,""),n="".concat(e,"/.well-known/shopify/monorail/unstable/produce_batch"),r=JSON.stringify({metadata:{event_sent_at_ms:(new Date).getTime()},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:o||"latest",bundle_target:s,page_url:self.location.href,status:"failed",surface:d.surface,error_msg:"".concat(f," has failed to load")},metadata:{event_created_at_ms:(new Date).getTime()}}]});try{if(self.navigator.sendBeacon.bind(self.navigator)(n,r))return!0}catch(d){}var i=new XMLHttpRequest;try{return i.open("POST",n,!0),i.setRequestHeader("Content-Type","text/plain"),i.send(r),!0}catch(d){console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging a load error.")}return!1},sri:function(d){return"string"==typeof d&&/^sha384-[A-Za-z0-9+/=]+$/.test(d)}(h)?h:""})}})({shopId: 2018508859,storefrontBaseUrl: "https://bodleianshop.co.uk",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",surface: "storefront-renderer",enabledBetaFlags: ["6a396365"],webPixelsConfigList: [{"id":"942440823","configuration":"{\"config\":\"{\\\"pixel_id\\\":\\\"G-QHZFLG3E7D\\\",\\\"gtag_events\\\":[{\\\"type\\\":\\\"purchase\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"page_view\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"view_item\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"search\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"add_to_cart\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"begin_checkout\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"add_payment_info\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"}],\\\"enable_monitoring_mode\\\":false}\"}","eventPayloadVersion":"v1","runtimeContext":"OPEN","scriptVersion":"322b4d09e15b68127cd86b1bb8929c25","type":"APP","apiClientId":1780363,"privacyPurposes":[]},{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0290","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0290","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,effectiveTopLevelDomain: "",initData: {"shop":{"name":"Bodleian Libraries","paymentSettings":{"currencyCode":"GBP"},"myshopifyDomain":"bodleian-library.myshopify.com","countryCode":"GB","storefrontUrl":"https:\/\/bodleianshop.co.uk"},"customer":null,"cart":null,"checkout":null,"productVariants":[],"purchasingCompany":null},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed", {});},"https://bodleianshop.co.uk/cdn","725c73313b205d979e8abaa7d4fb0fba7f299cd2","f1d1a304wfe79281ap5a5ffd39mcb3a6a89",{"modern":"","legacy":""});</script>  <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+window.ShopifyAnalytics.meta.currency = 'GBP';
+var meta = {"page":{}};
+for (var attr in meta) {
+  window.ShopifyAnalytics.meta[attr] = meta[attr];
+}</script>
+<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
+  
+};
+</script>
+<script class="analytics">(function () {
+    var customDocumentWrite = function(content) {
+      var jquery = null;
+
+      if (window.jQuery) {
+        jquery = window.jQuery;
+      } else if (window.Checkout && window.Checkout.$) {
+        jquery = window.Checkout.$;
+      }
+
+      if (jquery) {
+        jquery('body').append(content);
+      }
+    };
+
+    var hasLoggedConversion = function(token) {
+      if (token) {
+        return document.cookie.indexOf('loggedConversion=' + token) !== -1;
+      }
+      return false;
+    }
+
+    var setCookieIfConversion = function(token) {
+      if (token) {
+        var twoMonthsFromNow = new Date(Date.now());
+        twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+        document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
+      }
+    }
+
+    var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+    if (trekkie.integrations) {
+      return;
+    }
+    trekkie.methods = [
+      'identify',
+      'page',
+      'ready',
+      'track',
+      'trackForm',
+      'trackLink'
+    ];
+    trekkie.factory = function(method) {
+      return function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift(method);
+        trekkie.push(args);
+        return trekkie;
+      };
+    };
+    for (var i = 0; i < trekkie.methods.length; i++) {
+      var key = trekkie.methods[i];
+      trekkie[key] = trekkie.factory(key);
+    }
+    trekkie.load = function(config) {
+      trekkie.config = config || {};
+      trekkie.config.initialDocumentCookie = document.cookie;
+      var first = document.getElementsByTagName('script')[0];
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.onerror = function(e) {
+        var scriptFallback = document.createElement('script');
+        scriptFallback.type = 'text/javascript';
+        scriptFallback.onerror = function(error) {
+                var Monorail = {
+      produce: function produce(monorailDomain, schemaId, payload) {
+        var currentMs = new Date().getTime();
+        var event = {
+          schema_id: schemaId,
+          payload: payload,
+          metadata: {
+            event_created_at_ms: currentMs,
+            event_sent_at_ms: currentMs
+          }
+        };
+        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
+      },
+      sendRequest: function sendRequest(endpointUrl, payload) {
+        // Try the sendBeacon API
+        if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
+          var blobData = new window.Blob([payload], {
+            type: 'text/plain'
+          });
+
+          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+            return true;
+          } // sendBeacon was not successful
+
+        } // XHR beacon
+
+        var xhr = new XMLHttpRequest();
+
+        try {
+          xhr.open('POST', endpointUrl);
+          xhr.setRequestHeader('Content-Type', 'text/plain');
+          xhr.send(payload);
+        } catch (e) {
+          console.log(e);
+        }
+
+        return false;
+      },
+      isIos12: function isIos12() {
+        return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
+      }
+    };
+    Monorail.produce('monorail-edge.shopifysvc.com',
+      'trekkie_storefront_load_errors/1.1',
+      {shop_id: 2018508859,
+      theme_id: 14442233915,
+      app_name: "storefront",
+      context_url: window.location.href,
+      source_url: "//bodleianshop.co.uk/cdn/s/trekkie.storefront.ee00ae5d5f7902c457139393886b62864391d5ea.min.js"});
+
+        };
+        scriptFallback.async = true;
+        scriptFallback.src = '//bodleianshop.co.uk/cdn/s/trekkie.storefront.ee00ae5d5f7902c457139393886b62864391d5ea.min.js';
+        first.parentNode.insertBefore(scriptFallback, first);
+      };
+      script.async = true;
+      script.src = '//bodleianshop.co.uk/cdn/s/trekkie.storefront.ee00ae5d5f7902c457139393886b62864391d5ea.min.js';
+      first.parentNode.insertBefore(script, first);
+    };
+    trekkie.load(
+      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":2018508859,"isMerchantRequest":null,"themeId":14442233915,"themeCityHash":"13887852144501826815","contentLanguage":"en","currency":"GBP"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain"},"Session Attribution":{},"S2S":{"facebookCapiEnabled":false,"source":"trekkie-storefront-renderer","apiClientId":580111}}
+    );
+
+    var loaded = false;
+    trekkie.ready(function() {
+      if (loaded) return;
+      loaded = true;
+
+      window.ShopifyAnalytics.lib = window.trekkie;
+
+  
+      var originalDocumentWrite = document.write;
+      document.write = customDocumentWrite;
+      try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+      document.write = originalDocumentWrite;
+
+      window.ShopifyAnalytics.lib.page(null,{"shopifyEmitted":true});
+
+      var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
+      var token = match? match[1]: undefined;
+      if (!hasLoggedConversion(token)) {
+        setCookieIfConversion(token);
+        
+      }
+    });
+
+
+        var eventsListenerScript = document.createElement('script');
+        eventsListenerScript.async = true;
+        eventsListenerScript.src = "//bodleianshop.co.uk/cdn/shopifycloud/shopify/assets/shop_events_listener-bbbf3223c550be0dd72914a2fa06aaa88eb8943e96f9ea31fb63e7e27e0f97f4.js";
+        document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+
+})();</script>
+  <script>
+  if (!window.ga || (window.ga && typeof window.ga !== 'function')) {
+    window.ga = function ga() {
+      (window.ga.q = window.ga.q || []).push(arguments);
+      Shopify.analytics.publish("ga_stub_called", {}, {sendTo: "google_osp_migration"});
+      console.error("Shopify's Google Analytics stub called with:", Array.from(arguments), "\nSee https://help.shopify.com/manual/promoting-marketing/pixels/pixel-migration#google for more information.");
+    };
+    Shopify.analytics.publish("ga_stub_initialized", {}, {sendTo: "google_osp_migration"});
+  }
+</script>
+<script
+  defer
+  src="https://bodleianshop.co.uk/cdn/shopifycloud/perf-kit/shopify-perf-kit-1.4.0.min.js"
+  data-application="storefront-renderer"
+  data-shop-id="2018508859"
+  data-render-region="gcp-europe-west3"
+  data-page-type="404"
+  data-theme-instance-id="14442233915"
+  data-monorail-region="shop_domain"
+  data-resource-timing-sampling-rate="10"
+></script>
+</head>
+
+<body class="template-404">
+  <div id="page-wrap">
+    <div id="page-wrap-inner">
+      <div id="page-wrap-content">
+        <div class="container">
+          <div id="shopify-section-header" class="shopify-section">
+<style type="text/css">
+  .logo img,
+  #page-footer .logo-column img {
+    width: 500px;
+  }
+</style>
+
+
+
+
+<div class="page-header layout-center" data-section-type="header">
+  <div id="toolbar" class="toolbar cf">
+    <span class="mobile-toolbar">
+      <a class="toggle-mob-nav" href="#" aria-controls="mobile-nav" aria-label="Open navigation"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg></a>
+      <a class="compact-logo" href="https://bodleianshop.co.uk">
+        
+        
+        <img src="//bodleianshop.co.uk/cdn/shop/files/Logo_Header_v2_200x.jpg?v=1613764790" alt="Bodleian Library Shop" />
+        
+        
+      </a>
+    </span>
+
+    
+    <span class="toolbar-links">
+      
+      
+      <a href="/account/login" id="customer_login_link">Login</a>
+      
+      <span class="divider">/</span> <a href="/account/register" id="customer_register_link">Join</a>
+      
+      
+      <span class="divider">/</span>
+      
+      
+      <form class="search-form" action="/search" method="get">
+        <input type="hidden" name="type" value="product" />
+        <button type="submit"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Search</title>
+  <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+  <path d="M0 0h24v24H0z" fill="none"/>
+</svg></button>
+        <input type="text" name="q" placeholder="Search"/>
+      </form>
+      
+      <p>Call: 01865 277 175  | Email: <a href="mailto:customerservice@bodleian.ox.ac.uk"> customerservice@bodleian.ox.ac.uk</a></p>
+    </span>
+    
+
+    <span class="toolbar-cart">
+      <a class="current-cart toggle-cart-summary" href="/cart">
+        <span class="beside-svg">0 / <span class="theme-money">£0.00</span></span>
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Cart</title>
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M17.21 9l-4.38-6.56c-.19-.28-.51-.42-.83-.42-.32 0-.64.14-.83.43L6.79 9H2c-.55 0-1 .45-1 1 0 .09.01.18.04.27l2.54 9.27c.23.84 1 1.46 1.92 1.46h13c.92 0 1.69-.62 1.93-1.46l2.54-9.27L23 10c0-.55-.45-1-1-1h-4.79zM9 9l3-4.4L15 9H9zm3 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+</svg>
+      </a>
+      
+
+    </span>
+
+    
+    <span class="toolbar-social">
+      <ul class="social-links plain">
+    
+    
+    
+    
+    
+    
+    
+  
+    
+</ul>
+    </span>
+    
+  </div>
+
+  <div class="logo-nav">
+    
+
+    <div class="cf">
+    <div class="logo align-center">
+      
+        
+        <a target="_self" href="https://bodleianshop.co.uk">
+          <img src="//bodleianshop.co.uk/cdn/shop/files/Logo_Header_v2_1000x.jpg?v=1613764790" alt="Bodleian Library Shop" />
+        </a>
+      
+    </div>
+    </div>
+
+    
+    
+<nav class="main-nav cf desktop align-center" data-col-limit="6" role="navigation" aria-label="Primary navigation">
+  <ul>
+    
+
+
+      
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+      
+
+      <li class="nav-item first dropdown drop-norm">
+
+        <a class="nav-item-link" href="/collections/bodleian-publishing" aria-haspopup="true" aria-expanded="false">
+          <span class="nav-item-link-title">Books</span>
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+    <path d="M0-.75h24v24H0z" fill="none"/>
+</svg>
+        </a>
+
+        
+
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+
+          
+
+          <div class="sub-nav count-15">
+            
+
+            <ul class="sub-nav-list">
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/book-of-the-month" data-img="//bodleianshop.co.uk/cdn/shop/products/Making_of_Messiah_web_400x.jpg?v=1570096023" >
+                  <span class="sub-nav-item-link-title">Book of the Month</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/all-books" data-img="//bodleianshop.co.uk/cdn/shop/products/9781851244850_400x.jpg?v=1633074542" >
+                  <span class="sub-nav-item-link-title">All Books</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/bodleian-publishing" data-img="//bodleianshop.co.uk/cdn/shop/collections/publishing_400x.jpg?v=1684330993" >
+                  <span class="sub-nav-item-link-title">Bodleian Publishing</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/about-the-library" data-img="//bodleianshop.co.uk/cdn/shop/products/BriefHistoryBodleian_web_400x.jpg?v=1588000656" >
+                  <span class="sub-nav-item-link-title">About the Library</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/gift-humour" data-img="//bodleianshop.co.uk/cdn/shop/products/9781851240395_400x.jpg?v=1527603204" >
+                  <span class="sub-nav-item-link-title">Gift & Humour</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/books-for-food-lovers" data-img="//bodleianshop.co.uk/cdn/shop/products/Italian_Food_for_web_400x.jpg?v=1565070632" >
+                  <span class="sub-nav-item-link-title">Books for Food Lovers</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/childrens-books" data-img="//bodleianshop.co.uk/cdn/shop/products/HappyPrince_400x.jpg?v=1645196269" >
+                  <span class="sub-nav-item-link-title">Children's Books</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/history" data-img="//bodleianshop.co.uk/cdn/shop/files/PathlessForest_400x.jpg?v=1710422452" >
+                  <span class="sub-nav-item-link-title">History</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/literature-language-arts" data-img="//bodleianshop.co.uk/cdn/shop/files/TheBBCapeopleshistoryresized_400x.jpg?v=1738603771" >
+                  <span class="sub-nav-item-link-title">Literature, Language & Arts</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/local-interest" data-img="//bodleianshop.co.uk/cdn/shop/files/PathlessForest_400x.jpg?v=1710422452" >
+                  <span class="sub-nav-item-link-title">Local Interest</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/sale-books" data-img="//bodleianshop.co.uk/cdn/shop/products/9781851240395_400x.jpg?v=1527603204" >
+                  <span class="sub-nav-item-link-title">SALE books</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/recently-published" data-img="//bodleianshop.co.uk/cdn/shop/files/9781851246304BookCurses3Dcopy_400x.jpg?v=1721145114" >
+                  <span class="sub-nav-item-link-title">Recently published</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/coming-soon" data-img="//bodleianshop.co.uk/cdn/shop/files/E5EF1198-A133-45B1-B0B6-42DEECA85CA7_400x.jpg?v=1733849682" >
+                  <span class="sub-nav-item-link-title">Coming Soon</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/pages/about-bodleian-publishing" >
+                  <span class="sub-nav-item-link-title">About Bodleian Publishing</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/pages/catalogue" >
+                  <span class="sub-nav-item-link-title">Publications Catalogue</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+            </ul>
+          </div>
+        
+      </li>
+    
+
+      
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+      
+
+      <li class="nav-item dropdown drop-norm">
+
+        <a class="nav-item-link" href="/collections/christmas" aria-haspopup="true" aria-expanded="false">
+          <span class="nav-item-link-title">Gifts</span>
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+    <path d="M0-.75h24v24H0z" fill="none"/>
+</svg>
+        </a>
+
+        
+
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+
+          
+
+          <div class="sub-nav count-12">
+            
+
+            <ul class="sub-nav-list">
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/calendars-diarys" data-img="//bodleianshop.co.uk/cdn/shop/files/BodleianLibrariesMrsBeeton_sClassicDishesWallCalendar2025_9781835620816_400x.jpg?v=1730388520" >
+                  <span class="sub-nav-item-link-title">Calendars & Diaries</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/classic-crime" data-img="//bodleianshop.co.uk/cdn/shop/collections/Detective_Fiction_400x.jpg?v=1684231722" >
+                  <span class="sub-nav-item-link-title">Crime Classics</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/fashion-gifts" data-img="//bodleianshop.co.uk/cdn/shop/products/Bookshelves_Tie_400x.jpg?v=1565890107" >
+                  <span class="sub-nav-item-link-title">Fashion Gifts</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/oxford-university" data-img="//bodleianshop.co.uk/cdn/shop/files/Oxford_University_Belt___Shield_Logo_Hoody_Blue_1000px_400x.jpg?v=1698243123" >
+                  <span class="sub-nav-item-link-title">Official University of Oxford Apparel</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/games-toys" data-img="//bodleianshop.co.uk/cdn/shop/products/High_Jinks_Jigsaw_400x.jpg?v=1527582142" >
+                  <span class="sub-nav-item-link-title">Games & Toys</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/gifts-for-book-lovers" data-img="//bodleianshop.co.uk/cdn/shop/files/I_Buy_Books_Bag_Updated_version_2_copy_9e3f7aa5-50e0-4a94-8656-37ba1f25ef92_400x.jpg?v=1740049806" >
+                  <span class="sub-nav-item-link-title">Gifts for Book Lovers</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/mothers-day-gifts" data-img="//bodleianshop.co.uk/cdn/shop/files/Bookstacknecklace1_400x.jpg?v=1740138338" >
+                  <span class="sub-nav-item-link-title">Gifts for Mother's Day</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/childrens" data-img="//bodleianshop.co.uk/cdn/shop/products/Aesops-Fables_web_400x.jpg?v=1601889599" >
+                  <span class="sub-nav-item-link-title">Gifts for Children</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/gifts-for-the-home" data-img="//bodleianshop.co.uk/cdn/shop/products/Walnut_Large_Book_Light_400x.jpg?v=1553787042" >
+                  <span class="sub-nav-item-link-title">Gifts for the Home</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/games-toys" data-img="//bodleianshop.co.uk/cdn/shop/products/High_Jinks_Jigsaw_400x.jpg?v=1527582142" >
+                  <span class="sub-nav-item-link-title">Jigsaws & Games</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/friends-membership" data-img="//bodleianshop.co.uk/cdn/shop/products/FriendsPadk_400x.jpg?v=1605805911" >
+                  <span class="sub-nav-item-link-title">Membership</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/stationery-gifts" data-img="//bodleianshop.co.uk/cdn/shop/products/Hobbies_Foil_Notebook_400x.jpg?v=1525791040" >
+                  <span class="sub-nav-item-link-title">Stationery Gifts</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+            </ul>
+          </div>
+        
+      </li>
+    
+
+      
+    	
+      
+
+      <li class="nav-item">
+
+        <a class="nav-item-link" href="/collections/j-r-r-tolkien" >
+          <span class="nav-item-link-title">J.R.R. Tolkien</span>
+          
+        </a>
+
+        
+      </li>
+    
+
+      
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+      
+
+      <li class="nav-item dropdown drop-norm">
+
+        <a class="nav-item-link" href="/collections/homeware" aria-haspopup="true" aria-expanded="false">
+          <span class="nav-item-link-title">Homeware</span>
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+    <path d="M0-.75h24v24H0z" fill="none"/>
+</svg>
+        </a>
+
+        
+
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+
+          
+
+          <div class="sub-nav count-7">
+            
+
+            <ul class="sub-nav-list">
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/decorations" data-img="//bodleianshop.co.uk/cdn/shop/files/RadCamWoodenChristmasDecoration_400x.jpg?v=1695368311" >
+                  <span class="sub-nav-item-link-title">Decorations</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/furniture" data-img="//bodleianshop.co.uk/cdn/shop/products/isokon-bodleian-libraries-chair_-_cut_out_400x.jpg?v=1525787576" >
+                  <span class="sub-nav-item-link-title">Furniture</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/games-toys" data-img="//bodleianshop.co.uk/cdn/shop/products/High_Jinks_Jigsaw_400x.jpg?v=1527582142" >
+                  <span class="sub-nav-item-link-title">Games & Toys</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/home-accessories" data-img="//bodleianshop.co.uk/cdn/shop/products/Raft-elves_cushion_400x.jpg?v=1527771934" >
+                  <span class="sub-nav-item-link-title">Home Accessories</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/keepcups" data-img="//bodleianshop.co.uk/cdn/shop/products/RedPlastic_400x.jpg?v=1637576809" >
+                  <span class="sub-nav-item-link-title">KeepCups</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/kitchenware" data-img="//bodleianshop.co.uk/cdn/shop/products/Dust_jacket_mug_front_400x.jpg?v=1589363376" >
+                  <span class="sub-nav-item-link-title">Kitchen and Dining</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/lamps" data-img="//bodleianshop.co.uk/cdn/shop/products/Gingko_leather_book_light_400x.jpg?v=1559644668" >
+                  <span class="sub-nav-item-link-title">Lighting</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+            </ul>
+          </div>
+        
+      </li>
+    
+
+      
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+      
+
+      <li class="nav-item dropdown drop-norm">
+
+        <a class="nav-item-link" href="/collections/stationery" aria-haspopup="true" aria-expanded="false">
+          <span class="nav-item-link-title">Stationery</span>
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+    <path d="M0-.75h24v24H0z" fill="none"/>
+</svg>
+        </a>
+
+        
+
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+
+          
+
+          <div class="sub-nav count-9">
+            
+
+            <ul class="sub-nav-list">
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/bookmarks" data-img="//bodleianshop.co.uk/cdn/shop/products/leather_bookmark_lib_stamp_red_b75809c4-80fb-443f-a4b4-dc071753c2b4_400x.jpg?v=1574437173" >
+                  <span class="sub-nav-item-link-title">Bookmarks</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/calendars-diarys" data-img="//bodleianshop.co.uk/cdn/shop/files/BodleianLibrariesMrsBeeton_sClassicDishesWallCalendar2025_9781835620816_400x.jpg?v=1730388520" >
+                  <span class="sub-nav-item-link-title">Calendars & Diaries</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/christmas-cards" data-img="//bodleianshop.co.uk/cdn/shop/collections/Christmas_Cards_400x.jpg?v=1684231679" >
+                  <span class="sub-nav-item-link-title">Christmas Cards</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/advent-calendar" data-img="//bodleianshop.co.uk/cdn/shop/products/st1299_-_christmas_bookshelf_advent_calendar_1_400x.jpg?v=1527603153" >
+                  <span class="sub-nav-item-link-title">Advent Calendars</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/desk-accessories" data-img="//bodleianshop.co.uk/cdn/shop/files/box-file-dark-cloud-archive-cr-600x800_400x.webp?v=1734692936" >
+                  <span class="sub-nav-item-link-title">Desk accessories</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/notecards" data-img="//bodleianshop.co.uk/cdn/shop/collections/Greetings_cards_400x.jpg?v=1684231492" >
+                  <span class="sub-nav-item-link-title">Greetings Cards</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/library-stamp" data-img="//bodleianshop.co.uk/cdn/shop/products/StampA4Portfolio_Red_400x.jpg?v=1621000544" >
+                  <span class="sub-nav-item-link-title">Library Stamp</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/notebooks-journals" data-img="//bodleianshop.co.uk/cdn/shop/products/Hobbies_Foil_Notebook_400x.jpg?v=1525791040" >
+                  <span class="sub-nav-item-link-title">Notebooks & Journals</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/writing-equipment" data-img="//bodleianshop.co.uk/cdn/shop/products/BodleianLogoPen_400x.jpg?v=1622212895" >
+                  <span class="sub-nav-item-link-title">Stationery</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+            </ul>
+          </div>
+        
+      </li>
+    
+
+      
+        
+
+        
+
+        
+
+        
+
+        
+      
+
+      <li class="nav-item dropdown drop-norm">
+
+        <a class="nav-item-link" href="/collections/accessories" aria-haspopup="true" aria-expanded="false">
+          <span class="nav-item-link-title">Jewellery & Accessories</span>
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+    <path d="M0-.75h24v24H0z" fill="none"/>
+</svg>
+        </a>
+
+        
+
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+
+          
+
+          <div class="sub-nav count-4">
+            
+
+            <ul class="sub-nav-list">
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/accessories-1" data-img="//bodleianshop.co.uk/cdn/shop/products/Oxford_Map_Glasses_Case_Lens_Cloth_400x.jpg?v=1525794248" >
+                  <span class="sub-nav-item-link-title">Accessories</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/bags-purses" data-img="//bodleianshop.co.uk/cdn/shop/collections/Leather_High_Jinks_Bags_and_purse_400x.jpg?v=1684332420" >
+                  <span class="sub-nav-item-link-title">Bags & Purses</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/jewellery" data-img="//bodleianshop.co.uk/cdn/shop/products/Green_device_studs_400x.jpg?v=1527852814" >
+                  <span class="sub-nav-item-link-title">Jewellery</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/scarves" data-img="//bodleianshop.co.uk/cdn/shop/products/Bookshelves_Scarf_400x.jpg?v=1565889990" >
+                  <span class="sub-nav-item-link-title">Scarves and Ties</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+            </ul>
+          </div>
+        
+      </li>
+    
+
+      
+        
+
+        
+
+        
+      
+
+      <li class="nav-item dropdown drop-norm">
+
+        <a class="nav-item-link" href="/collections/prints" aria-haspopup="true" aria-expanded="false">
+          <span class="nav-item-link-title">Prints</span>
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+    <path d="M0-.75h24v24H0z" fill="none"/>
+</svg>
+        </a>
+
+        
+
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+
+          
+
+          <div class="sub-nav count-2">
+            
+
+            <ul class="sub-nav-list">
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="https://bodleian.museoteca.com/web_index.jsp?null" >
+                  <span class="sub-nav-item-link-title">Custom Prints</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/ready-made-prints" data-img="//bodleianshop.co.uk/cdn/shop/products/A3_Raftelves_19ab4965-0e69-4c7a-afb2-1a9bb49661cf_400x.jpg?v=1575048408" >
+                  <span class="sub-nav-item-link-title">Ready-made Prints</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+            </ul>
+          </div>
+        
+      </li>
+    
+
+      
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+      
+
+      <li class="nav-item dropdown drop-norm">
+
+        <a class="nav-item-link" href="/collections" aria-haspopup="true" aria-expanded="false">
+          <span class="nav-item-link-title">Collections</span>
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+    <path d="M0-.75h24v24H0z" fill="none"/>
+</svg>
+        </a>
+
+        
+
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+
+          
+
+          <div class="sub-nav count-25">
+            
+
+            <ul class="sub-nav-list">
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/international-womens-day-2025" data-img="//bodleianshop.co.uk/cdn/shop/files/IMG-0175_400x.jpg?v=1733851619" >
+                  <span class="sub-nav-item-link-title">International Women's Day</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/oxford-university" data-img="//bodleianshop.co.uk/cdn/shop/files/Oxford_University_Belt___Shield_Logo_Hoody_Blue_1000px_400x.jpg?v=1698243123" >
+                  <span class="sub-nav-item-link-title">Official University of Oxford Apparel</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/alices-adventures-in-wonderland" data-img="//bodleianshop.co.uk/cdn/shop/files/IMG-0181_400x.jpg?v=1733864135" >
+                  <span class="sub-nav-item-link-title"> Alice's Adventures in Wonderland</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/bibliophile" data-img="//bodleianshop.co.uk/cdn/shop/products/9781851244713_400x.jpg?v=1553246763" >
+                  <span class="sub-nav-item-link-title">Bibliophile</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/bodleian-bookshelves-1" data-img="//bodleianshop.co.uk/cdn/shop/products/teatowel-high-jinks_1_400x.jpg?v=1527603165" >
+                  <span class="sub-nav-item-link-title">Bodleian Bookshelves</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/bodleian-buildings" data-img="//bodleianshop.co.uk/cdn/shop/collections/buildings_400x.jpg?v=1684331138" >
+                  <span class="sub-nav-item-link-title">Bodleian Buildings</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/bodleian-oath" data-img="//bodleianshop.co.uk/cdn/shop/products/Oath_Bag_400x.jpg?v=1526382961" >
+                  <span class="sub-nav-item-link-title">Bodleian Oath</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/books-about-books" data-img="//bodleianshop.co.uk/cdn/shop/products/9781851244737_400x.jpg?v=1537857046" >
+                  <span class="sub-nav-item-link-title">Books About Books</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/c-s-lewis" data-img="//bodleianshop.co.uk/cdn/shop/files/LewisOxford3D_400x.jpg?v=1698404517" >
+                  <span class="sub-nav-item-link-title">C.S.Lewis</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/childrens" data-img="//bodleianshop.co.uk/cdn/shop/products/Aesops-Fables_web_400x.jpg?v=1601889599" >
+                  <span class="sub-nav-item-link-title">Children's</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/graduation-gifts" data-img="//bodleianshop.co.uk/cdn/shop/products/Curators_Chair_400x.jpg?v=1527594035" >
+                  <span class="sub-nav-item-link-title">Graduation Gifts</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/harry-potter" data-img="//bodleianshop.co.uk/cdn/shop/products/9781526626585_400x.jpg?v=1630933605" >
+                  <span class="sub-nav-item-link-title">Harry Potter</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/jane-austen" data-img="//bodleianshop.co.uk/cdn/shop/files/IMG-0180_400x.jpg?v=1733857815" >
+                  <span class="sub-nav-item-link-title">Jane Austen</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/j-r-r-tolkien" data-img="//bodleianshop.co.uk/cdn/shop/collections/Tolkein5_400x.jpg?v=1684231177" >
+                  <span class="sub-nav-item-link-title">JRR Tolkien</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="https://bodleianshop.co.uk/collections/german-language-manuscripts-a-polonsky-foundation-project" >
+                  <span class="sub-nav-item-link-title">Language of Manuscripts</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/library-at-home" data-img="//bodleianshop.co.uk/cdn/shop/products/isokon-bodleian-libraries-chair_-_cut_out_400x.jpg?v=1525787576" >
+                  <span class="sub-nav-item-link-title">Library at Home</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/map-room-1" data-img="//bodleianshop.co.uk/cdn/shop/products/9781851242504_400x.jpg?v=1527603220" >
+                  <span class="sub-nav-item-link-title">Map Room</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/medieval" data-img="//bodleianshop.co.uk/cdn/shop/products/9781851244683_400x.jpg?v=1527603120" >
+                  <span class="sub-nav-item-link-title">Medieval</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/oxford" data-img="//bodleianshop.co.uk/cdn/shop/products/9781851245000_400x.jpg?v=1526556170" >
+                  <span class="sub-nav-item-link-title">Oxford</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/philip-pullman" data-img="//bodleianshop.co.uk/cdn/shop/collections/Bodley_Daemon_Philip_Pullman_400x.jpg?v=1699285373" >
+                  <span class="sub-nav-item-link-title">Philip Pullman</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/shakespeare" data-img="//bodleianshop.co.uk/cdn/shop/products/MakingofShakespeare_sFirstFolio2022EDITION3D_400x.jpg?v=1673356170" >
+                  <span class="sub-nav-item-link-title">Shakespeare</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/silence-please" data-img="//bodleianshop.co.uk/cdn/shop/products/Silence_Please_Mug_400x.jpg?v=1527164509" >
+                  <span class="sub-nav-item-link-title">Silence Please</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/sale" data-img="//bodleianshop.co.uk/cdn/shop/products/library_miscellany_bd0b20a8-739f-41c0-a0e9-952644ea601b_400x.jpg?v=1570619795" >
+                  <span class="sub-nav-item-link-title">Sale</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/souvenirs" data-img="//bodleianshop.co.uk/cdn/shop/products/Bodleian_Oath_Dangler_400x.JPG?v=1525361127" >
+                  <span class="sub-nav-item-link-title">Souvenirs</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/new-in" data-img="//bodleianshop.co.uk/cdn/shop/files/Divination3D_400x.jpg?v=1729073664" >
+                  <span class="sub-nav-item-link-title">New In</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+            </ul>
+          </div>
+        
+      </li>
+    
+
+      
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+      
+
+      <li class="nav-item dropdown drop-norm">
+
+        <a class="nav-item-link" href="/collections/exhibitions" aria-haspopup="true" aria-expanded="false">
+          <span class="nav-item-link-title">Exhibitions</span>
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+    <path d="M0-.75h24v24H0z" fill="none"/>
+</svg>
+        </a>
+
+        
+
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+          
+          
+
+
+          
+
+          <div class="sub-nav count-14">
+            
+
+            <ul class="sub-nav-list">
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/listen-in-how-radio-changed-the-home" data-img="//bodleianshop.co.uk/cdn/shop/files/9781851246311ListenIn3Dresized_400x.jpg?v=1733156961" >
+                  <span class="sub-nav-item-link-title">Listen In: How Radio Changed the Home</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/oracles-omens-and-answers" data-img="//bodleianshop.co.uk/cdn/shop/collections/DF80DEB4-A8F7-4B5B-A990-C467AFEB6086_400x.jpg?v=1733838485" >
+                  <span class="sub-nav-item-link-title">Oracles, Omens and Answers</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/book-marks-by-alice-fox/Book-Marks" data-img="//bodleianshop.co.uk/cdn/shop/files/PaperclipsCyanotype_400x.jpg?v=1725536998" >
+                  <span class="sub-nav-item-link-title">Book Marks</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/kafka-making-of-an-icon" data-img="//bodleianshop.co.uk/cdn/shop/files/Kafka3D_400x.jpg?v=1698403944" >
+                  <span class="sub-nav-item-link-title">Kafka: Making of an Icon</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/write-cut-rewrite" data-img="//bodleianshop.co.uk/cdn/shop/files/Cut3D_400x.jpg?v=1698404545" >
+                  <span class="sub-nav-item-link-title">Write, Cut, Rewrite</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/chaucer-here-and-now" data-img="//bodleianshop.co.uk/cdn/shop/files/Chaucer3D_400x.jpg?v=1693486559" >
+                  <span class="sub-nav-item-link-title">Chaucer Here and Now</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/alphabets-alive" data-img="//bodleianshop.co.uk/cdn/shop/files/foxandchavemedievalalphabettie_400x.jpg?v=1692273033" >
+                  <span class="sub-nav-item-link-title">Alphabets Alive!</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="https://bodleianshop.co.uk/collections/gifts-books" >
+                  <span class="sub-nav-item-link-title">Gifts & Books</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/a-new-power-photography-in-britain-1800-1850" data-img="//bodleianshop.co.uk/cdn/shop/products/InventingPhotography3D_400x.jpg?v=1673356125" >
+                  <span class="sub-nav-item-link-title">A New Power: Photography in Britain 1800–1850</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/bright-sparks-photography-and-the-talbot-archive" data-img="//bodleianshop.co.uk/cdn/shop/products/DarkRoom3D_400x.jpg?v=1673355969" >
+                  <span class="sub-nav-item-link-title">Bright Sparks: Photography and the Talbot Archive</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/tutankhamun-excavating-the-archive" data-img="//bodleianshop.co.uk/cdn/shop/products/Tutankhamun-web_400x.jpg?v=1633595746" >
+                  <span class="sub-nav-item-link-title">Tutankhamun: Excavating the Archive</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/exhibition-from-roots-to-seeds" data-img="//bodleianshop.co.uk/cdn/shop/collections/Roots_To_Seeds_400x.jpg?v=1684231502" >
+                  <span class="sub-nav-item-link-title">Roots to Seeds</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/map-room" data-img="//bodleianshop.co.uk/cdn/shop/products/9781851245154_400x.jpg?v=1546425348" >
+                  <span class="sub-nav-item-link-title">Talking Maps</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+<li class="sub-nav-item">
+                <a class="sub-nav-item-link" href="/collections/tolkien-maker-of-middle-earth" data-img="//bodleianshop.co.uk/cdn/shop/products/9781851244850_400x.jpg?v=1633074542" >
+                  <span class="sub-nav-item-link-title">Tolkien: Maker of Middle-earth</span>
+                  
+                </a>
+
+                
+              </li>
+
+              
+            </ul>
+          </div>
+        
+      </li>
+    
+
+
+      
+    	
+      
+
+      <li class="nav-item last">
+
+        <a class="nav-item-link" href="/collections/sale" >
+          <span class="nav-item-link-title">Sale</span>
+          
+        </a>
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <script id="mobile-navigation-template" type="text/template">
+  <nav id="mobile-nav">
+  <div class="inner">
+
+    
+    <form class="search-form" action="/search" method="get">
+      <input type="hidden" name="type" value="product" />
+      <button type="submit"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Search</title>
+  <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+  <path d="M0 0h24v24H0z" fill="none"/>
+</svg></button>
+      <input type="text" name="q" placeholder="Search"/>
+    </form>
+    
+
+    <div class="header">
+      <ul class="social-links plain">
+    
+    
+    
+    
+    
+    
+    
+  
+    
+</ul>
+    </div>
+
+    
+    <ul class="plain" role="navigation" aria-label="Mobile navigation">
+<li class="nav-item">
+          <a class="nav-item-link" href="/collections/bodleian-publishing">
+            Books
+          </a>
+
+          
+          <button class="open-sub-nav"
+            data-sub-nav="menu-1"
+            aria-haspopup="true"
+            aria-controls="sub-nav-menu-1"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Right</title>
+  <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/>
+</svg></button>
+          
+        </li>
+      
+<li class="nav-item">
+          <a class="nav-item-link" href="/collections/christmas">
+            Gifts
+          </a>
+
+          
+          <button class="open-sub-nav"
+            data-sub-nav="menu-2"
+            aria-haspopup="true"
+            aria-controls="sub-nav-menu-2"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Right</title>
+  <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/>
+</svg></button>
+          
+        </li>
+      
+<li class="nav-item">
+          <a class="nav-item-link" href="/collections/j-r-r-tolkien">
+            J.R.R. Tolkien
+          </a>
+
+          
+        </li>
+      
+<li class="nav-item">
+          <a class="nav-item-link" href="/collections/homeware">
+            Homeware
+          </a>
+
+          
+          <button class="open-sub-nav"
+            data-sub-nav="menu-4"
+            aria-haspopup="true"
+            aria-controls="sub-nav-menu-4"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Right</title>
+  <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/>
+</svg></button>
+          
+        </li>
+      
+<li class="nav-item">
+          <a class="nav-item-link" href="/collections/stationery">
+            Stationery
+          </a>
+
+          
+          <button class="open-sub-nav"
+            data-sub-nav="menu-5"
+            aria-haspopup="true"
+            aria-controls="sub-nav-menu-5"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Right</title>
+  <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/>
+</svg></button>
+          
+        </li>
+      
+<li class="nav-item">
+          <a class="nav-item-link" href="/collections/accessories">
+            Jewellery & Accessories
+          </a>
+
+          
+          <button class="open-sub-nav"
+            data-sub-nav="menu-6"
+            aria-haspopup="true"
+            aria-controls="sub-nav-menu-6"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Right</title>
+  <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/>
+</svg></button>
+          
+        </li>
+      
+<li class="nav-item">
+          <a class="nav-item-link" href="/collections/prints">
+            Prints
+          </a>
+
+          
+          <button class="open-sub-nav"
+            data-sub-nav="menu-7"
+            aria-haspopup="true"
+            aria-controls="sub-nav-menu-7"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Right</title>
+  <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/>
+</svg></button>
+          
+        </li>
+      
+<li class="nav-item">
+          <a class="nav-item-link" href="/collections">
+            Collections
+          </a>
+
+          
+          <button class="open-sub-nav"
+            data-sub-nav="menu-8"
+            aria-haspopup="true"
+            aria-controls="sub-nav-menu-8"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Right</title>
+  <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/>
+</svg></button>
+          
+        </li>
+      
+<li class="nav-item">
+          <a class="nav-item-link" href="/collections/exhibitions">
+            Exhibitions
+          </a>
+
+          
+          <button class="open-sub-nav"
+            data-sub-nav="menu-9"
+            aria-haspopup="true"
+            aria-controls="sub-nav-menu-9"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Right</title>
+  <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/>
+</svg></button>
+          
+        </li>
+      
+
+<li class="nav-item">
+          <a class="nav-item-link" href="/collections/sale">
+            Sale
+          </a>
+
+          
+        </li>
+      
+
+      
+        
+            <li class="account-nav-item border-top"><a href="/account/login" id="customer_login_link">Login</a></li>
+          
+            <li class="account-nav-item"><a href="/account/register" id="customer_register_link">Join</a></li>
+          
+        
+      
+
+      
+    </ul>
+  </div>
+
+  
+
+
+  
+
+  <div id="sub-nav-menu-1" class="sub-nav" data-is-subnav-for="menu-1">
+    <div class="header">
+      <a class="close-sub-nav" href="#"><span class="btn alt"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Left</title>
+  <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/>
+</svg></span> Back to previous</a>
+    </div>
+
+    <ul class="sub-nav-list plain">
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/book-of-the-month">Book of the Month</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/all-books">All Books</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/bodleian-publishing">Bodleian Publishing</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/about-the-library">About the Library</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/gift-humour">Gift & Humour</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/books-for-food-lovers">Books for Food Lovers</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/childrens-books">Children's Books</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/history">History</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/literature-language-arts">Literature, Language & Arts</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/local-interest">Local Interest</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/sale-books">SALE books</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/recently-published">Recently published</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/coming-soon">Coming Soon</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/pages/about-bodleian-publishing">About Bodleian Publishing</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/pages/catalogue">Publications Catalogue</a>
+        
+      </li>
+      
+    </ul>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  <div id="sub-nav-menu-2" class="sub-nav" data-is-subnav-for="menu-2">
+    <div class="header">
+      <a class="close-sub-nav" href="#"><span class="btn alt"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Left</title>
+  <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/>
+</svg></span> Back to previous</a>
+    </div>
+
+    <ul class="sub-nav-list plain">
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/calendars-diarys">Calendars & Diaries</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/classic-crime">Crime Classics</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/fashion-gifts">Fashion Gifts</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/oxford-university">Official University of Oxford Apparel</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/games-toys">Games & Toys</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/gifts-for-book-lovers">Gifts for Book Lovers</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/mothers-day-gifts">Gifts for Mother's Day</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/childrens">Gifts for Children</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/gifts-for-the-home">Gifts for the Home</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/games-toys">Jigsaws & Games</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/friends-membership">Membership</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/stationery-gifts">Stationery Gifts</a>
+        
+      </li>
+      
+    </ul>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  <div id="sub-nav-menu-4" class="sub-nav" data-is-subnav-for="menu-4">
+    <div class="header">
+      <a class="close-sub-nav" href="#"><span class="btn alt"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Left</title>
+  <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/>
+</svg></span> Back to previous</a>
+    </div>
+
+    <ul class="sub-nav-list plain">
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/decorations">Decorations</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/furniture">Furniture</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/games-toys">Games & Toys</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/home-accessories">Home Accessories</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/keepcups">KeepCups</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/kitchenware">Kitchen and Dining</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/lamps">Lighting</a>
+        
+      </li>
+      
+    </ul>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  <div id="sub-nav-menu-5" class="sub-nav" data-is-subnav-for="menu-5">
+    <div class="header">
+      <a class="close-sub-nav" href="#"><span class="btn alt"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Left</title>
+  <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/>
+</svg></span> Back to previous</a>
+    </div>
+
+    <ul class="sub-nav-list plain">
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/bookmarks">Bookmarks</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/calendars-diarys">Calendars & Diaries</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/christmas-cards">Christmas Cards</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/advent-calendar">Advent Calendars</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/desk-accessories">Desk accessories</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/notecards">Greetings Cards</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/library-stamp">Library Stamp</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/notebooks-journals">Notebooks & Journals</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/writing-equipment">Stationery</a>
+        
+      </li>
+      
+    </ul>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  <div id="sub-nav-menu-6" class="sub-nav" data-is-subnav-for="menu-6">
+    <div class="header">
+      <a class="close-sub-nav" href="#"><span class="btn alt"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Left</title>
+  <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/>
+</svg></span> Back to previous</a>
+    </div>
+
+    <ul class="sub-nav-list plain">
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/accessories-1">Accessories</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/bags-purses">Bags & Purses</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/jewellery">Jewellery</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/scarves">Scarves and Ties</a>
+        
+      </li>
+      
+    </ul>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  <div id="sub-nav-menu-7" class="sub-nav" data-is-subnav-for="menu-7">
+    <div class="header">
+      <a class="close-sub-nav" href="#"><span class="btn alt"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Left</title>
+  <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/>
+</svg></span> Back to previous</a>
+    </div>
+
+    <ul class="sub-nav-list plain">
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="https://bodleian.museoteca.com/web_index.jsp?null">Custom Prints</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/ready-made-prints">Ready-made Prints</a>
+        
+      </li>
+      
+    </ul>
+  </div>
+
+  
+
+  
+
+  
+  
+
+  
+
+  <div id="sub-nav-menu-8" class="sub-nav" data-is-subnav-for="menu-8">
+    <div class="header">
+      <a class="close-sub-nav" href="#"><span class="btn alt"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Left</title>
+  <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/>
+</svg></span> Back to previous</a>
+    </div>
+
+    <ul class="sub-nav-list plain">
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/international-womens-day-2025">International Women's Day</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/oxford-university">Official University of Oxford Apparel</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/alices-adventures-in-wonderland"> Alice's Adventures in Wonderland</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/bibliophile">Bibliophile</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/bodleian-bookshelves-1">Bodleian Bookshelves</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/bodleian-buildings">Bodleian Buildings</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/bodleian-oath">Bodleian Oath</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/books-about-books">Books About Books</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/c-s-lewis">C.S.Lewis</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/childrens">Children's</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/graduation-gifts">Graduation Gifts</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/harry-potter">Harry Potter</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/jane-austen">Jane Austen</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/j-r-r-tolkien">JRR Tolkien</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="https://bodleianshop.co.uk/collections/german-language-manuscripts-a-polonsky-foundation-project">Language of Manuscripts</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/library-at-home">Library at Home</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/map-room-1">Map Room</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/medieval">Medieval</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/oxford">Oxford</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/philip-pullman">Philip Pullman</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/shakespeare">Shakespeare</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/silence-please">Silence Please</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/sale">Sale</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/souvenirs">Souvenirs</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/new-in">New In</a>
+        
+      </li>
+      
+    </ul>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  <div id="sub-nav-menu-9" class="sub-nav" data-is-subnav-for="menu-9">
+    <div class="header">
+      <a class="close-sub-nav" href="#"><span class="btn alt"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Left</title>
+  <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/>
+</svg></span> Back to previous</a>
+    </div>
+
+    <ul class="sub-nav-list plain">
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/listen-in-how-radio-changed-the-home">Listen In: How Radio Changed the Home</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/oracles-omens-and-answers">Oracles, Omens and Answers</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/book-marks-by-alice-fox/Book-Marks">Book Marks</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/kafka-making-of-an-icon">Kafka: Making of an Icon</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/write-cut-rewrite">Write, Cut, Rewrite</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/chaucer-here-and-now">Chaucer Here and Now</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/alphabets-alive">Alphabets Alive!</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="https://bodleianshop.co.uk/collections/gifts-books">Gifts & Books</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/a-new-power-photography-in-britain-1800-1850">A New Power: Photography in Britain 1800–1850</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/bright-sparks-photography-and-the-talbot-archive">Bright Sparks: Photography and the Talbot Archive</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/tutankhamun-excavating-the-archive">Tutankhamun: Excavating the Archive</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/exhibition-from-roots-to-seeds">Roots to Seeds</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/map-room">Talking Maps</a>
+        
+      </li>
+      
+<li class="sub-nav-item">
+        <a class="sub-nav-item-link" href="/collections/tolkien-maker-of-middle-earth">Tolkien: Maker of Middle-earth</a>
+        
+      </li>
+      
+    </ul>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+
+  
+</nav>
+
+  </script>
+</div>
+
+
+  
+    <style type="text/css">
+      #shopify-section-header .notification {
+        background: #002147;
+        color: #ffffff;
+        border-color: #000e1e;
+      }
+      #shopify-section-header .notification a:hover {
+        color: #cccccc;
+      }
+    </style>
+
+    <div class="notification">
+      <a href="/pages/delivery-returns">
+        Free shipping for UK orders over £50*
+      </a>
+    </div>
+  
+
+
+
+
+
+
+</div>
+        </div>
+
+        <div id="content">
+          <div class="container">
+  <div class="reading-column">
+    <h1 class="page-title">Page not found</h1>
+    Sorry, we couldn't find this page. <a href="/collections/all">Click here</a> to continue shopping.
+  </div>
+</div><script data-locksmith>
+    var load = function () {
+
+
+            Locksmith.initializeSession({silent: true});
+
+
+      Locksmith.util.on('submit', 'locksmith-resource-form', function (event) {
+        event.preventDefault();
+        var data = Locksmith.util.serializeForm(event.target);
+        Locksmith.postResource(data, { spinner: false, container: 'locksmith-content' });
+      });
+
+      Locksmith.util.on('click', 'locksmith-manual-trigger', function (event) {
+        event.preventDefault();
+        Locksmith.postResource({}, { spinner: true, container: document });
+      });
+
+      Locksmith.submitPasscode = function (passcode) {
+        Locksmith.postResource(
+          { passcode: passcode },
+          { spinner: false, container: 'locksmith-content' }
+        );
+      };
+    };
+
+    if (typeof Locksmith !== 'undefined') {
+      load();
+    } else {
+      window.addEventListener('load', load);
+    }
+  </script>
+        </div>
+      </div><!-- /#page-wrap-content -->
+
+      <div id="shopify-section-footer" class="shopify-section"><footer id="page-footer" class="page-footer">
+  <div class="container">
+
+    <a class="hash-link" href="#page-wrap-content"><span class="beside-svg">Back to the top</span> <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg></a>
+
+    <div class="row section padless-top">
+
+      <div class="extra-column half column">
+        
+      </div>
+
+      <div class="social-column align-right-desktop full column">
+        <ul class="social-links plain">
+    
+    
+    
+    
+    
+    
+    
+  
+    
+</ul>
+      </div>
+
+    </div>
+
+    
+    <div class="row section padless-top">
+
+      
+      <div class="logo-column column">
+        
+          <a href="https://bodleianshop.co.uk" title=""><img src="//bodleianshop.co.uk/cdn/shop/files/5842f8afa6515b1e0ad75b2b_500x.png?v=1613520118" alt="" /></a>
+        
+      </div>
+      
+
+      <div class="text-column  column rte">
+        <p>The profit from your purchases helps fund the conservation, collection and care of the Bodleian Libraries’ archive of over 12 million printed items and outstanding special collections.</p>
+      </div>
+
+      <div class="links-column column" role="navigation" aria-label="Footer navigation">
+        <ul class="plain">
+          
+<li><a href="/pages/contact-us" title="">Contact Us</a></li>
+          
+<li><a href="/pages/about-us" title="">About Us</a></li>
+          
+<li><a href="/pages/delivery-returns" title="">Delivery & Returns</a></li>
+          
+<li><a href="/pages/wholesale-enquiries" title="">Wholesale Enquiries</a></li>
+          
+<li><a href="https://bodleianshop.co.uk/pages/brand-licencing" title="">Brand Licensing Enquiries</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="links-column column" role="navigation" aria-label="Secondary footer navigation">
+        <ul class="plain">
+          
+<li><a href="/pages/terms-conditions" title="">Terms & Conditions</a></li>
+          
+<li><a href="/pages/privacy-policy" title="">Privacy Policy</a></li>
+          
+<li><a href="/pages/terms-of-website-use" title="">Terms of Website Use</a></li>
+          
+<li><a href="https://visit.bodleian.ox.ac.uk/accessibility" title="">Accessibility Statement</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="links-column column" role="navigation" aria-label="Tertiary footer navigation">
+        <ul class="plain">
+          
+        </ul>
+      </div>
+
+    </div>
+
+    
+
+    <div class="inline-row spaced">
+      <div class="inline-item left">
+        <div class="copy">Copyright &copy; 2025 <a href="/" title="">Bodleian Libraries</a>.</div>
+
+
+
+      </div>
+
+      <div class="inline-item right last payment-methods">
+        
+        <img data-src="//bodleianshop.co.uk/cdn/shopifycloud/shopify/assets/payment_icons/apple_pay-f6db0077dc7c325b436ecbdcf254239100b35b70b1663bc7523d7c424901fa09.svg" alt="apple_pay" class="lazyload" />
+        
+        <img data-src="//bodleianshop.co.uk/cdn/shopifycloud/shopify/assets/payment_icons/google_pay-c66a29c63facf2053bf69352982c958e9675cabea4f2f7ccec08d169d1856b31.svg" alt="google_pay" class="lazyload" />
+        
+        <img data-src="//bodleianshop.co.uk/cdn/shopifycloud/shopify/assets/payment_icons/maestro-d2055c6b416c46cf134f393e1df6e0ba31722b623870f954afd392092207889c.svg" alt="maestro" class="lazyload" />
+        
+        <img data-src="//bodleianshop.co.uk/cdn/shopifycloud/shopify/assets/payment_icons/master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg" alt="master" class="lazyload" />
+        
+        <img data-src="//bodleianshop.co.uk/cdn/shopifycloud/shopify/assets/payment_icons/shopify_pay-957a48d1202dc65a7890b292de764ee886f7e64cea486ae82e291e9dc824c914.svg" alt="shopify_pay" class="lazyload" />
+        
+        <img data-src="//bodleianshop.co.uk/cdn/shopifycloud/shopify/assets/payment_icons/visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg" alt="visa" class="lazyload" />
+        
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+
+</div>
+
+      <a id="page-overlay" href="#" aria-controls="mobile-nav" aria-label="Close navigation"></a>
+    </div>
+  </div><!-- /#page-wrap -->
+
+  
+<div id="cart-summary">
+  <div class="inner">
+    <a class="close toggle-cart-summary" href="#">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Left</title>
+  <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/>
+</svg>
+      <span class="beside-svg">Continue shopping</span>
+    </a>
+    <h5 class="cart-summary-title">Your Order</h5>
+    
+    <p class="cart-summary-title">
+      You have no items in your cart
+    </p>
+    
+  </div>
+  <div class="cart-summary-footer">
+    <div class="cart-summary-subtotal border-top">
+      Subtotal:
+      <span class="amount">
+        <span class="theme-money">£0.00</span>
+      </span>
+    </div>
+    <div class="cart-summary-buttons border-top cf">
+      <div class="align-right">
+        <a class="btn checkout" href="/cart">View Cart</a>
+      </div>
+    </div>
+  </div>
+</div><!-- /#cart-summary -->
+
+
+
+  <script src="//bodleianshop.co.uk/cdn/shop/t/5/assets/vendor.js?v=33154836528794267291523953115" type="text/javascript"></script>
+  <script src="//bodleianshop.co.uk/cdn/shop/t/5/assets/theme.js?v=8955914497715974821697815460" type="text/javascript"></script>
+
+  
+  
+
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <title>Theodor Fontane: Notizbücher</title><!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet"><!-- Custom styles for this template -->
+        <link href="https://res.de.dariah.eu/cdn/fonts/Lato/v14/Lato.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="js/EasyAutocomplete-1.3.5/easy-autocomplete.min.css">
+        <link rel="stylesheet" type="text/css" href="js/EasyAutocomplete-1.3.5/easy-autocomplete.themes.css">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <link rel="stylesheet" type="text/css" href="css/elements.css">
+        <link rel="stylesheet" type="text/css" href="css/custom.css"><!-- strange fontane things ? -->
+        <link rel="stylesheet" type="text/css" href="css/trans.css">
+        <link rel="stylesheet" type="text/css" href="css/transcription.css">
+        <link rel="stylesheet" type="text/css" href="css/edited-text.css">
+        <link rel="stylesheet" type="text/css" href="css/specific.css">
+        <link rel="stylesheet" type="text/css" href="rest/xq/css.xql">
+        <link rel="stylesheet" type="text/css" href="css/vs.css">
+        <link href="fonts/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+        <script src="https://res.de.dariah.eu/cdn/js/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://res.de.dariah.eu/cdn/js/html5shiv/html5shiv.js"></script>
+        <script src="https://res.de.dariah.eu/cdn/js/respond/respond.min.js"></script>
+    <![endif]-->
+
+        <!-- GOLDEN LAYOUT -->
+        <script type="text/javascript" src="js/goldenLayout.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/goldenLayoutBase.css">
+        <link type="text/css" rel="stylesheet" href="css/goldenLayoutLight.css">
+
+    </head>
+    <body><!-- Navbar
+    ============= -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="TheTitle" class="col-md-2 hidden-sm hidden-xs" style="color: white; vertical-align: middle; padding-top: 0.5em; white-space:nowrap;">
+
+                    Theodor Fontane: Notizbücher.<br>Hrsg. von Gabriele Radecke
+
+                </div>
+                    <div class="col-md-10">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="index.html">
+                                <span class="navbar-brand hidden-sm"></span>
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav" data-template="nav:navitems">
+    <li class="dropdown" data-template="templates:each" data-template-from="navitems" data-template-to="item">
+                                    <li class="dropdown" data-template="templates:each" data-template-from="navitems" data-template-to="item">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-template="nav:head">Notizbuch-Edition
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" data-template="nav:subitems">
+            <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="kaesten.html?n=a">Kasten A (Notizbuch A1 bis A21)</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="kaesten.html?n=b">Kasten B (Notizbuch B1 bis B15)</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="kaesten.html?n=c">Kasten C (Notizbuch C1 bis C14)</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="kaesten.html?n=d">Kasten D (Notizbuch D1 bis D11)</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="kaesten.html?n=e">Kasten E (Notizbuch E1 bis E6)</a>
+            </li>
+                                            </li>
+        </ul>
+    </li>
+                                    <li class="dropdown" data-template="templates:each" data-template-from="navitems" data-template-to="item">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-template="nav:head">(Meta-) Edition
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" data-template="nav:subitems">
+            <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="doku.html?id=einfuehrung">Einführung</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="doku.html">Editorische Gesamtdokumentation</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="inhaltsverzeichnis.html">Inhaltsverzeichnis</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="doku.html?id=verzeichnis_der_abkuerzungen">Verzeichnis der Abkürzungen</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="editorische-abkuerzungen.html">Verzeichnis editorischer Abkürzungen</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="doku.html?id=gesamtdokumentation_verzeichnis_der_sonderzeichen">Verzeichnis der Sonderzeichen</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="doku.html?id=gesamtdokumentation_verzeichnis_editorischer_zeichen">Verzeichnis editorischer Zeichen</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="literaturvz.html">Literatur- und Siglenverzeichnis</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="register.html">Register</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <span> </span>
+            </li>
+                                            </li>
+        </ul>
+    </li>
+                                    <li class="dropdown" data-template="templates:each" data-template-from="navitems" data-template-to="item">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-template="nav:head">Projekt
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" data-template="nav:subitems">
+            <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="ueber-das-projekt.html">Über das Projekt</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="editionsteam.html">Editionsteam</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="institutionen.html">Institutionen</a>
+            </li>
+                                                <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                <a href="#contact">Kontakt</a>
+            </li>
+                                            </li>
+        </ul>
+    </li>
+                                    <li class="dropdown" data-template="templates:each" data-template-from="navitems" data-template-to="item">
+        <a href="zitationshinweise.html">Zitation</a>
+        <ul class="dropdown-menu" data-template="nav:subitems">
+            <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem"></li>
+        </ul>
+    </li>
+                                    <li class="dropdown" data-template="templates:each" data-template-from="navitems" data-template-to="item">
+        <a href="nutzungshinweise.html">Nutzung</a>
+        <ul class="dropdown-menu" data-template="nav:subitems">
+            <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem"></li>
+        </ul>
+    </li>
+                                </li>
+</ul>
+                                <!-- Search form for extra small screens -->
+                                <form class="navbar-form navbar-left visible-xs" role="search" action="results.html" method="GET">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Suche" data-template="templates:form-control" name="q">
+                                    </div>
+                                    <button type="submit" class="btn btn-blue">Go!</button>
+                                </form>
+
+                                <ul class="nav navbar-nav navbar-right hidden-xs">
+                                    <!-- Search Button -->
+                                    <div class="nav navbar-nav navbar-right hidden-xs">
+                                        <li id="search">
+                                            <a href="#" id="search-btn">
+                                            <i class="fa fa-search" id="search-icon"></i> Suche</a>
+                                            <div class="search-box hidden" id="search-box">
+                                                <form class="navbar-form" role="search" action="results.html" method="GET">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Suche" data-template="templates:form-control" name="q">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-default" type="submit">
+                                                                <span class="glyphicon glyphicon-search"></span>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content-container">
+    <div id="wrapper">
+        <div id="wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="tmpllist">
+                            <ul>
+                                <li class="animated slideInLeft first">
+                                    <span style="font-weight: bolder;">Theodor Fontane: Notizbücher</span>
+                                </li>
+                                <li class="animated slideInLeft second hidden-xs">
+                                    <span style="font-size: smaller;white-space: nowrap;">Digitale genetisch-kritische und kommentierte Edition</span>
+                                </li>
+                                <li class="animated slideInLeft third">
+                                    <span style="font-size: smaller;white-space: nowrap;">Hrsg. von Gabriele Radecke</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="block-header">
+                        <h2>
+                            <span class="title">Willkommen</span>
+                            <span class="decoration"></span>
+                            <span class="decoration"></span>
+                            <span class="decoration"></span>
+                        </h2>
+                    </div>
+                    <p>
+Die genetisch-kritische und kommentierte digitale Edition von Theodor Fontanes Notizbüchern
+ist ein von der <a href="http://gepris.dfg.de/gepris/projekt/193395716" rel="ugc nofollow">Deutschen Forschungsgemeinschaft</a>
+gefördertes Projekt. Sie entsteht an der <a href="http://www.uni-goettingen.de/de/154180.html" rel="ugc nofollow">Theodor
+Fontane-Arbeitsstelle</a> der Universität Göttingen und an der <a href="http://www.sub.uni-goettingen.de/" rel="ugc nofollow">
+Niedersächsischen Staats- und Universitätsbibliothek Göttingen</a>. Nach dem Ende der Förderung (30. September 2019) wird der philologische Teil der Edition ehrenamtlich weitergeführt.
+</p>
+                            <p>
+Aufgrund ihrer komplexen Beschaffenheit galten Fontanes 67 Notizbücher bislang als nicht
+edierbar. Das Zusammenwirken philologischer und digitaler Methoden sowie die Arbeit in der
+Virtuellen Forschungsumgebung <a href="http://www.textgrid.de/" rel="ugc nofollow">TextGrid</a> ermöglicht nun die
+erste kommentierte Gesamtedition.
+</p>
+                            <p>
+Presseresonanz:<br>
+
+</p>
+                            <p>
+Tilman Spreckelsen: <a href="https://www.faz.net/aktuell/wissen/erforschung-von-notizbuechern-besuch-im-steinbruch-des-autors-12813833.html" rel="ugc nofollow">Besuch im Steinbruch des Autors</a> (FAZ)<br>
+
+Zum 120. Todestag am 20. September 2018: <a href="https://www.uni-goettingen.de/de/3240.html?id=5141" rel="ugc nofollow">Theodor Fontane digital</a>
+        <br>
+
+Regine Buddeke: <a href="http://www.maz-online.de/Lokales/Ostprignitz-Ruppin/Neuruppin/Fontanes-Wanderungen-muessen-neu-bewertet-werden" rel="ugc nofollow">Fontanes Notizbücher enthüllen Erstaunliches zu den Wanderungen</a> (Märkische Allgemeine Zeitung)<br>
+
+Anja Reinbothe-Occhipinti: <a href="http://www.maz-online.de/Lokales/Ostprignitz-Ruppin/Theodor-Fontanes-Notizbuch-A1-Eine-Sommerreise-durchs-Ruppinsche-von-1864-herausgegeben-von-Gabriele-Radecke-von-der-Uni-Goettingen" rel="ugc nofollow">Fontanes unbekannte Notizen. Eine Sommerreise durchs Ruppinsche</a> (Märkische Allgemeine Zeitung)<br>
+
+Jens Bisky: <a href="https://www.sueddeutsche.de/kultur/theodor-fontane-rezeption-fontane-jahr-1.4738966" rel="ugc nofollow">Interessantheitshöhepunkte</a> (Süddeutsche Zeitung)
+</p>
+                            <p>
+Vortrag:<br>
+
+</p>
+                            <p>
+Gabriele Radecke: <a href="http://cl-www.fernuni-hagen.de/videostreaming/archiv/ksw/video/video_2019-32.shtml" rel="ugc nofollow">Schneiden, Kleben und Skizzieren -Theodor Fontanes Notizbücher und die Entstehung der Wanderungen durch die Mark Brandenburg</a>
+</p>
+                    <br>
+                    <a href="content.html?id=ueber_das_projekt.md">
+                        <button type="button" class="btn btn-default btn-md btn-block">Über das Projekt</button>
+                    </a>
+                    <a href="fontane-projektflyer.pdf" target="_blank">
+                        <button type="button" class="btn btn-default btn-md btn-block">Projektflyer</button>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=a6CAdRiMIKg" target="_blank">
+                        <button type="button" class="btn btn-default btn-md btn-block">Interview zur digitalen Notizbuch-Edition</button>
+                    </a>
+                    <br>
+                    <!-- shows messages regarding this servers status
+                    <div data-template="f-misc:serverStatus"/>  -->
+                    <!-- shows messages regarding TextGrid Services
+                    <div data-template="f-misc:textgridStatus"/> -->
+
+                    <div class="info-board info-board-orange">
+                        <h4>Information</h4>
+                        <p>
+Am 19. Dezember 2019 wurden die letzten Notizbücher in einer beta-Version publiziert: <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a4" rel="nofollow">A4</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a12" rel="nofollow">A12</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a13" rel="nofollow">A13</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a17" rel="nofollow">A17</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a18" rel="nofollow">A18</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b12" rel="nofollow">B12</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c11" rel="nofollow">C11</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c12" rel="nofollow">C12</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=d5" rel="nofollow">D5</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=e2" rel="nofollow">E2</a>
+        </em> und <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=e3" rel="nofollow">E3</a>
+        </em>.
+</p>
+                                <p>
+Am 28. August 2019 wurden die folgenden Notizbücher in einer beta-Version publiziert: <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a3" rel="nofollow">A3</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a5" rel="nofollow">A5</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a9" rel="nofollow">A9</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b4" rel="nofollow">B4</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=d4" rel="nofollow">D4</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=d10" rel="nofollow">D10</a>
+        </em> und <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=e5" rel="nofollow">E5</a>
+        </em>.
+</p>
+                                <p>
+Am 26. Juli 2019 wurden die folgenden Notizbücher in einer beta-Version publiziert: <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a2" rel="nofollow">A2</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a7" rel="nofollow">A7</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c14" rel="nofollow">C14</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=d9" rel="nofollow">D9</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=d11" rel="nofollow">D11</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=e4" rel="nofollow">E4</a>
+        </em> und <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=e6" rel="nofollow">E6</a>
+        </em>.
+</p>
+                                <p>
+Am 23. Juli 2019 wurden die folgenden Notizbücher in einer beta-Version publiziert: <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c4" rel="nofollow">C4</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c9" rel="nofollow">C9</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c10" rel="nofollow">C10</a>
+        </em> und <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=d7" rel="nofollow">D7</a>
+        </em>.
+</p>
+                                <p>
+Am 5. Juli 2019 wurden die folgenden Notizbücher in einer beta-Version publiziert: <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a8" rel="nofollow">A8</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a10" rel="nofollow">A10</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a14" rel="nofollow">A14</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c1" rel="nofollow">C1</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c8" rel="nofollow">C8</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=d1" rel="nofollow">D1</a>
+        </em> und <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=d8" rel="nofollow">D8</a>
+        </em>.
+</p>
+                                <p>
+Am 7. Juni 2019 wurden die folgenden Notizbücher in einer beta-Version publiziert: <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b5" rel="nofollow">B5</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=d3" rel="nofollow">D3</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=d6" rel="nofollow">D6</a>
+        </em> und <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=e1" rel="nofollow">E1</a>
+        </em>. 
+</p>
+                                <p>
+Am 31. Mai 2019 wurden die folgenden Notizbücher in einer beta-Version publiziert: <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a20" rel="nofollow">A20</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b14" rel="nofollow">B14</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c2" rel="nofollow">C2</a>
+        </em> und <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=d2" rel="nofollow">D2</a>
+        </em>.
+</p>
+                                <p>
+Am 24. Mai 2019 wurden die folgenden Notizbücher in einer beta-Version publiziert: <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a11" rel="nofollow">A11</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a16" rel="nofollow">A16</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c3" rel="nofollow">C3</a>
+        </em> und <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c13" rel="nofollow">C13</a>
+        </em>.
+</p>
+                                <p>
+Am 29. März 2019, pünktlich zum Beginn des Fontane-Jubiläumsjahres, wurden die folgenden vier „Wanderungen“-Notizbücher in einer Beta-Version veröffentlicht: <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a6" rel="nofollow">A6</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a15" rel="nofollow">A15</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a19" rel="nofollow">A19</a> und </em>
+        <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a21" rel="nofollow">A21</a>
+        <em></em> sowie vier Theater-Notizbücher: <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b2" rel="nofollow">B2</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b6" rel="nofollow">B6</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b8" rel="nofollow">B8</a>
+        </em> und <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b13" rel="nofollow">B13</a>
+        </em> (Digitalisate, Transkription, TEI/XMl-Ansicht, Überblickskommentar, Inhaltsverzeichnis, Stellenkommentar, Register, Datierungen und Entitäten).
+</p>
+                                <p>
+Am 20. September 2018 wurden die Notizbücher zu den „Wanderungen“ (1864) <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=a1" rel="nofollow">A1</a>
+        </em> und zur Theaterkritik (1878-1882) <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b1" rel="nofollow">B1</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b3" rel="nofollow">B3</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b7" rel="nofollow">B7</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b9" rel="nofollow">B9</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b10" rel="nofollow">B10</a>
+        </em> und <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=b11" rel="nofollow">B11</a>
+        </em> in einer Beta-Version veröffentlicht  (Digitalisate, Transkription, TEI/XMl-Ansicht, Überblickskommentar, Inhaltsverzeichnis, Stellenkommentar, Register, Datierungen und Entitäten). Außerdem wurden die Notizbücher zur Reise nach Thüringen, die bereits 2015 veröffentlicht wurden, aktualisiert und mit Kommentaren und Registern versehen: <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c5" rel="nofollow">C5</a>
+        </em>, <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c6" rel="nofollow">C6</a>
+        </em> und <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c7" rel="nofollow">C7</a>
+        </em>.   
+</p>
+                                <p>
+Am 6. Oktober 2016 wurde die <a href="https://fontane-nb.dariah.eu/doku.html" rel="nofollow">Editorische Gesamtdokumentation</a> in einer
+Beta-Version publiziert. Sie umfasst das Gesamtkonzept der digitalen Fontane-Edition
+aufgrund der etwa 10.000 Notizbuchseiten.
+</p>
+                                <p>
+Am 14. Juli 2016 wurden die Notizbücher <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c5" rel="nofollow">C5</a>
+        </em> und
+<em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c6" rel="nofollow">C6</a>
+        </em> in einer Beta-Version veröffentlicht (Digitalisate,
+Transkription, TEI/XMl-Ansicht, Überblickskommentar, Inhaltsverzeichnis, Datierungen
+und Entitäten).
+</p>
+                                <p>
+Am 8. Dezember 2015 wurde das Notizbuch <em>
+            <a href="https://fontane-nb.dariah.eu/kaesten.html?n=c7" rel="nofollow">C7</a>
+        </em> in einer Beta-Version veröffentlicht
+(Digitalisate, Transkription, TEI/XML-Ansicht, Inhaltsverzeichnis).
+</p>
+                    </div>
+                </div><!-- Last updated
+        ================== -->
+                <div class="col-md-4">
+                    <div class="block-header">
+                        <h2>
+                            <span class="title">Neuigkeiten</span>
+                            <span class="decoration"></span>
+                            <span class="decoration"></span>
+                            <span class="decoration"></span>
+                        </h2>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#pub" data-toggle="tab">Publikationen</a>
+                        </li>
+                        <li>
+                            <a href="#preas" data-toggle="tab">Vorträge</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="pub">
+                            <div class="media">
+                                <div class="media-body">
+                                    <a href="http://www.uni-goettingen.de/de/publikationen/303721.html"> Übersicht </a>
+                                </div>
+                                <ul>
+                                    <ul>
+        <li>
+            <div> Gabriele Radecke: Schneiden, Kleben und Skizzieren Theodor Fontanes Notizbücher. In: Marcel Atze und Volker Kaukoreit (Hrsg.): »Gedanken Reisen, Einfälle kommen an« Die Welt der Notiz. Wien 2017. (Sichtungen, Bd. 16/17), S. 199–213.</div>
+</li>
+        <li>
+            <div> Gabriele Radecke, Heike Neuroth, Martin de la Iglesia und Mathias Göbel: Vom Nutzen digitaler Editionen – Die Genetisch-kritische Hybrid-Edition von Theodor Fontanes Notizbüchern erstellt mit der Virtuellen Forschungsumgebung TextGrid. In: Vom Nutzen der Editionen. Zur Bedeutung moderner Editorik für die Erforschung von Literatur- und Kulturgeschichte. Hrsg. von Thomas Bein. Berlin/Boston 2015 (= Beihefte zu editio. Bd. 39), S. 277–295.</div>
+</li>
+        <li>
+            <div> Gabriele Radecke: Materialautopsie. Überlegungen zu einer notwendigen Methode bei der Herstellung von digitalen Editionen am Beispiel der Genetisch-kritischen und kommentierten Hybrid-Edition von Theodor Fontanes Notizbüchern. In: TextGrid: Von der Community für die Community Eine Virtuelle Forschungsumgebung für die Geisteswissenschaften. Hrsg. von Heike Neuroth, Andrea Rapp und Sibylle Söring. Glückstadt 2015, S. 39–56.</div>
+</li>
+        <li>
+            <div> Martin de la Iglesia, Mathias Göbel: From Entity Description to Semantic Analysis: The Case of Theodor Fontane's Notebooks. In: Journal of the text encoding initiative. Issue 8 (2015).</div>
+</li>
+    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="preas">
+                            <div class="media">
+                                <div class="media-body">
+                                    <a href="http://www.uni-goettingen.de/de/vortr%C3%A4ge-und-pr%C3%A4sentationen/303717.html"> Übersicht </a>
+                                </div>
+                                <ul>
+                                    <ul>
+        <li>
+            <div> 6. November 2019: Haus der Brandenburgisch-Preußischen Geschichte, Potsdam (Rahmenprogramm zur Fontane-Ausstellung): Theodor Fontanes Notizbücher. Gespräch mit Dr. Christiane Barz und Dr. Gabriele Radecke. Es moderiert Dr. Kurt Winkler</div>
+</li>
+        <li>
+            <div> 19. Oktober 2019:Literaturherbst 2019 Götingen Universität Göttingen, Foyer der SUB, 15 Uhr Ausstellungseröffnung »Brandenburger Notizen: Fontane – Krüger – Kienzle. Eine Fotoausstellung.« Vortrag: Dr. Gabriele Radecke</div>
+</li>
+        <li>
+            <div> 26. September 2019: Stadtarchiv Dortmund: Dr. Gabriele Radecke: Schneiden, Kleben und Skizzieren - Theodor Fontanes Notizbücher und die Entstehung der „Wanderungen durch die Mark Brandenburg“. Vortrag</div>
+</li>
+        <li>
+            <div> 21. September 2019: Karwe. Dr. Gabriele Radecke: Theodor Fontane in Karwe und seine Notizbuchaufzeichnungen von 1864. Führung durch die Ausstellung und Vortrag.</div>
+</li>
+        <li>
+            <div> 20. September 2019: Fontane-Akademie der Fontane-Gesellschaft Neuruppin Gespräch über Fontane digital. Mit Dr. Gabriele Radecke und Prof. Dr. Peer Trilcke</div>
+</li>
+    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <footer id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="headline">
+                            <h3>Kontakt</h3>
+                        </div>
+                        <div class="content">
+                            <span>
+                                <img src="img/logo-tfa.png" alt="Logo der Fontane-Arbeitsstelle" width="75%">
+                            </span>
+                            <p>
+Georg-August-Universität Göttingen<br>
+Seminar für Deutsche Philologie<br>
+Theodor Fontane-Arbeitsstelle<br>
+Dr. Gabriele Radecke<br>
+Käte-Hamburger-Weg 3<br>
+D-37073 Göttingen<br>
+Tel.: +49 (0)551 / 39 - 10854<br>
+Fax: +49 (0)551 / 39 - 7511<br>
+E-Mail: <script type="text/javascript"><!--
+ document.write("<a href='mailto:gabriele.radecke" + "@" + "phil.uni-goettingen.de'>Gabriele Radecke</a>")
+// --></script>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="headline">
+                            <h3>Kontakt</h3>
+                        </div>
+                        <div class="content">
+                            <span>
+                                <img src="img/logo-sub.png" alt="Logo der SUB" width="75%">
+                            </span>
+                            <p>
+Georg-August-Universität Göttingen<br>
+Niedersächsische Staats- und Universitätsbibliothek Göttingen<br>
+Platz der Göttinger Sieben 1<br>
+D-37073 Göttingen<br>
+Tel.: +49 (0)551 / 39 - 9061<br>
+Fax: +49 (0)551 / 39 - 33856<br>
+E-Mail: <script type="text/javascript"><!--
+ document.write("<a href='mailto:mirjam.bluemm" + "@" + "th-koeln.de'>Mirjam Blümm</a>")
+// --></script>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="headline">
+                            <h3>Partner</h3>
+                        </div>
+                        <div class="content">
+                            <p>
+                                <img alt="Projektpartner" src="img/partner-c.png" width="100%">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="legal">
+            <img id="ccby" src="img/cc-by-small.png" alt="creative commons attribution">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>
+                            <a href="impressum.html">Impressum</a> |  <a href="datenschutz.html">Datenschutzerklärung</a> | <span><a href="#" data-toggle="modal" data-target="#citation">Zitationsempfehlung</a><!-- Modal window: -->
+                                <div class="modal fade" id="citation" tabindex="-1" role="dialog" aria-labelledby="citationrecommendation" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                                                <h4 class="modal-title">Zitationsempfehlung</h4>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="modal-body">
+                        Theodor Fontane: Notizbücher. Hrsg. von Gabriele Radecke.<br>http://fontane-nb.dariah.eu/index.html<br>
+                        abgerufen am: 8.3.2025</div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal --><!-- End of modal window --></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.lazyload.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/scrolltopcontrol.js"></script>
+        <!-- Scroll to top javascript -->
+        <script type="text/javascript" src="js/complex.js"></script>
+    </body>
+</html>

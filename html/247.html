@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>CEToM | Tocharian and the Tocharians</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="en">
+<meta http-equiv="cache-control" content="public">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index">
+<meta name="author" content="Content: CEToM, Program: Martin Braun, Design: Patricia Katharina Hoda">
+<link rel="shortcut icon" type="image/png" sizes="32x32" href="settings/skin/favicon_32.png">
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="settings/skin/favicon_48.png">
+<link rel="shortcut icon" type="image/png" sizes="192x192" href="settings/skin/favicon_192.png">
+<link rel="apple-touch-icon" type="image/png" sizes="167x167" href="settings/skin/favicon_167.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="settings/skin/favicon_180.png">
+<link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="settings/skin/favicon.ico">
+<link rel="stylesheet" type="text/css" href="settings/skin/tocharian.css">
+<meta http-equiv="expires" content="10">
+</head>
+
+<body>
+<div class="wrapper" style="width:100%;">
+
+<!-- Header & Logo -->
+<a href="/" title="CEToM | Home" style="text-decoration:none; color:black;">
+<div role="banner" class="logo">
+	<p><img src="settings/skin/logo_2024_160.png" alt="CEToM - A Comprehensive Edition of Tocharian Manuscripts"></p>
+</div>
+</a>
+
+<!-- Quicksearch -->
+<div style="position:relative; top:0px; right:0px;
+	white-space:nowrap; overflow:visible; height:0px;">
+<form name="quicksearch_form" action="?search3" method="post">
+	<input name="page" value="search3" type="hidden">
+	<input name="type" value="pagename" type="hidden">
+	<div style="position:absolute; top:12px; right:10px;">
+		<p title="Quicksearch"><label for="quicksearch_input">🔎︎</label> <input id="quicksearch_input" name="value" value="" style="width:100px;"
+			onfocusout="if(close == 1) { noResultsQuicksearch(); }"
+			autocomplete="off" placeholder="e.g. tht 639"></p>
+	</div>
+	<div id="quicksearch_result" class="comment"
+		onmouseover="close=0;"
+		onmouseout="close=1;"
+		style="position:absolute; top:22px; right:10px; z-index:3;
+		min-width:90px; max-width:400px; max-height:600px; text-overflow:ellipsis; overflow:hidden;
+		border:solid grey 2px; border-radius:10px 0px 10px 10px;
+		white-space:nowrap;"><p>[Error: Requires JavaScript.]</p>
+	</div>
+</form>
+
+<script type="text/JavaScript">
+var quicksearch_input = document.getElementById("quicksearch_input");
+var quicksearch_result = document.getElementById("quicksearch_result");
+var quicksearch_url = "module/ajax/quicksearch.cgi?group=";
+var quicksearch_old = "";
+var quicksearch_new = "";
+const noResults = "<p>[No search submitted.]</p>\n";
+var close = 1;
+noResultsQuicksearch();
+
+quicksearch_input.addEventListener("keyup", function(event)
+	{
+	quicksearch_new = quicksearch_input.value.replace(/[ ()]+$/, "");
+	quicksearch_new = quicksearch_new.replace(/[ ()]+/g, " ");
+	if(quicksearch_new.length >= 2)
+		{
+		const timer = setTimeout(function()
+			{
+			if(quicksearch_old != quicksearch_new)
+				{
+				req = new XMLHttpRequest();
+				req.onreadystatechange = handlerQuicksearch;
+				req.open("GET", quicksearch_url + "&value=" + quicksearch_input.value, true);
+				req.send(null);
+				}
+			quicksearch_old = quicksearch_new;
+			}, 1000);
+		}
+	else
+		{ noResultsQuicksearch(); }
+	});
+
+function handlerQuicksearch()
+	{
+	if (req.readyState != 4) { return; }
+	quicksearch_result.style.display = "block";
+	quicksearch_result.innerHTML = req.responseText;
+	}
+	
+function noResultsQuicksearch()
+	{
+	quicksearch_result.innerHTML = noResults;
+	quicksearch_result.style.display = "none";
+	}
+</script>
+</div>
+
+<!-- Menue -->
+<div role="navigation" aria-label="General navigation menue" class="menue" style="width: calc(100% - 180px);">
+<ul>
+	<li><a class="button" href="?About the project" title="Information about the aims, members, and collaborators of the CEToM project">Project</a></li>
+	<li><a class="button" href="?edition" title="Information about the editing method, abbreviations, and notation system used by CEToM">Edition</a></li>
+	<li><a class="button" href="?manuscripts" title="List of all Tocharian text fragments">Manuscripts</a></li>
+	<li><a class="button" href="?words" title="List of all Tocharian lexicon entries and inflected word forms">Words</a></li>
+	<li><a class="button" href="?nachlass_siegling" title="Letters, drafts, and other texts from the possession of Wilhelm Siegling (1880-1946)">Nachlass Siegling</a></li>
+	<li><a class="button" href="?bibliography" title="List of all bibliographical references">Bibliography</a></li>
+	<li><a class="button" href="?search3" title="Search the database for manuscript, word, or bibliography entries">Search</a></li>
+	<li><a class="button" href="?help">Help</a></li>
+	<li><a class="button" href="?contact">Contact</a></li>
+	<li><a class="button" href="?login">Login</a></li>
+
+</ul>
+</div>
+
+<!-- Announcements -->
+<!-- comment announcement -->
+
+<!-- Page-specific links -->
+<div role="navigation" aria-label="Page- and user-specific links" class="content"><a name="content"></a>
+
+<p class="editlinks" style="text-align:right;"> 
+ <a class="button" href="?home&amp;outputformat=print" target="_blank" title="Load this page in printable format.">print</a>
+</p>
+</div>
+
+<!-- Content -->
+<div role="main" class="content">
+
+<h1>Tocharian and the Tocharians</h1>
+<p style="margin-bottom:20px;">
+<b>English</b>
+| <a href="?home_de">Deutsch</a>
+| <a href="?home_fr">Français</a>
+| <a href="?home_ru">Русский</a>
+| <a href="?home_zh">中文</a>
+| <a href="?home_ja">日本語</a></p>
+
+<div class="img_right">
+<p><a href="images/qizil_1.jpg" target="blank">
+<img title="Qizil grottoes, Kucha region" alt="Qizil grottoes, Kucha region" src="images/qizil_1_small.jpg" border="0" width="170"></a></p>
+<p class="img_title">Qizil grottoes, Kucha region</p>
+</div>
+
+<p class="home_p">The Silk Road, the famous network of trade routes connecting China to the West, was essential not only for the transfer of material goods, but also for the exchange of language and culture. Along with many other Central Asian civilizations, Tocharian A and Tocharian B could so come to flourish as literary languages in the wake of the spread of Buddhism in the middle of the first millennium CE.</p>
+<p class="home_p">Although Tocharian was spoken in Kucha and Turfan along the northern edge of the Tarim Basin in North-West China (= present-day Xinjiang), it is not related to Chinese. Instead, Tocharian A and Tocharian B constitute a separate branch of the so-called Indo-European language family, which comprises ancient languages such as Latin, Greek and Sanskrit, as well as modern languages like English and Spanish.</p>
+
+<div class="img_left">
+<p><a href="images/manuscript_1.jpg" target="blank">
+<img title="Tocharian manuscript (IOL Toch 1)" alt="Tocharian manuscript" src="images/manuscript_1_small.jpg" border="0" width="170"></a></p>
+<p class="img_title">Tocharian manuscript <span style="white-space:nowrap;">(IOL Toch 1)</span></p>
+</div>
+
+<p class="home_p">Towards the end of the first millennium, Tocharian became extinct: it is now only known from documents that could be preserved over a period of more than 1000 years thanks to the arid climate of the Taklamakan Desert. The documents were discovered during a series of archaeological expeditions undertaken from the end of the nineteenth century onwards, and transferred to museums in China, Japan, and Europe.</p>
+<p class="home_p">Through the decipherment of these thousands of manuscripts precious insights into the civilization of the speakers of Tocharian can be gained: on the one hand, profane documents give information about every-day life; on the other hand, Buddhist religious and scientific texts are evidence of a highly developed literary culture.</p>
+<p class="home_p">It is the aim of our project to make all Tocharian texts available to everyone interested, by providing photographs, text transcriptions, and English translations with a commentary on the respective linguistic, philological, and cultural aspects. The text material is made accessible through a database with various search options, both grammatical and philological.</p>
+<p class="home_p">This project has started in February 2011 and was generously funded by the START Program of the <a href="http://www.fwf.ac.at/en/index.asp">Austrian Science Fund (FWF)</a> (Y492) until January 2017. It is currently maintained by the <A href="http://linguistik.univie.ac.at/">Department of Linguistics,</A> University of Vienna.</p>
+
+<div style="margin-top:40px;">
+<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FA-Comprehensive-Edition-of-Tocharian-Manuscripts%2F209301475876644%3Fref%3Dhl&amp;width=292&amp;height=290&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:290px;" allowTransparency="true"></iframe>
+</div>
+</div>
+
+<!-- Foot -->
+<div role="contentinfo" class="footer_url">
+<p class="foot"><a href="https://cetom.univie.ac.at/">https://cetom.univie.ac.at/</a><br><span title="Time and date in local server time, Vienna, Austria. (Format YYYY-MM-DD, hh:mm:ss.)">Output automatically generated on Sat, 2025-03-08, 08:56:40 (CET).
+	<br>Page cached on Mon, 2025-03-03, 20:40:30 (CET). <br>Page last edited on Tue, 2013-02-12, 15:45:36 (CET), by Hannes A. Fellner. Version 28.<br>Page created on Sun, 2011-05-08, 15:45:31 (CEST), by Melanie Malzahn.</span></p>
+</div>
+<div role="contentinfo" class="footer">
+
+<!-- Program runtime: 0.189208984375 seconds -->
+
+<!-- Sponsors -->
+<p class="copyright">
+	<a href="http://www.fwf.ac.at/" style="margin-right:20px;"><img src="settings/skin/fwf.png" border="0" title="FWF Der Wissenschaftsfonds" alt="FWF" style="height:24px;"></a>
+	<a href="http://www.univie.ac.at/"><img src="settings/skin/univie.png" border="0" title="Universität Wien" alt="Univie" style="height:24px;"></a></p>
+
+<!-- Copyright -->
+<p lang="de" class="copyright">Medieninhaber: Universität Wien, <a href="https://linguistics.univie.ac.at/">Institut für Sprachwissenschaft</a> | Inhalt: <a href="?About us#malzahn">Melanie Malzahn</a> | Programmierung: <a href="?About us#braun">Martin Braun</a> | Datenkonvertierung: <a href="?About us#koller">Bernhard Koller</a> | Design: <a href="?About us#hoda">Patricia Katharina Hoda</a><br><a href="https://dsba.univie.ac.at/datenschutzerklaerung">Datenschutzerklärung</a> || <a href="?barrierefreiheit">Erklärung zur Barrierefreiheit</a> || Copyright: Die Gesamtsite, alle enthaltenen Informationen, Grafiken, Seiten, eingetragene Markenzeichen und Ähnliches unterliegen dem Urheberrecht des jeweiligen Inhabers. Alle Rechte vorbehalten.</p>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <meta property="og:title" content="First Corinthians Vaticanus Arabicus 13"></meta>
+      <meta property="og:image" content="./data/input_data/images/thumb_fb.jpg"></meta>
+      <title>First Corinthians Vaticanus Arabicus 13</title>
+      <link rel="stylesheet" type="text/css" href="./css/main.css"></link>
+      <link rel="stylesheet" type="text/css" href="./css/page_data-include.css"></link>
+      <link rel="stylesheet" type="text/css" href="./css/jquery-ui-1.9.0.custom.css"></link>
+      <link rel="stylesheet" type="text/css" href="./css/ImageTextLink.css"></link>
+      <link rel="stylesheet" type="text/css" href="./css/jquery.jqzoom.css"></link>
+      <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css"></link>
+      <!--jQuery lib--><script type="text/javascript" src="./js/jquery_lib/jquery-latest.js"></script><script type="text/javascript" src="./js/jquery_lib/jquery-ui-latest.js"></script>
+      <!--/jQuery lib-->
+      <!--main lib--><script type="text/javascript" src="./js/main/interface_control.js"></script><script type="text/javascript" src="./js/main/utils.js"></script>
+      <!--/main lib-->
+      <!--keydown--><script src="./js/plugin/jquery.rafmas-keydown.js"></script>
+      <!--/keydown-->
+      <!--iViewer--><script type="text/javascript" src="./js/plugin/jquery_iviewer/jquery.mousewheel.min.js"></script><script type="text/javascript" src="./js/plugin/jquery_iviewer/jquery.iviewer.js"></script><script type="text/javascript" src="./js/plugin_settings/iviewer_config.js"></script>
+      <!--/iViewer-->
+      <!--magnifier--><script type="text/javascript" src="./js/plugin/jquery.jqzoom-core.js"></script><script type="text/javascript" src="./js/main/switchZM.js"></script>
+      <!--/magnifier-->
+      <!--hashchange--><script src="./js/plugin/jquery.ba-bbq.js"></script>
+      <!--/hashchange-->
+      <!--image text link--><script type="text/javascript" src="./js/main/ImageTextLink.js"></script>
+      <!--/image text link-->
+      <!--page data--><script type="text/javascript" src="./js/main/page_data-include.js"></script>
+      <!--/page data--></head>
+   <body>
+      <div id="global_wrapper">
+         <header id="main_header">
+            <div id="home_title">
+               							Project Tarsian
+               								
+               <div id="badge_title">beta</div>
+            </div>
+            <div id="home_subtitle">First Corinthians in Vaticanus Arabicus 13</div>
+            <div class="concave">
+               <div class="extTop">
+                  <div class="topleftconcave"></div>
+               </div>
+               <div class="botleftconcave"></div>
+            </div>
+            <div id="mode_switch"><a href="javascript:void(0);" id="txtimg_link" class="current_mode" title="Image|Text mode"><img src="images/img-txt.png" class="mainHeaderimg"></img></a><a href="javascript:void(0);" id="txttxt_link" title="Text|Text mode"><img src="images/txt-txt.png" class="mainHeaderimg"></img></a><a href="javascript:void(0);" id="imgd_link" title="Bookreader mode"><img src="images/double-view.png" class="mainHeaderimg"></img></a></div>
+            <div id="cont_fullscreen"><a href="javascript:void(0);" id="main_fullscreen" title="Fullscreen"><i class="fa fa-expand"></i></a></div>
+         </header>
+         <section id="central_wrapper"><i class="fa fa-caret-up" id="header_collapse" title="Toggle menu"></i><div class="main_left_arrow" onclick="UnInitialize()" title="Previous"></div>
+            <div class="main_right_arrow" title="Next"></div>
+            <div id="main_left_frame" style=""><i class="fa fa-caret-up go-full-left" id="goFullScreenLeft" title="Expand frame"></i><header id="left_header"><i class="fa fa-times-circle closeFullScreen" id="closeFullScreenLeft"></i><div id="left_menu"><span id="span_dd_select" class="like_select">
+                        <div class="main_dd_select"><span class="label_selected"></span><div class="open_select"><i class="fa fa-sort-asc"></i></div>
+                           <div class="option_container"></div>
+                        </div></span><span id="thumb_elem-add" class="iconButtons"><a href="javascript:void(0);" class="thumb_link"><i class="fa fa-th"></i></a></span><span id="span_ee_select-add" class="like_select">
+                        <div class="main_ee_select"><span class="label_selected"></span><div class="open_select"><i class="fa fa-sort-asc"></i></div>
+                           <div class="option_container"></div>
+                        </div></span><div id="image_menu"><span class="imageTopTool mainButtons" id="switchMag" value="mag" onclick="magOn()" title="Magnifying lens"><span>Magnifier</span><i class="fa fa-search"></i></span><span class="imageTopTool mainButtons" id="switchHS" value="HS" title="Hot spot" onclick="switchHS()"><span>HotSpot</span><i class="fa fa-circle-o"></i></span><span class="imageTopTool mainButtons" id="switchITL" value="turn ITL on" title="Image-Text link" onclick="switchIMT()"><span>TextLink</span><i class="fa fa-chain-broken"></i></span><span id="thumb_elem" class="iconButtons" title="Thumbnails"><a href="javascript:void(0);" class="thumb_link"><i class="fa fa-th"></i></a></span></div>
+                  </div>
+               </header>
+               <div id="image_cont">
+                  <div id="image_fade">
+                     <div id="image_elem"></div>
+                  </div>
+                  <div id="image_loading"><i class="fa fa-refresh fa-spin"></i></div>
+                  <div id="mag_image_elem"></div>
+                  <div id="image_tool">
+                     <div id="spb"><a id="zoom_orig" class="zoom_btn" href="javascript:void(0);" title="100%"><i class="icona">1:1</i></a><a id="zoom_fit" class="zoom_btn" href="javascript:void(0);" title="Fit to frame"><i class="fa fa-arrows-v"></i></a><a id="zoom_out" href="javascript:void(0);" title="Zoom out"><i class="fa fa-minus-circle"></i></a><div id="spb_cont">
+                           <div id="slider"></div>
+                        </div><a id="zoom_in" href="javascript:void(0);" title="Zoom in"><i class="fa fa-plus-circle"></i></a></div>
+                     <div id="zval"><span id="zvalint"><span id="val">0</span>%</span><span id="zvalopz"></span></div>
+                  </div><input id="dimFit" type="hidden" value=""></input><input id="imgTit" type="hidden" value=""></input><div id="thumb_cont">
+                     <figure class="thumb_single" id="folio_103r_small"><img src="data/input_data/images/single/folio_103r_small.jpg"></img><figcaption>103r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_103v_small"><img src="data/input_data/images/single/folio_103v_small.jpg"></img><figcaption>103v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_104r_small"><img src="data/input_data/images/single/folio_104r_small.jpg"></img><figcaption>104r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_104v_small"><img src="data/input_data/images/single/folio_104v_small.jpg"></img><figcaption>104v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_105r_small"><img src="data/input_data/images/single/folio_105r_small.jpg"></img><figcaption>105r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_105v_small"><img src="data/input_data/images/single/folio_105v_small.jpg"></img><figcaption>105v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_106r_small"><img src="data/input_data/images/single/folio_106r_small.jpg"></img><figcaption>106r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_106v_small"><img src="data/input_data/images/single/folio_106v_small.jpg"></img><figcaption>106v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_107r_small"><img src="data/input_data/images/single/folio_107r_small.jpg"></img><figcaption>107r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_107v_small"><img src="data/input_data/images/single/folio_107v_small.jpg"></img><figcaption>107v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_108r_small"><img src="data/input_data/images/single/folio_108r_small.jpg"></img><figcaption>108r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_108v_small"><img src="data/input_data/images/single/folio_108v_small.jpg"></img><figcaption>108v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_109r_small"><img src="data/input_data/images/single/folio_109r_small.jpg"></img><figcaption>109r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_109v_small"><img src="data/input_data/images/single/folio_109v_small.jpg"></img><figcaption>109v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_110r_small"><img src="data/input_data/images/single/folio_110r_small.jpg"></img><figcaption>110r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_110v_small"><img src="data/input_data/images/single/folio_110v_small.jpg"></img><figcaption>110v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_111r_small"><img src="data/input_data/images/single/folio_111r_small.jpg"></img><figcaption>111r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_111v_small"><img src="data/input_data/images/single/folio_111v_small.jpg"></img><figcaption>111v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_112r_small"><img src="data/input_data/images/single/folio_112r_small.jpg"></img><figcaption>112r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_112v_small"><img src="data/input_data/images/single/folio_112v_small.jpg"></img><figcaption>112v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_113r_small"><img src="data/input_data/images/single/folio_113r_small.jpg"></img><figcaption>113r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_113v_small"><img src="data/input_data/images/single/folio_113v_small.jpg"></img><figcaption>113v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_114r_small"><img src="data/input_data/images/single/folio_114r_small.jpg"></img><figcaption>114r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_114v_small"><img src="data/input_data/images/single/folio_114v_small.jpg"></img><figcaption>114v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_115r_small"><img src="data/input_data/images/single/folio_115r_small.jpg"></img><figcaption>115r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_115v_small"><img src="data/input_data/images/single/folio_115v_small.jpg"></img><figcaption>115v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_116r_small"><img src="data/input_data/images/single/folio_116r_small.jpg"></img><figcaption>116r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_116v_small"><img src="data/input_data/images/single/folio_116v_small.jpg"></img><figcaption>116v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_117r_small"><img src="data/input_data/images/single/folio_117r_small.jpg"></img><figcaption>117r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_117v_small"><img src="data/input_data/images/single/folio_117v_small.jpg"></img><figcaption>117v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_118r_small"><img src="data/input_data/images/single/folio_118r_small.jpg"></img><figcaption>118r</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_118v_small"><img src="data/input_data/images/single/folio_118v_small.jpg"></img><figcaption>118v</figcaption>
+                     </figure>
+                     <figure class="thumb_single" id="folio_120r_small"><img src="data/input_data/images/single/folio_120r_small.jpg"></img><figcaption>120r</figcaption>
+                     </figure>
+                  </div>
+               </div>
+            </div>
+            <div id="main_right_frame"><i class="fa fa-caret-up go-full-right" id="goFullScreenRight" title="Expand frame"></i><header id="right_header">
+                  <div id="right_menu"><span id="info_elem" class="iconButtons" title="info"><a href="about" target="_blank"><i class="fa fa-info-circle"></i></a></span><span id="span_tt_select" class="like_select" title="Text">
+                        <div class="main_tt_select"><span class="label_selected"></span><div class="open_select"><i class="fa fa-sort-asc"></i></div>
+                           <div class="option_container"></div>
+                        </div></span><span id="span_pp_select" class="like_select" title="Folio">
+                        <div class="main_pp_select"><span class="label_selected"></span><div class="open_select"><i class="fa fa-sort-asc"></i></div>
+                           <div class="option_container"></div>
+                        </div></span><span id="span_ee_select" class="like_select" title="Edition level">
+                        <div class="main_ee_select"><span class="label_selected"></span><div class="open_select"><i class="fa fa-sort-asc"></i></div>
+                           <div class="option_container"></div>
+                        </div></span><span id="github_elem" class="iconButtons" title="github"><a href="https://github.com/msank/tarsian-tei" id="github_link" target="_blank"><i class="fa fa-github"></i></a></span></div><i class="fa fa-times-circle closeFullScreen" id="closeFullScreenRight"></i></header>
+               <div id="text_cont">
+                  <div id="text_elem"></div>
+               </div>
+            </div>
+         </section>
+         <section id="central_button"><input id="folio_page_number" type="hidden" value=""></input></section>
+         <footer>
+            <div class="license-add"><span id="frameElt" class="iconButtons" title="About"><a href="about/#credits" target="_blank"><i class="fa fa-info-circle" aria-hidden="true" style="color:#3c322c"></i></a></span></div>
+         </footer>
+      </div>
+   </body>
+</html>

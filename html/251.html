@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>edition humboldt digital</title>
+        <link rel="canonical" href="https://edition-humboldt.de/">
+        <link rel="icon" href="https://edition-humboldt.de/resources/images/favicon.png" type="image/png">
+        <link rel="stylesheet" type="text/css" href="https://edition-humboldt.de/resources/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="https://edition-humboldt.de/resources/css/960.css">
+        <link rel="stylesheet" type="text/css" href="https://edition-humboldt.de/resources/css/main.css">
+        <link rel="stylesheet" type="text/css" href="https://edition-humboldt.de/resources/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="https://edition-humboldt.de/resources/css/gallery.css">
+        <link rel="stylesheet" media="screen,projection" href="https://edition-humboldt.de/resources/css/ui.totop.css">
+        <link rel="stylesheet" type="text/css" href="https://edition-humboldt.de/resources/css/startseite.css">
+        <link rel="stylesheet" href="https://edition-humboldt.de/resources/css/suche.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="https://edition-humboldt.de/resources/css/caroussel.css">
+        <script src="https://edition-humboldt.de/resources/js/slim.js" type="text/javascript"> </script>
+        <script src="https://edition-humboldt.de/resources/js/jquery-1.7.2.min.js" type="text/javascript"> </script>
+        <script src="https://edition-humboldt.de/resources/js/jquery-ui-1.10.3.custom.js" type="text/javascript"> </script>
+        <script src="https://edition-humboldt.de/resources/js/jquery.ui.totop.js" type="text/javascript"> </script>
+        <link rel="stylesheet" href="https://edition-humboldt.de/resources/css/leaflet.css">
+        <script src="https://edition-humboldt.de/resources/js/leaflet.js" type="text/javascript"> </script>
+        <script src="https://edition-humboldt.de/resources/js/jquery.collapser.min.js" type="text/javascript"> </script>
+        <script src="https://edition-humboldt.de/resources/js/jquery.truncate.js" type="text/javascript"> </script>
+        <script src="https://edition-humboldt.de/resources/js/headerFootnote.js" type="text/javascript"> </script>
+        <script src="https://edition-humboldt.de/resources/js/popupFussnotePosition.js" type="text/javascript"> </script>
+        <script src="https://edition-humboldt.de/resources/xslt/popup.js" type="text/javascript"> </script>
+        <script>
+                $(function() {
+                    $( ".accordion" ).accordion({
+                        active: 1,
+                        heightStyle: "content",
+                    });
+                });     
+                </script>
+        <script>
+            $(document).ready(function(){
+                $('.collapsedNote').collapser({
+                mode: 'block',
+                target: 'next',
+                effect: 'slide'
+                });
+            });
+            
+            
+            
+           $(document).ready(function(){
+            $('.truncate').each(function(){
+                
+                var trunCon = $(this);
+                trunCon.html(trunCon[0].innerHTML);                                       //Entfernt script-Element aus HTML. (Wie?)
+                trunCon.truncate({
+                length: '150',
+                ellipsis: '<a href="#endnote' + this.id + '"> (...)</a>',
+                words: true,
+                keepFirstWord: true
+                });
+                });
+            });
+            
+          
+        </script>
+        <script type="text/javascript">
+                var _paq = _paq || [];
+                _paq.push(["setVisitorCookieTimeout", "604800"]);
+                _paq.push(["setSessionCookieTimeout", "0"]);
+                /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+                _paq.push(['trackPageView']);
+                _paq.push(['enableLinkTracking']);
+                (function() {
+                var u="https://piwik.bbaw.de/";
+                _paq.push(['setTrackerUrl', u+'piwik.php']);
+                _paq.push(['setSiteId', '28']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+                })();
+            </script>
+        <noscript><img src="https://piwik.bbaw.de/piwik.php?idsite=28&amp;rec=1" style="border:0" alt=""></noscript>
+        <meta name="google-site-verification" content="CFybFEFKB-guBQivbjy_Z6-MSID1ZtRJSoBl5oiLwxY"></head>
+    <body id="">
+        <div class="outerLayer" id="navbar">
+            <div class="container_16">
+                <div class="grid_4"><a id="homelink" href="https://edition-humboldt.de/index.xql?l=de">
+                        <h1>edition humboldt digital</h1></a></div>
+                <div class="grid_12">
+                    <nav id="site-nav">
+                        <ul>
+                            <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0018392&amp;l=de">Reisetagebücher</a>
+                                <ul>
+                                    <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0018396&amp;l=de">Die amerikanische Reise (1799–1804)</a>
+                                        <ul>
+                                            <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0018393&amp;l=de">Tagebuch I</a></li>
+                                            <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H2743378&amp;l=de">Tagebuch II u. VI</a></li>
+                                            <li class="no-link"><span>Tagebuch III</span></li>
+                                            <li class="no-link"><span>Tagebuch IV</span></li>
+                                            <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0020393&amp;l=de">Tagebuch V</a></li>
+                                            <li class="no-link"><span>Tagebuch VII a et b</span></li>
+                                            <li class="no-link"><span>Tagebuch VII bb et c</span></li>
+                                            <li class="no-link"><span>Tagebuch VIII</span></li>
+                                            <li class="no-link"><span>Tagebuch IX</span></li>
+                                            <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0018394&amp;l=de">Isle de Cube. Antilles en général</a></li>
+                                            <li class="no-link"><span>Journal de Mexique à Veracruz</span></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0018397&amp;l=de">Europäische Reisen (1790–1805)</a>
+                                        <ul>
+                                            <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0018395&amp;l=de">England (1790)</a></li>
+                                            <li><a href="https://edition-humboldt.de/reisetagebuecher/detail.xql?id=H0019734&amp;l=de">Dresden, Wien, Salzburg (1797/98)</a></li>
+                                            <li><a href="https://edition-humboldt.de/reisetagebuecher/detail.xql?id=H0018407&amp;l=de">Paris–Toulon (1798)</a></li>
+                                            <li><a href="https://edition-humboldt.de/reisetagebuecher/detail.xql?id=H0018406&amp;l=de">Spanien (1799)</a></li>
+                                            <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0019737&amp;l=de">Italien (1805)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0018398&amp;l=de">Die russisch-sibirische Reise (1829)</a>
+                                        <ul>
+                                            <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0018417&amp;l=de">Fragmente des Sibirischen Reise-Journals</a></li>
+                                            <li class="no-link"><span>Observations astronomiques</span></li>
+                                            <li class="no-link"><span>Observations magnétiques</span></li>
+                                            <li><a href="https://edition-humboldt.de/themen/detail.xql?id=H0016785&amp;l=de">Ch. G. Ehrenberg: Tagebuch der russisch-sibirischen Reise</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="https://edition-humboldt.de/themen/index.xql?l=de">Themen</a>
+                                <ul>
+                                    <li><a href="https://edition-humboldt.de/themen/index.xql?id=H0018386&amp;l=de">Überblick</a></li>
+                                    <li><a href="https://edition-humboldt.de/themen/biowissenschaften.xql?l=de">Pflanzengeographie und Biowissenschaften</a></li>
+                                    <li><a href="https://edition-humboldt.de/themen/forschungsreisen.xql?l=de">Forschungsreisen</a></li>
+                                    <li class="no-link"><span>Das Wissen von der Erde</span></li>
+                                    <li class="no-link"><span>Kartographie und Entdeckungsgeschichte</span></li>
+                                    <li class="no-link"><span>Globalisierungsgeschichte und Anthropologie</span></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://edition-humboldt.de/briefe/index.xql?l=de">Briefe</a>
+                                <ul>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0005875&amp;l=de">Christian Gottfried Ehrenberg</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0011992&amp;l=de">Joseph Dalton Hooker</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0001517&amp;l=de">Carl Sigismund Kunth</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0014181&amp;l=de">Franz Julius Ferdinand Meyen</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0001123&amp;l=de">Johann Moritz Rugendas</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0015552&amp;l=de">Adolph Schlagintweit</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0015556&amp;l=de">Robert Schlagintweit</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0015557&amp;l=de">Hermann Schlagintweit-Sakünlünski</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0015643&amp;l=de">Moritz Richard Schomburgk</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0015644&amp;l=de">Otto Alfred Schomburgk</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0015645&amp;l=de">Robert Hermann Schomburgk</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0015944&amp;l=de">Samuel Thomas von Soemmerring</a></li>
+                                    <li><a href="https://edition-humboldt.de/briefe/index.xql?person=H0006403&amp;l=de">Karl Ludwig Willdenow</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://edition-humboldt.de/chronologie/index.xql?l=de">Chronologie</a></li>
+                            <li><a href="https://edition-humboldt.de/register/index.xql?l=de">Register</a></li>
+                            <li class="about"><a aria-label="Über diese Edition"><i class="fa fa-info-circle"> </i><span>Über diese Edition</span></a>
+                                <ul>
+                                    <li><a href="https://edition-humboldt.de/about/index.xql?id=H0016212&amp;l=de">Digitale Methodik</a></li>
+                                    <li><a href="https://edition-humboldt.de/richtlinien/index.html" target="_blank">Editionsrichtlinien <i class="fa fa-external-link-square"></i></a></li>
+                                    <li><a href="https://edition-humboldt.de/about/index.xql?id=H0020382&amp;l=de">Versionen</a></li>
+                                    <li><a href="https://edition-humboldt.de/about/index.xql?id=H0016214&amp;l=de">Berliner DH-Preis 2017</a></li>
+                                    <li><a href="https://edition-humboldt.de/about/index.xql?id=H0000002&amp;l=de">Zur Chronologie</a></li>
+                                    <li><a href="https://edition-humboldt.de/about/index.xql?id=H0002928&amp;l=de">Projektteam</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="search" href="https://edition-humboldt.de/suche/index.xql?l=de" aria-label="Suche"><i class="fa fa-search"> </i><span>Suche</span></a></li>
+                        </ul>
+                    </nav>
+                    <div id="language"><select id="languageSelect">
+                            <option value="https://edition-humboldt.de?&amp;l=en" title="This page in english">English</option>
+                            <option selected title="Diese Seite in deutsch">Deutsch</option></select>
+                        <script>
+                                    $(function(){
+                                    // bind change event to select
+                                    $('#languageSelect').on('change', function () {
+                                    var url = $(this).val(); // get selected value
+                                    if (url) { // require a URL
+                                    window.location = url; // redirect
+                                    }
+                                    return false;
+                                    });
+                                    });
+                                </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="outerLayer" id="header">
+            <header class="container_16">
+                <div class="grid_16">
+                    <div id="edition-title">
+                        <h1>edition <br>humboldt <br>digital</h1>
+                        <p class="edited-by">Herausgegeben von der <br>Berlin-Brandenburgischen <br>Akademie der Wissenschaften durch Ottmar Ette</p>
+                        <p class="version"><a href="about/index.xql?id=H0020382&amp;l=de">Version 10 vom 2. Juli 2024</a></p>
+                    </div>
+                    <div id="search-panel">
+                        <form id="search" action="https://edition-humboldt.de/suche/index.xql"><input name="q" id="q" value="" placeholder="Suchbegriff" autofocus><select name="type">
+                                <option value="all">Alles</option>
+                                <option disabled style="color: silver">──────────────</option>
+                                <option value="journal">Tagebücher</option>
+                                <option value="letter">Briefe</option>
+                                <option value="document">Dokumente</option>
+                                <option disabled style="color: silver">──────────────</option>
+                                <option value="article">Forschungsbeiträge</option>
+                                <option value="chronology">Chronologie</option>
+                                <option value="intro">Startseiten</option>
+                                <option disabled style="color: silver">──────────────</option>
+                                <option value="person">Personen</option>
+                                <option value="place">Orte</option>
+                                <option value="institution">Institutionen</option>
+                                <option value="glossary">Glossar</option>
+                                <option value="plant">Pflanzen</option>
+                                <option value="bibliography">Bibliographie</option>
+                                <option disabled style="color: silver">──────────────</option>
+                                <option value="index">Alle Register</option>
+                                <option value="edited-texts">Alle edierten Texte</option></select><input name="l" value="de" type="hidden"><button class="submit" type="submit"><i class="fa fa-search"></i> Suchen</button><br></form>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="outerLayer" id="content">
+            <div class="container_12">
+                <div class="grid_8 row1" id="gallery">
+                    <h3>Zeichnungen und Skizzen</h3>
+                    <section class="carousel" aria-label="Gallery">
+                        <ol class="carousel__viewport">
+                            <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/38v_1.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/89v_2.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ART_V/Frankreich-Tb_ART-V_PPN779883365_00000146-Sonnenflecken-Detail.jpg&amp;dh=180 "><a href="#carousel__slide9" class="carousel__prev">Go to last slide</a><a href="#carousel__slide2" class="carousel__next">Go to next slide</a></li>
+                            <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/26r.tif&amp;dw=1586&amp;dh=865&amp;ww=0.0931&amp;wh=0.1078&amp;wx=0.1325&amp;wy=0.4099 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/Schinkel/Graeser.jpg&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/29v&amp;dw=1618&amp;dh=897&amp;ww=0.0921&amp;wh=0.0749&amp;wx=0.6998&amp;wy=0.6276 "><a href="#carousel__slide1" class="carousel__prev">Go to last slide</a><a href="#carousel__slide3" class="carousel__next">Go to next slide</a></li>
+                            <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/ART_II-VI/00000042.tif&amp;dw=1858&amp;ww=0.0732&amp;wh=0.0295&amp;wx=0.5222&amp;wy=0.2303 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/138r&amp;dw=1618&amp;dh=897&amp;ww=0.1658&amp;wh=0.1159&amp;wx=0.201&amp;wy=0.7653 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/65v&amp;dw=820&amp;dh=1414&amp;ww=0.189&amp;wh=0.0611&amp;wx=0.5424&amp;wy=0.6943 "><a href="#carousel__slide2" class="carousel__prev">Go to last slide</a><a href="#carousel__slide4" class="carousel__next">Go to next slide</a></li>
+                            <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/87r_1.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/74r&amp;dw=1586&amp;dh=865&amp;ww=0.0913&amp;wh=0.0605&amp;wx=0.4196&amp;wy=0.2671 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/59r&amp;dw=1618&amp;dh=897&amp;ww=0.0916&amp;wh=0.0792&amp;wx=0.1248&amp;wy=0.8049 "><a href="#carousel__slide3" class="carousel__prev">Go to last slide</a><a href="#carousel__slide5" class="carousel__next">Go to next slide</a></li>
+                            <li id="carousel__slide5" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/76r&amp;dw=1618&amp;dh=897&amp;ww=0.4016&amp;wh=0.145&amp;wx=0.3382&amp;wy=0.7919 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/19r.tif&amp;dw=1586&amp;dh=865&amp;ww=0.3697&amp;wh=0.1736&amp;wx=0.2982&amp;wy=0.4871 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/2r.tif&amp;dw=788&amp;dh=1382&amp;ww=0.5933&amp;wh=0.3175&amp;wx=0.1656&amp;wy=0.2455 "><a href="#carousel__slide4" class="carousel__prev">Go to last slide</a><a href="#carousel__slide6" class="carousel__next">Go to next slide</a></li>
+                            <li id="carousel__slide6" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/Ehrenberg-Briefwechsel/1848_05_30-vEhrenberg_2&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/133r&amp;dw=1586&amp;dh=865&amp;ww=0.1914&amp;wh=0.1334&amp;wx=0.232&amp;wy=0.1735 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/138v&amp;dw=1586&amp;dh=865&amp;ww=0.2275&amp;wh=0.2185&amp;wx=0.1722&amp;wy=0.1572 "><a href="#carousel__slide5" class="carousel__prev">Go to last slide</a><a href="#carousel__slide7" class="carousel__next">Go to next slide</a></li>
+                            <li id="carousel__slide7" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/94r_1.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/95r_1.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/Cuba/146v_2.jpg&amp;dh=180 "><a href="#carousel__slide6" class="carousel__prev">Go to last slide</a><a href="#carousel__slide8" class="carousel__next">Go to next slide</a></li>
+                            <li id="carousel__slide8" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/35v&amp;dw=820&amp;dh=1414&amp;ww=0.111&amp;wh=0.0637&amp;wx=0.0754&amp;wy=0.2279 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/87v&amp;dw=1618&amp;dh=897&amp;ww=0.7587&amp;wh=0.6403&amp;wx=0.102&amp;wy=0.022 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/97v&amp;dw=1618&amp;dh=897&amp;ww=0.2701&amp;wh=0.1026&amp;wx=0.2291&amp;wy=0.4091 "><a href="#carousel__slide7" class="carousel__prev">Go to last slide</a><a href="#carousel__slide9" class="carousel__next">Go to next slide</a></li>
+                            <li id="carousel__slide9" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/65v&amp;dw=1060&amp;dh=1797&amp;ww=0.1905&amp;wh=0.0667&amp;wx=0.447&amp;wy=0.3778 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/servlet/Scaler?fn=projects/avhr/T2_Forschungsreisen/Briefe/Hooker/1849-04-26/00000019.tif&amp;dw=1858&amp;dh=889&amp;ww=0.9322&amp;wh=0.5669&amp;wx=0.039&amp;wy=0.009 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/GdP_Dokumente/Humboldts_Gliederung_19r.jpg&amp;dh=180 "><a href="#carousel__slide8" class="carousel__prev">Go to last slide</a><a href="#carousel__slide1" class="carousel__next">Go to next slide</a></li>
+                        </ol>
+                    </section><span><a class="button" style="float:right" href="gallery/index.xql?&amp;l=de">Zeichnungen und Skizzen</a></span></div>
+                <div class="grid_4 row1">
+                    <h3>Heute vor 228 Jahren</h3>
+                    <h4>08.03.1797</h4>
+                <p> H. führt dem <a href="https://edition-humboldt.de/register/personen/detail.xql?id=H0015372&amp;l=de">Herzog Carl August von Weimar</a>,
+                    der in <a href="https://edition-humboldt.de/register/orte/detail.xql?id=H0006574&amp;lde">Jena</a> weilt, Experimente vor. </p>
+            <p><a href="https://edition-humboldt.de/chronologie/detail.xql?id=H0014665&amp;l=de"><i class="fa fa-arrow-circle-right"> </i>Zum Eintrag in der Chronologie</a></p>
+                </div>
+                <hr class="clear">
+                <div class="grid_4 row1">
+                    <h3>Die Amerikanischen Reisetagebücher</h3>
+                    <p>Die Tagebücher der Amerikanischen Reise (1799-1804) sind die Schlüsselquelle zum Verständnis von Humboldts Reisewerk und Grundlage zur Aufarbeitung seines wissenschaftlichen Erbes. Die rund 3500 Seiten verbinden Beschreibungen des Reiseverlaufs mit Messergebnissen, literarischen Miniaturen, wissenschaftlichen Essays, Zeichnungen und Skizzen.</p><a class="button" href="reisetagebuecher/index.xql?id=H0018396&amp;l=de">Weitere Informationen</a></div>
+                <div class="grid_4 row1">
+                    <h3>Die Russisch-Sibirischen Reisetagebücher</h3>
+                    <p>Die Tagebücher der Russisch-Sibirischen Reise (1829) bestehen aus drei Konvoluten: die »Fragmente des Sibirischen Reise-Journals 1829« sowie zwei Bände mit später angefertigten Messungen zur Geodäsie und zum Erdmagnetismus. Die Aufzeichnung dieser Reise bilden die Grundlage für Humboldts dreibändiges Werk über Zentral-Asien.</p><a class="button" href="reisetagebuecher/index.xql?id=H0018398&amp;l=de">Weitere Informationen</a></div>
+                <div class="grid_4 row1">
+                    <h3>Themenschwerpunkte</h3>
+                    <p>Neben den Tagebüchern ediert das Vorhaben ausgewählte Bestände aus Humboldts Nachlass: Dokumente, Briefe, Notizen, Karten, die in unmittelbarem Zusammenhang mit Humboldts hemisphärischen Reisen stehen. Der erste Schwerpunkt ist dem <a href="themen/biowissenschaften.xql">Themenkomplex Biowissenschaften</a>, insbesondere Humboldts Aufzeichnungen zur Pflanzengeographie, gewidmet (Bearbeitungszeit 2015–2019). Der zweite Schwerpunkt erschließt den <a href="themen/forschungsreisen.xql">Themenkomplex Forschungsreisen</a> (2019–2024).</p><a class="button" href="themen/index.xql?l=de">Thema entdecken</a></div>
+                <hr class="clear">
+                <div class="grid_4 row1">
+                    <h3>Das Vorhaben</h3>
+                    <p>Die Hauptaufgabe des auf 18 Jahre projektierten Akademienvorhabens besteht in der vollständigen Herausgabe der Humboldt'schen Manuskripte zum Themenkomplex Reisen an der Schnittstelle von Kultur- und Naturwissenschaften. Sie bilden nicht nur die lebenslange Grundlage für die Redaktion der Reiseberichte, sondern wurden ebenso für die Entfaltung des gesamten 29-bändigen Amerikanischen Reisewerkes sowie zur Arbeit an <i>Asie centrale</i> (1843) oder am <i>Kosmos</i> (1845-1862) herangezogen.<br><a class="button" href="http://www.bbaw.de/forschung/avh-r/uebersicht ">Zum Vorhaben</a></p>
+                </div>
+                <div class="grid_8 row1" id="edp">
+                    <h3>edition humboldt print</h3>
+                    <p>Seit 2020 veröffentlicht das Vorhaben die Ergebnisse seiner Arbeit <br>auch in der Reihe <a href="https://www.springer.com/series/16345">edition humboldt print</a> (J. B. Metzler/Springer Nature).</p>
+                    <p><a href="https://link.springer.com/book/10.1007/978-3-662-64274-0"><img src="https://edition-humboldt.de/resources/images/edp_bdI.jpg" width="238px" style="margin-right:2.5rem"></a><a href="https://link.springer.com/book/10.1007/978-3-476-04965-0"><img src="https://edition-humboldt.de/resources/images/edp_bdIII.jpg" width="238px"></a></p>
+                </div>
+                <hr class="clear">
+                <div class="grid_8">
+                    <p class="bildnachweis">Hintergrundbild: Tafel XLII, Vue du Cayambe, in: Humboldt, Alexander von ([1810-]1813): <i>Vues des Cordillères et monumens des peuples indigènes de l'Amérique</i>. Paris: Schoell. (Quelle: Wellcome Library, London)</p>
+                </div>
+            </div>
+        </div>
+        <div class="outerLayer" id="footer">
+            <footer class="container_16">
+                <div class="grid_16">
+                    <h3>Über diese Publikation</h3>
+                </div>
+                <div class="grid_4">
+                    <p class="italic">
+            edition humboldt digital ist eine Publikation des Akademienvorhabens »Alexander von Humboldt auf Reisen – Wissenschaft aus der Bewegung« der Berlin-Brandenburgischen Akademie der Wissenschaften.</p>
+                </div>
+                <div class="grid_5">
+                    <p class="italic">Das Akademienvorhaben »Alexander von Humboldt auf Reisen – Wissenschaft aus der Bewegung« ist Teil des von Bund und Ländern geförderten Akademienprogramms, das der Erhaltung, Sicherung und Vergegenwärtigung unseres kulturellen Erbes dient. Koordiniert wird das Programm von der Union der Deutschen Akademien der Wissenschaften.</p>
+                </div>
+                <div class="grid_4"><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://edition-humboldt.de/resources/images/cc-by-sa.png" width="110"></a>
+                    <p><br>Alle Texte und TEI-XML-Daten dieser Website können – soweit nicht anders vermerkt – unter den Bedingungen der Creative Commons-Lizenz CC BY-SA 4.0 nachgenutzt werden.</p>
+                    <p><br><a href="https://github.com/telota/edition-humboldt-digital"><img src="https://edition-humboldt.de/resources/images/github_logo_light_32px.png" width="20"> Daten-Download ehd</a></p>
+                </div>
+                <div class="grid_3"><a href="http://www.bbaw.de"><img style="width: 180px;" src="https://edition-humboldt.de/resources/images/bbaw_logo.svg" title="Berlin-Brandeburgische Akademie der Wissenschaften" alt="Das Logo der Berlin-Brandenburgischen Akademie der Wissenschaften zeigt den Schriftzug neben einem Adler vor einem Sternenhimmel"></a><br><br><br>
+                    <p style="text-align: right;"><a href="https://edition-humboldt.de/impressum.xql?l=de">Impressum &amp; Datenschutz</a></p>
+                    <p style="text-align: right; color: silver;">Version 10 (02.07.2024)</p>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript">
+                        $(document).ready(function() {
+                        /*
+                        var defaults = {
+                        containerID: 'toTop', // fading element id
+                        containerHoverID: 'toTopHover', // fading element hover id
+                        scrollSpeed: 1200,
+                        easingType: 'linear' 
+                        };
+                        */
+                        
+                        $().UItoTop({ easingType: 'easeOutQuart' });
+                        
+                        });
+                    </script>
+        <script type="text/javascript">
+                    $('.tooltip').not('.add').not('.measure').not('.gap').mouseover(function(){
+                    
+                        //If this item is already selected, forget about it. 
+                        if ($(this).hasClass('active')) return;
+                    
+                        //Find the currently selected item, and remove the style class
+                        $('.active').removeClass('active');
+
+                        //Add the style class to this item 
+                        $(this).addClass('active');
+                    });
+                    $('.close').click(function(){
+                        $(".active").removeClass('active');
+                    });
+                </script>
+        <script type="text/javascript">
+                  
+                    $(document).ready(function(){
+                    window.addEventListener("keypress", myEventHandler, false);
+                    });
+                    
+                    function myEventHandler(e){
+                    if ((e.metaKey || e.ctrlKey) && ( String.fromCharCode(e.which).toLowerCase() === 'f') ) {
+                    alert( "DE: Bitte beachten Sie, dass die Suche mit STRG + F nur im Browser sichtbaren Text berücksichtigt. Um im vollständigen Dokumenttext zu suchen, stellen Sie bitte das Auswahlfeld zu Beginn des Dokuments auf 'Alle Anmerkungen im Text anzeigen'. Grundsätzlich raten wir zur Verwendung der eigens implementierten Suchfunktionen in der digitalen Edition.\n\nEN: Please note that the search with CTRL + F only considers text visible in the browser. To search the complete document text, please set the selection box at the beginning of the document to 'Alle Anmerkungen im Text anzeigen'. In general, we recommend using the specially implemented search functions in the digital edition." );
+                    }
+                    };
+                </script>
+        <script>
+                    $(document).ready(function(){
+                    
+                    $( "#contract-all" ).hide()
+                    $( "#expand-all" ).click(function() {
+                    $( "#expand-all" ).hide();
+                    $( "#contract-all" ).show();
+                    $('.collapsable .text').slideDown();
+                    });
+                    
+                    $( "#contract-all").click(function() {
+                    $( "#expand-all" ).show();
+                    $( "#contract-all" ).hide();
+                    if(!(window.location.href.indexOf("#") >= 1)) {
+                    $('.collapsable .text').slideUp();
+                    }});
+                    }); 
+                
+                </script>
+        <script type="text/javascript">
+                        if(window.location.href.indexOf("#") >= 1) {
+                        $( "#expand-all" ).ready(function() {
+                        $( "#expand-all" ).hide();
+                        $( "#contract-all" ).show();
+                        $('.collapsable .text').slideDown();
+                        });
+                        }
+                        else
+                        {$( "#expand-all" ).show();
+                        $( "#contract-all" ).hide();}
+                    </script>
+        <script>
+                    $("li").parent("td").css("padding-left","1.6em");
+                    $('.collapsable .text').slideUp();
+                </script>
+        <script>
+                    function changeMetaColor(node, newColor, newBackground){
+                        node.querySelector('h2').style.color=newColor;
+                        node.style.background=newBackground;
+                    };
+                </script>
+    </body>
+</html>

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html data-template="pages:app-root" data-app="/exist/apps/ssrq">
+    <head>
+        <title>Königsfelden Online</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Königsfelden Online">
+<!--        <link rel="shortcut icon" href="resources/images/favicon-ssrq-32.png"/>-->
+        <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"/> -->
+        <link rel="stylesheet" href="resources/fonts/material-icons.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/vendor/bootstrap-material-design.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/vendor/ripples.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/vendor/jquery.fileupload.css">
+        <link rel="stylesheet" type="text/css" href="resources/fonts/font.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/exist/apps/ssrq/transform/ssrq-norm.css">
+        <script type="text/javascript" src="resources/scripts/vendor/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="resources/scripts/vendor/bootstrap.min.js"></script>
+        <script type="text/javascript" src="resources/scripts/vendor/material.min.js"></script>
+        <script type="text/javascript" src="resources/scripts/vendor/ripples.min.js"></script>
+        <script type="text/javascript" src="resources/scripts/vendor/bootstrap3-typeahead.min.js"></script>
+        <script type="text/javascript" src="resources/scripts/vendor/jquery.fs.macaroon.min.js"></script>
+        <script type="text/javascript" src="resources/scripts/vendor/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="resources/scripts/app.js"></script>
+    </head>
+    <body id="body" data-template="i18n:translate" data-catalogues="resources/i18n">
+        <div id="content">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-template="i18n:translate" data-catalogues="resources/i18n">
+                <div class="container-fluid tp-row">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/" class="navbar-brand kf-header-logo">
+                <span>Königsfelden Online</span>
+            </a>
+            <a href="https://www.ag.ch/de/startseite_portal/startseite_portal.jsp" class="navbar-brand aargau-header-logo" target="_blank">
+                <span>Königsfelden Online</span>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li id="about">
+                    <a href="/exist/apps/ssrq/index.html?refresh=yes&amp;kanton=" class="tp-menu-item" title="Start">
+                        <div>
+                            Start
+                        </div>
+                        <!--<i class="material-icons">home</i>-->
+                    </a>
+                </li>
+                <li id="intro">
+                    <a href="/exist/apps/ssrq/intro.html" class="tp-menu-item" title="intro">
+                        <div>
+                            Einleitung
+                        </div>
+                        <!--<i class="material-icons">home</i>-->
+                    </a>
+                </li>
+                <li id="docs">
+                    <a href="/exist/apps/ssrq/documents.html" class="tp-menu-item" title="docs">
+                        <div>
+                            Dokumente
+                        </div>
+                    </a>
+                </li>
+                
+                <li id="trad">
+                    <a href="/exist/apps/ssrq/stemma.html" class="tp-menu-item" title="trad">
+                        <div>
+                            Überlieferung
+                        </div>
+                    </a>
+                </li>
+                <!--
+                <li id="archivordnung">
+                    <a href="$app/archivordnung.html" class="tp-menu-item" title="archivordnung">
+                        <div>
+                            <i18n:text key="archivordnung"/>
+                        </div>
+                    </a>
+                </li>
+                -->
+                <li id="map">
+                    <a href="/exist/apps/ssrq/map2.html" class="tp-menu-item" title="map">
+                        <div>
+                            Karte
+                        </div>
+                    </a>
+                </li>
+                <li id="registry">
+                    <a href="/exist/apps/ssrq/registry.html" class="tp-menu-item" title="registry">
+                        <div>
+                            Register
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!--
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <form class="navbar-form">
+                        <select id="lang-select" name="lang" class="form-control" data-template="templates:form-control">
+                            <option value="de">de</option>
+                            <option value="fr">fr</option>
+                        </select>
+                    </form>
+                </li>
+                <li data-template="browse:check-login">
+                    <a href="#loginDialog" data-toggle="modal" title="i18n(login)">
+                        <i class="material-icons">account_circle</i> <i18n:text key="login"/>
+                    </a>
+                    <a id="logout" href="#" title="i18n(logout)">
+                        <i class="material-icons">account_circle</i> <i18n:text key="logout"/> <span class="browse:current-user"/>
+                    </a>
+                </li>
+            </ul>
+            -->
+        </div>
+    </div>
+            </nav>
+     <STYLE type="text/css">
+  P { text-align: justify}
+ </STYLE>
+    
+    <section class="container-fluid">
+        <header class="tp-row">
+            <section class="col-md-12">
+                <div class="front-splash">
+                    <div class="front-splash-caption">
+                        <h1 style="color:black;">
+                           Die Urkunden und Akten des Klosters und des Oberamts Königsfelden
+                        </h1>
+                        <h2 style="color:black;">
+                            1308-1662
+                        </h2>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h3>
+                        Herausgegeben von Colette Halter-Pernet, Tobias Hodel und Simon Teuscher
+                        </h3>
+                    
+                        <h4>Bearbeitet von L. Barwitzki, S. Egloff, C. Halter-Pernet, F. Henggeler, T. Hodel, M. Nadig, A. Steinmann und S. Stettler. Technisch umgesetzt durch I. Prada Ziegler</h4>
+                    </div>
+                    <ul class="front-splash-image">
+                        <image src="resources/images/Startseite_0126.png" class="rounded img-fluid" alt="" title=""></image>
+                    </ul>
+                </div>
+            </section>
+        </header>
+
+        <main class="tp-row">
+            <section class="col-md-8">
+            <!--
+            <div id="introduction" class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                            <i18n:text key="introduction">Die Website befindet sich im Aufbau (sog. Beta-Version)</i18n:text>
+                        </h3>
+                </div>
+                </div>
+                -->
+            <div id="introduction" class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                            Königsfelden Online
+                        </h3>
+                </div>
+                
+                <div class="panel-body">
+                <p text-align="justify">
+               Geschichte des habsburgischen Dienstadels, der Monarchien und der städtischen Eliten im Gebiet der heutigen Schweiz, Wirtschaftsgeschichte eines Klosters, Adelsgeschichte aus Frauenperspektive, Archivierungstechniken und mehr – das Schriftgut Königsfeldens bietet Einblicke in vielfältige Themenbereiche. Die Zeugen ebendieser Geschichte(n), die Urkunden und Akten des Klosters und der nachmaligen Berner Hofmeisterei Königsfelden, die seit der Gründung des Klosters durch die Habsburger anfangs des 14. Jahrhunderts entstanden sind, wurden in einem mehrjährigen Projekt am Historischen Seminar der Universität Zürich digital aufbereitet. Dank der Auszeichnung der Urkunden – und Aktentranskriptionen mit Registerdaten wie auch der Verlinkung dieser zu externen Datenbanken eröffnet diese Online-Edition neue Dimensionen zur Erforschung vielfältiger historischer Fragestellungen.
+               </p>
+               <p>
+      
+                
+                Zur besseren Übersicht sind die Dokumente in Sammlungen gegliedert, die einen Zugang über einzelne Zeitabschnitte, Dorsualschichten oder nach Schlagwörtern ermöglichen.
+                </p>
+                <p>
+                
+                Mit der Volltextsuche kann auch nach Personen, Organisationen oder Orten gesucht und der Zeitraum dazu beliebig gewählt werden.
+                Unter <a href="registry.html">Register</a> können die einzelnen Entitäten durchstöbert werden.
+                
+                </p>
+                <p>
+                In der <a href="intro.html">Einleitung</a> findet sich eine Einführung zur Geschichte Königsfeldens wie auch zum digitalen Editionsprojekt.
+                </p>
+                <p>
+                Der Reiter <a href="stemma.html">Überlieferung</a> erlaubt einen experimentellen und visuellen Zugriff auf die Urkunden, Kopialbücher und Dorsualnotizen aus der Zeit bis 1500 und vermittelt die erste umfassende Archivordnung, die im 16. Jahrhundert entstanden ist. </p>
+                
+                <p>
+                Eine interaktive und zoombare <a href="map2.html">Karte</a> ermöglicht den Zugriff auf die Dokumente aus geographischer Perspektive.
+                </p>
+                <p>
+                Hier geht's zur Berichterstattung zum Projekt: <a href="intro.html#berichterstattung">Medien und Berichte</a>.
+                </p>
+                </div>
+                
+                </div>
+            </section>   
+            <section class="col-md-4">
+                <div>
+    <form action="search.html" class="form form-horizontal advanced-search">
+        <input type="hidden" name="refresh" value="true">
+        <div class="panel panel-info" data-template="i18n:translate" data-catalogues="resources/i18n">
+                                    <div class="panel-heading">
+                <h3 class="panel-title">
+                    Suche
+                    <a href="#" class="info-btn" data-toggle="modal" data-target="#searchInfo">
+                        <i class="material-icons">info</i>
+                    </a>
+                </h3>
+            </div>
+                                    <div class="panel-body">
+                <!--
+                <div class="form-group">
+                    <div class="col-md-12 col-xs-12">
+                        <select name="type" class="form-control" data-template="templates:form-control">
+                          <option value="text">
+                              <i18n:text key="text"/>
+                          </option>
+                          <option value="person">
+                              <i18n:text key="person"/>
+                          </option>
+                          <option value="organisation">
+                              <i18n:text key="organisation"/>
+                          </option>
+                          <option value="places">
+                              <i18n:text key="places"/>
+                          </option>
+                          <option value="lemma">
+                              <i18n:text key="lemma"/>
+                          </option>
+                          <option value="keywords">
+                              <i18n:text key="keywords"/>
+                          </option>
+                          
+                        </select>
+                    </div>
+                </div>
+                -->
+                <div class="form-group">
+                    <div class="col-md-12 col-xs-12">
+                        <span class="input-group">
+                            <input name="query" type="search" class="form-control typeahead-search" placeholder="Wonach suchen?" autocomplete="off" data-template="templates:form-control">
+                        </span>
+                    </div>
+                </div>
+                <h4>
+                    Suche im:</h4>
+                <ul class="control-list">
+                    <li>
+                        <label class="form-check-label">
+                            <input id="bearbeitungstext" Checked="" class="form-check-input" type="checkbox" value="" data-template="app:parse-params"> Bearbeitungstext
+                        </label>
+                        <ul>
+                            <li>
+                                <label class="form-check-label">
+                                    <input class="form-check-input bearbeitungstext" name="subtype" type="checkbox" value="title" data-template="templates:form-control"> Titel
+                                </label>
+                            </li>
+                            <li>
+                                <label class="form-check-label">
+                                    <input class="form-check-input bearbeitungstext" name="subtype" type="checkbox" value="regest" data-template="templates:form-control"> Regest
+                                </label>
+                            </li>
+                            <li>
+                                <label class="form-check-label">
+                                    <input class="form-check-input bearbeitungstext" name="subtype" type="checkbox" value="comment" data-template="templates:form-control"> Kommentar </label>
+                            </li>
+                            <li>
+                                <label class="form-check-label">
+                                    <input class="form-check-input bearbeitungstext" name="subtype" type="checkbox" value="notes" data-template="templates:form-control"> Anmerkungen </label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label class="form-check-label">
+                            <input class="form-check-input" name="subtype" type="checkbox" value="edition" checked data-template="templates:form-control">
+                            Editionstext </label>
+                    </li>
+                </ul>
+                <h4>
+                    Felder und Facetten:</h4>
+                <ul class="control-list">
+                    <li>
+                        <div class="form-group">
+                            <label class="control-label">
+                                Zeitraum: </label>
+                            
+                                <input type="number" name="filter-period-min" placeholder="1270" min="1270" max="1659" value="" data-template="app:parse-params">
+                                <span>-</span>
+                                <input type="number" name="filter-period-max" placeholder="1659" min="134" max="1659" value="" data-template="app:parse-params">
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                                Sprache: </label>
+                            <div class="col-sm-8">
+                                <select name="filter-language" class="form-control" data-template="templates:form-control">
+                                                            <option></option>
+                                                            <option>Frühneuhochdeutsch</option>
+                                                            <option>Latein</option></select>
+                            </div>
+                        </div>
+                        <!-- Dropdown eingefügt, anstelle Auswahlmöglichkeit (für Auswahlmöglichkeit Attribut multiple="multiple" einfügen in <select> -->
+                    </li>
+                    <!--
+                    <li>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                                <i18n:text key="archive"/>: </label>
+                            <div class="col-sm-8">
+                                <select name="filter-archive" class="form-control" data-template="query:list-archives">
+                                    <option/>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                                <i18n:text key="origPlace"/>: </label>
+                            <div class="col-sm-8">
+                                <select name="filter-pubplace" class="form-control" data-template="templates:form-control">
+                                    <option/>
+                                    <option value="yes">ja</option>
+                                    <option value="no">nein</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                                <i18n:text key="scribe"/>: </label>
+                            <div class="col-sm-8">
+                                <select name="filter-author" class="form-control" data-template="templates:form-control">
+                                    <option/>
+                                    <option value="yes">ja</option>
+                                    <option value="no">nein</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                                <i18n:text key="seal"/>: </label>
+                            <div class="col-sm-8">
+                                <select name="filter-seal" class="form-control" data-template="templates:form-control">
+                                    <option/>
+                                    <option value="yes">ja</option>
+                                    <option value="no">nein</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                                <i18n:text key="filliation"/>: </label>
+                            <div class="col-sm-8">
+                                <select name="filter-filiation" class="form-control" data-template="templates:form-control">
+                                    <option/>
+                                    <option value="yes">ja</option>
+                                    <option value="no">nein</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    -->
+                    <li>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                                Trägermaterial: </label>
+                            <div class="col-sm-8">
+                                <select name="filter-material" class="form-control" data-template="templates:form-control">
+                                                            <option></option>
+                                                            <option value="Papier">
+                                        Papier
+                                    </option>
+                                                            <option value="Pergament">
+                                        Pergament
+                                    </option></select>
+                            </div>
+                        </div>
+                    </li>
+                    <!--
+                    <li>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                                <i18n:text key="condition"/>: </label>
+                            <div class="col-sm-8">
+                                <select name="filter-condition" class="form-control" data-template="templates:form-control">
+                                    <option/>
+                                    <option value="yes">ja</option>
+                                    <option value="no">nein</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="form-group">
+                            <label class="col-sm-12 control-label">
+                                <i18n:text key="volume"/>: </label>
+                            <div class="col-sm-12">
+                                <select name="filter-kanton" class="form-control" multiple="multiple" data-template="templates:form-control">
+                                    <option/>
+                                    <option value="1308-1364">1308-1364</option>
+                                    <option value="1365-1415">1365–1415</option>
+                                    <option value="1416-1474">1416–1474</option>
+                                    <option value="1475-1528">1475–1528</option>
+                                    <option value="1529-1600">1529–1600</option>
+                                    <option value="1601-1650">1601-1650</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                                <i18n:text key="pubdate"/>: </label>
+                            <div class="col-sm-8" data-template="query:pubdate-range">
+                                <input type="number" name="filter-pubdate-min" placeholder="${min}" min="${min}" max="${max}" value="${filter-pubdate-min}" data-template="app:parse-params"/>
+                                <span>-</span>
+                                <input type="number" name="filter-pubdate-max" placeholder="${max}" min="${min}" max="${max}" value="${filter-pubdate-max}" data-template="app:parse-params"/>
+                            </div>
+                        </div>
+                    </li>
+                    -->
+                </ul>
+                <span class="input-group-btn">
+                    <button id="f-btn-search" type="submit" class="btn btn-primary">
+                        <span>Suche</span>
+                    </button>
+                    <button class="btn btn-primary" type="reset">
+                        <span>Zurücksetzen</span>
+                    </button>
+                </span>
+                <input type="hidden" name="doc" value="">
+            </div>
+                                </div>
+    </form>
+    <div class="modal fade" id="searchInfo">
+        <div class="modal-dialog" style="z-index: 1080;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span class="material-icons" aria-hidden="true">close</span>
+                        <span class="sr-only">
+                            Schließen
+                        </span>
+                    </button>
+                    <h4 class="modal-title">Erläuterungen zur Suche</h4>
+                </div>
+                <div class="modal-body content">
+                                            <style type="text/css">.document_heading {
+   font-size: 1.2em;
+}
+
+</style>
+                                            <section class="tei-div2">
+            <div class="tei-div3">
+               <h2 class="tei-head12">Volltextsuche</h2>
+               <ul class="tei-list2">
+                                                        <li class="tei-item">Exakte Suche eines Wortes oder einer Wortfolge</li>
+                                                        <li class="tei-item">Suche mit den Operatoren AND, OR oder AND NOT</li>
+                                                        <li class="tei-item">Wildcards für eine unscharfe Suche (z.B. wein* oder *haus)</li>
+                                                        <li class="tei-item">Platzhalter innerhalb eines Wortes (z.B. r*t; * für mehrere Zeichen; ? für ein Zeichen)</li>
+                                                    </ul>
+            </div>
+            <div class="tei-div3">
+               <h2 class="tei-head12">Erweiterte Suche nach Textgattung, Facetten, Felder</h2>
+               <p class="tei-p2">Personen:</p>
+               <ul class="tei-list2">
+                                                        <li class="tei-item">Nachnamen ohne Namelink</li>
+                                                        <li class="tei-item">Nachnamen und Vornamen. Namen durch Leerzeichen trennen (z.B.: Schmid Thomas)</li>
+                                                        <li class="tei-item">Personen ohne Nachnamen. NN Leerzeichen Vorname (z.B.: NN Ulrich)</li>
+                                                    </ul>
+               <p class="tei-p2">Familien/Organisationen; Orte; Lemma; Schlagworte:</p>
+               <ul class="tei-list2">
+                                                        <li class="tei-item">Standardschreibweise eingeben</li>
+                                                    </ul>
+            </div>
+            <p class="tei-p2">
+                    <a href="https://www.ssrq-sds-fds.ch/online/databases_doc.html" class="tei-ref5" target="_new">Detaillierter Beschrieb</a> zur Suche nach Personen, Organisationen, Orten
+               und Begriffen</p>
+         </section>
+                                        </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="resources/scripts/search.js"></script>
+</div>
+            </section>
+        </main>
+        
+        <main class="tp-row">
+            <section class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Sammlungen
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <table id="kantone" class="table">
+                                    <thead>
+                                        <tr>
+                                        
+                                            <th colspan="2">
+                                                Chronologische Aufteilung
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=Klostergruendung&amp;refresh=yes">Klostergründung</a><span class="badge">66</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=Agnes&amp;refresh=yes">Agnes von Ungarn in Königsfelden</a><span class="badge">300</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=Kopialbuch_1&amp;refresh=yes">Kopialbuch I (ca. 1335)</a><span class="badge">208</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=Reform&amp;refresh=yes">Reformansätze der herzoglichen Verwaltung</a><span class="badge">182</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=Kopialbuch_1a&amp;refresh=yes">Kopialbuch Ia (1417-1427)</a><span class="badge">63</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=BernHabsburg&amp;refresh=yes">Zwischen Bern und Habsburg</a><span class="badge">321</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=Kopialbuch_2&amp;refresh=yes">Kopialbuch II (ca. 1480-1530)</a><span class="badge">183</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=Bern&amp;refresh=yes">Intensivierung der Berner Verwaltung</a><span class="badge">208</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=Landvogtei&amp;refresh=yes">Säkularisation und Berner Landvogtei</a><span class="badge">55</span></span></td>
+                                                </tr>
+                                            </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4">
+                                <table id="dorsualtable" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Dorsualschichten
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=dorsual_01_latein_1&amp;refresh=yes"><span>Latein <i>pro</i> (&lt; 1321)</span></a><span class="badge">8</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=dorsual_02_uber_1&amp;refresh=yes"><span><i>ùber</i>, aus Besitz Agnes (&lt; 1343)</span></a><span class="badge">71</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=dorsual_03_kopie&amp;refresh=yes">Kopieverweis (&lt; 1370)</a><span class="badge">6</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=dorsual_04_uber_2&amp;refresh=yes"><span><i>ùber</i>, nicht aus Besitz Agnes (&lt; 1372)</span></a><span class="badge">83</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=dorsual_05_uber_3&amp;refresh=yes"><span><i>ùber</i> (&lt; 1381)</span></a><span class="badge">29</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=dorsual_06_doppel&amp;refresh=yes">Doppelaufstrich (&lt; 1408)</a><span class="badge">182</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_07_uber_4&amp;refresh=yes"><span><i>ùber</i> (&lt; 1417)</span></a><span class="badge">18</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_08_auftakt&amp;refresh=yes">Auftaktzeichen (&lt; 1418)</a><span class="badge">76</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_09_latein_2&amp;refresh=yes">Latein Franziskaner (&lt; 1429)</a><span class="badge">23</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_10_schraeg&amp;refresh=yes">Schräg, regelmässig (&lt; 1466)</a><span class="badge">32</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_11_uber_5&amp;refresh=yes"><span><i>ùber</i> (&lt; 1470)</span></a><span class="badge">16</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_12_fricker&amp;refresh=yes">Fricker (&lt; 1478)</a><span class="badge">108</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_13_eckig&amp;refresh=yes">Eckig (&lt; 1487) </a><span class="badge">36</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_14_rechnungsbuch&amp;refresh=yes">Rechnungsbuch Hofmeister (&lt; 1497)</a><span class="badge">81</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_15_textualis&amp;refresh=yes">Textualis, Orte und Siglen (&lt; 1497)</a><span class="badge">378</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_16_kanzlei&amp;refresh=yes">Kanzleihand Hofmeisterei (&lt; 1511)</a><span class="badge">20</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_17_notariat&amp;refresh=yes">Notariatsvermerk Papsturkunden (&lt; 1512)</a><span class="badge">12</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_18_brief&amp;refresh=yes">Zählung Brief (&lt; 1527)</a><span class="badge">128</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_19_latein_3&amp;refresh=yes">Latein divers (&lt; 1532)</a><span class="badge">53</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_20_regesta&amp;refresh=yes">Regest Bern (&lt; 1534)</a><span class="badge">801</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_21_kopialbuch&amp;refresh=yes">Kopialbuchverweis (&lt; 1568)</a><span class="badge">28</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_22_sigle&amp;refresh=yes">Sigle Bern (&lt; 1568)</a><span class="badge">978</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_23_sammelschicht_vor&amp;refresh=yes">Sammelschicht vor 1600</a><span class="badge">560</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_24_nummer&amp;refresh=yes">Nummer</a><span class="badge">268</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_25_zahl&amp;refresh=yes">Zahl</a><span class="badge">169</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_26_datierung_divers&amp;refresh=yes">Datierung divers</a><span class="badge">56</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_27_archiv&amp;refresh=yes">Archivverweis divers</a><span class="badge">135</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_28_datierung_urkunde&amp;refresh=yes">Datierung Urkundenwortlaut</a><span class="badge">122</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_29_jahreszahl_3&amp;refresh=yes">Jahreszahl dreistellig</a><span class="badge">320</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_30_jahreszahl_4&amp;refresh=yes">Jahreszahl vierstellig</a><span class="badge">274</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_31_staag&amp;refresh=yes">StAAG Signatur</a><span class="badge">948</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_32_staag_stempel&amp;refresh=yes">StAAG Stempel</a><span class="badge">988</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_33_staag_modern&amp;refresh=yes">StAAG modern</a><span class="badge">298</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_34_hga_stempel&amp;refresh=yes">HGA Stempel</a><span class="badge">0</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_35_speziell&amp;refresh=yes">Speziell</a><span class="badge">137</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_36_unleserlich&amp;refresh=yes">Unleserlich</a><span class="badge">59</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_dorsual">
+                                                    <td><span><a href="documents.html?kanton=dorsual_37_sammelschicht_nach&amp;refresh=yes">Sammelschicht nach 1600</a><span class="badge">83</span></span></td>
+                                                </tr>
+                                            </tbody>
+                                    <tr data-toggle="collapse" id="collapse_button" data-target=".collapse_dorsual">
+                                        <td>
+                                            <button class="btn btn-sm">Zeige mehr/weniger Dorsualschichten</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-4">
+                                <table id="termtable" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Häufigste Schlagwörter
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=key000001&amp;refresh=yes">Kaufgeschäft</a><span class="badge">449</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=key000033&amp;refresh=yes">Abgabe</a><span class="badge">268</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=key000005&amp;refresh=yes">Lehen</a><span class="badge">221</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=key000004&amp;refresh=yes">Bestätigung</a><span class="badge">145</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=key000003&amp;refresh=yes">Schenkung</a><span class="badge">136</span></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span><a href="documents.html?kanton=key000038&amp;refresh=yes">Konflikt</a><span class="badge">129</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000040&amp;refresh=yes">Urteil</a><span class="badge">118</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000002&amp;refresh=yes">Zehnt</a><span class="badge">105</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000007&amp;refresh=yes">Verfügung</a><span class="badge">101</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000014&amp;refresh=yes">Kirchensatz</a><span class="badge">99</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000031&amp;refresh=yes">Pfand</a><span class="badge">83</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000028&amp;refresh=yes">Privileg</a><span class="badge">77</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000017&amp;refresh=yes">Erlaubnis</a><span class="badge">70</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000010&amp;refresh=yes">Schulden</a><span class="badge">69</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000026&amp;refresh=yes">Jahrzeit</a><span class="badge">60</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000009&amp;refresh=yes">Seelenheil</a><span class="badge">59</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000012&amp;refresh=yes">Erbe</a><span class="badge">56</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000032&amp;refresh=yes">Mühle</a><span class="badge">54</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000022&amp;refresh=yes">Ordnung</a><span class="badge">48</span></span></td>
+                                                </tr>
+                                                <tr class="collapse collapse_terms">
+                                                    <td><span><a href="documents.html?kanton=key000020&amp;refresh=yes">Leibding</a><span class="badge">45</span></span></td>
+                                                </tr>
+                                            </tbody>
+                                    <tr data-toggle="collapse" id="collapse_button_2" data-target=".collapse_terms">
+                                        <td>
+                                            <button class="btn btn-sm">Zeige mehr/weniger Schlagwörter</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <main class="tp-row">
+            <section class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Mit freundlicher Unterstützung von
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-2">
+                                <img src="resources/images/snf_logo.png" style="height: 100%; width: 100%; object-fit: contain">
+                            </div>
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-2">
+                                <img src="resources/images/swisslos_logo_aargau.jpg" style="height: 100%; width: 100%; object-fit: contain">
+                            </div>
+                            <div class="col-xs-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer tp-row" data-template="i18n:translate" data-catalogues="resources/i18n">
+                    <div class="col-md-4">
+        <h5>
+            Kontakt
+        </h5>
+        <p>
+                Editionsprojekt Königsfelden<br>
+                Historisches Seminar der Universität Zürich<br>
+                Projektstelle Mittelalter<br>
+                Culmannstrasse 1<br>
+                8006 Zürich<br>
+
+
+                email: <a href="mailto:sekteuscher@hist.uzh.ch">sekteuscher@hist.uzh.ch</a>
+            <br>
+                <a href="https://www.hist.uzh.ch">https://www.hist.uzh.ch</a>
+        </p>
+    </div>
+                    <div class="col-md-3">
+        <h5>
+            Realisierung
+        </h5>
+        <p>
+            <a href="http://existsolutions.com">eXistSolutions GmbH</a>
+            <br>
+            <a href="http://www.ssrq-sds-fds.ch">Schweizerische Rechtsquellen (SSRQ)</a>
+            <br>
+            <a href="https://www.hist.uzh.ch/de/fachbereiche/mittelalter/lehrstuehle/teuscher/forschung/projekte/koenigsfelden.html">Editionsprojekt Königsfelden</a>
+        </p>
+    </div>
+                    <div class="col-md-3">
+        <h5>
+            
+        <a href="https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/intro.html#richtlinien">Transkriptionsrichtlinien</a>
+    
+        </h5>
+        <h5>
+            
+        <a href="https://www.ssrq-sds-fds.ch/wiki/Datierungsrichtlinien">Datierungsrichtlinien</a>
+    
+        </h5>
+        <h5>
+            
+        <a href="https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/intro.html#impressum">Impressum</a>
+    
+        </h5>
+        <h5>
+            
+        <a href="https://www.koenigsfelden.uzh.ch/exist/apps/ssrq/intro.html#datenschutz">Datenschutzerklärung</a>
+    
+        </h5>
+    </div>
+                    <div class="col-md-2">
+        <h5>
+            Lizenz: 
+        </h5>
+        <p>Plattform:
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a>
+        </p>
+        <p>Editionsdaten: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> 
+        </p>
+        <p>Alle Abbildungen der Dokumente und Akten sind gemeinfrei.
+        </p>
+    </div>
+                </footer>
+    </section>
+    <script type="text/javascript" src="resources/scripts/vendor/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/scripts/vendor/jquery.iframe-transport.js"></script>
+    <script type="text/javascript" src="resources/scripts/vendor/jquery.fileupload.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            'use strict';
+
+            function reloadDocTable() {
+                $("#documents-panel").load("templates/doc-table.html");
+            }
+            $('#fileupload').fileupload({
+                url: "modules/lib/upload.xql",
+                dataType: 'json',
+                done: function(e, data) {
+                    $.each(data.result.files, function (index, file) {
+                        var tr = document.createElement("tr");
+                        var td = document.createElement("td");
+                        var link = document.createElement("a");
+                        link.href = file.path;
+                        link.target = "_blank";
+                        var icon = document.createElement("span");
+                        icon.className = "material-icons";
+                        icon.appendChild(document.createTextNode("open_in_new"));
+                        link.appendChild(icon);
+                        td.appendChild(link);
+                        tr.appendChild(td);
+                        td = document.createElement("td");
+                        td.appendChild(document.createTextNode(file.path));
+                        tr.appendChild(td);
+                        $("#files").append(tr);
+                    });
+                    reloadDocTable();
+                },
+                progressall: function (e, data) {
+                    var progress = parseInt(data.loaded / data.total * 100, 10);
+                    $('#progress .progress-bar').css( 'width', progress + '%' );
+                }
+            }).prop('disabled', !$.support.fileInput)
+                .parent().addClass($.support.fileInput ? undefined : 'disabled');
+        });
+    </script>
+</div>
+        <div id="loginDialog" class="modal fade" tabindex="-1" style="display: none;">
+            <div class="modal-dialog" style="z-index: 1080;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">
+                            Login
+                        </h4>
+                    </div>
+                    <form class="form form-horizontal" action="" method="POST">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">
+                                    Benutzer:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="user" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">
+                                    Passwort:</label>
+                                <div class="col-sm-10">
+                                    <input type="password" name="password" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p>
+                                    Für ein neues Login oder bei Problemen bitte E-Mail an sekteuscher@hist.uzh.ch oder Feedback-Button drücken.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">
+                                Login
+                            </button>
+                        </div>
+                        <input type="hidden" name="duration" value="P7D">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="messageDialog" class="modal fade" tabindex="-1" style="display: none;">
+            <div class="modal-dialog" style="z-index: 1080;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Action</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="message"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">
+                            Schließen
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="pdf-info">
+            <div class="modal-dialog" style="z-index: 1080;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span class="fa fa-times" aria-hidden="true"></span>
+                            <span class="sr-only">
+                                Schließen
+                            </span>
+                        </button>
+                        <h4 class="modal-title">
+                            Erzeuge Datei...
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            
+        Das Erzeugen einer Datei zum Download kann bis zu mehrere Minuten dauern. Bitte warten Sie. Das Fenster sollte sich automatisch schließen, sobald
+        der Download beendet wurde.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            <i class="glyphicon glyphicon-remove"></i> Schließen
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" >
+<head>
+
+<meta charset="utf-8">
+<title>PMB</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+<link rel="stylesheet" href="/static/css/style.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+<link rel="manifest" href="/static/img/site.webmanifest">
+<link rel="mask-icon" href="/static/img/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/static/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function () {
+    var u = "https://matomo.acdh.oeaw.ac.at/";
+    _paq.push(['setTrackerUrl', u + 'piwik.php']);
+    _paq.push(['setSiteId', '124']);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+  })();</script>
+
+
+</head>
+
+<body class="d-flex flex-column h-100">
+    
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/static/img/project-logo.svg" alt="PMB-Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Info
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="/about/">Über das Projekt</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/export/">Datenexport</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Entitäten
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="/apis/entities/entity/person/list/">
+                                    <i class="bi bi-people apis-person"></i>
+                                    Personen
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/entities/entity/place/list/">
+                                    <i class="bi bi-map apis-place"></i>
+                                    Orte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/entities/entity/work/list/">
+                                    <i class="bi bi-book apis-work"></i>
+                                    Werke
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/entities/entity/event/list/">
+                                    <i class="bi bi-calendar3 apis-event"></i>
+                                    Ereignisse
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/entities/entity/institution/list/">
+                                    <i class="bi bi-building-gear apis-institution"></i>
+                                    Institutionen
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/metainfo/apis/metainfo/uri/">
+                                    <i class="bi bi-link-45deg apis-uri"></i>URIs
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Relationen
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="text-center">
+                                <a class="dropdown-item" href="/network/edges/">
+                                    <i class="bi bi-share"></i>
+                                    Alle Relationen <i class="bi bi-share"></i>
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/relations/person-person/">
+                                    <i class="bi bi-people apis-person"></i>
+                                    Personen und <i class="bi bi-people apis-person"></i> Personen
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/relations/person-place/">
+                                    <i class="bi bi-people apis-person"></i>
+                                    Personen und <i class="bi bi-map apis-place"></i> Orte
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/relations/person-work/">
+                                    <i class="bi bi-people apis-person"></i>
+                                    Personen und <i class="bi bi-book apis-work"></i> Werke
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/relations/person-event/">
+                                    <i class="bi bi-people apis-person"></i>
+                                    Personen und <i class="bi bi-calendar3 apis-event"></i> Ereignisse
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="/apis/relations/person-institution/">
+                                    <i class="bi bi-people apis-person"></i>
+                                    Personen und <i class="bi bi-building-gear apis-institution"></i> Institutionen
+                                    
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <a class="dropdown-item" href="/apis/relations/institution-institution/">
+                                <i class="bi bi-building-gear apis-institution"></i>
+                                Institutionen und <i class="bi bi-building-gear apis-institution"></i>
+                                Institutionen
+                            </a>
+                            <a class="dropdown-item" href="/apis/relations/institution-place/">
+                                <i class="bi bi-building-gear apis-institution"></i>
+                                Institutionen und <i class="bi bi-building-gear apis-place"></i> Orte
+                            </a>
+                            <a class="dropdown-item" href="/apis/relations/institution-work/">
+                                <i class="bi bi-building-gear apis-institution"></i>
+                                Institutionen und <i class="bi bi-book apis-work"></i> Werke
+                                
+                            </a>
+                            <a class="dropdown-item" href="/apis/relations/institution-event/">
+                                <i class="bi bi-building-gear apis-institution"></i>
+                                Institutionen und <i class="bi bi-building-gear apis-event"></i> Ereignisse
+                            </a>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/relations/place_place/">
+                                    <i class="bi bi-map apis-place"></i>
+                                    Orte und <i class="bi bi-map apis-place"></i> Orte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/relations/place-work/">
+                                    <i class="bi bi-map apis-place"></i>
+                                    Orte und <i class="bi bi-book apis-work"></i> Werke
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/apis/relations/place-event/">
+                                    <i class="bi bi-map apis-place"></i>
+                                    Orte und <i class="bi bi-calendar3 apis-event"></i> Ereignisse
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <a class="dropdown-item" href="/apis/relations/event-event/">
+                                <i class="bi bi-map apis-event"></i>
+                                Ereignisse und <i class="bi bi-calendar3 apis-event"></i> Ereignisse
+                            </a>
+                            <a class="dropdown-item" href="/apis/relations/event-work/">
+                                <i class="bi bi-map apis-event"></i>
+                                Ereignisse und <i class="bi bi-book apis-work"></i> Werke
+                            </a>
+                            <li><hr class="dropdown-divider"></li>
+                            <a class="dropdown-item" href="/apis/relations/work-work/">
+                                <i class="bi bi-book apis-work"></i>
+                                Werke und <i class="bi bi-book apis-work"></i> Werke
+                                
+                            </a>
+                        </ul>
+                    </li>
+                    
+              
+                </ul>
+                
+                <a href="/login/">
+                    <i class="bi bi-box-arrow-in-right fs-2 pe-3"></i>
+                    <span class="visually-hidden">log in</span>
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main class="flex-shrink-0" style="margin-bottom: 100px;">
+    
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="carousel-caption text-center">
+                    <h1 class="display-2">PMB</h1>
+                    <h2 class="display-3">Personen der Moderne Basis </h2>
+                    <p class="fs-3">Durch die Normdatei PMB wird ein Webservice für Personen, Werke, Institutionen, Orte und Ereignisse speziell für Wien um 1900 zur Verfügung gestellt. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container marketing">
+    <div class="row">
+        <div class="col-lg-4">
+            <p class="text-center">
+                <a class="icon-link" href="/apis/entities/entity/person/list/">
+                    <i class="bi bi-people apis-person big-icons"></i>
+                    <span class="visually-hidden">Personen</span>
+                </a>
+            </p>
+            <h2>40.740 Personen</h2>
+            <p>Welche Personen in den Dokumenten von
+                Karl Kraus, Arthur Schnitzler und
+                ihren Zeitgenoss:innen erwähnt werden und
+                mit wem sie Umgang pflegten
+            </p>
+        </div>
+
+        <div class="col-lg-4">
+            <p class="text-center">
+                <a class="icon-link" href="/apis/entities/entity/place/list/">
+                    <i class="bi bi-map apis-place big-icons"></i>
+                    <span class="visually-hidden">Orte</span>
+                </a>
+            </p>
+            <h2>13.635 Orte</h2>
+            <p>Hier sind alle durch Längen- und Breitengrade lokalisierbaren Plätze (heutige politische Zuordnung)
+                verzeichnet, auf die in verschiedenen Projekten Bezug genommen werden</p>
+        </div>
+
+        <div class="col-lg-4">
+            <p class="text-center">
+                <a class="icon-link" href="/apis/entities/entity/work/list/">
+                    <i class="bi bi-book apis-work big-icons"></i>
+                    <span class="visually-hidden">Werke</span>
+                </a>
+            </p>
+            <h2>21.505 Werke</h2>
+            <p>Literarische und künstlerische Schöpfungen, einschließlich
+                Zeitungen und Zeitschriften. Fast 
+                ein Drittel der Werke stammt von Hermann Bahr
+            </p>
+        </div>
+    </div>
+    <div class="row text-center pb-4">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <p class="text-center">
+                <a class="icon-link" href="/network/edges/">
+                    <i class="bi bi-share big-icons"></i>
+                    <span class="visually-hidden">Relationen</span>
+                </a>
+            </p>
+            <h2>142.885 Relationen</h2>
+            <p>Relationen zwischen Personen, Werken, Ereignissen, Institutionen und Orten.
+            </p>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="row">
+        <div class="col-lg-4">
+            <p class="text-center">
+                <a class="icon-link" href="/apis/entities/entity/event/list/">
+                    <i class="bi bi-calendar3 apis-event big-icons"></i>
+                    <span class="visually-hidden">Ereignisse</span>
+                </a>
+            </p>
+            <h2>5.884 Ereignisse</h2>
+            <p>Die Kategorie mit den wenigsten Einträgen umfasst bislang vor allem Aufführungen von
+                Theaterstücken – und, ob Schnitzler sie besucht hat</p>
+        </div>
+
+        <div class="col-lg-4">
+            <p class="text-center">
+                <a class="icon-link" href="/apis/entities/entity/institution/list/">
+                    <i class="bi bi-building-gear apis-institution big-icons"></i>
+                    <span class="visually-hidden">Institutionen</span>
+                </a>
+            </p>
+            <h2>1.762 Institutionen</h2>
+            <p>Jegliche Art von Organisation, aber auch sonst schwer zuordenbares wie Bahnlinien und
+                Kunstpreise sind hier verzeichnet.</p>
+        </div>
+
+        <div class="col-lg-4">
+            <p class="text-center">
+                <a class="icon-link" href="/apis/metainfo/apis/metainfo/uri/">
+                    <i class="bi bi-link-45deg apis-uri big-icons"></i>
+                    <span class="visually-hidden">Uris</span>
+                </a>
+            </p>
+            <h2>274.047 URIs</h2>
+            <p>Damit nicht nur wir, sondern auch die Maschine und in Folge andere Projekte wissen, wovon
+                die Rede ist.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+    </main>
+    
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+    <div class="container" tabindex="-1">
+        <div class="footer-separator">
+            KONTAKT
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-lg-1 col-md-2 col-sm-2 col-xs-6 col-3">
+                <a href="/">
+                    <img src="https://fundament.acdh.oeaw.ac.at/common-assets/images/acdh_logo.svg" class="image" alt="ACDH Logo" style="max-width: 100%; height: auto;" title="ACDH Logo"/>
+                </a>
+            </div>
+            <!-- .-->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-9">
+                <p>
+                    ACDH-CH
+                    <br/>
+                    Austrian Centre for Digital Humanities and Cultural Heritage
+                    <br/>
+                    Österreichische Akademie der Wissenschaften
+                </p>
+                <p>
+                    Bäckerstraße 13
+                    <br/>
+                    1010 Wien
+                </p>
+                <p>
+                    T: +43 1 51581-2200
+                    <br/>
+                    E: <a
+                        href="mailto:acdh-ch-helpdesk@oeaw.ac.at"
+                        >acdh-ch-helpdesk(at)oeaw.ac.at</a>
+                </p>
+            </div>
+            <!-- .footer-widget -->
+            <div class="footer-widget col-lg-3 col-md-4 col-sm-4 ml-auto">
+                <div class="textwidget custom-html-widget">
+                    <span class="fs-6 fw-bold">Work in Progress</span><br />
+                    <span class="fs-6 fw-bold">Lizenz der Inhalte: <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a></span>
+                    <p>Bei Fragen, Anmerkungen, Kritik, aber gerne auch Lob, wenden Sie sich bitte an den <a href="mailto:acdh-ch-helpdesk@oeaw.ac.at" class="footerlink">ACDH-CH Helpdesk</a>
+                    </p>
+                    <p>
+                        <a class="helpdesk-button" class="footerlink"
+                            href="mailto:acdh-ch-helpdesk@oeaw.ac.at">e-Mail</a>
+                    </p>
+                </div>
+                <div class="textwidget custom-html-widget">
+                    <a href="https://github.com/arthur-schnitzler/pmb-service">
+                        <i class="bi bi-github fs-2" class="footerlink" aria-hidden="true"></i>
+                        <span class="visually-hidden">GitHub repo</span>
+                    </a>
+                </div>
+            </div>
+            <!-- .footer-widget -->
+        </div>
+    </div>
+<div class="footer-imprint-bar hide-reading" id="wrapper-footer-secondary"
+    style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;"> © Copyright OEAW | <a
+        href="/imprint/">Impressum</a>
+</div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    
+    <script>
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        const csrftoken = getCookie('csrftoken');
+    </script>
+    
+    
+</body>
+
+
+</html>

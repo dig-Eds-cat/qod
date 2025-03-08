@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Annotated Books Online</title>
+        
+        <!-- As an optimization we load stylesheets first, then Javascript. -->
+        
+        <!-- Stylesheets. -->
+        <link rel="stylesheet" type="text/css" href="frontend/external/extjs/resources/css/ext-all.css"/>
+        <link rel="stylesheet" type="text/css" href="frontend/resources/stylesheets/application.css" />
+        <link rel="stylesheet" type="text/css" href="frontend/resources/stylesheets/messagebar.css" />
+        <link rel="stylesheet" type="text/css" href="frontend/resources/stylesheets/icons.css" />
+        <link rel="stylesheet" type="text/css" href="frontend/resources/stylesheets/viewport.css" />
+        <link rel="stylesheet" type="text/css" href="frontend/resources/stylesheets/viewer.css" />
+        <link rel="stylesheet" type="text/css" href="frontend/resources/stylesheets/polygonoverlay.css" />
+        <link rel="stylesheet" type="text/css" href="frontend/resources/stylesheets/bookinfo.css" />
+         
+        <!-- Google Analytics. -->
+        <script>
+          var gaId = 'UA-44628835-1'; // TODO: This is a temporary ID for testing purposes.
+
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', gaId, 'annotatedbooksonline.com');
+          ga('send', 'pageview');
+        </script>
+
+        <!-- Compatibility fixes. -->
+        <script type="text/javascript" src="frontend/util/compatibility.js"></script>
+
+        <!-- External code. -->
+        <script type="text/javascript" src="frontend/external/extjs/ext-all.js"></script>
+        
+        <script type="text/javascript" src="frontend/external/extjs/multiselect.js"></script>
+        <script type="text/javascript" src="frontend/external/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="frontend/external/modernizr.min.js"></script>
+        <script type="text/javascript" src="frontend/external/swfupload.js"></script>
+        <script type="text/javascript" src="frontend/external/flashdetect.min.js"></script>
+        
+        <!--  Messages. -->
+        <script type="text/javascript" src="frontend/messages/messages.js"></script>
+        
+        <!-- Settings utility, which requires settings to be filled in here. -->
+        <script type="text/javascript">
+            _cachedSettings = {"auto-user-acceptance":"1","homepage-url":"http:\/\/www.annotatedbooksonline.com","info-button":"0","info-page":"<h2>About the project<\/h2>\n\n<p>Annotated Books Online is a virtual research environment for scholars and students interested in historical reading practices. It is part of the research project \"A Collaboratory for the Study of Reading and the Circulation of Ideas in Early Modern Europe\" funded by the Dutch National Research Council (NWO). Generous additional funding was provided by Professor Anthony Grafton for the edition of Gabriel Harvey's annotations to Livy (Mellon Foundation).<\/p>\n\n<p>\n<h3>Partners<\/h3> \n<ul>\n<li>Paul Dijstelberge (University of Amsterdam)<\/li>\n<li>Anthony Grafton (Princeton University)<\/li>\n<li>Lisa Jardine (Centre for Editing Lives and Letters, Queen Mary, London)<\/li>\n<li>J\u00fcrgen Pieters (Ghent University)<\/li>\n<li>Els Stronks (Utrecht University)<\/li>\n<li>Matthew Symonds (Centre for Editing Lives and Letters, Queen Mary, London)<\/li>\n<li>Garrelt Verhoeven (University of Amsterdam)<\/li>\n<li>Arnoud Visser (Utrecht University)<\/li>\n<\/ul> \n<\/p>\n\n<p>\n<h3>Board of Advisors<\/h3> \n<ul>\n<li>Professor Roger Chartier (Coll\u00e8ge de France, Paris and Department of History & University of Pennsylvania)<\/li>\n<li>Dr Cristina Dondi (Oxford & Consortium of European Research Libraries)<\/li>\n<li>Professor Paul Hoftijzer (University of Leiden, Department of Book and Digital Media Studies)<\/li>\n<li>Professor Howard Hotson (St Anne\u2019s College, Oxford & Cultures of Knowledge Project)<\/li>\n<li>Professor Lisa Kuitert (University of Amsterdam, Department of Book History)<\/li>\n<li>Professor Jerome McGann (University of Virginia, Department of English)<\/li>\n<li>Dr David Pearson (Director of Libraries, Archives and Guildhall Art Gallery London)<\/li>\n<li>Professor Andrew Pettegree (University of St Andrews, Director Universal Short Title Catalogue)<\/li>\n<li>Professor William Sherman (University of York, Department of English)<\/li>\n<li>Professor Jacob Soll (Rutgers University, Department of History)<\/li>\n<li>Professor Bob Owens (Open University, Director of Reading Experience Database)<\/li>\n<li>Dr Henk Wals (The Hague, Huygens Institute for the History of the Netherlands, KNAW)<\/li>\n<\/ul> \n<\/p>\n\n<h3>Background<\/h3> \n\n<p>Proceeding from the idea that reading constitutes a crucial form of intellectual exchange, the collaborators will collect and enhance evidence of how readers used their books to build knowledge and assimilate ideas. This is especially pertinent since the early modern period, just like the twenty-first century, saw the revolutionary rise of a new medium of communication, which helped shape cultural formation and intellectual freedom.<\/p>\n\n<p>Although widely recognized as a promising approach with important theoretical implications, currently the study of reading practices still largely depends on individual researchers, whose work is seriously hampered by the limited access to an inherently fragmented body of material. The proposed collaboratory will connect scholarly expertise and provide added value to digital sources through user-generated content (e.g. explanatory material or fuller scholarly syntheses) in an electronic environment specifically designed for research and teaching purposes. It will offer, in short, an academic Wikipedia for the history of reading and the circulation of ideas.<\/p>\n\n<p>The project will create a transnational platform that enables scholars to (1) view, connect and study annotated books and readers' notes, (2) offer training to students and young researchers in handling readers' traces, and (3) make results freely accessible for teaching purposes, as well as for broader general interest by means of exhibitions, digital presentations and general publications. In order to expand this structural network, the principal partners in the collaboratory will prepare an application for a Marie Curie Initial Training Network.<\/p>\n\n<p>For more information, contact Arnoud Visser, <a href=\"mailto:a.s.q.visser@uu.nl\">a.s.q.visser@uu.nl<\/a> <\/p>","project-title":"Annotated Books Online","show-welcome-page":"0","terms-of-use":"<h2>Terms of Use<\/h2>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>\n\n<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?<\/p>\n\n<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.<\/p>","tutorial-video":"ZhQXIOj_2mo","upload-instructions":"<h2>About this collaboratory<\/h2>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>\n\n<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?<\/p>\n\n<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.<\/p>","welcome-page":"<h2>Welcome<\/h2>\n\n<p>Historical readers left many traces in the books they owned. Names, notes, marks, and underlining provide unique evidence of how generations of readers used their books. Annotated Books Online gives full access to these unique copies. Focusing on the first three centuries of print, it enables scholars and students interested in the history of reading to collect, view and study reading practices. User tools include extensive search, viewing and annotating options.<\/p>\n\n<a href=\"http:\/\/www.uu.nl\/en\" target=\"_blank\" title=\"Go to the website of Utrecht University\"><img src=\"frontend\/resources\/images\/uu.png\" style=\"height: 65px\"\/><\/a>\n<a href=\"http:\/\/www.english.uva.nl\/\" target=\"_blank\" title=\"Go to the website of University of Amsterdam\"><img src=\"frontend\/resources\/images\/uva.png\" style=\"height: 60px\"\/><\/a>\n<a href=\"http:\/\/www.princeton.edu\/\" target=\"_blank\" title=\"Go to the website of Princeton University\"><img src=\"frontend\/resources\/images\/princeton.png\" style=\"height: 65px\"\/><\/a>\n<a href=\"http:\/\/www.ugent.be\/en\" target=\"_blank\" title=\"Go to the website of Ghent University\"><img src=\"frontend\/resources\/images\/ugent.png\" style=\"height: 100px\"\/><\/a>\n<a href=\"http:\/\/www.livesandletters.ac.uk\/\" target=\"_blank\" title=\"Go to the website of CELL\"><img src=\"frontend\/resources\/images\/cell.png\" style=\"height: 100px\"\/><\/a>"};
+        </script>
+        <script type="text/javascript" src="frontend/util/settings.js"></script>
+        
+        <!-- Utility logic. -->
+        <script type="text/javascript" src="frontend/util/common.js"></script>
+        <script type="text/javascript" src="frontend/util/eventdispatcher.js"></script>
+        <script type="text/javascript" src="frontend/util/domnode.js"></script>
+        <script type="text/javascript" src="frontend/util/messagebar.js"></script>
+        
+        <!-- Viewer logic. -->
+        <script type="text/javascript" src="frontend/viewer/document.js"></script>
+        <script type="text/javascript" src="frontend/viewer/overlay.js"></script>
+        <script type="text/javascript" src="frontend/viewer/polygon.js"></script>
+        <script type="text/javascript" src="frontend/viewer/polygonoverlay.js"></script>
+        <script type="text/javascript" src="frontend/viewer/annotationoverlay.js"></script>
+        <script type="text/javascript" src="frontend/viewer/annotations.js"></script>
+        <script type="text/javascript" src="frontend/viewer/viewport.js"></script>
+        
+        <!-- Common logic. -->
+        <script type="text/javascript" src="frontend/logic/requestmanager.js"></script>
+        <script type="text/javascript" src="frontend/logic/requestmanagerproxy.js"></script>
+        <script type="text/javascript" src="frontend/logic/authentication.js"></script>
+        <script type="text/javascript" src="frontend/logic/application.js"></script>
+        
+        <!-- Models. -->
+        <script type="text/javascript" src="frontend/models/modelbase.js"></script>
+        <script type="text/javascript" src="frontend/models/user.js"></script>
+        <script type="text/javascript" src="frontend/models/scan.js"></script>
+        <script type="text/javascript" src="frontend/models/book.js"></script>
+        <script type="text/javascript" src="frontend/models/notes.js"></script>
+        <script type="text/javascript" src="frontend/models/binding.js"></script>
+        <script type="text/javascript" src="frontend/models/annotation.js"></script>
+        <script type="text/javascript" src="frontend/models/provenance.js"></script>
+        <script type="text/javascript" src="frontend/models/author.js"></script>
+        <script type="text/javascript" src="frontend/models/language.js"></script>
+        <script type="text/javascript" src="frontend/models/bindinglanguage.js"></script>
+        <script type="text/javascript" src="frontend/models/booklanguage.js"></script>
+        <script type="text/javascript" src="frontend/models/help.js"></script>
+        
+        <!-- Entities. -->
+        <script type="text/javascript" src="frontend/entities/binding.js"></script>
+        <script type="text/javascript" src="frontend/entities/annotation.js"></script>
+        
+        <!-- View bases. -->
+        <script type="text/javascript" src="frontend/views/vtypes.js"></script>
+        <script type="text/javascript" src="frontend/views/storebase.js"></script>
+        <script type="text/javascript" src="frontend/views/formbase.js"></script>
+        <script type="text/javascript" src="frontend/views/windowbase.js"></script>
+        
+        <!-- Viewer views. -->
+        <script type="text/javascript" src="frontend/views/viewportpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/informationpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/revisionspanel.js"></script>
+        <script type="text/javascript" src="frontend/views/workspacepanel.js"></script>
+        <script type="text/javascript" src="frontend/views/viewerpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/bindinginformationpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/navigationpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/referencespanel.js"></script>
+        <script type="text/javascript" src="frontend/views/notespanel.js"></script>
+        <script type="text/javascript" src="frontend/views/annotationspanel.js"></script>
+        <script type="text/javascript" src="frontend/views/transcriptioneditorwindow.js"></script>
+        
+        <!-- User views. -->
+        <script type="text/javascript" src="frontend/views/loginwindow.js"></script>
+        <script type="text/javascript" src="frontend/views/registrationpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/editprofilewindow.js"></script>
+        <script type="text/javascript" src="frontend/views/viewprofilepanel.js"></script>
+        <script type="text/javascript" src="frontend/views/userlistpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/activationpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/restorepasswordpanel.js"></script>
+        
+        <!-- Search view. -->
+        <script type="text/javascript" src="frontend/views/searchpanel.js"></script>
+        
+        <!-- Upload views. -->
+        <script type="text/javascript" src="frontend/views/uploadprogress.js"></script>
+        <script type="text/javascript" src="frontend/views/scanpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/uploadpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/bindinginformationfieldset.js"></script>
+        <script type="text/javascript" src="frontend/views/reorderscanpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/selectbookpanel.js"></script>
+        <script type="text/javascript" src="frontend/views/uploadinstructionpanel.js"></script>
+        
+        <!-- Other views. -->
+        <script type="text/javascript" src="frontend/views/welcomepanel.js"></script>
+        <script type="text/javascript" src="frontend/views/infopanel.js"></script>
+        <script type="text/javascript" src="frontend/views/termsofusepanel.js"></script>
+        <script type="text/javascript" src="frontend/views/helppanel.js"></script>
+        <script type="text/javascript" src="frontend/views/applicationviewport.js"></script>
+        <script type="text/javascript" src="frontend/views/statisticspanel.js"></script>
+        <script type="text/javascript" src="frontend/views/static.js"></script>
+        
+        <!-- Extras. -->
+        <script type="text/javascript" src="frontend/extra/greeter.js"></script>
+    </head>
+    <body>
+    
+    <!-- Message for when JS is turned off. -->
+    <noscript><p>
+        The Annotated Books Online application is fully written in JavaScript and 
+        therefore requires Javascript to be enabled in your browser.
+    </p></noscript>
+    
+    </body>
+</html>
+

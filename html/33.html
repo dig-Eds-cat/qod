@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="author" content="Friedrich Nietzsche, Paolo D'Iorio" />
+    <meta name="description" content="Friedrich Nietzsche, Digitale Kritische Gesamtausgabe Werke und Briefe auf der Grundlage der Kritischen Gesamtausgabe Werke, herausgegeben von Giorgio Colli und Mazzino Montinari, Berlin/New York, Walter de Gruyter, 1967ff. und Nietzsche Briefwechsel Kritische Gesamtausgabe, Berlin/New York, Walter de Gruyter, 1975ff., herausgegeben von Paolo D’Iorio." />
+    <meta name="keywords" content="Nietzsche Source, Nietzsche online, Digitale Kritische Gesamtausgabe, edizione critica digitale, digital critical edition, édition critique numérique, Werke, opere, works, oeuvres, Briefe, epistolario, lettere, correspondence, letters, correspondance, lettres, nachgelassene Fragmente, frammenti postumi, posthumous fragments, fragments posthumes" />
+    <meta name="copyright" content="Paolo D'Iorio, Association HyperNietzsche" />
+
+    <script src="resources/javascripts/prototype.js" type="text/javascript"></script>
+    <script src="resources/javascripts/effects.js" type="text/javascript"></script>
+    <script src="resources/javascripts/dragdrop.js" type="text/javascript"></script>
+    <script src="resources/javascripts/controls.js" type="text/javascript"></script>
+    <script src="resources/javascripts/application.js" type="text/javascript"></script>
+
+    <script src="resources/javascripts/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="resources/javascripts/js/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+    <script src="resources/javascripts/js/jquery.printElement.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="resources/stylesheets/custom-theme/jquery-ui-1.8.18.custom.css">
+    <script type="text/javascript">//<![CDATA[
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7393632-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_setDomainName', 'www.nietzschesource.org']);  
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+//]]>
+</script>
+
+    <script type="text/javascript">//<![CDATA[
+        // this allows jquery to be called along with scriptaculous and YUI without any conflicts
+        // the only difference is all jquery functions should be called with $j instead of $
+        // e.g. $j('#div_id').stuff instead of $('#div_id').stuff
+        var $j = jQuery.noConflict();
+        
+     //]]>
+      </script>
+
+    <script type="text/javascript">//<![CDATA[
+
+
+        function updateTitle(siglum){
+            var siglum = siglum.replace('#eKGWB/', '');
+            var newtitle = $j('#base-title').html() + ', ' + siglum;
+
+            document.title = newtitle;
+        }
+
+        function createCookie(name,value,days) {
+          var expires = "";
+
+          if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toGMTString();
+          }
+          else {
+            expires = "";
+          }
+          document.cookie = name+"="+value+expires+"; path=/";
+        }
+
+      
+      
+        function update_print_link(book){
+        
+          print_li = $('print');
+          print_li.down('a').href='/' + book + '/print';
+          print_li.style.display = 'block';
+
+        }
+      
+      
+
+
+      // we take the anchor from the url, and fill a cookie, then PHP will be able to use it.
+      var query = location.href.split('#');
+                                                             
+      var anchor = '';
+
+      if (query[1] == undefined) {
+        anchor = "false";
+      } else {
+        anchor = query[1];
+      }
+      //  document.cookie = 'anchor=' + escape(anchor);
+                  
+      createCookie('anchor', anchor, '7');
+                  
+      // urldecode is needed as javascript does nasty things with strings... (try putting a space in there)
+      if ((anchor != "")
+        || ((anchor == "false") && (anchor != "")) 
+                                                         
+    ){
+        // this is required as at the first access to this page, the PHP cookie isn't filled yet
+        window.location.reload();
+      }
+
+
+    var handler = document.on(
+  'click',
+  'a.nlink',
+  function(event, element) {
+    
+    // event.stopImmediatePropagation();
+    Event.stop(event);
+
+    // so we clicked on a menu entry, first we read the link attributes
+    var datalink = element.getAttribute('data-link');
+    var databook = element.getAttribute('data-book');
+    var datalocation = element.getAttribute('data-location');
+
+
+
+      updateTitle(datalink);
+
+
+    _gaq.push(['_trackPageview', datalink]);
+
+    // we save the current location hash
+    var old_location = window.location.hash;
+
+    // and change it with the new one 
+    window.location.href = datalink;
+
+    // now we do some reasonning, first we set some vars
+    var old_location_array = $$('a[data-link="'+old_location+'"]');
+    var old_location_element = old_location_array[0];
+
+    // now if we changed page (e.g. layout) we need to reload the whole page, 
+    // so the browser calls everything needed
+    if ((databook == null) && (old_location_element == null) ) {
+      window.location.reload();
+      return false;
+    }
+ 
+    // now we set the old_databook var, which we use later on
+    var old_databook;
+    if (old_location_element != 'null'){
+      old_databook = old_location_element.readAttribute('data-book');
+    } else {
+      old_databook = 'undefined';
+    }
+
+
+    // first we take the subtree 
+    var book_li_id = "li_" + databook.split('#')[1];
+
+    if(databook != old_databook){
+      // we changed the book we're in, hence we need to reload its html
+      // and its menu subtree
+
+      // first we take the book html
+      new Ajax.Request('/resources/scripts/static_html_include.php',
+      {
+        method:'get',
+        parameters: {book: databook},
+        onCreate: startLoading(),
+        onSuccess: function(transport){
+          var visore = $('visore');
+          // we put the new html in place
+          visore.update(transport.responseText);
+          visore.scrollTop = 0;
+
+          // we call this function which will set-up the pop-ups code
+          configurePopUp();
+          stopLoading();
+
+          $j('#visore').change();
+        }
+      });
+
+
+        if (($(book_li_id) != null) && ($(book_li_id).down('ul') != undefined)){
+        // if we clicked on a book we already have visited, we don't have to
+        // request the menu again
+        if ($(book_li_id).down('ul').getStyle('display') == 'none'){
+          Effect.Appear($(book_li_id).down('ul'), {
+            duration: 0.5
+          });
+        }
+        // we still have to update menu highlights and the print link
+        rollup(datalink, false);
+        update_print_link(databook.split('#')[1]);
+
+      } else {
+        // this is a book we've never visited, hence we request the menu
+        if (book_li_id  == 'li_eKGWB'){
+          //we have clicked on "index" (eKGWB on the UI)
+          window.location.reload();
+        }
+
+        new Ajax.Updater(book_li_id, '/resources/scripts/menu_include.php',
+        {
+          method:'get',
+          parameters: {book: databook},
+          onCreate: startLoading(),
+
+
+          onSuccess: function(transport){
+          },
+          onComplete: function(transport){
+            // this will update the menu
+            rollup(datalink, false);
+            next_ul = $(book_li_id).down('ul');
+            if (next_ul != undefined) {
+              //            next_ul.hide();
+              Effect.Appear(next_ul, {
+                duration: 0.5
+              });
+            }
+
+            update_print_link(databook.split('#')[1]);
+            stopLoading();
+          }
+        });
+
+
+      }
+
+
+
+
+        return false;
+    }
+
+    // we clicked on a menu entry of the same book we were showing 
+    
+    // this will just higlight the correct entries
+    rollup(datalink, false);
+    if ($(book_li_id) == null){
+      window.location='eKGWB/index';
+      window.location.reload();
+      return;
+    }
+    next_ul = $(book_li_id).down('ul');
+    // if we clicked on the menu title, we have to hide/show the submenu
+
+    if(typeof(element.up('ul')) != 'undefined' && element.up('ul').hasClassName('book')){
+      // we only want to rollup the book list, not the page 
+      if ((next_ul.getStyle('display') != 'none') ){
+        Effect.Fade(next_ul, { 
+          duration: 0.5
+        });
+      } else {
+        Effect.Appear(next_ul, { 
+          duration: 0.5
+        });
+      }
+    }
+
+      var menu_item=  $j('.critical_edition_menu_widget [data-link="'+datalink+'"]');
+
+      if (datalocation == 'text'){
+          console.log(menu_item);
+          console.log('testxt', $j(menu_item).offset().top);
+          $j('#scroll').animate({ scrollTop: $j(menu_item).offset().top - $j('.critical_edition_menu_widget').offset().top}, {queue: false});
+      }
+ 
+    return false;
+  }.bind(this)
+);
+
+  handler.stop();
+  handler.start();
+
+//]]>
+      </script>
+
+      
+        <link href="resources/stylesheets/home.css" media="screen" rel="stylesheet" type="text/css" />
+
+        <title>Nietzsche Source – Home </title>
+    </head>
+
+    <body>
+<blockquote>&nbsp;</blockquote>
+<div id="paginaExt">
+  <div id="paginaInt">
+
+    <div id="top_menu">
+      <ul>
+
+        <li><a href="http://doc.nietzschesource.org/en/home" title="">ABOUT NIETZSCHE SOURCE</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div id="testata">
+    </div>
+
+    <div id="menu">
+      <ul>
+
+        <li><a href="change_language.php?language=de">Deutsch</a></li>
+
+        <li><a href="change_language.php?language=en">English</a></li>
+
+        <!--                        <li><a href="change_language.php?language=es">Espa&ntilde;ol</a></li> -->
+
+        <li><a href="change_language.php?language=fr">Fran&ccedil;ais</a></li>
+
+        <li><a href="change_language.php?language=it">Italiano</a></li>
+
+        <!--      <li><a href="change_language.php?language=po">Portugu&ecirc;s</a></li> -->
+
+
+      </ul>
+    </div>
+
+
+    <div id="contenuti">
+      <div class="floatClear"></div>
+      <div id="contenutoDoppio_ext">
+
+        <div id="contenutoSingolo_int">
+          <div id="contenutoSingolo">
+
+<ul>
+
+        <form action="/SN/" method="post" name="sn">
+                    </form>
+
+        <script type="text/javascript">
+            function gotosn(){
+                document.sn.submit();
+                return false;
+            }
+        </script>
+        <li id="SN_li" style="background: url(resources/images/editions/SN_button.gif) left top no-repeat;">
+            <a href="/SN/" onclick="javascript:gotosn(); return false;"><i>Studia Nietzscheana</i> &ndash; International and Multilingual Journal of Nietzsche Studies. </a>
+        </li>
+
+<!--
+</ul>
+
+            <h2>Scholarly Editions</h2>
+            <ul>
+
+    -->
+              <li id="eKGWB_li" style="background: url(resources/images/editions/eKGWB_button.gif) left top no-repeat;">
+                <a href="/eKGWB/" onclick="return false;" data-link="#eKGWB" class="nlink"><i>Digitale Kritische Gesamtausgabe</i> &ndash; Digital version of the German critical edition of the complete works of Nietzsche edited by Giorgio Colli and Mazzino Montinari.</a>
+              </li>
+
+
+             <li id="DFGA_li" style="background: url(resources/images/editions/DFGA_button.gif) left top no-repeat;">
+<!--
+<a href="/DFGA/index" onclick="return false;" data-link="#DFGA/index" class="nlink"><i>Digitale Faksimile-Gesamtausgabe</i> &ndash; Facsimile reproduction of the entire Nietzsche archive.</a>
+-->
+            <a href="http://nietzschesource.org/DFGA"><i>Digitale Faksimile-Gesamtausgabe</i> &ndash; Facsimile reproduction of the entire Nietzsche archive.</a>
+           </li>
+
+
+
+
+            </ul>
+            <!-- End left content box -->
+
+          </div>
+        </div>
+
+      </div>
+      <div class="floatClear"></div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <div id="footer">
+      <table id="footer_table">
+        <tr>
+          
+          <td align="center" id="footer_table_center">
+            <a href="/doc/en/institutions">CNRS</a> |
+            <a href="/doc/en/institutions">European Commission</a> |
+            <a href="/doc/en/institutions">Klassik Stiftung Weimar</a> |
+            <a href="/doc/en/institutions">Humboldt Stiftung</a> |
+            <a href="/doc/en/institutions">DFG</a> |
+            General Editor:
+            <a href="http://www.diorio.info/" target="_blank">Paolo D'Iorio</a>
+          </td>
+      
+        </tr>
+      </table>
+    </div>
+    <!-- Footer -->
+
+
+  </div>
+</div>
+
+<script type="text/javascript">//<![CDATA[
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+  try{ 
+    var pageTracker = _gat._getTracker("UA-7393632-1");
+    pageTracker._trackPageview();
+  } catch(err) {} 
+  _gaq.push(['_setDomainName', 'www.nietzschesource.org']);   
+  _gaq.push(['_trackPageview', '/home']);
+    //]]>
+</script>
+
+    </body>
+</html>    
+

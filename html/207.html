@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:php="http://php.net/xsl" lang="fr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-language" content="fr" />
+    <meta name="keywords" content="Architecture, 18e siècle, France, Architecture –– Philosophie, Architecture religieuse, Architecture hospitalière, Architecture publique" xml:lang="fr" lang="fr" />
+	  <meta name="description" content="Édition critique des cours d’Antoine Desgodets prononcés à l’Académie royale d’architecture de 1721 à 1728, les Cours d’Antoine Desgodets constituent un jalon important dans l’élaboration et la normalisation du savoir architectural à l’époque classique." xml:lang="fr" lang="fr" />
+	<title>Les Cours de Desgodets</title>
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/desgodets.css">
+    <link rel="stylesheet" type="text/css" href="css/desgodets.css" />
+    <script type="text/javascript" src="js/prototype.js"></script>
+    <script type="text/javascript" src="js/scriptaculous.js"></script>
+    <script type="text/javascript" src="js/desgodets.js"></script>
+	  <!-- ajout perso -->
+	  <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body class="page accueil">
+  <div class="dumbBoxWrap">
+    <div class="dumbBoxOverlay">&nbsp;</div>
+    <div class="vertical-offset">
+      <div class="dumbBox">
+        <a id="closeModal"><img src="css/graphics/modal_close.png"/></a>
+        <div class="logo"><a href="">Cours de Desgodets</a></div>
+        <h3>Bienvenue sur la <strong>version bêta</strong> de l’édition critique des cours d’Antoine Desgodets !</h3>
+        <ul>
+          <li>Il est possible que vous rencontriez des problèmes d’affichage.</li>
+          <li>Les différentes versions des manuscrits seront publiées au fur et à mesure des relectures.</li>
+          <li>L’indexation des textes est en cours.</li>
+        </ul>
+        <h4><a href="aide" title="Consulter le guide de consultation">Guide de consultation du site</a></h4>
+      </div>
+    </div>
+  </div>
+
+<div id="mainnav">
+<h1><a href="">Cours de Desgodets</a></h1>
+<ul id="manuscrits">
+<li id="ordres"><a onclick="active(this)" href="ordres-presentation">TRAITÉ DES ORDRES</a></li>
+<li id="commodite"><a onclick="active(this)" href="commodite-presentation">TRAITÉ DE LA COMMODITÉ</a></li>
+<li id="toise"><a onclick="active(this)" href="toise-presentation">TRAITÉ DU TOISÉ</a></li>
+<li id="servitudes"><a onclick="active(this)" href="servitudes-presentation">TRAITÉ DES SERVITUDES</a></li>
+</ul>
+<ul id="index">
+<li id="locorum"><a href="index-locorum">INDEX LOCORUM</a></li>
+<li id="nominum"><a href="index-nominum">INDEX NOMINUM</a></li>
+<li id="rerum"><a href="index-rerum">INDEX RERUM</a></li>
+<li id="glossaires"><a href="glossaire">GLOSSAIRE</a></li>
+</ul>
+<ul id="pages-historiographiques">
+<li id="antoinedesgodets"><a href="antoine-desgodets">ANTOINE DESGODETS</a></li>
+<li id="editioncours"><a href="edition-des-cours">L'ÉDITION DES COURS</a></li>
+<li id="colloques"><a href="colloques">COLLOQUES</a></li>
+<li id="bibliographie"><a href="bibliographie">BIBLIOGRAPHIE</a></li>
+</ul>
+<ul id="meta-info">
+<li id="home"><a href="">accueil</a></li>
+<li id="aide"><a href="aide">aide</a></li>
+<li id="credits"><a href="credits">crédits</a></li>
+<li id="contact"><a href="contact">contact</a></li>
+</ul>
+</div>
+<div id="search-breadcrumb">
+<ul>
+  <li id="recherche-simple">
+    <div id="recherche-simple">
+      <!--<form id="recherche" action="/recherche-simple" onsubmit="return simplesearch()">
+        <div style="float:left;">
+          <input class="keyword" id="keyword" name="term" tabindex="1" value="Recherche" onclick="javascript:$('keyword').focus();$('keyword').select();" type="text" />
+        </div>
+        <div style="float: right;">
+          <input class="searchBtn" value="" onclick="$('simple_search').submit();" type="button" />
+        </div>
+      </form>-->
+      <div id="recherche-simple">
+        <form name="simple_search_form" action="recherche-avancee" onsubmit="return valider()" method="get" id="simple_search_form">
+          <div style="float:left;">
+            <input class="q" name="q" maxlength="400" id="q" value="Recherche" type="text" />
+          </div>
+          <div style="float: right;">
+            <input class="searchBtn" value="" type="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </li>
+  <li id="recherche-avancee">
+    <div>
+      <a href="/recherche-avancee">Recherche avancée</a>
+    </div>
+  </li>
+  <li id="breadcrumbs">
+    <div>Accueil</div>
+  </li>
+  <li id="small-visuel"></li>
+</ul>
+</div>
+
+
+<div id="main-accueil">
+      <div id="scroll" class="scroll">
+          <div class="text-accueil">
+            <div class="copyright">© Bibliothèque de l’Institut</div>
+            <div class="title"><h1>Les cours d’Antoine desgodets</h1></div>
+
+            <div class="director">Édités sous la direction de Robert Carvais</div>
+            <div>
+                <p>Prononcés à l’Académie royale d’architecture de 1721 à 1728, les Cours d’Antoine Desgodets constituent un jalon important dans l’élaboration et la normalisation du savoir architectural à l’époque classique.</p>
+                <p>Nous sommes heureux de mettre à la disposition des lecteurs, amateurs et spécialistes, cette première édi- tion critique des quatre cours d’Antoine Desgodets, établie à partir de l’étude de l’ensemble des manuscrits identifiés à ce jour.</p>
+                <div class="link-help brace"><a href="aide" title="Guide de consultation">Guide de consultation du site</a></div>
+             </div>
+          </div>
+
+           <div class="rub financement">Financement</div>
+           <div class="logo-financement">
+             <a href="http://www.agence-nationale-recherche.fr" title="Site de l’Agence nationale de la recherche"><img src="css/graphics/logo-financement/logo-anr.png"/></a>
+             <a href="http://www.u-paris2.fr" title="Site de l’université Paris 2"><img src="css/graphics/logo-financement/logo-paris2.png"/></a>
+             <a href="https://ctad.u-paris10.fr" title="Site du Centre de théorie et analyse du droit"><img src="css/graphics/logo-financement/logo-umr-cnrs.png"/></a>
+           </div>
+
+             <div class="rub partenariat">partenariat</div>
+             <div class="logo-partenariat">
+               <a href="http://www.huma-num.fr/service/grille-de-services" title="Page de la Grille de services d’Huma-Num"><img src="css/graphics/logo-partenariat/logo-grille-adonis.png"/></a>
+               <a href="http://www.beauxartsparis.com" title="Site de l’École nationale supérieure des beaux-arts de Paris"><img src="css/graphics/logo-partenariat/logo-Ensba.png"/></a>
+               <a href="http://www.enc.sorbonne.fr" title="Site de l’École nationale des chartes"><img src="css/graphics/logo-partenariat/logo-ENC.png"/></a>
+               <a href="http://www.senat.fr" title="Site du Sénat"><img src="css/graphics/logo-partenariat/logo-senat.png"/></a>
+               <a href="http://www.library.upenn.edu" title="Site de la Penn Library"><img src="css/graphics/logo-partenariat/logo-penn-libraries.png"/></a>
+               <a href="http://www.institut-de-france.fr" title="Site de l’Institut de France"><img src="css/graphics/logo-partenariat/logo-institut.png"/></a>
+               <a href="http://www.enpc.fr" title="Site de l’École nationale des ponts et chaussées"><img src="css/graphics/logo-partenariat/logo-ENPC.png"/></a>
+               <a href="http://www.bnf.fr" title="Bibliothèque nationale de France"><img src="css/graphics/logo-partenariat/logo-BNF.png"/></a>
+               <a href="http://www.architecture.com" title="Site du RIBA"><img src="css/graphics/logo-partenariat/logo-riba.png"/></a>
+               <a href="http://bibliotheques.compiegne.fr" title="Site de la bibliothèque de la ville de Compiègne"><img src="css/graphics/logo-partenariat/logo-compiegne.png"/></a>
+               <a href="http://www.bm.nantes.fr/" title="Site de la bibliothèque municipale de Nantes"><img src="css/graphics/logo-partenariat/logo-BM-nantes.png"/></a>
+               <a href="" title=""><img src="css/graphics/logo-partenariat/logo-getty-research.png"/></a>
+               <div style="text-align:center;">
+                 <a href="http://www.columbia.edu" title="Site de l’Université de Columbia"><img src="css/graphics/logo-partenariat/logo-columbia.png"/></a>
+                 <a href="https://www.rijksmuseum.nl" title="Site du Rijksmuseum"><img src="css/graphics/logo-partenariat/logo-rijks-museum.png"/></a>
+                 <a href="http://linneatillyarchitecture.blogspot.fr/p/normal-0-21-false-false-false-fr-x-none_8498.html" title="Cronstedt"><img src="css/graphics/logo-partenariat/logo-cronstedt.png"/></a>
+               </div>
+             </div>
+           </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+    //Show modal box
+    $('#openModal').click(
+      function() {$('.dumbBoxWrap').show();}
+      );
+      //Hide modal box
+      $('#closeModal').click(
+      function() {$('.dumbBoxWrap').hide();}
+      );
+      }); </script>
+
+<script type="text/javascript">
+  Event.observe(window,'load',function(){
+  setHeightHomePage();
+  },false);
+</script>
+
+</body>
+</html>

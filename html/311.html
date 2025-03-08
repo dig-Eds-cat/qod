@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html dir="auto">
+  <head>
+    <title>Home - IGCyr | GVCyr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="The Inscriptions of Greek Cyrenaica (IGCyr) and the Greek Verse inscriptions of Cyrenaica (GVCyr)">
+    <meta name="dc.creator" content="CRR-MM">
+    <meta name="robots" content="noodp">
+    <link rel="canonical" href="http://igcyr.unibo.it/">
+    <meta name="keywords" content="Inscriptions; IGCyr; GVCyr; Cyrenaica; Greek Verse; Cirenaica">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="it_IT">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home - IGCyr | GVCyr">
+    <meta property="og:description" content="The Inscriptions of Greek Cyrenaica (IGCyr) and the Greek Verse inscriptions of Cyrenaica (GVCyr)">
+    <meta property="og:url" content="http://igcyr.unibo.it/">
+    <meta property="og:site_name" content="IGCyr | GVCyr">
+    <meta property="og:image" content="http://igcyr.unibo.it/static/img/efebi.gif">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="The Inscriptions of Greek Cyrenaica (IGCyr) and the Greek Verse inscriptions of Cyrenaica (GVCyr)">
+    <meta name="twitter:title" content="Home - IGCyr | GVCyr">
+    <meta name="twitter:image" content="http://igcyr.unibo.it/static/img/efebi.gif">
+    <meta name="google-site-verification" content="nU2pheQwISndxJLbXjIFwMfDY__tl8xtkPqLAgkL01c">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/cookies.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.i18n.properties.js?2018041202"></script>
+    <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/static/js/dictionaries.js?2018041202"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/igcyr.css?2017092801">
+  </head>
+  <body class="container-fluid home">
+    <div id="wrapper">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#abis-navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">IGCyr | GVCyr</a>
+          </div>
+          <div class="collapse navbar-collapse" id="abis-navbar">
+            <form class="navbar-form navbar-right" method="GET" action="/queryresults">
+              <div class="input-group">
+                <input id="nav_search_input" name="q" value="" type="text" class="form-control" placeholder="Search ...">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a id="nav_lang" href="#" title="Change language" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <span id="now_lang"></span>
+                  <i class="glyphicon glyphicon-globe"></i>
+                  <span class="caret"></span>
+                </a>
+                <ul id="lang" class="dropdown-menu language_container">
+                  <li>
+                    <a class="language" href="?lang=it" id="it">it</a>
+                  </li>
+                  <li>
+                    <a class="language" href="?lang=en" id="en">en</a>
+                  </li>
+                  <li>
+                    <a class="language" href="?lang=fr" id="fr">fr</a>
+                  </li>
+                  <li>
+                    <a class="language" href="?lang=ar" id="ar">ar</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a id="nav_adv_search" href="/advsearch" title="Advanced Search">
+                  <span class="visible-xs">Advanced Search</span>
+                  <i class="glyphicon glyphicon-zoom-in"></i>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left">
+              <li class="dropdown">
+                <a id="nav_preface" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu extended_menu preface">
+                  <ul class="col-sm-3">
+                    <li>
+                      <a id="nav_preface_menu1" href="/preface#art2"></a>
+                    </li>
+                    <li>
+                      <a id="nav_preface_menu2" href="/preface#art3"></a>
+                    </li>
+                    <li>
+                      <a id="nav_preface_menu3" href="/preface#art4"></a>
+                    </li>
+                  </ul>
+                  <div class="col-sm-9 extended_menu info">
+                    <p id="preface_intro"></p>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a id="nav_about_menu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu extended_menu about">
+                  <ul class="col-sm-3">
+                    <!-- <li><a id="nav_about" href="{$basep}/about#about-section">ABOUT</a></li> -->
+                    <li>
+                      <a id="nav_project" href="/about#project-section">The project</a>
+                    </li>
+                    <li>
+                      <a id="nav_igcyr" href="/about#igcyr-section">IGCyr | GVCyr</a>
+                    </li>
+                    <li>
+                      <a id="nav_cyr" href="/about#cyr-section">Greek Cyrenaica</a>
+                    </li>
+                    <li>
+                      <a id="nav_schol" href="/about#schol-section">Scholarship</a>
+                    </li>
+                  </ul>
+                  <div class="col-sm-9 extended_menu info">
+                    <p id="about_intro"></p>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a id="nav_browse_menu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu extended_menu browse">
+                  <ul class="col-sm-3">
+                    <!-- <li><a class="nav_li" id="nav_browse" href="{$basep}/browse">BROWSE</a></li> -->
+                    <li>
+                      <a class="nav_li" id="nav_toc" href="/browsetoc">Table of Contents</a>
+                    </li>
+                    <li>
+                      <a class="nav_li" id="nav_indices" href="/browseindices">Indices</a>
+                    </li>
+                  </ul>
+                  <div class="col-sm-9 info">
+                    <p id="browse_intro"></p>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a id="nav_maps_menu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu extended_menu maps">
+                  <ul class="col-sm-12">
+                    <li>
+                      <a class="nav_li" id="nav_map_cirenaica" href="/map"></a>
+                    </li>
+                    <li>
+                      <a class="nav_li" id="nav_map_archaeological" href="/arcmaps"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a id="nav_biblio_menu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu extended_menu biblio">
+                  <ul class="col-sm-3">
+                    <!-- <li><a class="nav_li" id="nav_biblio" href="{$basep}/biblio#biblio-section">Bibliography</a></li> -->
+                    <li>
+                      <a class="nav_li" id="nav_concordance" href="/biblio#concordance-section">Concordance</a>
+                    </li>
+                    <li>
+                      <a class="nav_li" id="nav_series" href="/biblio#series-section">Series and Collections</a>
+                    </li>
+                    <li>
+                      <a class="nav_li" id="nav_monog" href="/biblio#monog-section">Authored Editions, Articles and Monographs</a>
+                    </li>
+                  </ul>
+                  <div class="col-sm-9 info">
+                    <p id="biblio_intro"></p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a id="nav_credits" href="/credits"></a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+      </nav>
+      <div id="page-content-wrapper">
+        <section class="col-md-12 main_content" id="cover">
+          <section class="home_panel">
+            <h1>
+              <span id="cover_resp1" class="cover_text"></span>
+              <span id="cover_title1" class="cover_title">Inscriptions</span>
+              <span id="cover_title2" class="cover_title">of Greek Cyrenaica</span>
+              <span id="cover_collaborators1" class="cover_text"></span>
+              <span id="cover_helpers1" class="cover_text"></span>
+              <hr>
+              <span id="cover_resp2" class="cover_text"></span>
+              <span id="cover_subtitle1">Greek Verse inscriptions</span>
+              <span id="cover_subtitle2">of Cyrenaica</span>
+              <span id="cover_collaborators2" class="cover_text"></span>
+              <span id="cover_helpers2" class="cover_text"></span>
+            </h1>
+            <span class="credit_photo">Cyrene, agora. Photo by courtesy of J.-P. Perrin, enhanced by A. Bencivenni</span>
+            <article>
+              <!--
+                    <p id="cover_howto"></p>
+                    <p id="cover_intro">The Inscriptions of Greek Cyrenaica (IGCyr) and the Greek Verse inscriptions of Cyrenaica (GVCyr) are two corpora, the first collecting all the inscriptions of Greek (VII-I centuries B.C.) Cyrenaica, the second gathering the Greek metrical texts of all periods. These new critical editions of inscriptions from Cyrenaica are part of the international project Inscriptions of Libya (InsLib). For the first time all the inscriptions known to us in 2014, coming from this area of the ancient Mediterranean world, will be assembled in a single online and open access publication.</p>
+-->
+            </article>
+          </section>
+        </section>
+      </div>
+      <footer id="footer" class="footer col-md-12">
+        <div class="footer_bottom col-sm-12">
+          <p id="cover_howto"></p>
+          <p id="cover_intro"></p>
+          <div class="footer_first col-sm-12">
+            <ul class="logos">
+              <li class="abbr">
+                <span id="abbr"></span>
+              </li>
+              <li>ISBN: 9788898010684</li>
+              <li>DOI: http://doi.org/10.6092/UNIBO/IGCYRGVCYR</li>
+              <li>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                  <img alt="Licenza Creative Commons" style="border-width:0" height="20" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png">
+                </a>
+                <div class="sr-only">
+                  <br>
+                  <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Inscriptions of Greek Cyrenaica; Greek Verse Inscriptions of Cyrenaica</span> di<a xmlns:cc="http://creativecommons.org/ns#" href="https://igcyr.unibo.it" property="cc:attributionName" rel="cc:attributionURL">Dobias-Lalou, Catherine</a> è distribuito con Licenza <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribuzione - Non commerciale 4.0 Internazionale</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="footer_second col-sm-12">
+            <ul class="logos">
+              <li>
+                <a class="nav_li" href="http://www.unibo.it">
+                  <img src="/static/img/logo-unibo-dx.png" height="48">
+                </a>
+              </li>
+              <li>
+                <a class="nav_li" href="https://www.kcl.ac.uk/">
+                  <img src="/static/img/kings.jpg" height="40">
+                </a>
+              </li>
+              <li>
+                <a class="nav_li" id="nav_credits_crr-mm" href="http://www.unibo.it/crr-mm">
+                  <img src="/static/img/MMcenter_logo_A.jpg" height="40">
+                </a>
+              </li>
+              <li>
+                <a class="nav_li">
+                  <img src="/static/img/cerla.jpeg" height="40">
+                </a>
+              </li>
+              <li>
+                <a class="nav_li" href="http://www.unimc.it/en">
+                  <img src="/static/img/unimc.jpg" height="40">
+                </a>
+              </li>
+              <li>
+                <a class="nav_li" href="https://www.eagle-network.eu/">
+                  <img src="/static/img/egl.png" height="40">
+                </a>
+              </li>
+              <li>
+                <a class="nav_li" href="https://www.trismegistos.org/">
+                  <img src="/static/img/tm_logo_web13.png" height="60">
+                </a>
+              </li>
+              <li>
+                <a class="nav_li" href="http://peripleo.pelagios.org/ui#selected=http://raw.githubusercontent.com/EAGLE-BPN/RDF/master/IGCyr">
+                  <img src="/static/img/Pelagios-logo.svg" height="60">
+                </a>
+              </li>
+            </ul>
+            <span id="refamsacta_link"></span>
+            <a href="http://amsacta.unibo.it/id/eprint/5687">http://amsacta.unibo.it/id/eprint/5687</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1056 @@
+
+<!DOCTYPE html>
+<!-- adapted by Ian W. Scott from the default layout.html file included in the
+    web2py scaffolding app -->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- www.phpied.com/conditional-comments-block-downloads/ -->
+    <!-- Always force latest IE rendering engine
+        (even in intranet) & Chrome Frame
+            Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--  Mobile Viewport Fix
+            j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
+            device-width: Occupy full width of the screen in its current orientation
+            initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+            user-scalable = yes allows the user to zoom in -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <title>The Online Critical Pseudepigrapha</title>
+    <!-- http://dev.w3.org/html5/markup/meta.name.html -->
+    <meta name="application-name" content="grammateus3" />
+    <meta name="google-site-verification" content="None" />
+
+    <!-- include stylesheets -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <!--<link rel="stylesheet" href="/static/css/bootstrap-theme.min.css"/>-->
+    <link rel="stylesheet" href="/static/css/web2py-bootstrap3.css"/>
+    <link rel="stylesheet" href="/static/css/theme.css"/>
+    <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!--imported fonts-->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/static/images/favicon.png">
+
+    <!-- All JavaScript at the bottom, except ... -->
+    <script type = "text/javascript">
+      <!--
+        console.log('Redirecting from ' + window.location.href);
+        if ( window.location.hostname == "ocp.tyndale.ca" || 
+             window.location.protocol == "http:" ) {
+            window.location = "https://pseudepigrapha.org";
+        }
+      //-->
+    </script>
+
+    <script type="text/javascript"><!--
+    // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+    var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+    var w2p_ajax_date_format = "%Y-%m-%d";
+    var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+    //--></script>
+
+<meta name="keywords" content="early judaism, religion, ancient, literature, Pseudepigrapha,    apocrypha, textual criticism, primary texts, sources, manuscripts" />
+<meta name="copyright" content="Copyright 2006-2012" />
+<meta name="description" content="Free-access editions of the &quot;Old Testament Pseudepigrapha&quot;    and related literature" />
+<meta name="generator" content="Web2py Web Framework" />
+<meta name="author" content="Ian W. Scott &lt;scottianw@gmail.com&gt;" />
+<script src="/static/js/jquery.js" type="text/javascript"></script><link href="/static/css/calendar.css" rel="stylesheet" type="text/css" /><script src="/static/js/calendar.js" type="text/javascript"></script><script src="/static/js/web2py.js" type="text/javascript"></script><script src="/static/plugin_ajaxselect/plugin_ajaxselect.js" type="text/javascript"></script><link href="/static/plugin_listandedit/plugin_listandedit.css" rel="stylesheet" type="text/css" />
+ <!-- this includes jquery.js, calendar.js/.css, web2py.js -- >
+    <!-- Modernizr for HTML5 elements & feature detects -->
+    <script src="/static/js/modernizr-2.8.3.min.js"></script>
+    <!-- Respond.js for the support of media queries in IE8 -->
+    <!--[if lt IE 9]><script src="/static/js/respond-1.4.2.min.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#sidebar-menu">
+    <a id="top" name="top"></a>
+    <div class="flash alert alert-dismissable"></div>
+    <!-- Navbar ======================================= -->
+    <nav id="topnav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            
+            <a class="navbar-brand">The online critical pseudepigrapha</a>
+                <small>Developing and Publishing Accurate Texts of the "Old Testament Pseudepigrapha"    and related literature</small>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" rel="nofollow">Log In</a><ul class="dropdown-menu"><li><a href="/default/user/register?_next=/default/index" rel="nofollow"><i class="icon icon-user glyphicon glyphicon-user"></i> Sign Up</a></li><li><a href="/default/user/request_reset_password?_next=/default/index" rel="nofollow"><i class="icon icon-lock glyphicon glyphicon-lock"></i> Lost password?</a></li><li class="divider"></li><li><a href="/default/user/login?_next=/default/index" rel="nofollow"><i class="icon icon-off glyphicon glyphicon-off"></i> Log In</a></li></ul></li>
+          </ul>
+          
+          <ul class="nav navbar-nav"><li class="web2py-menu-first"><a class="documentslink" href="/default/index"><i class="fa fa-book"></i><span class="visible-lg-inline"> Documents</span></a></li><li class="dropdown"><a class="helplink" href="#"><i class="fa fa-info-circle"></i><span class="visible-lg-inline"> Help and Information</span></a><ul class="dropdown-menu"><li><a class="aboutlink" href="/default/page/about"><i class="fa fa-info-circle fa-fw"></i><span>About</span></a></li><li><a class="faqlink" href="/default/page/faq"><i class="fa fa-question-circle fa-fw"></i><span>FAQ</span></a></li><li><a class="copyrightlink" href="/default/page/copyright"><i class="fa fa-copyright fa-fw"></i><span> Copyright</span></a></li></ul></li><li class="web2py-menu-last"><a class="contactlink" href="/default/contact"><i class="fa fa-bullhorn"></i><span class="visible-lg-inline"> Contact us</span></a></li></ul>
+          
+        </div>
+      </div>
+    </nav>
+    <!-- Masthead ===================================== -->
+    
+    
+    <!-- Main ========================================= -->
+    <!-- Begin page content -->
+    <div class="container-fluid">
+      
+
+      <div class="col-md-8">
+        
+        
+
+
+
+<h3>News and Updates</h3>
+
+<div class='docs_list'>
+
+    <h2>Documents</h2>
+
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Alphabetical by Genre
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+
+                <!-- inner accordion for genres =========================== -->
+                <div class="panel-group" id="accordion-genres" role="tablist" aria-multiselectable="true">
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_apocalypses">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_apocalypses" aria-expanded="true" aria-controls="genresCollapse_apocalypses">
+                            Apocalypses and visionary texts
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_apocalypses" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_apocalypses">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+                                
+                                <li><a href="/docs/text/1En">1 (Ethiopic Apocalypse of) Enoch</a><span class="doc-link-span"> ( <a href="/docs/text/1En">text</a> | <a href="/docs/intro/1En">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/2Bar">2 (Syriac Apocalypse of) Baruch</a><span class="doc-link-span"> ( <a href="/docs/text/2Bar">text</a> | <a href="/docs/intro/2Bar">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/3Bar">3 (Greek Apocalypse of) Baruch</a><span class="doc-link-span"> ( <a href="/docs/text/3Bar">text</a> | <a href="/docs/intro/3Bar">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/4Ezra">4 Ezra</a><span class="doc-link-span"> ( <a href="/docs/text/4Ezra">text</a> | <a href="/docs/intro/4Ezra">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/Mois">Assumption of Moses (Testament of Moses)</a><span class="doc-link-span"> ( <a href="/docs/text/Mois">text</a> | <a href="/docs/intro/Mois">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/SibOr">Sibylline Oracles</a><span class="doc-link-span"> ( <a href="/docs/text/SibOr">text</a> | <a href="/docs/intro/SibOr">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/Amram">Visions of Amram</a><span class="doc-link-span"> ( <a href="/docs/text/Amram">text</a> | <a href="/docs/intro/Amram">introduction</a>)</span></li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_drama">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_drama" aria-expanded="true" aria-controls="genresCollapse_drama">
+                            Drama
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_drama" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_drama">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+                                
+                                <li><a href="/docs/text/EzekTrag">Exagoge of Ezekiel the Tragedian</a><span class="doc-link-span"> ( <a href="/docs/text/EzekTrag">text</a> | <a href="/docs/intro/EzekTrag">introduction</a>)</span></li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_epic">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_epic" aria-expanded="true" aria-controls="genresCollapse_epic">
+                            Epic poetry
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_epic" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_epic">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+                                
+                                <li><a href="/docs/text/PhEPoet">Philo the Epic Poet (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/PhEPoet">text</a> | <a href="/docs/intro/PhEPoet">introduction</a>)</span></li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_histories">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_histories" aria-expanded="true" aria-controls="genresCollapse_histories">
+                            Histories and history-like narratives
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_histories" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_histories">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+                                
+                                <li><a href="/docs/text/3Macc">3 Maccabees</a><span class="doc-link-span"> ( <a href="/docs/text/3Macc">text</a> | <a href="/docs/intro/3Macc">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/4Macc">4 Maccabees</a><span class="doc-link-span"> ( <a href="/docs/text/4Macc">text</a> | <a href="/docs/intro/4Macc">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/ArisEx">Aristeas the Exegete (Fragment)</a><span class="doc-link-span"> ( <a href="/docs/text/ArisEx">text</a> | <a href="/docs/intro/ArisEx">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/Artap">Artapanus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Artap">text</a> | <a href="/docs/intro/Artap">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/ClMal">Cleodemus Malchus</a><span class="doc-link-span"> ( <a href="/docs/text/ClMal">text</a> | <a href="/docs/intro/ClMal">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/Eup">Eupolemus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Eup">text</a> | <a href="/docs/intro/Eup">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/HistRech">History of the Rechabites</a><span class="doc-link-span"> ( <a href="/docs/text/HistRech">text</a> | <a href="/docs/intro/HistRech">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/LetAris">Letter of Aristeas</a><span class="doc-link-span"> ( <a href="/docs/text/LetAris">text</a> | <a href="/docs/intro/LetAris">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/4Bar">Paraleipomena Ieremiou (4 Baruch)</a><span class="doc-link-span"> ( <a href="/docs/text/4Bar">text</a> | <a href="/docs/intro/4Bar">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/Ps-Eup">Pseudo-Eupolemus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Ps-Eup">text</a> | <a href="/docs/intro/Ps-Eup">introduction</a>)</span></li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_lives">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_lives" aria-expanded="true" aria-controls="genresCollapse_lives">
+                            Lives and biographies
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_lives" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_lives">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+                                
+                                <li><a href="/docs/text/AdamEve">Life of Adam and Eve</a><span class="doc-link-span"> ( <a href="/docs/text/AdamEve">text</a> | <a href="/docs/intro/AdamEve">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/LivPro">Lives of the Prophets</a><span class="doc-link-span"> ( <a href="/docs/text/LivPro">text</a> | <a href="/docs/intro/LivPro">introduction</a>)</span></li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_parabiblical">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_parabiblical" aria-expanded="true" aria-controls="genresCollapse_parabiblical">
+                            Parabiblical works (re-written bible)
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_parabiblical" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_parabiblical">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+                                
+                                <li><a href="/docs/text/ArisEx">Aristeas the Exegete (Fragment)</a><span class="doc-link-span"> ( <a href="/docs/text/ArisEx">text</a> | <a href="/docs/intro/ArisEx">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/Artap">Artapanus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Artap">text</a> | <a href="/docs/intro/Artap">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/Mois">Assumption of Moses (Testament of Moses)</a><span class="doc-link-span"> ( <a href="/docs/text/Mois">text</a> | <a href="/docs/intro/Mois">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/EzekTrag">Exagoge of Ezekiel the Tragedian</a><span class="doc-link-span"> ( <a href="/docs/text/EzekTrag">text</a> | <a href="/docs/intro/EzekTrag">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/Jub">Jubilees</a><span class="doc-link-span"> ( <a href="/docs/text/Jub">text</a> | <a href="/docs/intro/Jub">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/AdamEve">Life of Adam and Eve</a><span class="doc-link-span"> ( <a href="/docs/text/AdamEve">text</a> | <a href="/docs/intro/AdamEve">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/4Bar">Paraleipomena Ieremiou (4 Baruch)</a><span class="doc-link-span"> ( <a href="/docs/text/4Bar">text</a> | <a href="/docs/intro/4Bar">introduction</a>)</span></li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_philosophical">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_philosophical" aria-expanded="true" aria-controls="genresCollapse_philosophical">
+                            Philosophical and theological discourses
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_philosophical" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_philosophical">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+                                
+                                <li><a href="/docs/text/Aristob">Aristobulus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Aristob">text</a> | <a href="/docs/intro/Aristob">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/Theod">Theodotus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Theod">text</a> | <a href="/docs/intro/Theod">introduction</a>)</span></li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_prophecy">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_prophecy" aria-expanded="true" aria-controls="genresCollapse_prophecy">
+                            Prophecy
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_prophecy" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_prophecy">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+                                
+                                <li><a href="/docs/text/ApocrEzek">Apocryphon of Ezekiel</a><span class="doc-link-span"> ( <a href="/docs/text/ApocrEzek">text</a> | <a href="/docs/intro/ApocrEzek">introduction</a>)</span></li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_psalms">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_psalms" aria-expanded="true" aria-controls="genresCollapse_psalms">
+                            Psalms and hymns
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_psalms" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_psalms">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+                                
+                                <li><a href="/docs/text/PssSol">Psalms of Solomon</a><span class="doc-link-span"> ( <a href="/docs/text/PssSol">text</a> | <a href="/docs/intro/PssSol">introduction</a>)</span></li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_testaments">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_testaments" aria-expanded="true" aria-controls="genresCollapse_testaments">
+                            Testaments
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_testaments" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_testaments">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+                                
+                                <li><a href="/docs/text/Mois">Assumption of Moses (Testament of Moses)</a><span class="doc-link-span"> ( <a href="/docs/text/Mois">text</a> | <a href="/docs/intro/Mois">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/TAbr">Testament of Abraham</a><span class="doc-link-span"> ( <a href="/docs/text/TAbr">text</a> | <a href="/docs/intro/TAbr">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/TAdam">Testament of Adam</a><span class="doc-link-span"> ( <a href="/docs/text/TAdam">text</a> | <a href="/docs/intro/TAdam">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/TJob">Testament of Job</a><span class="doc-link-span"> ( <a href="/docs/text/TJob">text</a> | <a href="/docs/intro/TJob">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/TSol">Testament of Solomon</a><span class="doc-link-span"> ( <a href="/docs/text/TSol">text</a> | <a href="/docs/intro/TSol">introduction</a>)</span></li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_uncertain">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-genres" href="#genresCollapse_uncertain" aria-expanded="true" aria-controls="genresCollapse_uncertain">
+                            Uncertain genre
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="genresCollapse_uncertain" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_uncertain">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+                                
+                                <li><a href="/docs/text/4Q548">4Q548 (Dualistic Fragments in Aramaic)</a><span class="doc-link-span"> ( <a href="/docs/text/4Q548">text</a> | <a href="/docs/intro/4Q548">introduction</a>)</span></li>
+                            
+                                
+                                <li><a href="/docs/text/ElMod">Eldad and Modad (Fragment)</a><span class="doc-link-span"> ( <a href="/docs/text/ElMod">text</a> | <a href="/docs/intro/ElMod">introduction</a>)</span></li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+                <!-- inner accordion for genres ends =========================== -->
+
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Alphabetical by Biblical Figure
+                </a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+
+                <!-- inner accordion for figures =========================== -->
+                <div class="panel-group" id="accordion-figures" role="tablist" aria-multiselectable="true">
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Abraham">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Abraham" aria-expanded="true" aria-controls="figuresCollapse_Abraham">
+                            Abraham
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Abraham" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Abraham">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/Artap">Artapanus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Artap">text</a> | <a href="/docs/intro/Artap">introduction</a>)</span></li>
+
+                            
+
+                                
+                                <li><a href="/docs/text/TAbr">Testament of Abraham</a><span class="doc-link-span"> ( <a href="/docs/text/TAbr">text</a> | <a href="/docs/intro/TAbr">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Adam">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Adam" aria-expanded="true" aria-controls="figuresCollapse_Adam">
+                            Adam
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Adam" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Adam">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/AdamEve">Life of Adam and Eve</a><span class="doc-link-span"> ( <a href="/docs/text/AdamEve">text</a> | <a href="/docs/intro/AdamEve">introduction</a>)</span></li>
+
+                            
+
+                                
+                                <li><a href="/docs/text/TAdam">Testament of Adam</a><span class="doc-link-span"> ( <a href="/docs/text/TAdam">text</a> | <a href="/docs/intro/TAdam">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Amram">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Amram" aria-expanded="true" aria-controls="figuresCollapse_Amram">
+                            Amram
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Amram" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Amram">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/Amram">Visions of Amram</a><span class="doc-link-span"> ( <a href="/docs/text/Amram">text</a> | <a href="/docs/intro/Amram">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Baruch">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Baruch" aria-expanded="true" aria-controls="figuresCollapse_Baruch">
+                            Baruch
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Baruch" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Baruch">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/2Bar">2 (Syriac Apocalypse of) Baruch</a><span class="doc-link-span"> ( <a href="/docs/text/2Bar">text</a> | <a href="/docs/intro/2Bar">introduction</a>)</span></li>
+
+                            
+
+                                
+                                <li><a href="/docs/text/3Bar">3 (Greek Apocalypse of) Baruch</a><span class="doc-link-span"> ( <a href="/docs/text/3Bar">text</a> | <a href="/docs/intro/3Bar">introduction</a>)</span></li>
+
+                            
+
+                                
+                                <li><a href="/docs/text/4Bar">Paraleipomena Ieremiou (4 Baruch)</a><span class="doc-link-span"> ( <a href="/docs/text/4Bar">text</a> | <a href="/docs/intro/4Bar">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Enoch">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Enoch" aria-expanded="true" aria-controls="figuresCollapse_Enoch">
+                            Enoch
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Enoch" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Enoch">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/1En">1 (Ethiopic Apocalypse of) Enoch</a><span class="doc-link-span"> ( <a href="/docs/text/1En">text</a> | <a href="/docs/intro/1En">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Eve">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Eve" aria-expanded="true" aria-controls="figuresCollapse_Eve">
+                            Eve
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Eve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Eve">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/AdamEve">Life of Adam and Eve</a><span class="doc-link-span"> ( <a href="/docs/text/AdamEve">text</a> | <a href="/docs/intro/AdamEve">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Ezekiel">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Ezekiel" aria-expanded="true" aria-controls="figuresCollapse_Ezekiel">
+                            Ezekiel
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Ezekiel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Ezekiel">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/ApocrEzek">Apocryphon of Ezekiel</a><span class="doc-link-span"> ( <a href="/docs/text/ApocrEzek">text</a> | <a href="/docs/intro/ApocrEzek">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Ezra">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Ezra" aria-expanded="true" aria-controls="figuresCollapse_Ezra">
+                            Ezra
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Ezra" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Ezra">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/4Ezra">4 Ezra</a><span class="doc-link-span"> ( <a href="/docs/text/4Ezra">text</a> | <a href="/docs/intro/4Ezra">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Jeremiah">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Jeremiah" aria-expanded="true" aria-controls="figuresCollapse_Jeremiah">
+                            Jeremiah
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Jeremiah" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Jeremiah">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/4Bar">Paraleipomena Ieremiou (4 Baruch)</a><span class="doc-link-span"> ( <a href="/docs/text/4Bar">text</a> | <a href="/docs/intro/4Bar">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Job">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Job" aria-expanded="true" aria-controls="figuresCollapse_Job">
+                            Job
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Job" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Job">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/ArisEx">Aristeas the Exegete (Fragment)</a><span class="doc-link-span"> ( <a href="/docs/text/ArisEx">text</a> | <a href="/docs/intro/ArisEx">introduction</a>)</span></li>
+
+                            
+
+                                
+                                <li><a href="/docs/text/TJob">Testament of Job</a><span class="doc-link-span"> ( <a href="/docs/text/TJob">text</a> | <a href="/docs/intro/TJob">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Moses">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Moses" aria-expanded="true" aria-controls="figuresCollapse_Moses">
+                            Moses
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Moses" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Moses">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/Aristob">Aristobulus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Aristob">text</a> | <a href="/docs/intro/Aristob">introduction</a>)</span></li>
+
+                            
+
+                                
+                                <li><a href="/docs/text/Artap">Artapanus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Artap">text</a> | <a href="/docs/intro/Artap">introduction</a>)</span></li>
+
+                            
+
+                                
+                                <li><a href="/docs/text/Mois">Assumption of Moses (Testament of Moses)</a><span class="doc-link-span"> ( <a href="/docs/text/Mois">text</a> | <a href="/docs/intro/Mois">introduction</a>)</span></li>
+
+                            
+
+                                
+                                <li><a href="/docs/text/EzekTrag">Exagoge of Ezekiel the Tragedian</a><span class="doc-link-span"> ( <a href="/docs/text/EzekTrag">text</a> | <a href="/docs/intro/EzekTrag">introduction</a>)</span></li>
+
+                            
+
+                                
+                                <li><a href="/docs/text/Jub">Jubilees</a><span class="doc-link-span"> ( <a href="/docs/text/Jub">text</a> | <a href="/docs/intro/Jub">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Prophets">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Prophets" aria-expanded="true" aria-controls="figuresCollapse_Prophets">
+                            Prophets
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Prophets" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Prophets">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/LivPro">Lives of the Prophets</a><span class="doc-link-span"> ( <a href="/docs/text/LivPro">text</a> | <a href="/docs/intro/LivPro">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Rechabites">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Rechabites" aria-expanded="true" aria-controls="figuresCollapse_Rechabites">
+                            Rechabites
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Rechabites" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Rechabites">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/HistRech">History of the Rechabites</a><span class="doc-link-span"> ( <a href="/docs/text/HistRech">text</a> | <a href="/docs/intro/HistRech">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Sibyl">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Sibyl" aria-expanded="true" aria-controls="figuresCollapse_Sibyl">
+                            Sibyl
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Sibyl" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Sibyl">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/SibOr">Sibylline Oracles</a><span class="doc-link-span"> ( <a href="/docs/text/SibOr">text</a> | <a href="/docs/intro/SibOr">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="genresHeading_Solomon">
+                        <h5 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-figures" href="#figuresCollapse_Solomon" aria-expanded="true" aria-controls="figuresCollapse_Solomon">
+                            Solomon
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="figuresCollapse_Solomon" class="panel-collapse collapse" role="tabpanel" aria-labelledby="genresHeading_Solomon">
+                        <div class="panel-body">
+                        <ul class="">
+                            
+
+                                
+                                <li><a href="/docs/text/PssSol">Psalms of Solomon</a><span class="doc-link-span"> ( <a href="/docs/text/PssSol">text</a> | <a href="/docs/intro/PssSol">introduction</a>)</span></li>
+
+                            
+
+                                
+                                <li><a href="/docs/text/TSol">Testament of Solomon</a><span class="doc-link-span"> ( <a href="/docs/text/TSol">text</a> | <a href="/docs/intro/TSol">introduction</a>)</span></li>
+
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+                <!-- inner accordion for figures ends =========================== -->
+
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Alphabetical by Full Title
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+            <ul class="">
+            
+                
+                <li><a href="/docs/text/1En">1 (Ethiopic Apocalypse of) Enoch</a><span class="doc-link-span"> ( <a href="/docs/text/1En">text</a> | <a href="/docs/intro/1En">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/2Bar">2 (Syriac Apocalypse of) Baruch</a><span class="doc-link-span"> ( <a href="/docs/text/2Bar">text</a> | <a href="/docs/intro/2Bar">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/3Bar">3 (Greek Apocalypse of) Baruch</a><span class="doc-link-span"> ( <a href="/docs/text/3Bar">text</a> | <a href="/docs/intro/3Bar">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/3Macc">3 Maccabees</a><span class="doc-link-span"> ( <a href="/docs/text/3Macc">text</a> | <a href="/docs/intro/3Macc">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/4Ezra">4 Ezra</a><span class="doc-link-span"> ( <a href="/docs/text/4Ezra">text</a> | <a href="/docs/intro/4Ezra">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/4Macc">4 Maccabees</a><span class="doc-link-span"> ( <a href="/docs/text/4Macc">text</a> | <a href="/docs/intro/4Macc">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/4Q548">4Q548 (Dualistic Fragments in Aramaic)</a><span class="doc-link-span"> ( <a href="/docs/text/4Q548">text</a> | <a href="/docs/intro/4Q548">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/ApocrEzek">Apocryphon of Ezekiel</a><span class="doc-link-span"> ( <a href="/docs/text/ApocrEzek">text</a> | <a href="/docs/intro/ApocrEzek">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/ArisEx">Aristeas the Exegete (Fragment)</a><span class="doc-link-span"> ( <a href="/docs/text/ArisEx">text</a> | <a href="/docs/intro/ArisEx">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/Aristob">Aristobulus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Aristob">text</a> | <a href="/docs/intro/Aristob">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/Artap">Artapanus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Artap">text</a> | <a href="/docs/intro/Artap">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/Mois">Assumption of Moses (Testament of Moses)</a><span class="doc-link-span"> ( <a href="/docs/text/Mois">text</a> | <a href="/docs/intro/Mois">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/ClMal">Cleodemus Malchus</a><span class="doc-link-span"> ( <a href="/docs/text/ClMal">text</a> | <a href="/docs/intro/ClMal">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/ElMod">Eldad and Modad (Fragment)</a><span class="doc-link-span"> ( <a href="/docs/text/ElMod">text</a> | <a href="/docs/intro/ElMod">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/Eup">Eupolemus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Eup">text</a> | <a href="/docs/intro/Eup">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/EzekTrag">Exagoge of Ezekiel the Tragedian</a><span class="doc-link-span"> ( <a href="/docs/text/EzekTrag">text</a> | <a href="/docs/intro/EzekTrag">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/HistRech">History of the Rechabites</a><span class="doc-link-span"> ( <a href="/docs/text/HistRech">text</a> | <a href="/docs/intro/HistRech">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/Jub">Jubilees</a><span class="doc-link-span"> ( <a href="/docs/text/Jub">text</a> | <a href="/docs/intro/Jub">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/LetAris">Letter of Aristeas</a><span class="doc-link-span"> ( <a href="/docs/text/LetAris">text</a> | <a href="/docs/intro/LetAris">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/AdamEve">Life of Adam and Eve</a><span class="doc-link-span"> ( <a href="/docs/text/AdamEve">text</a> | <a href="/docs/intro/AdamEve">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/LivPro">Lives of the Prophets</a><span class="doc-link-span"> ( <a href="/docs/text/LivPro">text</a> | <a href="/docs/intro/LivPro">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/4Bar">Paraleipomena Ieremiou (4 Baruch)</a><span class="doc-link-span"> ( <a href="/docs/text/4Bar">text</a> | <a href="/docs/intro/4Bar">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/PhEPoet">Philo the Epic Poet (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/PhEPoet">text</a> | <a href="/docs/intro/PhEPoet">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/PssSol">Psalms of Solomon</a><span class="doc-link-span"> ( <a href="/docs/text/PssSol">text</a> | <a href="/docs/intro/PssSol">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/Ps-Eup">Pseudo-Eupolemus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Ps-Eup">text</a> | <a href="/docs/intro/Ps-Eup">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/SibOr">Sibylline Oracles</a><span class="doc-link-span"> ( <a href="/docs/text/SibOr">text</a> | <a href="/docs/intro/SibOr">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/TAbr">Testament of Abraham</a><span class="doc-link-span"> ( <a href="/docs/text/TAbr">text</a> | <a href="/docs/intro/TAbr">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/TAdam">Testament of Adam</a><span class="doc-link-span"> ( <a href="/docs/text/TAdam">text</a> | <a href="/docs/intro/TAdam">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/TJob">Testament of Job</a><span class="doc-link-span"> ( <a href="/docs/text/TJob">text</a> | <a href="/docs/intro/TJob">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/TSol">Testament of Solomon</a><span class="doc-link-span"> ( <a href="/docs/text/TSol">text</a> | <a href="/docs/intro/TSol">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/Theod">Theodotus (Fragments)</a><span class="doc-link-span"> ( <a href="/docs/text/Theod">text</a> | <a href="/docs/intro/Theod">introduction</a>)</span></li>
+            
+                
+                <li><a href="/docs/text/Amram">Visions of Amram</a><span class="doc-link-span"> ( <a href="/docs/text/Amram">text</a> | <a href="/docs/intro/Amram">introduction</a>)</span></li>
+            
+            </ul>
+            </div>
+        </div>
+    </div>
+    </div> <!--close div panel group-->
+</div>
+
+
+
+
+        
+      </div>
+
+      
+        <div id="right_sidebar" class="col-md-4 right-sidebar clearfix" >
+            
+
+<div class="sidebar-wrapper">
+
+<h4>General Editors</h4>
+    <ul>
+        <li>Ian W. Scott (2006-)</li>
+        <li>Ken M. Penner (2006-2009, 2013-)</li>
+        <li>David M. Miller (2006-2007)</li>
+    </ul>
+
+<h4>Review Board</h4>
+
+    <ul>
+        <li>Judith H. Newman (2009-)</li>
+        <li>James H. Charlesworth (2006-2014)</li>
+        <li>Robert A. Kraft (2006-2008)</li>
+        <li>Craig A. Evans (2006-2007)</li>
+    </ul>
+
+<h4>About the Project</h4>
+
+<p>The mandate of the Online Critical Pseudepigrapha is to develop and publish
+electronic editions of the best critical texts of the "Old Testament" Pseudepigrapha
+and related literature.</p>
+
+<p>Note that in a few cases it has not yet been feasible
+to publish the best eclectic text of a given document. In other cases the OCP
+edition of a document does not yet include all of the textual evidence. Readers
+should consult the "text status" information on the introductory page for each
+document to determine whether a better or more complete text exists elsewhere.</p>
+
+</div>
+
+
+        </div>
+      
+
+    </div>
+
+     <!-- this is default footer -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="copyright pull-left">Copyright &#169; 2025</div>
+          <div id="poweredBy" class="pull-right">
+            Powered by
+            <a href="http://www.web2py.com/">web2py</a>
+          </div>
+      </div>
+    </footer>
+    
+    <!-- The javascript =============================== -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/web2py-bootstrap3.js"></script>
+    
+    
+    <!-- Share ============================y============ -->
+    <script src="/static/js/share.js?static=%2Fstatic%2Fimages"></script>
+  </body>
+</html>

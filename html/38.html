@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" ><!--<![endif]-->
+
+<head>
+    <title>CORPUS RHYTHMORUM MUSICUM</title>    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fogli di stile -->
+    <link rel="stylesheet" type="text/css" href="/shared/css/HIdatagrid.css" />
+    <link rel="stylesheet" type="text/css" href="/shared/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="/shared/css/default_BS.css" />
+    <link rel="stylesheet" type="text/css" href="/js/bootstrap/css/bootstrap.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/shared/css/bootstrap-custom.css" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="/shared/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="/shared/himeros/officinabarezzi/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="/shared/css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="/public/css/default.css?random=67cbf8376bcaa" />
+    <link rel="stylesheet" type="text/css" href="/public/css/frontend.css?random=67cbf8376bcab" />
+
+    <link rel="stylesheet" type="text/css" href="/public/cleancanvas/css/bootstrap-overrides.css">
+    <link rel="stylesheet" type="text/css" href="/public/cleancanvas/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/navbar.css?random=67cbf8376bcac">
+
+    <script type="text/javascript" src="/js/jquery/jquery.js"></script>
+
+    <script type="text/javascript" src="/shared/js/HIdatagrid.js"></script>
+    <script type="text/javascript" src="/shared/himeros/js/language_BS.js" ></script>
+    <script type="text/javascript" src="/shared/js/default.js" ></script>
+    <script type="text/javascript" src="/public/js/default.js?random=67cbf8376bcae"></script>
+    <script type="text/javascript" src="/shared/js/chrono.js" ></script>
+
+
+<!--    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+    <link rel="icon" href="/public/img/favicon.png" type="image/png" />
+
+
+
+    <style>
+        body {
+            background-color: #efefef;
+            font-family: 'Open sans', 'sans-serif' !important;
+        }
+        div.container {
+            background-color: #efefef;
+        }
+        /* impedisce lo slittamento a destra del menù quando si apre una finestra modale*/
+        .modal-open, .modal-open .navbar-fixed-top{
+            margin-right:15px !important
+        }
+
+        /* sposta a 1000px il breakpoint per il collasso del menù */
+
+        @media (max-width: 1000px) {
+          .navbar-header {
+              float: none;
+          }
+          .navbar-left,.navbar-right {
+              float: none !important;
+          }
+          .navbar-toggle {
+              display: block;
+          }
+          .navbar-collapse {
+              border-top: 1px solid transparent;
+              box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+          }
+          .navbar-fixed-top {
+              top: 0;
+              border-width: 0 0 1px;
+          }
+          .navbar-collapse.collapse {
+              display: none!important;
+          }
+          .navbar-nav {
+              float: none!important;
+              margin-top: 7.5px;
+          }
+          .navbar-nav>li {
+              float: none;
+          }
+          .navbar-nav>li>a {
+              padding-top: 10px;
+              padding-bottom: 10px;
+          }
+          .collapse.in{
+              display:block !important;
+          }
+          #item-menu-it, #item-menu-en{
+            padding-left:15px;
+          }
+
+        }
+        a:link, a:visited, a.active {
+            color:#0000b1
+        }
+        a:hover {
+            text-decoration:underline
+        }
+        /* è usato solo nel footer (cleancanvas/css/bootstrap-overrides */
+        .row {
+            margin-right: 0 !important
+        }
+        .nav-pills li{
+            margin-bottom: 3px !important;
+            margin-left: 0 !important;
+            margin-right: 3px !important;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="wait0"></div>
+    <script src="/shared/js/wait0.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="/shared/himeros/opera/css/pagine.css"/>
+<script src="/public/js/navbar.js"></script>
+
+
+
+<style>
+
+    body {
+/*        background-color: #fff*/
+    }
+
+    div.titoloHome {
+        position:absolute;
+        left:10%;
+/*        right:20%;*/
+        top:550px;
+        color:#fff;
+        font-size: 50px;
+        line-height: 50px;
+        text-shadow: 1px 1px 1px rgb(49,57,61);
+        z-index: 10;
+        font-weight: 400;
+        background-color: transparent;
+        padding: 1.5%;
+        opacity: .97
+    }
+
+    .section_header {
+        margin-top:50px
+    }
+    div.testo-home div{
+        text-align:justify !important;
+        font-size: 18px;
+    }
+    @media screen and (max-width: 1800px) {
+        div.titoloHome {
+            top:450px;
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        div.titoloHome {
+            top:400px;
+        }
+    }
+
+    @media screen and (max-width: 1375px) {
+        div.titoloHome {
+            top:370px;
+            left:5%;
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+    @media screen and (max-width: 1250px) {
+        div.titoloHome {
+            top:320px;
+        }
+    }
+    @media screen and (max-width: 1150px) {
+        div.titoloHome {
+            top:280px;
+        }
+    }
+
+    @media screen and (max-width: 1050px) {
+        div.titoloHome {
+            font-size: 30px;
+            line-height: 30px;
+            top:320px;
+        }
+    }
+    @media screen and (max-width: 850px) {
+        div.titoloHome {
+            top:280px;
+        }
+    }
+
+
+    @media screen and (max-width: 760px) {
+        /* la scritta scompare*/
+        .titoloHome {
+            display:none
+        }
+        .section_header {
+            margin-top:80px
+        }
+        div.testo-home div{
+            text-align:left !important;
+            font-size:15px
+        }
+    }
+</style>
+<nav class="navbar navbar-default navbar-fixed-top navbar-default-large" id="navbar-default">
+<div class="container nav-container-large" id="nav-container">
+<div class="navbar-header" style="float:left;">
+<a class="navbar-brand navbar-brand-large" id ="navbar-brand" href="/public/frontend"><img id="img-brand" alt="" src="/public/img/logo3.png"></a>
+</div>
+<div class="navbar-header" style="margin-top:4px;padding-right:2%">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="collapse navbar-collapse navbar-collapse-large" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li><a href="/public/frontend/index" class="normal-toggle selected-item">HOME</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle normal-toggle " data-toggle="dropdown">INTRODUZIONI <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+<li><a href="#" ><b>Globali</b></a>
+<ul class="dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+<li class="mySubmenu"><a class="mySubmenu" href="/public/pagine/introduzioni/idintroduzioni/82">Introduzione&nbsp;generale</a></li>
+<li class="mySubmenu"><a class="mySubmenu" href="/public/pagine/introduzioni/idintroduzioni/2">Introduzione&nbsp;all'edizione&nbsp;musicale</a></li>
+<li class="mySubmenu"><a class="mySubmenu" href="/public/pagine/introduzioni/idintroduzioni/3">Trascrizione&nbsp;musicale</a></li>
+<li class="mySubmenu"><a class="mySubmenu" href="/public/pagine/introduzioni/idintroduzioni/5">Criteri&nbsp;della&nbsp;scansione&nbsp;elettronica</a></li>
+</ul>
+</li>
+<li><a href="#" ><b>1. Canti di tradizione non liturgica</b></a>
+<ul class="dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+<li class="mySubmenu"><a class="mySubmenu" href="/public/pagine/introduzioni/idintroduzioni/1">Introduzione&nbsp;all'edizione&nbsp;critica</a></li>
+<li class="mySubmenu"><a class="mySubmenu" href="/public/pagine/introduzioni/idintroduzioni/4">Manoscritti</a></li>
+</ul>
+</li>
+<li><a href="#" ><b>2. <i>Rhythmi</i> computistici</b></a>
+<ul class="dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+<li class="mySubmenu"><a class="mySubmenu" href="/public/pagine/introduzioni/idintroduzioni/84">Introduzione&nbsp;all'edizione&nbsp;critica</a></li>
+</ul>
+</li>
+<li><a href="#" ><b>3. Inni ritmici</b></a>
+<ul class="dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+<li class="mySubmenu"><a class="mySubmenu" href="/public/pagine/introduzioni/idintroduzioni/83">Introduzione&nbsp;all'edizione&nbsp;critica</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/public/pagine/testi" class="normal-toggle ">CANTI</a></li>
+<li><a href="/public/pagine/musica" class="normal-toggle ">MUSICA</a></li>
+<li><a href="/public/pagine/manoscritti" class="normal-toggle ">MANOSCRITTI</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle normal-toggle " data-toggle="dropdown">STRUMENTI <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+<li><a href="/public/ricerca/grid">Ricerca</a></li>
+<li><a href="/public/pagine/concordanze">Concordanze</a></li>
+<li><a href="/public/pagine/statistiche">Statistiche</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle normal-toggle " data-toggle="dropdown">TAVOLE <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+<li><a href="/public/pagine/tavole/tavola/trascrizione">Norme di trascrizione</a></li>
+<li><a href="/public/pagine/tavole/tavola/metrica">Tabelle metriche</a></li>
+<li><a href="/public/pagine/tavole/tavola/neume">Neume table</a></li>
+<li><a href="/public/pagine/tavole/tavola/statistiche">Criteri delle statistiche</a></li>
+<li><a href="/public/pagine/bibliografia">Bibliografia</a></li>
+<li><a href="/public/pagine/credits">Credits</a></li>
+</ul>
+</li>
+<li><a href="/public/pagine/guida" class="normal-toggle ">?</a></li>
+<li><a href="javascript:setLanguage('it','/public/cookies.php')" id="item-menu-it" class="normal-toggle "><img src='/public/img/italy.gif' alt='Italiano' title='Italiano' style='width:28px'></a></li>
+<li><a href="javascript:setLanguage('en','/public/cookies.php')" id="item-menu-en" class="normal-toggle "><img src='/public/img/english.gif' alt='English' title='English' style='width:28px'></a></li>
+</ul>
+</div><!-- /.nav-collapse -->
+</div>
+</nav><!-- /.navbar -->
+
+
+<div id="home-banner" style="clear:both"><img class="flex" width="100%" src="/public/img/home_3.jpg"/></div>
+
+<div class="titoloHome">
+    CORPUS RHYTHMORUM MUSICUM <br/>(saec. IV-IX)
+</div>
+
+
+
+<!--div class="titoloHome">
+    Scuola di Alta formazione in Storia e Filologia<br/> del Manoscritto e del Libro Antico
+</div-->
+
+
+<div class="container" style="background-color:#fff">
+    <div class="section_header">
+        <h3></h3>
+    </div>
+    <div class="testo-home" style="padding-left: 10%;padding-right: 7%;padding-top: 40px;padding-bottom: 100px;text-indent: 15px">
+        <div>
+                        Il <i>Corpus Rhythmorum Musicum</i> è l’edizione critica a stampa e digitale, con analisi linguistica, metrica, paleografica e musicologica,
+            delle poesie latine musicate dei secoli IV-IX composte nella versificazione ritmica, cioè sillabo-tonica da cui nasce la poesia occidentale moderna.
+            Presenta per la prima volta i testi insieme alle musiche e la riproduzione completa di tutti i testimoni manoscritti con relative trascrizioni.
+            Include i canti di tradizione non-liturgica, le i ritmi computistico-astronomici e gli inni ritmici. Il progetto,
+            ideato e diretto da Francesco Stella (Università di Siena) con la collaborazione di specialisti internazionali,
+            è coordinato da Sam Barrett (University of Cambridge) per l’edizione musicale, e realizzato grazie al supporto della Commissione Europea (progetto TMR1998-2000) e dei PRIN 2004-2006.
+        </div>
+    </div>
+</div>
+
+<footer id="footer" style="margin-top:0">
+    <div class="container" style="padding-left:30px !important;background-color: inherit">
+        <div class="row sections">
+            <div class="span4 recent_posts">
+                <div class="post">
+                    <div class="date" style="margin-top:25px">
+                        Digital edition coordinated by
+                    </div>
+                    <div class="nomi">
+                        FRANCESCO STELLA
+                    </div>
+                    <div class="date" style="margin-top:10px">
+                        Musical edition by
+                    </div>
+                    <div class="nomi">
+                        SAM BARRETT
+                    </div>
+                    <div class="date" style="margin-top:10px">
+                        Digital reproduction of the manuscripts
+                    </div>
+                    <div class="nomi">
+                    </div>
+                    <div class="date" style="margin-top:10px">
+                        Audio recordings by choirs
+                    </div>
+                    <div class="nomi">
+                        <i>Laus cordis</i> and <i>Palma choralis</i>
+                    </div>
+                    <div class="date" style="margin-top:10px">
+                        directed by
+                    </div>
+                    <div class="nomi">
+                        GIACOMO BAROFFIO and KIM EUN JU
+                    </div>
+                    <div class="date" style="margin-top:10px">
+                        Software by
+                    </div>
+                    <div class="nomi">
+                        LUIGI TESSAROLO
+                    </div>
+
+                </div>
+            </div>
+            <div class="span4 testimonials" style="margin-bottom:75px">
+                <h3 class="footer_header">
+                    Partners
+                </h3>
+                <div class="wrapper">
+                    <div>
+                        <a href="https://www.unisi.it" target="_blank">
+                            <img src="/public/img/unisi.png" class="flex" width="300px" alt=""/>
+                        </a>
+                    </div>
+                    <div style="margin-top:50px">
+                        <a href="https://www.unibg.it" target="_blank">
+                            <img src="/public/img/unibg.png" class="flex" width="300px" alt=""/>
+                        </a>
+                    </div>
+                    <div style="margin-top:50px">
+                        <a href="https://www.cam.ac.uk" target="_blank">
+                            <img src="/public/img/logo_cambridge.png" class="flex" width="280px" alt=""/>
+                        </a>
+                    </div>
+                    <div style="margin-top:50px">
+                        <a href="http://www.sismelfirenze.it" target="_blank">
+                            <img src="/public/img/galluzzo.png" class="flex" width="300px" alt=""/>
+                        </a>
+                    </div>
+                    <div style="margin-top:50px">
+                        <a href="http://www.centroideugsu.unisi.it" target="_blank">
+                            <img src="/public/img/logo_csc1.png" class="flex" width="300px" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="span4 contact" style="margin-bottom:30px;width: 250px">
+                <h3 class="footer_header" style="margin-left:5px">
+                    Contacts
+                </h3>
+                <div class="post">
+                    <div class="date">
+                        CORPUS RHYTHMORUM MUSICUM <br/>(saec. IV-IX)
+                    </div>
+                    <div class="nomi">Centro Studi I Deug-Su</div>
+                    <div class="nomi">Dipartimento di Filologia e critica</div>
+                    <div class="nomi">delle letterature antiche e moderne</div>
+                    <div class="nomi">(Palazzo San Niccolò, via Roma, 56 53100 Siena)</div>
+                    <div class="nomi">Università degli Studi di Siena</div>
+
+                </div>
+                <div style="margin-top:60px">
+                    <form action="#" method="post">
+                        <input type="text" id="messaggio-footer-nome" placeholder="Name" />
+                        <input type="text" id="messaggio-footer-email" placeholder="Email" />
+                        <textarea rows="3" id="messaggio-footer-messaggio" placeholder="Message"></textarea>
+                        <br/><input type="button" onclick="inviaMessaggio('/public')" value="Send" />
+                    </form>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="row credits" style="margin-top:50px">
+            <div class="span12">
+                <!--div class="row social">
+                    <div class="span12">
+                        <a href="#" class="facebook">
+                            <span class="socialicons ico1"></span>
+                            <span class="socialicons_h ico1h"></span>
+                        </a>
+                        <a href="#" class="twitter">
+                            <span class="socialicons ico2"></span>
+                            <span class="socialicons_h ico2h"></span>
+                        </a>
+                        <a href="#" class="gplus">
+                            <span class="socialicons ico3"></span>
+                            <span class="socialicons_h ico3h"></span>
+                        </a>
+                        <a href="#" class="flickr">
+                            <span class="socialicons ico4"></span>
+                            <span class="socialicons_h ico4h"></span>
+                        </a>
+                        <a href="#" class="pinterest">
+                            <span class="socialicons ico5"></span>
+                            <span class="socialicons_h ico5h"></span>
+                        </a>
+                        <a href="#" class="dribble">
+                            <span class="socialicons ico6"></span>
+                            <span class="socialicons_h ico6h"></span>
+                        </a>
+                        <a href="#" class="behance">
+                            <span class="socialicons ico7"></span>
+                            <span class="socialicons_h ico7h"></span>
+                        </a>
+                    </div>
+                </div-->
+                <div class="row copyright" style="margin-right: 3% !important">
+                    <div class="span12" style="padding-top:20px;">
+                        Last update 28-07-2020
+                    </div>
+                    <div class="span12" style="padding-top:20px;">
+                        The glyphs of the buttons are taken from <a href="https://glyphicons.com" target="_blank">Glyphicons</a>
+                    </div>
+                    <div class="span12" style="padding-top:10px;">
+                        © 2013 Clean Canvas. All rights reserved. Theme by Detail Canvas.
+                    </div>
+                    <div class="span12" style="padding-top:20px;margin-left:20px;">
+                        <a target="_blank" href="/public/index/cookiepolicy">Cookie policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>    
+
+
+
+<script src="/js/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.6/dist/css/bootstrap-select.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.6/dist/js/bootstrap-select.min.js"></script>
+
+
+    <script>
+        // consente la corretta apertura di più finestre modal sovrapposte, senza problemi con le barre di scroll
+        $(document).ready(function () {
+            $('#openBtn').click(function () {
+                $('#myModal').modal()
+            });
+
+            $('.modal')
+                .on({
+                    'show.bs.modal': function() {
+                        var idx = $('.modal:visible').length;
+                        $(this).css('z-index', 1040 + (10 * idx));
+                    },
+                    'shown.bs.modal': function() {
+                        var idx = ($('.modal:visible').length) - 1; // raise backdrop after animation.
+                        $('.modal-backdrop').not('.stacked')
+                        .css('z-index', 1039 + (10 * idx))
+                        .addClass('stacked');
+                    },
+                    'hidden.bs.modal': function() {
+                        if ($('.modal:visible').length > 0) {
+                            // restore the modal-open class to the body element, so that scrolling works
+                            // properly after de-stacking a modal.
+                            setTimeout(function() {
+                                $(document.body).addClass('modal-open');
+                            }, 0);
+                        }
+                    }
+                });
+        });
+    </script>
+</body>
+</html>

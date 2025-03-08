@@ -1,0 +1,351 @@
+<HTML>
+<HEAD>
+<!--start error reporting pop up code-->
+
+<script language="JavaScript">
+<!-- // layout Window
+function layoutWin(x, y) 
+{
+
+report = window.open(x,y,'width=540,height=480,status=no,menubar=no,location=no,toolbar=no,scrollbars=yes,resizable=yes,screenx=40,xposition=40,screeny=40,yposition=40,left=40,xposition=40,top=40');
+
+if (report.blur) 
+{report.focus()};
+}
+//-->
+
+
+</script>
+
+<!--end error reporting pop up code--><!--start pop up window script-->
+<SCRIPT LANGUAGE="Javascript">
+
+<!--
+function openAWindow( pageToLoad, winName, width, height, center) {
+/* Opens a new window on the users desktop.
+   Arguments:
+    pageToLoad - The URL of a page to load in the browser window.
+                 This can be a relative URL or fully qualified.
+    winName -    Name of the new window.
+    width -      The horizontal size of the new window.
+    height -     The vertical size of the new window.
+    center -     toggle centering on 4.0 browsers.
+                  1=centered window 0=no centering
+
+    Values in the "args" section below can all be toggled in the
+    same fashion as the center toggle.  Just modify the appropriate
+    value in the args section to be either 0 or 1.
+
+    A call to this function might look like this:
+    <a href="javascript:openAWindow('ice.html','ice',375,250,1)">Ice</a>
+
+   Created by Glenn Davis of Project Cool, Inc. for general use.  If
+   you use this routine please leave all comments in place so that
+   others may benefit as well.
+*/
+                                 
+    xposition=0; yposition=0;
+    if ((parseInt(navigator.appVersion) >= 4 ) && (center)){
+        xposition = (screen.width - width) / 2;
+        yposition = (screen.height - height) / 2;
+    }
+    args = "width=" + width + "," 
+    + "height=" + height + "," 
+    + "location=0," 
+    + "menubar=0,"
+    + "resizable=1,"
+    + "scrollbars=1,"
+    + "status=0," 
+    + "titlebar=0,"
+    + "toolbar=0,"
+    + "hotkeys=0,"
+    + "screenx=" + xposition + ","  //NN Only
+    + "screeny=" + yposition + ","  //NN Only
+    + "left=" + xposition + ","     //IE Only
+    + "top=" + yposition;           //IE Only
+
+    window.open( pageToLoad,winName,args );
+}
+
+//-->
+</SCRIPT>
+<!--end pop up window script-->
+
+
+
+<!-- ImageReady Preload Script (layout2.psd) -->
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		leaf_1_over = newImage("../images/leaf_1-over.gif");
+		leaf_1_back_over = newImage("../images/leaf_1_back-over.gif");
+		leaf_2_over = newImage("../images/leaf_2-over.gif");
+		leaf_2_back_over = newImage("../images/leaf_2_back-over.gif");
+		leaf_3_over = newImage("../images/leaf_3-over.gif");
+		leaf_3_back_over = newImage("../images/leaf_3_back-over.gif");
+		leaf_4_over = newImage("../images/leaf_4-over.gif");
+		leaf_4_back_over = newImage("../images/leaf_4_back-over.gif");
+		leaf_5_over = newImage("../images/leaf_5-over.gif");
+		leaf_5_back_over = newImage("../images/leaf_5_back-over.gif");
+		leaf_6_over = newImage("../images/leaf_6-over.gif");
+		Leaf_6_back_over = newImage("../images/Leaf_6_back-over.gif");
+		leaf_7_over = newImage("../images/leaf_7-over.gif");
+		leaf_7_back_over = newImage("../images/leaf_7_back-over.gif");
+		leaf_8_over = newImage("../images/leaf_8-over.gif");
+		leaf_8_back_over = newImage("../images/leaf_8_back-over.gif");
+		leaf_9_over = newImage("../images/leaf_9-over.gif");
+		leaf_9_back_over = newImage("../images/leaf_9_back-over.gif");
+		leaf_10_over = newImage("../images/leaf_10-over.gif");
+		leaf_10_back_over = newImage("../images/leaf_10_back-over.gif");
+		leaf_layout_over = newImage("../images/leaf_layout-over.gif");
+		show_all_leaves_over = newImage("../images/show_all_leaves-over.gif");
+		first_record_over = newImage("../images/first_record-over.gif");
+		previous_record_over = newImage("../images/previous_record-over.gif");
+		next_record_over = newImage("../images/next_record-over.gif");
+		last_record_over = newImage("../images/last_record-over.gif");
+		content_on_over = newImage("../images/content_on-over.gif");
+		content_off_over = newImage("../images/content_off-over.gif");
+		preloadFlag = true;
+	}
+}
+
+// -->
+</SCRIPT>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+<!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		tablets_over = newImage("../images/tablets-over.gif");
+		exhib_over = newImage("../images/exhib-over.gif");
+		Help_over = newImage("../images/Help-over.gif");
+		preloadFlag = true;
+	}
+}
+
+// -->
+
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_jumpMenuGo(selName,targ,restore){ //v3.0
+  var selObj = MM_findObj(selName); if (selObj) MM_jumpMenu(targ,selObj,restore);
+}
+//-->
+</SCRIPT>
+<!-- End Preload Script -->
+
+
+
+<title>Vindolanda Tablets Online  |  Welcome</title>
+
+<link rel="stylesheet" href="http://vindolanda.csad.ox.ac.uk/css/tv.css" type="text/css">
+
+</HEAD>
+<BODY BGCOLOR=#FFcc99 ONLOAD="preloadImages();" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#330000" vlink="#663333" alink="#CC3300">
+<meta name="keywords" content="epigraphy, achaeology, Roman, Latin, classics,
+papyrology ">
+<a name="top"></a>
+<!--start top banner table -->
+<table border="0" cellpadding="0" cellspacing="0" height="26" width="100%" style="border-collapse: collapse" bordercolor="#111111">
+  <tr> 
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="220"><a href="http://vindolanda.csad.ox.ac.uk/"><img src="http://vindolanda.csad.ox.ac.uk/images/newlogo3.gif" width=220 height=26 border="0" alt="Vindolanda Tablets Online"></a></td>
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="238"><img src="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" width=38 height=26 alt=""></td>
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="15%"> <img src="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" width=12 height=26 alt="" ></td>
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="51"><a href="http://vindolanda.csad.ox.ac.uk/tablets/index.shtml" onMouseOver="changeImages('tablets', 'http://vindolanda.csad.ox.ac.uk/images/tablets-over.gif'); return true;" onMouseOut="changeImages('tablets', 'http://vindolanda.csad.ox.ac.uk/images/tablets.gif'); return true;"><img name="tablets" src="http://vindolanda.csad.ox.ac.uk/images/tablets.gif" border=0 alt="Tablets" height=26 ></a></td>
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="15%"> <img src="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" width=12 height=26 alt="" ></td>
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="58"><a href="http://vindolanda.csad.ox.ac.uk/exhibition/index.shtml" onMouseOver="changeImages('exhib', 'http://vindolanda.csad.ox.ac.uk/images/exhib-over.gif'); return true;" onMouseOut="changeImages('exhib', 'http://vindolanda.csad.ox.ac.uk/images/exhib.gif'); return true;"><img name="exhib" src="http://vindolanda.csad.ox.ac.uk/images/exhib.gif" height=26 border=0 alt="Exhibition" ></a></td>
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="15%"> <img src="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" width=12 height=26 alt="" ></td>
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="78"><a href="http://vindolanda.csad.ox.ac.uk/reference/index.shtml" onMouseOver="changeImages('reference', 'http://vindolanda.csad.ox.ac.uk/images/reference-over.gif'); return true;" onMouseOut="changeImages('reference', 'http://vindolanda.csad.ox.ac.uk/images/reference.gif'); return true;"><img name="reference" src="http://vindolanda.csad.ox.ac.uk/images/reference.gif" height=26 border=0 alt="Reference" ></a></td>
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="15%"> <img src="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" width=12 height=26 alt="" ></td>
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="44"><a href="http://vindolanda.csad.ox.ac.uk/help/index.shtml" onMouseOver="changeImages('Help', 'http://vindolanda.csad.ox.ac.uk/images/Help-over.gif'); return true;" onMouseOut="changeImages('Help', 'http://vindolanda.csad.ox.ac.uk/images/Help.gif'); return true;"><img name="Help" src="http://vindolanda.csad.ox.ac.uk/images/Help.gif" height=26 border=0 alt="Help" ></a></td>
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="15%"> <img src="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" width=12 height=26 alt="" ></td>
+    <td background="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" height="26" width="287"> <img src="http://vindolanda.csad.ox.ac.uk/images/topstretch.gif" width=287 height=26 alt="" ></td>
+  </tr>
+</table>
+
+
+<!--end top banner table -->
+<table border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr> 
+    <td colspan="2"> <h1><img src="images/hometitle.jpg" alt="Vindolanda Tablets Online" width="433" height="66"></h1>
+    </td>
+  </tr>
+
+  <tr> 
+    <td valign="top"> 
+     <div class="sub"> 
+        <h4>Search database </h4>
+        <form name="form1" action="http://vindolanda.csad.ox.ac.uk/4DLink2/4DACTION/WebRequestQuery" method="POST"> 
+                   
+                    
+                <p>View tablet number (118-573): </p> 
+           
+             <input type="TEXT" size="5" name="searchTerm">
+              <input type="submit" class="button" action="SUBMIT" value="go" name="submit">
+              <input type="hidden" name="thisPageNum" value="1">
+              <input type="hidden" name="thisListPosition" value="1">
+              <input type="hidden" name="searchType" value="number">
+              <input type="hidden" name="searchField" value="TVII">
+
+			</form>
+			
+			<form name="form2" action="http://vindolanda.csad.ox.ac.uk/4DLink2/4DACTION/WebRequestQuery" method="POST"> 
+                   
+                    
+                
+         
+           
+            <input type="hidden" size="5" name="searchTerm" value="118-573">
+              <input type="submit" class="button" action="SUBMIT" value="View all Tablets" name="submit">
+              <input type="hidden" name="thisPageNum" value="1">
+              <input type="hidden" name="thisListPosition" value="1">
+              <input type="hidden" name="searchType" value="number">
+              <input type="hidden" name="searchField" value="TVII">
+
+			</form>
+			
+        <p class="button"><a class="youarehere" href="http://vindolanda.csad.ox.ac.uk/tablets/search.shtml">Search Tablets</a></p>
+		<p class="button"><a class="youarehere" href="http://vindolanda.csad.ox.ac.uk/tablets/browse.shtml">Browse Tablets</a></p>
+			</div>
+<div class="searchbox" ><h4>General search</h4>
+<p>(Excluding Tablets database)</p><form method="post" action="http://vindolanda.csad.ox.ac.uk/Search/index.search" enctype="x-www-form-encoded">
+					<INPUT type="hidden" NAME="template" value="/Search/Custom_Search_Template.xml">
+					<INPUT type="hidden" NAME="numdocs" value="20">
+					<INPUT type="hidden" NAME="minscore" value="20">
+                    <p><span class="searchlabel">Text:</span></p>
+					<p><input type="text" name="query" class="searchfield" size="13"></p>
+
+					<input type="submit" class="searchsubmit" name="dummy" value="search">
+					</form>
+		
+ <form action="/4DLink2/4DACTION/WebRequestExhibitImage" method="POST">
+    <p><span class="searchlabel">Images:</span></p>
+
+<p><input type="TEXT" size="13" name="searchTerm"></p>
+
+     
+    
+
+ <input type="submit" class="searchsubmit"  action="SUBMIT" value="search" name="submit">
+              <input type="hidden" name="thisPageNum" value="1">
+              <input type="hidden" name="thisListPosition" value="0">
+              <input type="hidden" name="searchType" value="phrase">
+            </form>
+  
+                    <p class="sitemaplink"><a class="youarehere" href="http://vindolanda.csad.ox.ac.uk/sitemap.shtml">Site map</a></p>
+                  </div><!--#4dinclude ../inc/rootdir-searchbox.inc-->
+                  
+                
+    </td> <td width="90%" valign="top"> 
+      <table border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+        <tr> 
+          <td width="100%" valign="top"> <img src="images/home-home.jpg" alt="images from Vindolanda" width="141" height="360" border="0" align="right"> 
+            <p>This online edition of the Vindolanda writing 
+              tablets, excavated from the Roman fort at Vindolanda in northern 
+              England, includes the following elements:</p>
+            <p></p>
+            <p><span class="inlinetitle"><a class="youarehere" href="http://vindolanda.csad.ox.ac.uk/tablets/">Tablets</a></span> 
+              - a searchable online edition of the tablets (volumes I and II)</p>
+            <p><span class="inlinetitle"><a  class="youarehere" href="http://vindolanda.csad.ox.ac.uk/exhibition/">Exhibition</a></span> 
+              - an introduction to the tablets and their context</p>
+            <p><span class="inlinetitle"><a  class="youarehere" href="http://vindolanda.csad.ox.ac.uk/reference/">Reference</a></span> 
+              - a guide to aspects of the tablets&#8217; content</p>
+            <p><span class="inlinetitle"><a  class="youarehere" href="http://vindolanda.csad.ox.ac.uk/help/">Help</a></span> 
+              - navigation and using the site</p>
+            <p>&nbsp;</p>
+            <p>Also available are <a href="http://vindolanda.csad.ox.ac.uk/tablets/browse.shtml">highlights from 
+              the tablets</a>.</p>
+            <p>&nbsp;</p>
+            <p>The website is part of the <a href="http://www.csad.ox.ac.uk/Mellon">Script, 
+              Image and the Culture of Writing in the Ancient World</a> programme, 
+              supported by the <a href="http://www.mellon.org/">Andrew W. Mellon 
+              Foundation</a>. It is a collaborative project between the <a href="http://www.csad.ox.ac.uk">Centre 
+              for the Study of Ancient Documents</a> and the <a href="http://www.oucs.ox.ac.uk/acdt/">Academic 
+              Computing Development Team</a>, Oxford University.</p>
+            <p>&nbsp;</p>
+            <p>Scholarly publications should refer to this site as:</p>
+            <p> Vindolanda Tablets Online <a href="http://vindolanda.csad.ox.ac.uk/">http://vindolanda.csad.ox.ac.uk/</a></p>
+<p>Editions of individual tablets may be cited in the form <a href="http://vindolanda.csad.ox.ac.uk/TVII-291" target="_parent">http://vindolanda.csad.ox.ac.uk/TVII-291</a> (<em>Tab. Vindol.</em> II 291)
+</p>
+            <p>&nbsp;</p>
+            <p>Feedback: if you are using Vindolanda Tablets Online for teaching, 
+              research or general interest, please send us your <a href="http://vindolanda.csad.ox.ac.uk/contact.shtml">comments</a> 
+              on the site.</p>
+              
+           <!--   
+           <table  border="0" align="right" cellpadding="5" cellspacing="0">
+              <tr> 
+                <td  align="center"> <p><span class="gototopbutton"><a href="#top" class="gototop">Top 
+                    of page</a> </span> </p></td>
+              </tr>
+            </table>
+            -->
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+        </td>
+</table>
+<!-- #BeginLibraryItem "/Library/footer.lbi" --> <hr noshade  color="330000">
+      <p class="footer" align="center"> <a href="http://vindolanda.csad.ox.ac.uk/about.shtml" class="youarehere" >about this 
+        site</a> | <a href="http://vindolanda.csad.ox.ac.uk/contact.shtml" class="youarehere" >contact</a> | 
+        <a href="http://vindolanda.csad.ox.ac.uk/copyright.shtml" class="youarehere" >copyright</a> | <a href="http://vindolanda.csad.ox.ac.uk/links.shtml" class="youarehere" >links</a> | <a href="javascript:layoutWin('http://vindolanda.csad.ox.ac.uk/report_error.shtml','report');" class="youarehere">report 
+        an error</a> | <a href="http://vindolanda.csad.ox.ac.uk/news.shtml" class="youarehere" >news</a></p>
+
+
+</body>
+</HTML>

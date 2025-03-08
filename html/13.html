@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <title>Codex Suprasliensis</title>
+        <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+        <link href="http://www.obdurodon.org/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="http://dh.obdurodon.org/projects.css" rel="stylesheet" type="text/css" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <style type="text/css">
+            @font-face{
+                font-family:'KlimentStdRegular';
+                src:url('http://obdurodon.org/css/fonts/kliment_std-webfont.eot');
+                src:url('http://obdurodon.org/css/fonts/kliment_std-webfont.eot?#iefix') format('embedded-opentype'), url('http://obdurodon.org/css/fonts/kliment_std-webfont.woff')format('woff'), url('http://obdurodon.org/css/fonts/kliment_std-webfont.ttf')format('truetype'), url('http://obdurodon.org/css/fonts/kliment_std-webfont.svg#KlimentStdRegular')format('svg');
+                font-weight:normal;
+                font-style:normal;
+            }
+            .os{
+                font-family:KlimentStdRegular;
+            }
+            img.folio {
+                max-width:433px;
+                width:40%;
+                float:right;
+                margin:0 0 1em 1em;
+                border:none;
+            }
+            body {
+                counter-reset: textno;
+            }
+            td:first-child {width: 50%;}
+            td:first-child:before {
+                counter-increment: textno;
+                content: counter(textno) ". ";
+            }
+            td:nth-child(3){ 
+                text-align: right;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1><a class="logo" href="http://www.obdurodon.org">&lt;oo&gt;</a>&#x2192;<a
+                href="http://suprasliensis.obdurodon.org" class="logo">&lt;sup&gt;</a>
+            <cite>Codex Suprasliensis</cite></h1>
+        <hr />
+        <p><a href="images/supr008r.jpg"><img class="folio" alt="[Folio 8r]"
+                    src="images/supr008r.jpg" /></a></p>
+        <p class="boilerplate">
+            <span><strong>Maintained by:</strong> David J. Birnbaum (<a
+                    href="mailto:djbpitt@gmail.com">djbpitt@gmail.com</a>) <a
+                    href="http://creativecommons.org/licenses/by-nc-sa/3.0/" style="outline: none;">
+                    <img src="http://www.obdurodon.org/images/cc/88x31.png"
+                        alt="[Creative Commons BY-NC-SA 3.0 Unported License]"
+                        title="Creative Commons BY-NC-SA 3.0 Unported License"
+                        style="height: 1em; vertical-align: text-bottom;" />
+                </a>
+            </span>
+            <span><strong>Last modified:</strong>
+                2013-02-05T04:01:10+0000</span>
+        </p>
+        <hr />
+        <h2>About the <cite>Codex Suprasliensis</cite></h2>
+        <p>The <cite>Codex Suprasliensis</cite>, a Cyrillic manuscript copied at the end of the
+            tenth or beginning of the eleventh century, is the largest extant Old Church Slavonic
+            manuscript from the Preslav literary school (first Bulgarian kingdom). It is one of the
+            earliest testimonials to the reception of Orthodox Christianity among the Slavs. The
+            manuscript contains twenty-four vitae of Christian saints for the month of March and
+            twenty-three homilies for triodion cycle of the church year. In content it is a
+            lectionary menaeum (or panegyric), combined with homilies from the movable Easter cycle,
+            most of which were written by or are attributed to John Chrysostom.</p>
+        <h2>The <cite>Codex Suprasliensis</cite> Project</h2>
+        <p> The <cite>Codex Supraslianis</cite> has been listed in the UNESCO’s <a
+                href="http://www.unesco.org/new/en/communication-and-information/flagship-project-activities/memory-of-the-world/register/full-list-of-registered-heritage/registered-heritage-page-2/codex-suprasliensis-mineia-cetia-mart-the-suprasl-codex-menology-march/"
+                >Memory of the World</a> Register since 2007. This project is intended to unite
+            digital images of all three parts of the <cite>Codex Suprasliensis</cite>, currently
+            located in three different countries: the National Library in Warsaw, Poland; the
+            National Library of Russia in St. Petersburg; and the National and University Library in
+            Ljubljana, Slovenia. In addition to reuniting the parts of the manuscript, the current
+            project aims to develop an electronic version of the <cite>Codex Suprasliensis</cite>,
+            together with critical apparatus, parallel Greek text, translation, vocabulary,
+            grammatical analysis, and tools for searching. The <cite>Codex Suprasliensis</cite>
+            Project aims to make the manuscript, along with tools for its study, accessible to a
+            global audience for the first time. Drawing on the expertise of leading scholars,
+            curators, and specialists in informational technology, the Project gives everyone the
+            opportunity to connect directly with this famous manuscript.</p>
+        <h3>Manuscript and texts</h3>
+        <p><form style="display: block;">
+   <label for="folios">Go to page: </label>
+   <select id="folios" onChange="location.href=this.options[this.selectedIndex].value;" style="display: inline;">
+      <option>Go to page</option>
+      <option value="pages/supr001r.html">1r</option>
+      <option value="pages/supr001v.html">1v</option>
+      <option value="pages/supr002r.html">2r</option>
+      <option value="pages/supr002v.html">2v</option>
+      <option value="pages/supr003r.html">3r</option>
+      <option value="pages/supr003v.html">3v</option>
+      <option value="pages/supr004r.html">4r</option>
+      <option value="pages/supr004v.html">4v</option>
+      <option value="pages/supr005r.html">5r</option>
+      <option value="pages/supr005v.html">5v</option>
+      <option value="pages/supr006r.html">6r</option>
+      <option value="pages/supr006v.html">6v</option>
+      <option value="pages/supr007r.html">7r</option>
+      <option value="pages/supr007v.html">7v</option>
+      <option value="pages/supr008r.html">8r</option>
+      <option value="pages/supr008v.html">8v</option>
+      <option value="pages/supr009r.html">9r</option>
+      <option value="pages/supr009v.html">9v</option>
+      <option value="pages/supr010r.html">10r</option>
+      <option value="pages/supr010v.html">10v</option>
+      <option value="pages/supr011r.html">11r</option>
+      <option value="pages/supr011v.html">11v</option>
+      <option value="pages/supr012r.html">12r</option>
+      <option value="pages/supr012v.html">12v</option>
+      <option value="pages/supr013r.html">13r</option>
+      <option value="pages/supr013v.html">13v</option>
+      <option value="pages/supr014r.html">14r</option>
+      <option value="pages/supr014v.html">14v</option>
+      <option value="pages/supr015r.html">15r</option>
+      <option value="pages/supr015v.html">15v</option>
+      <option value="pages/supr016r.html">16r</option>
+      <option value="pages/supr016v.html">16v</option>
+      <option value="pages/supr017r.html">17r</option>
+      <option value="pages/supr017v.html">17v</option>
+      <option value="pages/supr018r.html">18r</option>
+      <option value="pages/supr018v.html">18v</option>
+      <option value="pages/supr019r.html">19r</option>
+      <option value="pages/supr019v.html">19v</option>
+      <option value="pages/supr020r.html">20r</option>
+      <option value="pages/supr020v.html">20v</option>
+      <option value="pages/supr021r.html">21r</option>
+      <option value="pages/supr021v.html">21v</option>
+      <option value="pages/supr022r.html">22r</option>
+      <option value="pages/supr022v.html">22v</option>
+      <option value="pages/supr023r.html">23r</option>
+      <option value="pages/supr023v.html">23v</option>
+      <option value="pages/supr024r.html">24r</option>
+      <option value="pages/supr024v.html">24v</option>
+      <option value="pages/supr025r.html">25r</option>
+      <option value="pages/supr025v.html">25v</option>
+      <option value="pages/supr026r.html">26r</option>
+      <option value="pages/supr026v.html">26v</option>
+      <option value="pages/supr027r.html">27r</option>
+      <option value="pages/supr027v.html">27v</option>
+      <option value="pages/supr028r.html">28r</option>
+      <option value="pages/supr028v.html">28v</option>
+      <option value="pages/supr029r.html">29r</option>
+      <option value="pages/supr029v.html">29v</option>
+      <option value="pages/supr030r.html">30r</option>
+      <option value="pages/supr030v.html">30v</option>
+      <option value="pages/supr031r.html">31r</option>
+      <option value="pages/supr031v.html">31v</option>
+      <option value="pages/supr032r.html">32r</option>
+      <option value="pages/supr032v.html">32v</option>
+      <option value="pages/supr033r.html">33r</option>
+      <option value="pages/supr033v.html">33v</option>
+      <option value="pages/supr034r.html">34r</option>
+      <option value="pages/supr034v.html">34v</option>
+      <option value="pages/supr035r.html">35r</option>
+      <option value="pages/supr035v.html">35v</option>
+      <option value="pages/supr036r.html">36r</option>
+      <option value="pages/supr036v.html">36v</option>
+      <option value="pages/supr037r.html">37r</option>
+      <option value="pages/supr037v.html">37v</option>
+      <option value="pages/supr038r.html">38r</option>
+      <option value="pages/supr038v.html">38v</option>
+      <option value="pages/supr039r.html">39r</option>
+      <option value="pages/supr039v.html">39v</option>
+      <option value="pages/supr040r.html">40r</option>
+      <option value="pages/supr040v.html">40v</option>
+      <option value="pages/supr041r.html">41r</option>
+      <option value="pages/supr041v.html">41v</option>
+      <option value="pages/supr042r.html">42r</option>
+      <option value="pages/supr042v.html">42v</option>
+      <option value="pages/supr043r.html">43r</option>
+      <option value="pages/supr043v.html">43v</option>
+      <option value="pages/supr044r.html">44r</option>
+      <option value="pages/supr044v.html">44v</option>
+      <option value="pages/supr045r.html">45r</option>
+      <option value="pages/supr045v.html">45v</option>
+      <option value="pages/supr046r.html">46r</option>
+      <option value="pages/supr046v.html">46v</option>
+      <option value="pages/supr047r.html">47r</option>
+      <option value="pages/supr047v.html">47v</option>
+      <option value="pages/supr048r.html">48r</option>
+      <option value="pages/supr048v.html">48v</option>
+      <option value="pages/supr049r.html">49r</option>
+      <option value="pages/supr049v.html">49v</option>
+      <option value="pages/supr050r.html">50r</option>
+      <option value="pages/supr050v.html">50v</option>
+      <option value="pages/supr051r.html">51r</option>
+      <option value="pages/supr051v.html">51v</option>
+      <option value="pages/supr052r.html">52r</option>
+      <option value="pages/supr052v.html">52v</option>
+      <option value="pages/supr053r.html">53r</option>
+      <option value="pages/supr053v.html">53v</option>
+      <option value="pages/supr054r.html">54r</option>
+      <option value="pages/supr054v.html">54v</option>
+      <option value="pages/supr055r.html">55r</option>
+      <option value="pages/supr055v.html">55v</option>
+      <option value="pages/supr056r.html">56r</option>
+      <option value="pages/supr056v.html">56v</option>
+      <option value="pages/supr057r.html">57r</option>
+      <option value="pages/supr057v.html">57v</option>
+      <option value="pages/supr058r.html">58r</option>
+      <option value="pages/supr058v.html">58v</option>
+      <option value="pages/supr059r.html">59r</option>
+      <option value="pages/supr059v.html">59v</option>
+      <option value="pages/supr060r.html">60r</option>
+      <option value="pages/supr060v.html">60v</option>
+      <option value="pages/supr061r.html">61r</option>
+      <option value="pages/supr061v.html">61v</option>
+      <option value="pages/supr062r.html">62r</option>
+      <option value="pages/supr062v.html">62v</option>
+      <option value="pages/supr063r.html">63r</option>
+      <option value="pages/supr063v.html">63v</option>
+      <option value="pages/supr064r.html">64r</option>
+      <option value="pages/supr064v.html">64v</option>
+      <option value="pages/supr065r.html">65r</option>
+      <option value="pages/supr065v.html">65v</option>
+      <option value="pages/supr066r.html">66r</option>
+      <option value="pages/supr066v.html">66v</option>
+      <option value="pages/supr067r.html">67r</option>
+      <option value="pages/supr067v.html">67v</option>
+      <option value="pages/supr068r.html">68r</option>
+      <option value="pages/supr068v.html">68v</option>
+      <option value="pages/supr069r.html">69r</option>
+      <option value="pages/supr069v.html">69v</option>
+      <option value="pages/supr070r.html">70r</option>
+      <option value="pages/supr070v.html">70v</option>
+      <option value="pages/supr071r.html">71r</option>
+      <option value="pages/supr071v.html">71v</option>
+      <option value="pages/supr072r.html">72r</option>
+      <option value="pages/supr072v.html">72v</option>
+      <option value="pages/supr073r.html">73r</option>
+      <option value="pages/supr073v.html">73v</option>
+      <option value="pages/supr074r.html">74r</option>
+      <option value="pages/supr074v.html">74v</option>
+      <option value="pages/supr075r.html">75r</option>
+      <option value="pages/supr075v.html">75v</option>
+      <option value="pages/supr076r.html">76r</option>
+      <option value="pages/supr076v.html">76v</option>
+      <option value="pages/supr077r.html">77r</option>
+      <option value="pages/supr077v.html">77v</option>
+      <option value="pages/supr078r.html">78r</option>
+      <option value="pages/supr078v.html">78v</option>
+      <option value="pages/supr079r.html">79r</option>
+      <option value="pages/supr079v.html">79v</option>
+      <option value="pages/supr080r.html">80r</option>
+      <option value="pages/supr080v.html">80v</option>
+      <option value="pages/supr081r.html">81r</option>
+      <option value="pages/supr081v.html">81v</option>
+      <option value="pages/supr082r.html">82r</option>
+      <option value="pages/supr082v.html">82v</option>
+      <option value="pages/supr083r.html">83r</option>
+      <option value="pages/supr083v.html">83v</option>
+      <option value="pages/supr084r.html">84r</option>
+      <option value="pages/supr084v.html">84v</option>
+      <option value="pages/supr085r.html">85r</option>
+      <option value="pages/supr085v.html">85v</option>
+      <option value="pages/supr086r.html">86r</option>
+      <option value="pages/supr086v.html">86v</option>
+      <option value="pages/supr087r.html">87r</option>
+      <option value="pages/supr087v.html">87v</option>
+      <option value="pages/supr088r.html">88r</option>
+      <option value="pages/supr088v.html">88v</option>
+      <option value="pages/supr089r.html">89r</option>
+      <option value="pages/supr089v.html">89v</option>
+      <option value="pages/supr090r.html">90r</option>
+      <option value="pages/supr090v.html">90v</option>
+      <option value="pages/supr091r.html">91r</option>
+      <option value="pages/supr091v.html">91v</option>
+      <option value="pages/supr092r.html">92r</option>
+      <option value="pages/supr092v.html">92v</option>
+      <option value="pages/supr093r.html">93r</option>
+      <option value="pages/supr093v.html">93v</option>
+      <option value="pages/supr094r.html">94r</option>
+      <option value="pages/supr094v.html">94v</option>
+      <option value="pages/supr095r.html">95r</option>
+      <option value="pages/supr095v.html">95v</option>
+      <option value="pages/supr096r.html">96r</option>
+      <option value="pages/supr096v.html">96v</option>
+      <option value="pages/supr097r.html">97r</option>
+      <option value="pages/supr097v.html">97v</option>
+      <option value="pages/supr098r.html">98r</option>
+      <option value="pages/supr098v.html">98v</option>
+      <option value="pages/supr099r.html">99r</option>
+      <option value="pages/supr099v.html">99v</option>
+      <option value="pages/supr100r.html">100r</option>
+      <option value="pages/supr100v.html">100v</option>
+      <option value="pages/supr101r.html">101r</option>
+      <option value="pages/supr101v.html">101v</option>
+      <option value="pages/supr102r.html">102r</option>
+      <option value="pages/supr102v.html">102v</option>
+      <option value="pages/supr103r.html">103r</option>
+      <option value="pages/supr103v.html">103v</option>
+      <option value="pages/supr104r.html">104r</option>
+      <option value="pages/supr104v.html">104v</option>
+      <option value="pages/supr105r.html">105r</option>
+      <option value="pages/supr105v.html">105v</option>
+      <option value="pages/supr106r.html">106r</option>
+      <option value="pages/supr106v.html">106v</option>
+      <option value="pages/supr107r.html">107r</option>
+      <option value="pages/supr107v.html">107v</option>
+      <option value="pages/supr108r.html">108r</option>
+      <option value="pages/supr108v.html">108v</option>
+      <option value="pages/supr109r.html">109r</option>
+      <option value="pages/supr109v.html">109v</option>
+      <option value="pages/supr110r.html">110r</option>
+      <option value="pages/supr110v.html">110v</option>
+      <option value="pages/supr111r.html">111r</option>
+      <option value="pages/supr111v.html">111v</option>
+      <option value="pages/supr112r.html">112r</option>
+      <option value="pages/supr112v.html">112v</option>
+      <option value="pages/supr113r.html">113r</option>
+      <option value="pages/supr113v.html">113v</option>
+      <option value="pages/supr114r.html">114r</option>
+      <option value="pages/supr114v.html">114v</option>
+      <option value="pages/supr115r.html">115r</option>
+      <option value="pages/supr115v.html">115v</option>
+      <option value="pages/supr116r.html">116r</option>
+      <option value="pages/supr116v.html">116v</option>
+      <option value="pages/supr117r.html">117r</option>
+      <option value="pages/supr117v.html">117v</option>
+      <option value="pages/supr118r.html">118r</option>
+      <option value="pages/supr118v.html">118v</option>
+      <option value="pages/supr119r.html">119r</option>
+      <option value="pages/supr119v.html">119v</option>
+      <option value="pages/supr120r.html">120r</option>
+      <option value="pages/supr120v.html">120v</option>
+      <option value="pages/supr121r.html">121r</option>
+      <option value="pages/supr121v.html">121v</option>
+      <option value="pages/supr122r.html">122r</option>
+      <option value="pages/supr122v.html">122v</option>
+      <option value="pages/supr123r.html">123r</option>
+      <option value="pages/supr123v.html">123v</option>
+      <option value="pages/supr124r.html">124r</option>
+      <option value="pages/supr124v.html">124v</option>
+      <option value="pages/supr125r.html">125r</option>
+      <option value="pages/supr125v.html">125v</option>
+      <option value="pages/supr126r.html">126r</option>
+      <option value="pages/supr126v.html">126v</option>
+      <option value="pages/supr127r.html">127r</option>
+      <option value="pages/supr127v.html">127v</option>
+      <option value="pages/supr128r.html">128r</option>
+      <option value="pages/supr128v.html">128v</option>
+      <option value="pages/supr129r.html">129r</option>
+      <option value="pages/supr129v.html">129v</option>
+      <option value="pages/supr130r.html">130r</option>
+      <option value="pages/supr130v.html">130v</option>
+      <option value="pages/supr131r.html">131r</option>
+      <option value="pages/supr131v.html">131v</option>
+      <option value="pages/supr132r.html">132r</option>
+      <option value="pages/supr132v.html">132v</option>
+      <option value="pages/supr133r.html">133r</option>
+      <option value="pages/supr133v.html">133v</option>
+      <option value="pages/supr134r.html">134r</option>
+      <option value="pages/supr134v.html">134v</option>
+      <option value="pages/supr135r.html">135r</option>
+      <option value="pages/supr135v.html">135v</option>
+      <option value="pages/supr136r.html">136r</option>
+      <option value="pages/supr136v.html">136v</option>
+      <option value="pages/supr137r.html">137r</option>
+      <option value="pages/supr137v.html">137v</option>
+      <option value="pages/supr138r.html">138r</option>
+      <option value="pages/supr138v.html">138v</option>
+      <option value="pages/supr139r.html">139r</option>
+      <option value="pages/supr139v.html">139v</option>
+      <option value="pages/supr140r.html">140r</option>
+      <option value="pages/supr140v.html">140v</option>
+      <option value="pages/supr141r.html">141r</option>
+      <option value="pages/supr141v.html">141v</option>
+      <option value="pages/supr142r.html">142r</option>
+      <option value="pages/supr142v.html">142v</option>
+      <option value="pages/supr143r.html">143r</option>
+      <option value="pages/supr143v.html">143v</option>
+      <option value="pages/supr144r.html">144r</option>
+      <option value="pages/supr144v.html">144v</option>
+      <option value="pages/supr145r.html">145r</option>
+      <option value="pages/supr145v.html">145v</option>
+      <option value="pages/supr146r.html">146r</option>
+      <option value="pages/supr146v.html">146v</option>
+      <option value="pages/supr147r.html">147r</option>
+      <option value="pages/supr147v.html">147v</option>
+      <option value="pages/supr148r.html">148r</option>
+      <option value="pages/supr148v.html">148v</option>
+      <option value="pages/supr149r.html">149r</option>
+      <option value="pages/supr149v.html">149v</option>
+      <option value="pages/supr150r.html">150r</option>
+      <option value="pages/supr150v.html">150v</option>
+      <option value="pages/supr151r.html">151r</option>
+      <option value="pages/supr151v.html">151v</option>
+      <option value="pages/supr152r.html">152r</option>
+      <option value="pages/supr152v.html">152v</option>
+      <option value="pages/supr153r.html">153r</option>
+      <option value="pages/supr153v.html">153v</option>
+      <option value="pages/supr154r.html">154r</option>
+      <option value="pages/supr154v.html">154v</option>
+      <option value="pages/supr155r.html">155r</option>
+      <option value="pages/supr155v.html">155v</option>
+      <option value="pages/supr156r.html">156r</option>
+      <option value="pages/supr156v.html">156v</option>
+      <option value="pages/supr157r.html">157r</option>
+      <option value="pages/supr157v.html">157v</option>
+      <option value="pages/supr158r.html">158r</option>
+      <option value="pages/supr158v.html">158v</option>
+      <option value="pages/supr159r.html">159r</option>
+      <option value="pages/supr159v.html">159v</option>
+      <option value="pages/supr160r.html">160r</option>
+      <option value="pages/supr160v.html">160v</option>
+      <option value="pages/supr161r.html">161r</option>
+      <option value="pages/supr161v.html">161v</option>
+      <option value="pages/supr162r.html">162r</option>
+      <option value="pages/supr162v.html">162v</option>
+      <option value="pages/supr163r.html">163r</option>
+      <option value="pages/supr163v.html">163v</option>
+      <option value="pages/supr164r.html">164r</option>
+      <option value="pages/supr164v.html">164v</option>
+      <option value="pages/supr165r.html">165r</option>
+      <option value="pages/supr165v.html">165v</option>
+      <option value="pages/supr166r.html">166r</option>
+      <option value="pages/supr166v.html">166v</option>
+      <option value="pages/supr167r.html">167r</option>
+      <option value="pages/supr167v.html">167v</option>
+      <option value="pages/supr168r.html">168r</option>
+      <option value="pages/supr168v.html">168v</option>
+      <option value="pages/supr169r.html">169r</option>
+      <option value="pages/supr169v.html">169v</option>
+      <option value="pages/supr170r.html">170r</option>
+      <option value="pages/supr170v.html">170v</option>
+      <option value="pages/supr171r.html">171r</option>
+      <option value="pages/supr171v.html">171v</option>
+      <option value="pages/supr172r.html">172r</option>
+      <option value="pages/supr172v.html">172v</option>
+      <option value="pages/supr173r.html">173r</option>
+      <option value="pages/supr173v.html">173v</option>
+      <option value="pages/supr174r.html">174r</option>
+      <option value="pages/supr174v.html">174v</option>
+      <option value="pages/supr175r.html">175r</option>
+      <option value="pages/supr175v.html">175v</option>
+      <option value="pages/supr176r.html">176r</option>
+      <option value="pages/supr176v.html">176v</option>
+      <option value="pages/supr177r.html">177r</option>
+      <option value="pages/supr177v.html">177v</option>
+      <option value="pages/supr178r.html">178r</option>
+      <option value="pages/supr178v.html">178v</option>
+      <option value="pages/supr179r.html">179r</option>
+      <option value="pages/supr179v.html">179v</option>
+      <option value="pages/supr180r.html">180r</option>
+      <option value="pages/supr180v.html">180v</option>
+      <option value="pages/supr181r.html">181r</option>
+      <option value="pages/supr181v.html">181v</option>
+      <option value="pages/supr182r.html">182r</option>
+      <option value="pages/supr182v.html">182v</option>
+      <option value="pages/supr183r.html">183r</option>
+      <option value="pages/supr183v.html">183v</option>
+      <option value="pages/supr184r.html">184r</option>
+      <option value="pages/supr184v.html">184v</option>
+      <option value="pages/supr185r.html">185r</option>
+      <option value="pages/supr185v.html">185v</option>
+      <option value="pages/supr186r.html">186r</option>
+      <option value="pages/supr186v.html">186v</option>
+      <option value="pages/supr187r.html">187r</option>
+      <option value="pages/supr187v.html">187v</option>
+      <option value="pages/supr188r.html">188r</option>
+      <option value="pages/supr188v.html">188v</option>
+      <option value="pages/supr189r.html">189r</option>
+      <option value="pages/supr189v.html">189v</option>
+      <option value="pages/supr190r.html">190r</option>
+      <option value="pages/supr190v.html">190v</option>
+      <option value="pages/supr191r.html">191r</option>
+      <option value="pages/supr191v.html">191v</option>
+      <option value="pages/supr192r.html">192r</option>
+      <option value="pages/supr192v.html">192v</option>
+      <option value="pages/supr193r.html">193r</option>
+      <option value="pages/supr193v.html">193v</option>
+      <option value="pages/supr194r.html">194r</option>
+      <option value="pages/supr194v.html">194v</option>
+      <option value="pages/supr195r.html">195r</option>
+      <option value="pages/supr195v.html">195v</option>
+      <option value="pages/supr196r.html">196r</option>
+      <option value="pages/supr196v.html">196v</option>
+      <option value="pages/supr197r.html">197r</option>
+      <option value="pages/supr197v.html">197v</option>
+      <option value="pages/supr198r.html">198r</option>
+      <option value="pages/supr198v.html">198v</option>
+      <option value="pages/supr199r.html">199r</option>
+      <option value="pages/supr199v.html">199v</option>
+      <option value="pages/supr200r.html">200r</option>
+      <option value="pages/supr200v.html">200v</option>
+      <option value="pages/supr201r.html">201r</option>
+      <option value="pages/supr201v.html">201v</option>
+      <option value="pages/supr202r.html">202r</option>
+      <option value="pages/supr202v.html">202v</option>
+      <option value="pages/supr203r.html">203r</option>
+      <option value="pages/supr203v.html">203v</option>
+      <option value="pages/supr204r.html">204r</option>
+      <option value="pages/supr204v.html">204v</option>
+      <option value="pages/supr205r.html">205r</option>
+      <option value="pages/supr205v.html">205v</option>
+      <option value="pages/supr206r.html">206r</option>
+      <option value="pages/supr206v.html">206v</option>
+      <option value="pages/supr207r.html">207r</option>
+      <option value="pages/supr207v.html">207v</option>
+      <option value="pages/supr208r.html">208r</option>
+      <option value="pages/supr208v.html">208v</option>
+      <option value="pages/supr209r.html">209r</option>
+      <option value="pages/supr209v.html">209v</option>
+      <option value="pages/supr210r.html">210r</option>
+      <option value="pages/supr210v.html">210v</option>
+      <option value="pages/supr211r.html">211r</option>
+      <option value="pages/supr211v.html">211v</option>
+      <option value="pages/supr212r.html">212r</option>
+      <option value="pages/supr212v.html">212v</option>
+      <option value="pages/supr213r.html">213r</option>
+      <option value="pages/supr213v.html">213v</option>
+      <option value="pages/supr214r.html">214r</option>
+      <option value="pages/supr214v.html">214v</option>
+      <option value="pages/supr215r.html">215r</option>
+      <option value="pages/supr215v.html">215v</option>
+      <option value="pages/supr216r.html">216r</option>
+      <option value="pages/supr216v.html">216v</option>
+      <option value="pages/supr217r.html">217r</option>
+      <option value="pages/supr217v.html">217v</option>
+      <option value="pages/supr218r.html">218r</option>
+      <option value="pages/supr218v.html">218v</option>
+      <option value="pages/supr219r.html">219r</option>
+      <option value="pages/supr219v.html">219v</option>
+      <option value="pages/supr220r.html">220r</option>
+      <option value="pages/supr220v.html">220v</option>
+      <option value="pages/supr221r.html">221r</option>
+      <option value="pages/supr221v.html">221v</option>
+      <option value="pages/supr222r.html">222r</option>
+      <option value="pages/supr222v.html">222v</option>
+      <option value="pages/supr223r.html">223r</option>
+      <option value="pages/supr223v.html">223v</option>
+      <option value="pages/supr224r.html">224r</option>
+      <option value="pages/supr224v.html">224v</option>
+      <option value="pages/supr225r.html">225r</option>
+      <option value="pages/supr225v.html">225v</option>
+      <option value="pages/supr226r.html">226r</option>
+      <option value="pages/supr226v.html">226v</option>
+      <option value="pages/supr227r.html">227r</option>
+      <option value="pages/supr227v.html">227v</option>
+      <option value="pages/supr228r.html">228r</option>
+      <option value="pages/supr228v.html">228v</option>
+      <option value="pages/supr229r.html">229r</option>
+      <option value="pages/supr229v.html">229v</option>
+      <option value="pages/supr230r.html">230r</option>
+      <option value="pages/supr230v.html">230v</option>
+      <option value="pages/supr231r.html">231r</option>
+      <option value="pages/supr231v.html">231v</option>
+      <option value="pages/supr232r.html">232r</option>
+      <option value="pages/supr232v.html">232v</option>
+      <option value="pages/supr233r.html">233r</option>
+      <option value="pages/supr233v.html">233v</option>
+      <option value="pages/supr234r.html">234r</option>
+      <option value="pages/supr234v.html">234v</option>
+      <option value="pages/supr235r.html">235r</option>
+      <option value="pages/supr235v.html">235v</option>
+      <option value="pages/supr236r.html">236r</option>
+      <option value="pages/supr236v.html">236v</option>
+      <option value="pages/supr237r.html">237r</option>
+      <option value="pages/supr237v.html">237v</option>
+      <option value="pages/supr238r.html">238r</option>
+      <option value="pages/supr238v.html">238v</option>
+      <option value="pages/supr239r.html">239r</option>
+      <option value="pages/supr239v.html">239v</option>
+      <option value="pages/supr240r.html">240r</option>
+      <option value="pages/supr240v.html">240v</option>
+      <option value="pages/supr241r.html">241r</option>
+      <option value="pages/supr241v.html">241v</option>
+      <option value="pages/supr242r.html">242r</option>
+      <option value="pages/supr242v.html">242v</option>
+      <option value="pages/supr243r.html">243r</option>
+      <option value="pages/supr243v.html">243v</option>
+      <option value="pages/supr244r.html">244r</option>
+      <option value="pages/supr244v.html">244v</option>
+      <option value="pages/supr245r.html">245r</option>
+      <option value="pages/supr245v.html">245v</option>
+      <option value="pages/supr246r.html">246r</option>
+      <option value="pages/supr246v.html">246v</option>
+      <option value="pages/supr247r.html">247r</option>
+      <option value="pages/supr247v.html">247v</option>
+      <option value="pages/supr248r.html">248r</option>
+      <option value="pages/supr248v.html">248v</option>
+      <option value="pages/supr249r.html">249r</option>
+      <option value="pages/supr249v.html">249v</option>
+      <option value="pages/supr250r.html">250r</option>
+      <option value="pages/supr250v.html">250v</option>
+      <option value="pages/supr251r.html">251r</option>
+      <option value="pages/supr251v.html">251v</option>
+      <option value="pages/supr252r.html">252r</option>
+      <option value="pages/supr252v.html">252v</option>
+      <option value="pages/supr253r.html">253r</option>
+      <option value="pages/supr253v.html">253v</option>
+      <option value="pages/supr254r.html">254r</option>
+      <option value="pages/supr254v.html">254v</option>
+      <option value="pages/supr255r.html">255r</option>
+      <option value="pages/supr255v.html">255v</option>
+      <option value="pages/supr256r.html">256r</option>
+      <option value="pages/supr256v.html">256v</option>
+      <option value="pages/supr257r.html">257r</option>
+      <option value="pages/supr257v.html">257v</option>
+      <option value="pages/supr258r.html">258r</option>
+      <option value="pages/supr258v.html">258v</option>
+      <option value="pages/supr259r.html">259r</option>
+      <option value="pages/supr259v.html">259v</option>
+      <option value="pages/supr260r.html">260r</option>
+      <option value="pages/supr260v.html">260v</option>
+      <option value="pages/supr261r.html">261r</option>
+      <option value="pages/supr261v.html">261v</option>
+      <option value="pages/supr262r.html">262r</option>
+      <option value="pages/supr262v.html">262v</option>
+      <option value="pages/supr263r.html">263r</option>
+      <option value="pages/supr263v.html">263v</option>
+      <option value="pages/supr264r.html">264r</option>
+      <option value="pages/supr264v.html">264v</option>
+      <option value="pages/supr265r.html">265r</option>
+      <option value="pages/supr265v.html">265v</option>
+      <option value="pages/supr266r.html">266r</option>
+      <option value="pages/supr266v.html">266v</option>
+      <option value="pages/supr267r.html">267r</option>
+      <option value="pages/supr267v.html">267v</option>
+      <option value="pages/supr268r.html">268r</option>
+      <option value="pages/supr268v.html">268v</option>
+      <option value="pages/supr269r.html">269r</option>
+      <option value="pages/supr269v.html">269v</option>
+      <option value="pages/supr270r.html">270r</option>
+      <option value="pages/supr270v.html">270v</option>
+      <option value="pages/supr271r.html">271r</option>
+      <option value="pages/supr271v.html">271v</option>
+      <option value="pages/supr272r.html">272r</option>
+      <option value="pages/supr272v.html">272v</option>
+      <option value="pages/supr273r.html">273r</option>
+      <option value="pages/supr273v.html">273v</option>
+      <option value="pages/supr274r.html">274r</option>
+      <option value="pages/supr274v.html">274v</option>
+      <option value="pages/supr275r.html">275r</option>
+      <option value="pages/supr275v.html">275v</option>
+      <option value="pages/supr276r.html">276r</option>
+      <option value="pages/supr276v.html">276v</option>
+      <option value="pages/supr277r.html">277r</option>
+      <option value="pages/supr277v.html">277v</option>
+      <option value="pages/supr278r.html">278r</option>
+      <option value="pages/supr278v.html">278v</option>
+      <option value="pages/supr279r.html">279r</option>
+      <option value="pages/supr279v.html">279v</option>
+      <option value="pages/supr280r.html">280r</option>
+      <option value="pages/supr280v.html">280v</option>
+      <option value="pages/supr281r.html">281r</option>
+      <option value="pages/supr281v.html">281v</option>
+      <option value="pages/supr282r.html">282r</option>
+      <option value="pages/supr282v.html">282v</option>
+      <option value="pages/supr283r.html">283r</option>
+      <option value="pages/supr283v.html">283v</option>
+      <option value="pages/supr284r.html">284r</option>
+      <option value="pages/supr284v.html">284v</option>
+      <option value="pages/supr285r.html">285r</option>
+      <option value="pages/supr285v.html">285v</option>
+   </select>
+</form>
+</p>
+        <table border="1">
+            <tr>
+                <th>Title</th>
+                <th>Folios</th>
+                <th>First</th>
+                <th>Continuous</th>
+                <th>Raw XML</th>
+            </tr>
+            <tr>
+                <td>Vita (Passio) Pauli et Iulianae (4 March)</td>
+                <td>1r1–8r15</td>
+                <td><a href="pages/supr001r.html">1r</a></td>
+                <td><a href="01_paragraphed.html">Continuous</a></td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita (Passio) Basilisci (5 March)</td>
+                <td>8r18–12r26</td>
+                <td><a href="pages/supr008r.html">8r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita (Passio et miracula) Cononis martyris in Isauria (6 March)</td>
+                <td>12r28–27v3</td>
+                <td><a href="pages/supr012r.html">12r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita (Passio) XLII martyrum Amoriensium (7 March)</td>
+                <td>27v5–34v20</td>
+                <td><a href="pages/supr027v.html">27v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita (Passio) XL martyrum Sebastenorum (9 March)</td>
+                <td>34v22–37v30,<br />39r1–42r27</td>
+                <td><a href="pages/supr034v.html">34v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Laudatio in XL martyres Sebastenos</td>
+                <td>42r30–50r21</td>
+                <td><a href="pages/supr042r.html">42r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita (Passio) Codrati (10 March)</td>
+                <td>50r24–61r13</td>
+                <td><a href="pages/supr050r.html">50r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Gregorii I papae (11 March)</td>
+                <td>61r15–63v5</td>
+                <td><a href="pages/supr061r.html">61r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita (Passio) Pionii presbyteri Smirnae (12 March)</td>
+                <td>63v7–72v18</td>
+                <td><a href="pages/supr063v.html">63v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Oratio Pionii</td>
+                <td>72v19–73v26</td>
+                <td><a href="pages/supr072v.html">72v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita (Passio) Sabini (13 March)</td>
+                <td>73v29–78v31</td>
+                <td><a href="pages/supr073v.html">73v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Alexandri presbyteri Sidensis (15 March)</td>
+                <td>79r1–84v30</td>
+                <td><a href="pages/supr079r.html">79r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Narrationes de taxeota</td>
+                <td>85r1–85v25</td>
+                <td><a href="pages/supr085r.html">85r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Pauli simplicis (19 March)</td>
+                <td>85v28–88v7</td>
+                <td><a href="pages/supr085v.html">85v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita (Passio) Terentii, Africani, Pompei et sociorum (20 March)</td>
+                <td>88v9–88v39<br />38r1–38v30,<br />89r1–93r21</td>
+                <td><a href="pages/supr088v.html">88v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Isaacii monachi (21 March)</td>
+                <td>93r24–105r20</td>
+                <td><a href="pages/supr093r.html">93r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Trophimi et Eucarpionis (22 March)</td>
+                <td>105r23–107r25</td>
+                <td><a href="pages/supr105r.html">105r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Dometii Persae (et discipulorum eius) (23 March)</td>
+                <td>107r29–110v5</td>
+                <td><a href="pages/supr107r.html">107r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Artemonis (24 March)</td>
+                <td>110v8–118v30</td>
+                <td><a href="pages/supr110v.html">110v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In annuntiationem sanctissimae deiparae (25 March)</td>
+                <td>119r1–122r24</td>
+                <td><a href="pages/supr119r.html">119r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In annuntiationem b. uirginis (25 March)</td>
+                <td>122r26–126r30</td>
+                <td><a href="pages/supr122r.html">122r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita (Passio) Irenaei episcopi Sirmii (26 March)</td>
+                <td>126v2–127v25</td>
+                <td><a href="pages/supr126v.html">126v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita (Passio) Ionae et Barachisii martyrum (29 March)</td>
+                <td>127v26–136v3</td>
+                <td><a href="pages/supr127v.html">127v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Ioannis Climaci (30 March)</td>
+                <td>136v5–139v8</td>
+                <td><a href="pages/supr136v.html">136v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Ioannis hesychastae (31 March)</td>
+                <td>139v9–151v29</td>
+                <td><a href="pages/supr139v.html">139v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In quartriduanum Lazarum homilia 1</td>
+                <td>152r1–156r27</td>
+                <td><a href="pages/supr152r.html">152r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In Lazarum homilia 2</td>
+                <td>156v1–159v7</td>
+                <td><a href="pages/supr156v.html">156v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In ramos palmarum homilia</td>
+                <td>159v10–166v11</td>
+                <td><a href="pages/supr159v.html">159v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Patriarchae Photii. In ramos et Lazarum homilia</td>
+                <td>166v13–171v28</td>
+                <td><a href="pages/supr166v.html">166v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In parabolam de ficu, homilia</td>
+                <td>172r1–177v14</td>
+                <td><a href="pages/supr172r.html">172r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. De jejunio, de Davide et de presbyteris, de Josepho et de
+                    novato</td>
+                <td>177v16–184v20</td>
+                <td><a href="pages/supr177v.html">177v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In parabolam decem virginibus, et de eleemosyna (Matth.
+                    25,1)</td>
+                <td>184v22–192v8</td>
+                <td><a href="pages/supr184v.html">184v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In sancta et magna feria secunda homilia</td>
+                <td>192v10–195r30</td>
+                <td><a href="pages/supr192v.html">192v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. De meretrice homilia</td>
+                <td>195v2–198r19</td>
+                <td><a href="pages/supr195v.html">195v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. De invidia homilia (Matth. 12, 14)</td>
+                <td>198r22–203r1</td>
+                <td><a href="pages/supr198r.html">198r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. De proditione Iudae homilia</td>
+                <td>203r3–212v13</td>
+                <td><a href="pages/supr203r.html">203r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In magnam feriam homilia</td>
+                <td>212v15–214r22</td>
+                <td><a href="pages/supr212v.html">212v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In sancta et magna Parasceve homilia</td>
+                <td>214r25–220r13</td>
+                <td><a href="pages/supr214r.html">214r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In Matthaeum homilia 89 (Matth. 27, 62-64)</td>
+                <td>220r15–224r26</td>
+                <td><a href="pages/supr220r.html">220r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Epiphanius Constantiens. In divini corporis sepulturam homilia</td>
+                <td>224r28–236r12</td>
+                <td><a href="pages/supr224r.html">224r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In resurrectionem Domini homilia</td>
+                <td>236r15–240r2</td>
+                <td><a href="pages/supr236r.html">236r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In sanctum Pascha homilia 1</td>
+                <td>240r4–243v17</td>
+                <td><a href="pages/supr240r.html">240r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In sanctum Pascha homilia 2</td>
+                <td>243v19–249v11</td>
+                <td><a href="pages/supr243v.html">243v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. De incredulitate ap. Thomae homilia</td>
+                <td>249v12–254v9</td>
+                <td><a href="pages/supr249v.html">249v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Iohannes Chrysostomus. In sanctum Thomam apostolum et contra Arianos sermo</td>
+                <td>254v11–257r13</td>
+                <td><a href="pages/supr254v.html">254v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Iacobi eremitae in Palaestina</td>
+                <td>257r15–266v18</td>
+                <td><a href="pages/supr257r.html">257r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Basilii et Capitonis apud Chersonesum</td>
+                <td>266v20–272r11</td>
+                <td><a href="pages/supr266v.html">266v</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+            <tr>
+                <td>Vita Aninae Thaumaturgi</td>
+                <td>272r13–285v30</td>
+                <td><a href="pages/supr272r.html">272r</a></td>
+                <td>&#xa0;</td>
+                <td>&#xa0;</td>
+            </tr>
+        </table>
+        <h3>Supporting materials</h3>
+        <ul>
+            <li><a href="foliation.html">Guide to collation and foliation</a></li>
+        </ul>
+        <h3>Photographic facsimile</h3>
+        <ul>
+            <li><a href="http://csup.ilit.bas.bg/sites/ms/">Coffee-table version</a></li>
+        </ul>
+        <h3>Development reports and documentation</h3>
+        <ul>
+            <li><a href="editorial-principles.html">Editorial principles</a> (last modified
+                2012-06-09T19:43:32+0000)</li>
+            <li><q>On beyond St. Paul the Simple</q> (lecture in Sofia, 2011-08-20)<ul>
+                    <li><a href="2011-08-20_on-beyond-paul.pdf">PowerPoint slides</a> (330k
+                        pdf)</li>
+                    <li><a href="http://www.youtube.com/watch?v=RNfG_Z4g230">Video</a> (on
+                        YouTube)</li>
+                </ul></li>
+            <!--<li><a href="report.html">Development report</a></li>-->
+        </ul>
+        <h3>External links</h3>
+        <ul>
+            <li><a href="http://csup.ilit.bas.bg">Main project page</a> (Bulgarian Academy of
+                Sciences server)</li>
+            <li><a href="conference-program.pdf">Exhibition program, Sofia, August 19–29 2011</a>
+                (16M pdf)</li>
+            <li><a
+                    href="http://www.unesco.org/new/en/communication-and-information/flagship-project-activities/memory-of-the-world/register/full-list-of-registered-heritage/registered-heritage-page-2/codex-suprasliensis-mineia-cetia-mart-the-suprasl-codex-menology-march/"
+                    >UNESCO declaration of the inscription of the <cite>Codex Suprasliensis in the
+                        Memory of the World</cite> registry</a></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Csokonai Vitéz Mihály összes művei</title>
+
+  <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/stilus.css" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/note.js"></script>
+	<script type="text/javascript" src="js/scriptek.js"></script>
+	<script type="text/javascript" src="js/jquery-highlight1.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery.michiweber.table-head-fixed.js"></script>-->
+
+
+  <script type="text/javascript">
+
+  function show_hide_menu( x ){
+    var e = document.getElementById(x);
+    var c = e.className;
+    e.className = c == "rejtett" ? "lathato" : "rejtett";
+  }
+
+  function divet_mutat_elrejt( x ){
+    var aktdiv = $('.' + x);
+    if( $(aktdiv).hasClass('rejtettDiv') ){
+      $(aktdiv).fadeIn( 500, function(){ $(this).removeClass('rejtettDiv'); } );
+    }
+    else{
+      $(aktdiv).fadeOut( 200, function(){ $(this).addClass('rejtettDiv'); } );
+    }
+
+  }
+
+  $(document).ready( function(){
+
+    if( $("#toHighlight").length > 0 ){
+      $("#tartalom").highlight($("#toHighlight").val(), false);
+      $('.highlight:first').each(function(){
+    	  $('html, body').animate({
+    		    scrollTop: ($(this).offset().top)
+    	  },500);
+      });
+    }
+
+
+    if( window.top.location.href.search('text.php') != -1 ){
+      window.name="mainWindow";
+    }
+
+
+    $('.pdf_trigger').click(function(){
+      var pdf_link = $(this).attr('data-pdf');
+      $('#pdf_viewer').attr('src', $('#pdf_viewer').attr('data-src')+pdf_link);
+    });
+
+
+
+  } );
+
+  </script>
+
+</head>
+
+<body >
+
+	
+
+
+
+
+
+  <header>
+    <div class="container-fluid">
+
+    <div class="col-xs-3" id="header-left">
+      <div id="logo_text">HUN–REN–DE<br>Klasszikus Magyar Irodalmi<br>Textológiai Kutatócsoport</div>
+    </div>
+
+
+    <div class="col-xs-9" id="header-right">
+      <div class="jumbotron">
+      	<div id="logo"></div>
+      		<h1>Csokonai Vitéz Mihály összes művei<br><span>Elektronikus kritikai kiadás</span></h1>
+      </div>
+    </div>
+
+	</div>
+  </header>
+
+
+	<div class="container-fluid">
+
+  <div id="loader_bg_wrapper"><div id="loader_bg"></div></div>
+
+
+  <div class="row-fluid" id="keret_row">
+
+  
+
+<div id="lang-switcher" style="padding-right: 20px; text-align: right;">
+<form id="languageswitcher" method="post" action="lang_switcher.php?currpage=/deba/csokonai_muvei/&portal=csokonai">
+<span style="cursor: pointer; margin-right: 6px;" onclick="document.getElementById('chosen_lang').value='hu'; document.getElementById('languageswitcher').submit();">HU</span>
+<span style="cursor: pointer;" onclick="document.getElementById('chosen_lang').value='en'; document.getElementById('languageswitcher').submit();">EN</span>
+<input type="hidden" id="chosen_lang" name="chosen_lang" value=""/>
+</form>
+</div>
+
+    <div class="col-sm-3">
+
+<div class="panel-group" id="accordion">
+
+<div class="menu_label">Az életmű szövegforrásai</div>
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse_mufajok">
+               Műfaj            </a>
+         </h4>
+      </div>
+
+      <div id="collapse_mufajok" class="panel-collapse collapse ">
+         <div class="panel-body">         		
+           <p><a href="kronologia.php?sztipus=1">Dráma</a></p>          
+           <p><a href="kronologia.php?sztipus=6">Feljegyzés</a></p>
+           <p><a href="kronologia.php?sztipus=2">Költemény</a></p>
+           <p><a href="kronologia.php?sztipus=3">Levél</a></p>
+           <p><a href="kronologia.php?sztipus=4">Széppróza</a></p>
+           <p><a href="kronologia.php?sztipus=8">Tanulmány</a></p>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse_kron">
+               Kronológia            </a>
+         </h4>
+      </div>
+
+      <div id="collapse_kron" class="panel-collapse collapse ">
+         <div class="panel-body">
+          <p><a href="kronologia.php">Szövegforrás</a></p>
+          <p><a href="kronologia.php?sz=1">Szövegidentitás</a></p>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse_beturend">
+               Betűrend            </a>
+         </h4>
+      </div>
+
+      <div id="collapse_beturend" class="panel-collapse collapse ">
+         <div class="panel-body">
+          <p><a href="beturend.php">Szövegforrás</a></p>
+          <p><a href="szovegidentitas.php?s=b">Szövegidentitás</a></p>
+         </div>
+      </div>
+   </div>
+
+
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse_forrastipusok">
+               Forrástípus            </a>
+         </h4>
+      </div>
+
+      <div id="collapse_forrastipusok" class="panel-collapse collapse ">
+         <div class="panel-body">
+         <div class="panel-group" id="accordion_ft_1">
+         <div class="panel panel-default">
+          <div class="panel-heading">
+             <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion_ft_1" href="#collapse_ft_ny">Nyomtatvány</a></h4>
+          </div>
+          <div id="collapse_ft_ny" class="panel-collapse collapse ">
+             <div class="panel-body">
+              <p><a href="nyomtatvanyok.php?tipus=onallo_kotet">Önálló kötet</a></p>
+              <p><a href="nyomtatvanyok.php?tipus=gyujtemenyes_kotet">Gyűjteményes kötet</a></p>
+						  <p><a href="nyomtatvanyok.php?tipus=apronyomtatvany">Aprónyomtatvány</a></p>
+						  <p><a href="nyomtatvanyok.php?tipus=folyoirat">Folyóirat</a></p>
+						  <p><a href="nyomtatvanyok.php?tipus=hirlap">Hírlap</a></p>
+						  <p><a href="nyomtatvanyok.php?tipus=konyvreszlet">Könyvrészlet</a></p>
+						  <p><a href="nyomtatvanyok.php?tipus=utolagos_publikacio">Utólagos publikáció</a></p>
+             </div>
+          </div>
+         </div>
+         </div>
+
+         <div class="panel-group" id="accordion_ft_2">
+         <div class="panel panel-default">
+          <div class="panel-heading">
+             <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion_ft_2" href="#collapse_ft_k">Kézirat</a></h4>
+          </div>
+          <div id="collapse_ft_k" class="panel-collapse collapse ">
+             <div class="panel-body">
+              <p><a href="keziratok.php?tipus=autograf">Autográf</a></p>
+              <p><a href="keziratok.php?tipus=autograf_tisztazat">Autográf tisztázat</a></p>
+              <p><a href="keziratok.php?tipus=autograf_fogalmazvany">Autográf fogalmazvány</a></p>
+              <p><a href="keziratok.php?tipus=diktalt_tisztazat">Diktált tisztázat</a></p>
+              <p><a href="keziratok.php?tipus=masolat">Másolat</a></p>
+              <p><a href="keziratok.php?tipus=autorizalt_masolat">Autorizált másolat</a></p>
+              <p><a href="keziratok.php?tipus=archivalasi_masolat">Archiválási másolat</a></p>
+              <p><a href="keziratok.php?tipus=felhasznaloi_masolat">Felhasználói másolat</a></p>
+              <p><a href="keziratok.php?tipus=kerdeses_besorolasu">Kérdéses besorolású</a></p>
+             </div>
+          </div>
+         </div>
+         </div>
+
+         </div>
+      </div>
+   </div>
+
+
+
+
+<div class="menu_label menu_label_2">Válogatott szövegforrások</div>
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse_szerz_komp">
+               Szerzői kompozíció            </a>
+         </h4>
+      </div>
+
+      <div id="collapse_szerz_komp" class="panel-collapse collapse ">
+         <div class="panel-body">
+         <div class="panel-group" id="accordion_szkomp_1">
+         <div class="panel panel-default">
+		      <div class="panel-heading">
+		         <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion_szkomp_1" href="#collapse_szerz_komp_ny">Nyomtatvány</a></h4>
+		      </div>
+		      <div id="collapse_szerz_komp_ny" class="panel-collapse collapse ">
+		         <div class="panel-body">
+		          <p><a href="nyomtatvanyok.php?tipus=onallo_kotet&m=sz">Önálló kötet</a></p>
+		          <p><a href="nyomtatvanyok.php?tipus=gyujtemenyes_kotet&m=sz">Gyűjteményes kötet</a></p>
+              <p><a href="nyomtatvanyok.php?tipus=apronyomtatvany&m=sz">Aprónyomtatvány</p>
+		         </div>
+		      </div>
+         </div>
+         </div>
+
+
+         <div class="panel-group" id="accordion_szkomp_1">
+         <div class="panel panel-default">
+          <div class="panel-heading">
+             <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion_szkomp_2" href="#collapse_szerz_komp_k">Kézirat</a></h4>
+          </div>
+          <div id="collapse_szerz_komp_k" class="panel-collapse collapse ">
+             <div class="panel-body">
+              <p><a href="keziratok.php?tipus=szerzoi_kezirat&tipus2=autograf_tisztazat&m=szk">Autográf tisztázat</a></p>
+              <p><a href="keziratok.php?tipus=szerzoi_kezirat&tipus2=autograf_fogalmazvany&m=szk">Autográf fogalmazvány</a></p>
+             </div>
+          </div>
+         </div>
+         </div>
+
+
+         </div>
+      </div>
+   </div>
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse_kgyujtemeny">
+               Kéziratgyűjtemény            </a>
+         </h4>
+      </div>
+
+      <div id="collapse_kgyujtemeny" class="panel-collapse collapse ">
+         <div class="panel-body">
+            <p><a href="keziratok.php?tipus=kezirat&tipus2=autorizalt_masolat&m=szk">Autorizált másolat</a></p>
+            <p><a href="keziratok.php?tipus=kezirat&tipus2=archivalasi_masolat&m=szk">Archiválási másolat</a></p>
+         </div>
+      </div>
+   </div>
+
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse_ford">
+               Fordítás            </a>
+         </h4>
+      </div>
+
+      <div id="collapse_ford" class="panel-collapse collapse ">
+         <div class="panel-body">
+          <p><a href="forditasok.php?x=szerzo">Fordított szerző</a></p>
+          <p><a href="forditasok.php?x=mufaj">Műfaj</a></p>
+         </div>
+      </div>
+   </div>
+
+
+
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse_lev">
+               Levelezés            </a>
+         </h4>
+      </div>
+
+      <div id="collapse_lev" class="panel-collapse collapse ">
+         <div class="panel-body">
+          <p><a href="olv_ajanlat.php?x=leveliro">Levélíró</a></p>
+          <p><a href="olv_ajanlat.php?x=cimzett">Címzett</a></p>
+          <p><a href="levelvaltasok.php">Levélváltás</a></p>
+          <p><a href="terkep.php">Térkép</a></p>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse_kritkiad">
+               A kritikai kiadás kötetei            </a>
+         </h4>
+      </div>
+
+      <div id="collapse_kritkiad" class="panel-collapse collapse ">
+         <div class="panel-body">
+          <p><a href="kritikai_kiadas_kotetei.php">XML</a></p>
+          <p><a href="kritikai_kiadas_kotetei_pdf.php">PDF</a></p>
+         </div>
+      </div>
+   </div>
+
+
+
+
+<div class="menu_label menu_label_2">Keresés</div>
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="osszetett_kereses.php">Összetett keresés</a>
+         </h4>
+      </div>
+   </div>
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a>
+               Teljes szövegű keresés            </a>
+         </h4>
+      </div>
+
+      <div class="panel-collapse" style="display: block;">
+         <div class="panel-body search">
+			 <div id="acc_search_wrapper">
+<form name="f" method="post" action="kereses.php">
+<input type="text" class="text" name="search" maxlength="150" placeholder="Keresés" >
+</form>
+
+</div>
+         </div>
+      </div>
+   </div>
+
+
+
+
+<div class="menu_label menu_label_2">Kapcsolódó források</div>
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse_hit">
+               Hitelesség            </a>
+         </h4>
+      </div>
+
+      <div id="collapse_hit" class="panel-collapse collapse ">
+         <div class="panel-body">
+          <p><a href="hitelesseg.php?x=csokonai">Csokonainak tulajdonított művek</a></p>
+          <p><a href="hitelesseg.php?x=ketes">Kétes hitelű művek</a></p>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="https://deba.unideb.hu/deba/csokonai_enekelt" target="_blank">Énekelt költészet</a>
+         </h4>
+      </div>
+   </div>
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="https://dea.lib.unideb.hu/dea/bitstream/handle/2437/134479/file_up_Debreczeni Attila_Csokonai.pdf?sequence=1" target="_blank">Filológiai alapok</a>
+         </h4>
+      </div>
+   </div>
+
+
+   
+
+
+
+  <div class="menu_label menu_label_2">Mutatók</div>
+
+  <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="mutatok.php?t=nev" >Nevek</a>
+         </h4>
+      </div>
+   </div>
+
+  <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="mutatok.php?t=hely" >Helynevek</a>
+         </h4>
+      </div>
+   </div>
+
+
+  <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="mutatok.php?t=mu" >Művek</a>
+         </h4>
+      </div>
+   </div>
+
+
+
+
+<div class="menu_label menu_label_3" style="margin-top: 40px;"></div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="index.php">Nyitóoldal</a>
+         </h4>
+      </div>
+   </div>
+
+
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse_sugo">
+               Fogalmak és használat            </a>
+         </h4>
+      </div>
+
+      <div id="collapse_sugo" class="panel-collapse collapse ">
+         <div class="panel-body">
+          <p><a href="fogalmak.php">Fogalmak</a></p>
+          <p><a href="sugo.php">Használat</a></p>
+         </div>
+      </div>
+   </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="impresszum.php">Impresszum</a>
+         </h4>
+      </div>
+   </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="feltoltesi_naplo.php">Feltöltési napló</a>
+         </h4>
+      </div>
+   </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="tarsportalok.php">Társportálok</a>
+         </h4>
+      </div>
+   </div>
+
+
+
+
+
+
+	
+
+
+
+</div>
+
+
+</div>
+    <div class="col-sm-9" id="tartalom">
+
+		<noscript>
+			<div class="piros">Az oldal megfelelő működéséhez engedélyeznie kell böngészőjében a JavaScriptet!</div>
+		</noscript>
+
+		<input type="hidden" id="pagelanguage" value="hu" />
+
+
+		
+
+<div class="text-center">
+<img id="fooldal_kep" src="img/csokonai_kor.jpg">
+</div>
+
+<div style="text-align: justify; padding: 50px 50px 0px 50px;">
+Csokonai Vitéz Mihály összes műveinek kritikai kiadása 1975 és 2002 között tizenegy kötetben jelent meg, 
+a sorozat tizenkettedik darabja pedig a költői életmű kronológiájának újradolgozását elvégző monográfia volt 2012-ben. 
+A köztes évtized számos jelentős textológiai-filológiai felfedezést hozott, melyek önmagukban is szükségessé tettek egy új kiadást, 
+a genetikus szövegkiadási szemléletmód és a TEI–XML alapú digitális textológia által pedig megteremtődtek ennek tudományos és technikai feltételei. 
+A jelen elektronikus kiadás így csak részben a megjelent kritikai kiadás adaptációja, alapvetően eltér attól szövegforrásokra épülő, 
+genetikus kiadási elvében. A költeményeknek pedig nemcsak a kronológiája, hanem a szöveganyaga is egészen új, s az énekversek hangzó 
+kiadásban eredeti dallamokkal hallhatóak.
+</div>
+
+
+
+<div class="kozepre impresszum">
+
+<p>
+Szerkesztő<br>
+<span class="impresszum_nev">Debreczeni Attila</span><br><br>
+
+Vezető munkatárs<br>
+<span class="impresszum_nev">Tóth Barna</span><br><br>
+
+Lektor<br>
+<span class="impresszum_nev" style="border: 1px solid black; padding: 1px 5px;">Labádi Gergely</span><br><br>
+
+Informatikai fejlesztés<br>
+<span class="impresszum_nev">Nyitrai Nóra</span>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+		<div class="clear"></div>
+		<!--<div id="szovegmezo_navigator_wrapper"><div id="szovegmezo_navigator"><div class="in_div"></div></div></div>   -->
+    
+    
+    
+
+
+    
+      
+      </div><!-- col- masodik oszlop vege-->
+      
+      
+     <!-- sticky div jegyzeteknek -->
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container" id="sticky_div">
+                        
+        </div>
+    </div>
+    
+
+
+
+
+  </div> <!-- row -->
+  
+  
+</div> <!-- container -->  
+
+<div class="container-fluid" id="footer">    
+    <div class="col-sm-12" id="footer_text">
+      Copyright &copy; 2016-2025 HUN–REN–DE Klasszikus Magyar Irodalmi Textológiai Kutatócsoport<br>
+			Copyright &copy; 2016-2025 Debreceni Egyetemi Kiadó (DOI: 10.5484/Csokonai_Vitez_Mihaly_osszes_muvei)
+      
+    </div>
+</div>
+
+
+
+  
+  <script src="bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
+

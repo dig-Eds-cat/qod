@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title data-template="config:app-title">mrp</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Digitale Edition der Ministerratsprotokolle 1848–1918">
+        <meta name="creator" content="Peter Andorfer">
+        <meta name="creator" content="Stephan Kurz">
+        <link rel="apple-touch-icon" sizes="180x180" href="../resources/img/mrp-favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../resources/img/mrp-favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../resources/img/mrp-favicon/favicon-16x16.png">
+        <link rel="manifest" href="../resources/img/mrp-favicon/site.webmanifest">
+        <link rel="mask-icon" href="../resources/img/mrp-favicon/safari-pinned-tab" color="#5bbad5">
+        <link rel="shortcut icon" href="../resources/img/mrp-favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="../resources/img/mrp-favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="title" content="Ministerratsprotokolle Österreichs und der österreichisch-ungarischen Monarchie 1848–1918">
+        <meta name="description" content="Ministerratsprotokolle Österreichs und der österreichisch-ungarischen Monarchie 1848–1918. The „Ministerratsprotokolle“ are a large German-language corpus of digitized governmental documents from the Habsburg Monarchy, scholarly edited since 1969, digitally published in TEI XML by the Austrian Academy of Sciences since 2018.">
+        <meta name="author" content="Kurz, Stephan">
+        <meta name="author" content="Schmied-Kowarzik, Anatol">
+        <meta name="author" content="Adlgasser, Franz">
+        <meta name="author" content="Fischer-Nebmaier, Wladimir">
+        <meta name="author" content="Lein, Richard">
+        <meta name="author" content="Koch, Klaus">
+        <meta name="keywords" lang="en" content="Habsburg Monarchy, Digital Scholarly Edition, TEI, Governmental history, Administration, governmental minutes">
+        <meta name="keywords" lang="de" content="Habsburgermonarchie, Digital Scholarly Edition, TEI, Politische Geschichte, Administration, Protokolle">
+        <meta property="og:title" content="Ministerratsprotokolle Österreichs und der österreichisch-ungarischen Monarchie 1848–1918">
+        <meta property="og:description" content="The „Ministerratsprotokolle“ are a large German-language corpus of digitized governmental documents from the Habsburg Monarchy, scholarly edited since 1969, digitally published in TEI XML by the Austrian Academy of Sciences since 2018.">
+        <meta property="og:url" content="https://mrp.oeaw.ac.at/">
+        <meta property="og:site_name" content="Ministerratsprotokolle Österreichs und der österreichisch-ungarischen Monarchie 1848–1918"> 
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="de">
+        <meta property="og:image" content="https://mrp.oeaw.ac.at/resources/img/project_background.jpg">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="930">
+        <meta property="og:image:height" content="621">
+        <meta property="og:image:alt" content="A historical governmental protocol, viewed through modern glasses">
+        <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+        <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
+        <meta name="DC.publisher" content="Österreichische Akademie der Wissenschaften">
+        <meta name="DC.subject" content="Habsburgermonarchie, Digital Scholarly Edition, TEI, Politische Geschichte, Administration, Protokolle">
+        <meta name="DC.creator" content="Stephan Kurz">
+        <meta name="DCTERMS.rightsHolder" content="Institute for Habsburg and Balkan Studies, Österreichische Akademie der Wissenschaften">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&amp;display=swap" rel="stylesheet">
+        <!--<link rel="stylesheet" type="text/css" href="$app-root/resources/css/fundament.css"/>-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" type="text/css" href="$app-root/resources/css/style.css">
+        <!--scroll to top start-->
+        <link rel="stylesheet" href="../resources/js/scroll-to-top/css/ap-scroll-top.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/swt4ixr.css"><!-- externally load Brandon Grotesque -->
+        <script src="$app-root/resources/js/custom.js"></script>
+        <!-- Matomo -->
+        <script type="text/javascript">
+        var _paq = _paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+              var u="//matomo.acdh.oeaw.ac.at/";
+              _paq.push(['setTrackerUrl', u+'piwik.php']);
+              _paq.push(['setSiteId', '173']);
+              var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+              g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            })();
+        </script>
+        <!-- End Matomo Code -->
+    </head>
+    <body role="document" class="home contained fixed-nav" id="body">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light sticky-top bg-white">
+                <a class="navbar-brand custom-logo-link p-0 pl-3" href="https://www.oeaw.ac.at" rel="home" itemprop="url">
+                    <img class="navbar-brand" src="../resources/img/oeaw-logo.svg" alt="ÖAW" title="ÖAW" itemprop="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto pl-4">
+                        <li class="nav-item" title="Ministerratsprotokolle Österreichs und der österreichisch-ungarischen Monarchie 1848–1918">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Paratexte
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="show.html?document=help.xml&amp;directory=meta">Anleitung</a>
+                                <a class="dropdown-item" href="show.html?document=about.xml&amp;directory=meta">Über die Edition</a>
+                                <a class="dropdown-item" href="show.html?document=editions.xml&amp;directory=meta">Editionsgrundsätze</a>
+                                <a class="dropdown-item" href="show.html?document=echo.xml&amp;directory=meta">Presseecho</a>
+                                <a class="dropdown-item" href="show.html?document=partners.xml&amp;directory=meta">Partnerinstitutionen</a>
+                                <a class="dropdown-item" href="show.html?document=workflows.xml&amp;directory=meta">Technische Umsetzung</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="volumes.html">Bände</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">Kalender</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Verzeichnisse
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="toc.html">Inhaltsverzeichnis</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="persons.html">Personenregister</a>
+                                <!--<a class="dropdown-item disabled" href="places.html">Ortsregister</a>
+                                <a class="dropdown-item disabled" href="orgs.html">Institutionenregister</a>-->
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="abbr.html">Abkürzungsverzeichnis</a>
+                                <a class="dropdown-item" href="glossar.html">Verzeichnis veralteter Ausdrücke</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="https://www.zotero.org/groups/2042149/mrp-bib/library" target="_blank">Literaturliste (Zotero-Bibliothek) <i class="fas fa-external-link-alt small"></i>
+                                </a>
+                                <a class="dropdown-item" href="https://mpr.acdh.oeaw.ac.at/" target="_blank">MPR Entitätendatenbank (APIS) <i class="fas fa-external-link-alt small"></i>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../api/api.html">API</a>
+                            </div>
+                        </li>
+                        <!--<li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Autocompletes
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../ac/entity-ac.xql?query=">Persons</a>
+                                <a class="dropdown-item" href="../ac/entity-ac.xql?entity=place&query=">Orte</a>
+                                <a class="dropdown-item" href="../ac/entity-ac.xql?entity=org&query=">Institutionen</a>
+                                <a class="dropdown-item" href="../ac/entity-ac.xql?entity=work&query=">Bibliographie</a>
+                            </div>
+                        </li>-->
+                    </ul>
+                    <form method="get" action="ft_search.html" class="form-inline my-2 my-lg-0">
+                        <input name="searchexpr" class="form-control mr-sm-1" type="text" placeholder="Volltextsuche" aria-label="Volltextsuche" pattern=".{3,}" required="" title="Mind. 3 Zeichen, Trunkierung ? für 1 Zeichen, * für 0-n Zeichen, &#xD;&#34;Phrasensuche unter Anführung&#34; &#xD;Verknüpfung mit AND | OR wie z.B. Herbst AND (Frühling OR Sommer OR Winter)">
+                        <button class="btn btn-main btn-outline-primary btn-mg" type="submit" title="Suche starten">
+                            <i class="fas fa-search" title="Suche starten"></i>
+                        </button>
+                    </form>
+                    <div class="p-1">
+                        <a href="https://fedihum.org/@MinisterratCis" class="btn btn-main btn-outline-primary" title="Fediverse link">
+                            <i class="fa-brands fa-mastodon"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="content" class="container">
+    <div class="wrapper" id="wrapper-hero">
+        <!-- ******************* The Hero Area ******************* -->
+        <div class="wrapper" id="wrapper-hero-content" style="margin-bottom:2rem;">
+            <div class="container-fluid-empty hero-light" id="wrapper-hero-inner" tabindex="-1">
+                <div>
+                    <img width="100%" src="../resources/img/mrp-header.svg" alt="Die Ministerratsprotokolle Österreichs und der österreichisch-ungarischen Monarchie 1848–1918">
+                </div>
+                <div class="p-2">
+                    <a class="btn btn-main btn-outline-primary btn-md m-1" href="toc.html?collection=meta" role="button">Über die Edition</a>
+                    <a class="btn btn-main btn-outline-primary btn-md m-1" href="toc-introductions.html" role="button">Bandeinleitungen</a>
+                    <a class="btn btn-main btn-outline-primary btn-md m-1" href="toc.html?collection=editions" role="button">Gesamtinhalt</a>
+                    <a class="btn btn-main btn-outline-primary btn-md m-1" href="volumes.html" role="button">Bände</a>
+                    <a class="btn btn-main btn-outline-primary btn-md m-1" href="calendar.html" role="button">Kalenderansicht</a>
+                    <a class="btn btn-main btn-lg btn-warning m-1" href="https://doi.org/10.5281/zenodo.6798622" target="_blank">Get the dataset: <br><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.6798622.svg" alt="Zenodo link badge"></a>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper card" style="margin-bottom:2rem;">
+            <div class="container-fluid-empty hero-light" tabindex="-1">
+                <p>Die Protokolle der Regierungen der Habsburgermonarchie waren streng geheim. Seit 1967 werden sie für die Öffentlichkeit ediert. Seit 2018 erscheinen sie auch als digitale Edition. Hier finden Sie drei Serien der Ministerratsprotokolle: </p>
+                <ul>
+                    <li>ÖMR 1848–1867: TEI-XML-Daten aus 28 Bänden Protokollen des Kaisertums Österreich (<a href="volumes.html">Bandansicht</a>) <span class="badge badge-pill">abgeschlossen</span><span class="badge badge-pill badge-secondary">Volltext</span><!--(<a 
+href="toc.html?collection=editions&volume=MRP-1-">Inhaltsverzeichnis</a>)--><!--(<a href="https://hw.oeaw.ac.at/ministerrat">
+                            <i class="fas fa-external-link-alt small"/> PDF-Digitalisate</a>)-->
+                    </li>
+                    <li>GMR 1867–1918: Inhaltsübersicht Protokolle des Gemeinsamen Ministerrats  (<a href="volumes.html#serie2">Bandansicht</a>) <span class="badge badge-pill">abgeschlossen</span><span class="badge badge-pill badge-secondary">OCR-Text</span></li>
+                    <li>CMR 1867–1918: Die Protokolle Cisleithaniens (Österreichs), als laufende TEI-Edition (verfügbar: <a href="toc-vol.html?collection=editions&amp;volume=MRP-3-0-01">Band I: 1867</a>, <a href="toc-vol.html?collection=editions&amp;volume=MRP-3-0-02">Band II: 1868–1871</a>, <a href="toc-vol.html?collection=editions&amp;volume=MRP-3-0-03-1">Band III/1: 1871–1872</a>, <a href="toc-vol.html?collection=editions&amp;volume=MRP-3-0-04-1">Band IV/1: 1879–1822</a>, <a href="toc-vol.html?collection=editions&amp;volume=MRP-3-0-08-1">Band VIII/1: 1914–1916</a>) <span class="badge badge-pill">laufend</span><span class="badge badge-pill badge-secondary">Volltext</span></li>
+                </ul>
+                <p>Zusätzlich dazu:</p>
+                <ul>
+                    <li>UMR 1848–1918: Die Ungarischen Ministerratsprotokolle als Bilddigitalisate (<a href="volumes.html#UMRdigitalisate">Bandansicht und Verweise</a>) <span class="badge badge-pill badge-secondary">Scans</span></li>
+                </ul>
+                <div class="entry-content" id="coll-overview"><!-- filled by post-install.xql via app:coll-overview() -->
+                
+                <p>
+    Die digitale Edition umfasst derzeit 42 Bände, sie enthalten 3144 Protokolle mit 13479 Tagesordnungspunkten aus 66 Regierungsjahren.
+</p>
+                </div>
+            </div>
+        </div>
+        <!-- #wrapper-hero-content -->
+        <div class="wrapper" id="index-wrapper">
+            <div class="container-fluid" id="content" tabindex="-1">
+                <div class="row">
+                    <!-- Do the left sidebar check and opens the primary div -->
+                    <div class="col-md-12 content-area" id="primary">
+                        <main class="site-main" id="main">
+                            <!-- Use custom content block templates if they are defined -->
+                            
+                            <div class="card-wrapper">
+                                
+                                <!-- #post-## -->
+                                <article class="card col-md-6 flat-style">
+                                    <div class="card-inner card-vertical" style="min-height:420px;">
+                                        <a class="entry-top-thumbnail" style="height:230px;" href="volumes.html" rel="bookmark">
+                                            <img width="864" height="864" src="../resources/img/start_vols.jpg" alt="IHB-Bibliothek. CC-BY 4.0 Stephan Kurz">
+                                        </a>
+                                        <div class="entry-text-content">
+                                            <header class="entry-header">
+                                                <h4 class="entry-title">
+                                                    <a href="volumes.html" rel="bookmark" class="light">Zur Ansicht nach Bänden</a>
+                                                </h4>
+                                            </header>
+                                            <!-- .entry-header -->
+                                            <div class="entry-content">
+                                                <p>Protokolle in der Ordnung der gedruckten Edition finden.</p>
+                                                <a class="btn btn-round mb-1" href="volumes.html">Weiter</a>
+                                            </div>
+                                            <!-- .entry-content -->
+                                        </div>
+                                        <!-- .entry-text-content -->
+                                    </div>
+                                    <!-- .card-inner -->
+                                </article>
+                                <article class="card col-md-6 flat-style">
+                                    <div class="card-inner card-vertical" style="min-height:420px;">
+                                        <a class="entry-top-thumbnail" style="height:230px;" href="calendar.html" rel="bookmark">
+                                            <img width="1024" height="684" src="../resources/img/start_cal_400_300.jpg" alt="Screenshot. CC-BY 4.0 Stephan Kurz">
+                                        </a>
+                                        <div class="entry-text-content">
+                                            <header class="entry-header">
+                                                <h4 class="entry-title">
+                                                    <a href="calendar.html" rel="bookmark" class="light">Zur Kalenderansicht</a>
+                                                </h4>
+                                            </header>
+                                            <!-- .entry-header -->
+                                            <div class="entry-content">
+                                                <p>Protokolle anhand ihres Datums finden.</p>
+                                                <a class="btn btn-round mb-1" href="calendar.html">Weiter</a>
+                                            </div>
+                                            <!-- .entry-content -->
+                                        </div>
+                                        <!-- .entry-text-content -->
+                                    </div>
+                                    <!-- .card-inner -->
+                                </article>
+                                <!-- #post-## -->
+                                <article class="card col-md-6 flat-style">
+                                    <div class="card-inner card-vertical" style="min-height:420px;">
+                                        <a class="entry-top-thumbnail" style="height:230px;" href="#" rel="bookmark">
+                                            <img width="1024" height="684" src="../resources/img/start_news.jpg" title="Niederösterr. Amtskalender 1894, S. II (c) Stephan Kurz">
+                                        </a>
+                                        <div class="entry-text-content">
+                                            <header class="entry-header">
+                                                <h4 class="entry-title">
+                                                    Neuigkeiten
+                                                </h4>
+                                            </header>
+                                            <!-- .entry-header -->
+                                            <div class="entry-content overflow-auto" style="height:140px;">
+                                                <dl id="news">
+                                                    <dt>2024-11-18</dt>
+                                                    <dd>Neuerscheinung lieferbar in Print und Web: <a href="toc-vol.html?collection=editions&amp;volume=MRP-3-0-04-1#myTable=oa2">Band IV/1 (Die Ministerien Stremayr, Taaffe II 1879–1893): Teilband 1: 17. Februar 1879–28. Dezember 1882</a>.</dd>
+                                                    <dt>2024-05-27</dt>
+                                                    <dd>Die <a href="calendar.html">Kalenderansicht</a> stellt nun sämtliche Tagesordnungspunkte aus dem Cisleithanischen Ministerrat zur Verfügung, auch jene aus Zeiträumen, die noch nicht ediert sind. Je nach Überlieferungslage wird im Kalender angezeigt, ob die entsprechenden Protokolle „noch nicht ediert“ oder ob „keine Quellen überliefert“ sind.</dd>
+                                                    <dt>2024-04-09</dt>
+                                                    <dd>Sammelrezension der ersten drei erschienenen Bände zu den CMR: Ágnes Deák, Die Protokolle des Cisleithanischen Ministerrates 1867–1918. Vols. 1–3 [Review]. In: Hungarian Historical Review Volume 12 Issue 4 (2023), 740–744. <a href="https://hunghist.org/images/HHR_2023_4_Deak.pdf">PDF</a>.</dd>
+                                                    <dt>2023-11-09</dt>
+                                                    <dd>Neuerscheinung lieferbar in Print und Web: <a href="toc-vol.html?collection=editions&amp;volume=MRP-3-0-08-1#myTable=oa2">Band VIII/1: Erster Weltkrieg, Teilband 1: 23. Juli 1914–22. November 1916</a>.</dd>
+                                                    <dt>2023-01-13</dt>
+                                                    <dd><del>Twitter</del> <ins>Fediverse/Mastodon</ins>: Folgen unter <a href="https://fedihum.org/@MinisterratCis">https://fedihum.org/@MinisterratCis</a>.</dd>
+                                                    <dt>2022-09-27</dt>
+                                                    <dd>Aviso: Buchpräsentationen der Bände II und III/1 in <a href="../resources/img/20221107MRP-Einladungsfolder.pdf" target="_blank">Wien 7.11.</a> – <a href="../resources/img/20221114MRP_Prag.pdf" target="_blank">Prag 14.11.</a> – <a href="../resources/img/20221118MRP_Budapest.jpg" target="_blank">Budapest 18.11.</a> – Sarajevo 28.11. – Zagreb 2.12.2022. Details <a href="https://www.oeaw.ac.at/ihb/detail/event/ministerratsprotokolle-on-tour" target="_blank">hier</a>.</dd>
+                                                    <dt>2022-09-26</dt>
+                                                    <dd>Unser Kalender enthält nun Übersetzungen der <a href="calendar.html?year=1867">Tagesordnungen des ungarischen Ministerrats aus dem Jahr 1867</a> sowie die Tagesordnungspunkte der Jahre <a href="calendar.html?year=1873">1873</a> und <a href="calendar.html?year=1894">1894</a>.</dd>
+                                                    <dt>2022-07-05</dt>
+                                                    <dd>Neuerscheinung II: Die Daten für die Druckausgabe von CMR Bd. III/1 sind ab sofort auch <a href="toc-vol.html?collection=editions&amp;volume=MRP-3-0-03-1#myTable=oa2">hier</a> enthalten!</dd>
+                                                    <dt>2022-05-25</dt>
+                                                    <dd>Neuerscheinung I: Die Druckausgabe von CMR Bd. II ist beim <a href="https://verlag.oeaw.ac.at/produkt/die-protokolle-des-cisleithanischen-ministerrates-1867-1918-band-ii-1868-1871/99200867?product_form=4354">Verlag der ÖAW</a> lieferbar – ab sofort auch <a href="toc-vol.html?collection=editions&amp;volume=MRP-3-0-02#myTable=oa2">hier</a>!</dd>
+                                                    <dt>2022-04-19</dt>
+                                                    <dd>Letzte Vorbereitungen für die Aufnahme von <a href="https://twitter.com/MinisterratCis/status/1512099398045609988/photo/1">Band II</a> der Cisleithanischen MRP in die Webapplikation…</dd>
+                                                    <dt>2021-04-27</dt>
+                                                    <dd>Ein <a href="show.html?document=echo.xml&amp;directory=meta">Presseecho aus dem In- und Ausland</a> verdeutlicht die wissenschaftliche Relevanz des Editionsprojekts</dd>
+                                                    <dt>2021-03-03</dt>
+                                                    <dd>Die MRP-Edition ist nun auf <a href="https://www.data.gv.at/katalog/dataset/01f24d79-a8f5-42d3-b236-eeee3b45277e" target="_blank">data.gv.at</a> vertreten: Ein Schritt in Richtung Historical Open Governmental Data!</dd>
+                                                    <dt>2021-02-19</dt>
+                                                    <dd>Die Abstimmung hat begonnen: Wir freuen uns über jede Stimme für das MRP-Dataset bei den <a href="http://dhawards.org/dhawards2020/voting/" target="_blank">Digital Humanities Awards 2020</a>!</dd>
+                                                    <dt>2021-02-18</dt>
+                                                    <dd>Update für unsere <a href="../api/api.html">API</a>: Ein neuer <a href="../exist/restxq/mrp/api/sessions?from=1850-12-01&amp;to=1850-12-03" target="_blank"><code>sessions</code></a>-Endpoint gibt die Sitzungsdaten (JSON) aus einem Zeitraum zurück</dd>
+                                                    <dt>2020-12-18</dt>
+                                                    <dd>Im <a href="calendar.html">Kalender</a> verfügbar: Links auf die <a href="https://adatbazisokonline.hu/adatbazis/minisztertanacsi-jegyzokonyvek-1867-1944/hierarchia" target="_blank">Bilddigitalisate zu den Protokollen des Ungarischen Ministerrats</a> (Tagesordnungspunktlisten in ungarischer Sprache)</dd>
+                                                    <dt>2020-11-12</dt>
+                                                    <dd>Ausgezeichnete Entitäten: Daten Cisleithanischer Ministerrat 1867 (<a href="toc-vol.html?collection=editions&amp;volume=MRP-3-0-01#myTable=oa2">CMR Bd. I</a>) nun mit zahlreichen Angaben zu Personen, Institutionen und Orten aufgewertet</dd>
+                                                    <dt>2020-11-01</dt>
+                                                    <dd>OCR-Rohdaten zu den <a href="toc-vol.html?collection=editions&amp;volume=MRP-2-0#_">Protokollen des Gemeinsamen Ministerrats</a> werden nun angezeigt (Dank an die <a href="show.html?document=partners.xml&amp;directory=meta">Ungarische Akademie der Wissenschaften</a>)</dd>
+                                                    <dt>2020-10-14</dt>
+                                                    <dd>Neue Screencast-Einführung in der <a href="show.html?document=help.xml&amp;directory=meta">Anleitung</a>
+                                                    </dd>
+                                                    <dt>2020-10-06</dt>
+                                                    <dd>Neuer <a href="https://www.youtube.com/channel/UCTllxlCTOKinVdsj8IybKrw" target="_blank">YouTube-Kanal</a>, Mitschnitte der <a href="https://www.youtube.com/watch?v=sWDGYABXSuY&amp;list=PLV_Ma4FQCEJlfv6Kk7VZo3Vn6KQvH0e2M" target="_blank">Präsentation der Edition sind verfügbar</a>
+                                                    </dd>
+                                                    <dt>2020-10-01</dt>
+                                                    <dd>Tagesordnungspunkte aus den GMR nun in allen <a href="toc.html">Verzeichnissen</a> abgebildet</dd>
+                                                    <dt>2020-10-05</dt>
+                                                    <dd>Präsentation der Edition am IHB und via Livestream – <a href="https://www.oeaw.ac.at/detail/news/70-jahre-innenpolitik-aus-dem-ministerrat">Programm</a>
+                                                    </dd>
+                                                    <dt>2020-07-28</dt>
+                                                    <dd>Artikel über die Ministerratsprotokolle-Edition auf der <a href="https://www.oeaw.ac.at/detail/news/archiv-fuer-die-hosentasche/">Startseite der ÖAW</a>
+                                                    </dd>
+                                                    <dt>2020-06-01</dt>
+                                                    <dd>Tagesordnungspunkttitel aus den GMR nun im <a href="calendar.html">Kalender</a> abgebildet</dd>
+                                                </dl>
+                                            </div>
+                                            <!-- .entry-content -->
+                                        </div>
+                                        <!-- .entry-text-content -->
+                                    </div>
+                                    <!-- .card-inner -->
+                                </article>
+                                <!-- #post-## -->
+                                <article class="card col-md-6 flat-style">
+                                    <div class="card-inner card-vertical" style="min-height:420px;">
+                                        <a class="entry-top-thumbnail" style="height:230px;" href="persons.html" rel="bookmark">
+                                            <img width="1024" height="684" src="../resources/img/start_pers.jpg" title="Kaiser Franz Joseph I. leitet den Ministerrat für gemeinsame Angelegenheiten der österreichisch-ungarischen Monarchie im Konferenzzimmer der Hofburg, an dem die ranghöchsten Minister Österreichs und Ungarns teilnehmen. Rechts vom Kaiser sitzen der österreichische Ministerpräsident Franz Graf Thun und der Minister des Äußeren Agenor Graf Gołuchowski, links der ungarische Ministerpräsident Desider Baron Bánffy. Bleistiftzeichnung von Artur Lajos Halmi, signiert. (c) Bildarchiv Austria">
+                                        </a>
+                                        <div class="entry-text-content">
+                                            <header class="entry-header">
+                                                <h4 class="entry-title">
+                                                    <a href="persons.html" rel="bookmark" class="light">Personenregister</a>
+                                                </h4>
+                                            </header>
+                                            <!-- .entry-header -->
+                                            <div class="entry-content">
+                                                <p>Zugang zu den in den Sitzungen anwesenden Personen.</p>
+                                                <a class="btn btn-round mb-1" href="persons.html">Weiter</a>
+                                            </div>
+                                            <!-- .entry-content -->
+                                        </div>
+                                        <!-- .entry-text-content -->
+                                    </div>
+                                    <!-- .card-inner -->
+                                </article>
+                                <!-- #post-## -->
+                                <article class="card col-md-6 flat-style">
+                                    <div class="card-inner card-vertical" style="min-height:420px; background-color:#eeeefe;">
+                                        <!--<a class="entry-top-thumbnail" style="height:230px;" href="toc-introductions.html" rel="bookmark">
+                                            <img width="1024" height="684" src="../resources/img/start_introduction_loco.jpg" alt="© Technisches Museum Wien, Archiv (Weltdokumentenerbe) "/>
+                                        </a>-->
+                                        <div class="entry-text-content">
+                                            <header class="entry-header">
+                                                <h4 class="entry-title">
+                                                    Aus den Einleitungen
+                                                </h4>
+                                            </header>
+                                            <!-- .entry-header -->
+                                            <div class="entry-content">
+                                                <ul class="inline-list">
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-2-01-0-00000000-einleitung.xml#a2-b1-einleitung-2">Reichstag und Verfassung [1848-50]</a>
+                                                    </li>
+                                                    <!--<li>
+                                                        <a href="show.html?document=MRP-1-2-02-0-00000000-einleitung.xml">Das Verhältnis der <!-\-Kirchen bzw.-\-> Religionsgemeinschaften zum Staat [1850]</a>
+                                                    </li>
+                                                    -->
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-2-05-0-00000000-einleitung.xml">Reactio triumphans – die Installierung des Neoabsolutismus [1851/52]</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-3-01-0-00000000-einleitung.xml#a3-b1-einleitung-2">Die Durchführung der Bauernbefreiung | Eisenbahnen [1852-53]</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-3-03-0-00000000-einleitung.xml#a3-b3-einleitung-4">Studienreform und Universitätsorganisation [1854-54]</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-3-04-0-00000000-einleitung.xml#a3-b4-einleitung-3">Kirche und Staat: Das Konkordat und die Folgen [1854-56]</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-3-05-0-00000000-einleitung.xml#a3-b5-einleitung-5">Das „Organische Statut“ für die Ländervertretungen [1856-57]</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-3-06-0-00000000-einleitung.xml#a3-b6-einleitung-5">Eisenbahnen und Weltwirtschaftskrise [1858-59]</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-3-07-0-00000000-einleitung.xml#a3-b7-einleitung-3.c">Emanzipation der Juden [1857-59]</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-4-02-0-00000000-einleitung.xml#a4-b2-einleitung-9">Die Entscheidung – Das Oktoberdiplom [1860]</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-5-02-0-00000000-einleitung.xml#a5-b2-einleitung-2">Die Reichsverfassung von 1861</a>
+                                                    </li>
+                                                    <!--<li><a href="show.html?document=MRP-1-5-04-0-00000000-einleitung.xml#a5-b4-einleitung-4">Der Deutsche Zollverein</a></li>-->
+                                                    <!--<li><a href="show.html?document=MRP-1-5-07-0-00000000-einleitung.xml">Der Konflikt um Schleswig-Holstein</a></li>-->
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-5-09-0-00000000-einleitung.xml#a5-b9-einleitung-8">Wasser für Wien [1864-65]</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=MRP-1-6-01-0-00000000-einleitung.xml#a6-b1-einleitung-9">Die ungarische Frage</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=MRP-3-0-01-0-00000000-einleitung.xml#MRP-3-0-01-0-00000000-einleitung.xml_3">Beginn der Umsetzung des Ausgleichs [1867]</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="toc-introductions.html#myTable=ffinanz">Finanzen</a>
+                                                    </li>
+                                                </ul>
+                                                <a class="btn btn-round mb-1" href="toc-introductions.html" role="button">Alle Einleitungen</a>
+                                            </div>
+                                            <!-- .entry-content -->
+                                        </div>
+                                        <!-- .entry-text-content -->
+                                    </div>
+                                    <!-- .card-inner -->
+                                </article>
+                                <article class="card col-md-6 flat-style">
+                                    <div class="card-inner card-vertical" style="min-height:420px;">
+                                        <a class="entry-top-thumbnail" style="height:230px;" href="toc.html?collection=meta" rel="bookmark">
+                                            <img width="1024" height="684" src="../resources/img/project_background.jpg" alt="Mantelbogen eines Protokolls. (c) Maren Jeleff Photography">
+                                        </a>
+                                        <div class="entry-text-content">
+                                            <header class="entry-header">
+                                                <h4 class="entry-title">
+                                                    <a href="toc.html?collection=meta&amp;vt0.1.2.8" rel="bookmark" class="light">Paratexte</a>
+                                                </h4>
+                                            </header>
+                                            <!-- .entry-header -->
+                                            <div class="entry-content">
+                                                <ul class="inline-list">
+                                                    <li>
+                                                        <a href="show.html?document=editions.xml&amp;directory=meta">Editionsgrundsätze</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=about.xml&amp;directory=meta">Über die Edition</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=workflows.xml&amp;directory=meta">Technische Umsetzung</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="show.html?document=partners.xml&amp;directory=meta">Partnerinstitutionen und Förderer</a>
+                                                    </li>
+                                                </ul>
+                                                <a class="btn btn-round mb-1" href="toc.html?collection=meta">Weiter</a>
+                                            </div>
+                                            <!-- .entry-content -->
+                                        </div>
+                                        <!-- .entry-text-content -->
+                                    </div>
+                                    <!-- .card-inner -->
+                                </article>
+                                <!-- #post-## -->
+                                <article class="card col-md-6 flat-style">
+                                    <div class="card-inner card-vertical" style="min-height:420px;">
+                                        <a class="entry-top-thumbnail" style="height:230px;" href="#" rel="bookmark">
+                                            <img width="1024" height="684" src="../resources/img/start_info.jpg" alt="Screenshot. CC-BY 4.0 Stephan Kurz">
+                                        </a>
+                                        <div class="entry-text-content">
+                                            <header class="entry-header">
+                                                <h4 class="entry-title">
+                                                    <a href="toc.html?collection=meta&amp;vt0.1.2.8" rel="bookmark" class="light">Benutzungshinweis</a>
+                                                </h4>
+                                            </header>
+                                            <!-- .entry-header -->
+                                            <div class="entry-content">
+                                                <p>Kontextabhängige Meta-Informationen finden sich bei Klick auf <i class="fas fa-info" title="Info"></i>, Zugriff auf die jeweiligen Rohdaten bietet der Button <i class="fas fa-download" title="Data"></i>. </p>
+                                            </div>
+                                            <!-- .entry-content -->
+                                            <a class="btn btn-round mb-1" href="toc.html?collection=meta">Weiter</a>
+                                        </div>
+                                        <!-- .entry-text-content -->
+                                    </div>
+                                    <!-- .card-inner -->
+                                </article>
+                                <article class="card col-md-6 flat-style">
+                                    <div class="card-inner card-vertical" style="min-height:420px;">
+                                        <div class="entry-top-thumbnail">
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLV_Ma4FQCEJlfv6Kk7VZo3Vn6KQvH0e2M" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true" title="YouTube channel embed"></iframe>
+                                            </div>
+                                            <!-- .entry-content -->
+                                            <!-- .entry-header -->
+                                            
+                                        </div>
+                                        <!-- .entry-text-content -->
+                                        <a class="btn btn-round mb-1" href="https://www.youtube.com/channel/UCTllxlCTOKinVdsj8IybKrw" target="_blank">YouTube-Kanal</a>
+                                    </div>
+                                    <!-- .card-inner -->
+                                </article>
+                                <article class="card col-md-12 flat-style">
+                                    <div class="card-inner card-vertical" style="min-height:270px;">
+                                        <a class="entry-top-thumbnail" style="height:130px;" href="#" rel="bookmark" title="random document">
+                                            <img width="1024" height="684" src="../resources/img/start_random.jpg" alt="Protokoll vom 31.5.1863. Foto: Klaus Koch">
+                                        </a>
+                                        <div class="entry-text-content">
+                                                    <header class="entry-header">
+                                                        <h4 class="entry-title">Zufälliges Protokoll</h4>
+                                                    </header><!-- .entry-header -->
+                                                    <div class="entry-content">
+                                                        <p><a href="show.html?document=MRP-3-0-02-0-18680701-P-0077.xml" rel="bookmark" class="light">Ministerrat, Wien, 1. Juli 1868 – Protokoll I</a></p>
+                                                    </div><!-- .entry-content -->
+                                                    <p>...</p>
+                                                </div>
+                                        <!-- .entry-text-content -->
+                                    </div>
+                                    <!-- .card-inner -->
+                                </article>
+                            </div>
+                            <!-- .card-wrapper -->
+                        </main>
+                        <!-- #main -->
+                        <!-- The pagination component -->
+                    </div>
+                    <!-- #primary -->
+                    <!-- Do the right sidebar check -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- Container end -->
+        </div>
+    </div>
+</div>
+        <div id="loadModal"></div>
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-wrapper">
+                    <div class="footer-sep" style="margin-top:1rem;">
+                        <i class="far fa-comment"></i> Kontakt
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 pl-0">
+                            <a href="https://www.oeaw.ac.at/ihb/digitales/" target="_blank" rel="noopener" aria-label="IHB">
+                                <img src="../resources/img/ihb_logo.png" alt="IHB" title="Institute for Habsburg and Balkan Studies" style="max-height:50px !important">
+                            </a>
+                        </div>
+                        <div class="col-md-4 small" id="contact">
+                            <p>Research Unit <a href="https://www.oeaw.ac.at/ihb/forschungsbereiche/digitale-historiographie-und-editionen/forschung/ministerratsprotokolle-habsburgermonarchie#c63467" target="_blank" rel="noopener" aria-label="IHB">Digital Historiography and Editions</a>
+                                <br>
+                                <a href="https://www.oeaw.ac.at/ihb/digitales/" target="_blank">Institute for Habsburg and Balkan Studies</a>
+                                <br>
+                            Hollandstraße 11-13, 1020 Vienna
+                            </p>
+                            <p>T: <a href="tel:+431515817300">+43 1 51581-7300</a> | E: mrp(at)oeaw.ac.at
+                            </p>
+                        </div>
+                        <div class="col-md-4 small">
+                            <p>Diese digitale Edition ist <em>Work in progress</em>. Wir freuen uns über Ihre Hinweise und Änderungsvorschläge!</p>
+                        </div>
+                        <div class="col-md-1 pr-0 ml-auto">
+                            <a href="index.html">
+                                <img src="../resources/img/mrp_logo3.svg" alt="Ministerratsprotokolle Logo" title="Ministerratsprotokolle Österreichs und der österreichisch-ungarischen Monarchie 1848–1918" style="max-height:60px !important;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-imprint-bar small p-3 m-3">
+                        <a href="show.html?document=partners.xml&amp;directory=meta">Partnerinstitutionen</a> | <a href="https://www.oeaw.ac.at/oeaw/impressum">Impressum/Imprint</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script src="../resources/js/scroll-to-top/js/ap-scroll-top.min.js"></script>
+        <!--scroll to top end -->
+        <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+        <script>
+                window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"index.html","theme":"dark-bottom"};
+            </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+        <script>
+            $(window).on('load', function(){
+                $('#myModal').modal('show');
+            });
+        </script>
+        <script>
+            // http://www.jqueryscript.net/animation/jQuery-Plugin-For-Fixed-Positioned-Scroll-To-Top-Button-ap-scroll-top.html
+            // Setup plugin with default settings
+            $.apScrollTop({
+                'onInit': function(evt) {}
+            });
+        </script>
+    </body>
+</html>

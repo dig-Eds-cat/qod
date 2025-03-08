@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Briefwechsel Alexander von Humboldt - Ehrenberg</title>
+        <link rel="stylesheet" type="text/css" href="css/avh.css">
+        <script src="script/prototype.js" type="text/javascript"> </script>
+        <script src="script/jquery-1.10.2.min.js"></script>
+        <script src="script/jquery-migrate-1.2.1.min.js"></script>
+        <script src="script/scriptaculous.js" type="text/javascript">
+        </script>
+        <script src="script/avh.js" type="text/javascript">
+        </script>
+        <script src="script/register.js" type="text/javascript">
+        </script>
+        <script src="script/jquery.address-1.5.min.js" type="text/javascript">
+        </script>
+        <script type="text/javascript">
+        	jQuery.noConflict();       	       	
+        </script>
+    </head>
+    <body>
+        <table cellpadding="0" cellspacing="0" border="0" id="zoom">
+            <tr class="header" style="height:140px;">
+                <td style="width:180px;">
+                    <!--<img src="bilder/humboldt_oben.jpg" alt="Portrait von Alexander von Humboldt"/>-->
+                </td>
+                <td style="width:500px;vertical-align:bottom;">
+                    <!--<img src="bilder/schriftzug_oben.jpg" alt="Alexander von Humboldt"/>-->
+                </td>
+                <td style="width:25px">
+                    <!--<img src="bilder/platzhalter_klein.gif" alt="" border="0">-->
+                </td>
+                <td style="width:180px;vertical-align:bottom;">
+                    <!--<img style="margin-left:20px;" src="bilder/ehrenberg_oben_mittel.png" alt="Portrait von Christian Gottfried Ehrenberg"/>-->
+                </td>
+                <td align="right" style="width:370px; padding-top:8px;"></td>
+            </tr>
+            <tr>
+                <td class="nav" style="vertical-align:top;">
+                    <!--<img src="bilder/humboldt_unten.jpg" alt="Portrait von Alexander von Humboldt"/>-->
+                    <br>
+                    <br>
+                    <ul>
+                        <li class="index">
+                            <a class="nav" href="index.html">Startseite</a>
+                        </li>
+                        <li class="normal">
+                            <a class="nav" href="einfuehrung.xml">Einführung</a>
+                        </li>
+                        <li class="normal">
+                            <a class="nav" href="ehrenberg.xml">C. G.
+                            Ehrenberg</a>
+                        </li>
+                        <li class="normal">
+                            <a class="nav" href="editionsprinzipien.xml">Editionsprinzipien</a>
+                        </li>
+                        <li class="normal">
+                            <a class="nav" href="1" style="font-size:larger;">Briefedition</a>
+                        </li>
+                        <li class="normal">
+                            <a class="nav" href="#" onclick="Element.toggle($('untermenue'));return false;">Übersicht</a>
+                        </li>
+                    </ul>
+                    <ul class="untermenue" id="untermenue" style="display: none;">
+                        <li class="untermenue">
+                            <a class="nav" href="javascript:openTOC('year')">nach
+                                Jahren</a>
+                        </li>
+                        <li class="untermenue">
+                            <a class="nav" href="javascript:openTOC('nr')">nach
+                                Briefnummern</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <!--<li class="normal">
+                            <a class="nav" href="suche.xml">Suche</a>
+                        </li>-->
+                        <li class="normal">
+                            <a class="nav" href="#" onclick="Element.toggle($('registerMenu'));return false;">Register</a>
+                        </li>
+                        <li style="list-style: none;display: none;" id="registerMenu">
+                            <ul class="untermenue">
+                                <li class="untermenue">
+                                    <a class="nav_u1" href="javascript:showRegister('n',%20'',%20'content')">Namen</a>
+                                </li>
+                                <li class="untermenue">
+                                    <a class="nav_u2" href="javascript:showRegister('o',%20'',%20'content')">Orte</a>
+                                </li>
+                                <li class="untermenue">
+                                    <a class="nav_u3" href="javascript:showRegister('z',%20'',%20'content')">zoologische und botanische Namen</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="lit">
+                            <a class="nav" href="javascript:showRegister('l',%20'',%20'content')">Literaturverzeichnis</a>
+                        </li>
+                        <li class="normal">
+                            <a class="nav" href="abkuerzungsverz.xml">Abkürzungen und
+                                Symbole</a>
+                        </li>
+                        <li class="normal">
+                            <a class="nav" href="links.xml">weiterführende
+                            Links</a>
+                        </li>
+                        <li class="normal">
+                            <a class="nav" href="impressum.xml">Impressum &amp; Datenschutz</a>
+                        </li>
+                    </ul>
+                    <p>
+                        <a href="http://www.bbaw.de" target="_blank">
+                            <img style="margin-top:20px;margin-left:5px;margin-right:15px;" src="bilder/BBAW_Logo_KLEIN_hellerHintergrund.png" border="0" alt="Logo der BBAW">
+                        </a>
+                    </p>
+                </td>
+                <td class="inhalt">
+                    <!--<img src="bilder/schriftzug_unten.jpg" alt="Alexander von Humboldt"/>-->
+                    <div id="content" class="innerC">
+                        <noscript>
+                            <p>JavaScript ist in Ihrem Browser nicht aktiviert.</p>
+                            <p>Bitte schalten Sie JavaScript ein und laden Sie die Seite neu.</p>
+                        </noscript>
+                        <table>
+                            <tr>
+                                <!-- <td style="width:25px"><img src="bilder/platzhalter_klein.gif"
+                                                            alt="" border="0"/></td>-->
+                                <td>
+                                    <h2 class="startseite_titel">Alexander von Humboldt - Christian
+                                        Gottfried Ehrenberg<br>
+                                    </h2>
+                                    <h2 class="startseite_untertitel">Briefwechsel</h2>
+                                    <h1 class="startseite_title">Herausgegeben von Anne Jobst<br>
+                                        unter Mitarbeit von Eberhard Knobloch</h1>
+                                    <p class="startseite">Der vorliegende Briefwechsel zwischen
+                                        Alexander von Humboldt und Christian Gottfried Ehrenberg,
+                                        bestehend aus ca. 300 Briefen, die Mehrzahl davon von
+                                        Humboldts Hand, ist ein wichtiger Mosaikstein zum Bild der
+                                        Wissenschaftsgeschichte des 19. Jahrhunderts.</p>
+                                    <p class="startseite"> Ehrenberg, in seiner Zeit ein berühmter
+                                        und gefeierter Mikropaläontologe, war ein geschätzter
+                                        Kollege Humboldts, nicht nur in seiner Funktion als Sekretar
+                                        der mathematisch-physikalischen Klasse der
+                                        Königlich-Preußischen Akademie der Wissenschaften, auch als
+                                        Mikrobiologe, der in damals noch kaum bekannten Bereichen
+                                        forschte.</p>
+                                    <p class="startseite"> Die Korrespondenz der beiden
+                                        Wissenschaftler beleuchtet zunächst Humboldts Förderung des
+                                        jungen Mannes, der nach der Erlangung der Doktorwürde 1818
+                                        eine Forschungsreise unternehmen wollte. Der erste
+                                        überlieferte Brief datiert vom 15. April 1820. Humboldt
+                                        dankt Ehrenberg darin für eine Schrift (wahrscheinlich seine
+                                        Doktorarbeit über "Die Schimmelwälder Berlins", Berlin
+                                        1818), und versichert ihn seiner Unterstützung für die
+                                        bevorstehende Reise nach Nordafrika. Im Laufe der sechs
+                                        Jahre währenden Expedition verwendet sich Humboldt mehrfach
+                                        für Ehrenberg und seinen Freund und Studienkollegen Wilhelm
+                                        Friedrich Hemprich in der Königlich-Preußischen Akademie der
+                                        Wissenschaften und beim Kultusminister Altenstein, indem er
+                                        Reisemittel beschafft und Forschungsergebnisse bekannt
+                                        macht.</p>
+                                    <p class="startseite"> Im Jahre 1826 kehrt Ehrenberg allein von
+                                        der Afrikareise zurück; im Jahr darauf wird er zum
+                                        außerordentlichen Professor an der Berliner Universität
+                                        ernannt. Am 20. Februar 1829 lädt Humboldt den erfolgreichen
+                                        jungen Biologen ein, ihn auf einer bevorstehenden Reise in
+                                        den Ural zu begleiten. Es ist anzunehmen, dass Ehrenberg
+                                        begeistert zustimmte - sein Antwortschreiben ist leider
+                                        nicht überliefert. Jedenfalls entwickelt sich aus der
+                                        wissenschaftlichen Zusammenarbeit eine freundschaftliche
+                                        Verbundenheit, die über die nächsten 30 Jahre dauert.</p>
+                                    <p class="startseite"> In dem Briefwechsel werden verschiedene
+                                        wissenschaftliche Themen berührt, die sich in den meisten
+                                        Fällen auf Ehrenbergs Arbeiten beziehen und an denen
+                                        Humboldt sehr interessiert war. Humboldt hatte die
+                                        Gewohnheit, nur an ihn gerichtete Briefe aufzubewahren, die
+                                        für ihn von wissenschaftlichem Interesse waren. So enthalten
+                                        die wenigen überlieferten Briefe von Ehrenberg denn auch vor
+                                        allem Übersichten über die mikroskopische Beschaffenheit
+                                        verschiedener Proben. Oft schickt Humboldt Proben von
+                                        Meteoren, von ungewöhnlichen oder exotischen Substanzen an
+                                        Ehrenberg, sei es roter Schnee, Passatstaub oder essbare
+                                        Erde, um sie untersuchen zu lassen. Die Ergebnisse stellt
+                                        Ehrenberg nicht nur in der Königlich-Preußischen Akademie
+                                        der Wissenschaften vor, er hat auch - oft durch Humboldts
+                                        Vermittlung - Gelegenheit, seine Forschungen dem preußischen
+                                        Königshaus zu präsentieren und einem internationalen
+                                        Fachpublikum bekannt zu machen.</p>
+                                    <p class="startseite"> Humboldt setzt sich insbesondere dafür
+                                        ein, dass Ehrenberg auch im Ausland die Anerkennung erfährt,
+                                        die ihm seiner Meinung nach zusteht. Mit viel Energie setzt
+                                        er sich zum Beispiel für Ehrenbergs Wahl zum
+                                        korrespondierenden Mitglied der Académie des sciences
+                                        in Paris ein. Er ermutigt ihn, in ausländischen Journalen zu
+                                        veröffentlichen. Er engagiert sich auch für Ehrenbergs
+                                        Rechte, wo dieser sich in seiner wissenschaftlichen Arbeit
+                                        eingeschränkt fühlte. Als es zum Beispiel
+                                        Kompetenzschwierigkeiten im anatomisch-zootomischen Museum
+                                        gibt, verschafft Humboldt Ehrenberg eine Audienz beim
+                                        zuständigen Kultusminister Altenstein, versucht aber auch
+                                        selbst, vermittelnd einzugreifen. Wo nötig, verteidigt er
+                                        Ehrenberg als "einen der ersten Naturforscher des 19ten
+                                        Jahrhunderts (meinen innigen Freund und Reisegefährten)"
+                                        (Brief von A.v.Humboldt an C.G.Ehrenberg vom 27. Mai 1856,
+                                        ABBAW NL Ehrenberg 224). </p>
+                                    <p class="startseite"> Aber Humboldt interessierte sich nicht
+                                        nur für Ehrenbergs Karriere als Forscher, er nahm auch
+                                        lebhaften Anteil an dessen Familieleben, was in vielen
+                                        Briefen deutlich wird.</p>
+                                    <p class="startseite"> Bei der Arbeit an Humboldts großem Werk,
+                                        dem "Kosmos", der alles Bekannte über die Natur darstellen
+                                        sollte, war Ehrenberg einer der Wissenschaftler, die
+                                        Humboldt mit den neuesten Erkenntnissen in ihrem Fachgebiet
+                                        versorgten. Damit nahm Ehrenberg einen zentralen Platz im
+                                        "Humboldtschen Netzwerk des Wissens" ein.</p>
+                                    <p class="startseite"> Die lange und fruchtbare Freundschaft und
+                                        Zusammenarbeit zwischen dem weltberühmten Naturforscher und
+                                        Reisenden Alexander von Humboldt und seinem jüngeren,
+                                        hochbegabten Kollegen Christian Gottfried Ehrenberg wird in
+                                        den vorliegenden Zeugnissen lebendig.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <!--<td style="width:25px"><img src="bilder/platzhalter_klein.gif" alt="" border="0"></td>-->
+                <td class="register">
+                    <!--<img style="margin-left:20px;" src="bilder/ehrenberg_unten_mittel.png" alt="Portrait Christian Gottfried Ehrenberg">-->
+                    <br>
+                    <br>
+                    <div id="query" class="register"></div>
+                </td>
+                <td align="right" style="width:370px; padding-top:8px;"></td>
+
+                <td colspan="5">
+                    <!--<img src="bilder/platzhalter.gif" alt="" border="0">-->
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>

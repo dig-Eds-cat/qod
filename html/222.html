@@ -1,0 +1,1308 @@
+<!doctype html>
+<html class="no-js" lang="en-us"
+      prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile# place: http://ogp.me/ns/place# books: http://ogp.me/ns/books#">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+                    Welcome |
+                Key Documents of German-Jewish History
+        </title>
+                        <script type="text/javascript">
+            var Hyphenopoly = {
+                require: {
+                    "de": "Silbentrennungsalgorithmus",
+                    "en-us": "Supercalifragilisticexpialidocious"
+                },
+                setup: {
+                    selectors: {
+                        ".dta-p": {}
+                    }
+                }
+            };
+        </script>
+        <script src="/vendor/Hyphenopoly-4.5.0/Hyphenopoly_Loader.js" type="text/javascript"></script>
+                        <meta property="og:title" content="Welcome">
+        
+
+                <script src="/js/jquery-3.3.1.min.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/vendor/bootstrap-3.4.0-dist/css/bootstrap.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="/vendor/bootstrap-3.4.0-dist/js/bootstrap.min.js"></script>
+
+        <!-- Search suggest -->
+        <script src="/js/bootstrap3-typeahead.js"></script>
+
+                <link href="/css/base.css" rel="stylesheet">
+
+                <style>
+        @media print {
+            /* http://drupal.stackexchange.com/a/59908*/
+            a[href]:after {
+                content: none;
+            }
+        }
+        </style>
+
+                <link rel="stylesheet" href="/vendor/leaflet-1.6.0/leaflet.css" />
+    <script src="/vendor/leaflet-1.6.0/leaflet.js"></script>
+
+        <link rel="stylesheet" href="/vendor/leaflet.markercluster-1.4.1/MarkerCluster.css" />
+    <link rel="stylesheet" href="/vendor/leaflet.markercluster-1.4.1/MarkerCluster.Default.css" />
+    <script src="/vendor/leaflet.markercluster-1.4.1/leaflet.markercluster.js"></script>
+    <script>
+        function escapeHtml(text) {
+            return $('<div/>').text(text).html();
+        }
+    </script>
+
+
+    <script src="/js/blazy.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            // topic-carousel
+            // see https://www.jquery-az.com/boots/demo.php?ex=8.0_4
+            $( '.carousel[data-type="multi"] .item' ).each(function(){
+                var next = $( this ).next();
+                if (!next.length) {
+                    next = $( this ).siblings(':first');
+                }
+
+                next.children(':first-child').clone().appendTo($( this ));
+
+                for (var i = 0; i < 2; i++) {
+                    next = next.next();
+                    if (!next.length) {
+                        next = $( this ).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo($( this ));
+                }
+            });
+        });
+    </script>
+
+    <style>
+		.exhibition-img {
+			vertical-align: top;
+		}
+
+		@media (min-width: 1200px ) {
+			.exhibition-img {
+				vertical-align: bottom;
+			}
+		}
+
+		/* topic-carousel */
+
+		@media (min-width: 992px ) {
+			.carousel-inner .active.left {
+				left: -25%;
+			}
+			.carousel-inner .next {
+				left:  25%;
+			}
+			.carousel-inner .prev {
+				left: -25%;
+			}
+		}
+
+		@media (min-width: 768px) and (max-width: 991px ) {
+			.carousel-inner .active.left {
+				left: -33.3%;
+			}
+			.carousel-inner .next {
+				left:  33.3%;
+			}
+			.carousel-inner .prev {
+				left: -33.3%;
+			}
+			.active > div:first-child {
+				display:block;
+			}
+			.active > div:first-child + div {
+				display:block;
+			}
+			.active > div:last-child {
+				display:none;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.carousel-inner .active.left {
+				left: -100%;
+			}
+			.carousel-inner .next {
+				left:  100%;
+			}
+			.carousel-inner .prev {
+				left: -100%;
+			}
+			.active > div {
+				display:none;
+			}
+			.active > div:first-child {
+				display:block;
+			}
+		}
+
+		#topic .carousel-control.left, #topic .carousel-control.right {
+			background-image: none !important;
+			filter: none !important;
+			opacity: 1 !important;
+			color: #e0e0e0;
+		}
+
+		#topic .carousel-control.left:hover, #topic .carousel-control.right:hover {
+			color: #fff;
+		}
+    </style>
+
+                <script>
+        if (!String.prototype.startsWith) {
+            // Polyfill for IE 11
+            String.prototype.startsWith = function(searchString, position) {
+                position = position || 0;
+                return this.indexOf(searchString, position) === position;
+            };
+        }
+
+        $(document).ready(function() {
+            // show back to top arrow upon scroll
+            $(window).scroll(function () {
+                    if ($(this).scrollTop() > 50) {
+                        $('#back-to-top').fadeIn();
+                    } else {
+                        $('#back-to-top').fadeOut();
+                    }
+            });
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+                // $('#back-to-top').tooltip('hide');
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+
+            // typeahead for search
+            var $input = $('#header-search');
+            $input.typeahead({
+                autoSelect: true,
+                minLength: 3,
+                delay: 100,
+                source: function (query, process) {
+                    $.ajax({
+                        url: '/search/suggest',
+                        data: { q: query },
+                        dataType: 'json'
+                    })
+                    .done(function(response) {
+                        return process(response);
+                    });
+                }
+            });
+
+            $input.change(function() {
+                var current = $input.typeahead('getActive');
+                if (current) {
+                    // Some item from your model is active!
+                    if (current.name == $input.val()) {
+                        // This means the exact match is found. Use toLowerCase() if you want case insensitive match.
+                        window.location = current.url;
+                    }
+                    else {
+                        // This means it is only a partial match, you can either add a new item
+                        // or take the active if you don't want new items
+                    }
+                }
+                else {
+                    // Nothing is active so it is a new value (or maybe empty value)
+                }
+            });
+        });
+        </script>    </head>
+
+    <body role="document" class="route-home">
+        <div id="displaybox" style="display: none;">
+            <a href="#" style="display: block; position: absolute; top: 8px; right: 8px;" onclick="$('#displaybox').toggle(); return false;"><svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="2em" width="2em" viewBox="0 0 40 40" style="vertical-align: middle;"><g><path d="m31.6 10.7l-9.3 9.3 9.3 9.3-2.3 2.3-9.3-9.3-9.3 9.3-2.3-2.3 9.3-9.3-9.3-9.3 2.3-2.3 9.3 9.3 9.3-9.3z"></path></g></svg></a>
+            <div id="displayBoxContent" style="background-color: white; margin-top: 2em; margin-left: auto; margin-right: auto; width: 90%; height: 90%; overflow: auto;"></div>
+        </div>
+                        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12" style="position: relative">
+                        <div style="position: absolute; right: 18px; z-index: 100">
+                                    <ul id="menu-top" class="list-inline">
+            
+                            <li class="first">        <a href="/about/edition">About this edition</a>                <ul class="menu_level_1">
+            
+                <li class="first">        <a href="/about/goals">Goals</a>        
+    </li>
+
+    
+                <li>        <a href="/about/keydocuments">Key Documents</a>        
+    </li>
+
+    
+                <li>        <a href="/about/audience">Target Audience</a>        
+    </li>
+
+    
+                <li>        <a href="/about/usage">How to Use this Edition</a>        
+    </li>
+
+    
+                <li>        <a href="/about/editorial-model">Editorial Model</a>        
+    </li>
+
+    
+                <li>        <a href="/about/edition-guidelines">Edition and Edition Guidelines</a>        
+    </li>
+
+    
+                <li>        <a href="/about/technical-implementation">Technical Implementation</a>        
+    </li>
+
+    
+                <li class="last">        <a href="/about/publications">Presentations and Publications</a>        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+    
+                            <li>        <a href="/about/team">About us</a>                <ul class="menu_level_1">
+            
+                <li class="first">        <a href="/about/team">Team</a>        
+    </li>
+
+    
+                <li>        <a href="/about/editors">Editors</a>        
+    </li>
+
+    
+                <li>        <a href="/about/authors">Authors</a>        
+    </li>
+
+    
+                <li>        <a href="/about/board">Advisory Board</a>        
+    </li>
+
+    
+                <li>        <a href="/about/sponsors">Sponsors and Partners</a>        
+    </li>
+
+    
+                <li class="last">        <a href="/about/news">Project News</a>        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+    
+                <li>        <a href="/terms">Terms and Conditions</a>        
+    </li>
+
+    
+                <li class="last">        <a href="/contact">Contact</a>        
+    </li>
+
+
+    </ul>
+
+                                                        <ul id="menu-lang" class="list-inline">
+                                                            <li>
+                                                                                                                                                    <a href="https://schluesseldokumente.net/">de</a>
+                                </li>
+                                                            <li class="current">
+                                                                                                                                                    <a href="/">en</a>
+                                </li>
+                                                        </ul>
+                                                                            <a class="hidden-xs" href="http://www.igdj-hh.de/" target="_blank" rel="noopener">
+                        <img src="/img/igdj.png" style="margin-left: 60px; width: 80px; height: auto" alt="Institute for the History of the German Jews" />
+                    </a>
+                                    </div>
+                    </div>
+                    <div class="col-sm-12" id="site-name">
+                        <h1>
+                            <a href="/">Key Documents of German-Jewish History</a><br />
+                            <a href="/" id="site-tagline">A Digital Source Edition</a>
+                        </h1>
+                    </div>
+                    <div class="col-sm-9">
+                                <ul id="menu-main" class="list-inline">
+            
+                <li id="menu-item-exhibition" class="first">        <a href="/exhibition">Online Exhibitions</a>        
+    </li>
+
+    
+                <li id="menu-item-topic">        <a href="/topic">Topics</a>        
+    </li>
+
+    
+                <li id="menu-item-map">        <a href="/map">Map</a>        
+    </li>
+
+    
+                <li id="menu-item-chronology">        <a href="/chronology">Chronology</a>        
+    </li>
+
+    
+                            <li dropdown="dropdown" id="menu-item-lookup" class="last">        <a href="#">Look-up</a>                <ul class="menu_level_1">
+            
+                <li class="first">        <a href="/person">Persons</a>        
+    </li>
+
+    
+                <li>        <a href="/place">Places</a>        
+    </li>
+
+    
+                <li>        <a href="/organization">Organizations</a>        
+    </li>
+
+    
+                <li>        <a href="/event">Epochs and Events</a>        
+    </li>
+
+    
+                <li>        <a href="/bibliography">Bibliography</a>        
+    </li>
+
+    
+                <li>        <a href="/article">Articles</a>        
+    </li>
+
+    
+                <li class="last">        <a href="/glossary">Glossary</a>        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+
+    </ul>
+
+                    </div>
+                    <div id="header-search-wrapper" class="col-sm-3 hidden-xs">
+                        <form action="/search" method="post">
+                            <div class="form-group has-feedback" style="margin-bottom: 0">
+                            <input autocomplete="off" id="header-search" name="q" type="text" placeholder="Search" />
+                            <i style="margin-top: -2px; pointer-events: inherit" onclick=" $(this).closest('form').submit()" class="glyphicon glyphicon-search form-control-feedback"></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+            <div class="container-fluid">
+            <div class="row">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"   data-interval="10000">
+                    <!-- Indicators
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-example-generic" data-slide-to="0" class="active hidden-xs"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="1" class="hidden-xs"></li>
+                    </ol>
+                    -->
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="/img/carousel/home.jpg" alt="" style="width: 100%; height: auto; min-height: 90px;">
+                            <!--
+                        <div class="carousel-caption">
+
+                          <h4><a target="_blank" href="http://igdj-hh.de/event-details-kopie/feierlicher-jubilaeums-empfang-zum-50-geburtstag-das-igdj-wird-digital.html">Feierlicher Jubiläums-Empfang: „Zum 50. Geburtstag: Das IGdJ wird digital“</a></h4>
+                        </div>-->
+                        </div>
+                        <!--
+              <div class="item">
+                <img src="/img/carousel/schaechten.jpg" alt="Neue Quelle" style="width: 100%; height: auto; min-height: 90px;">
+                <div class="carousel-caption">
+                  <h4><a href="/source/jgo:source-15">Neue Quelle: Schreiben an Schlachthof- und Viehmarktverwaltung</a></h4>
+                </div>
+              </div>
+              -->
+                        <!--
+              <div class="item">
+                <img src="/img/carousel/filmclub.jpg" alt="Filmclub" style="width: 100%; height: auto; min-height: 90px;">
+                <div class="carousel-caption">
+                  <h4 style="background-color: black; opacity:0.9;">Filmclub: Donnerstag, 18.02.2016 19.00 Uhr
+      GOD’S NEIGHBORS - HA-MASHGIHIM</h4>
+                </div>
+              </div>
+              -->
+                    </div><!-- .carousel-inner -->
+
+                    <!-- Controls -->
+                    <!--
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                    -->
+                </div><!-- .carousel -->
+            </div>
+        </div>
+<div class="container-fluid" id="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 small">
+                                                <ul class="list-inline">
+                                        <li class="active">Home</li>                </ul>
+            </div>
+        </div>
+    </div>
+</div><!-- .container-fluid -->
+
+                <div class="container wrapper">
+            <div class="row">
+        <div id="col-main" class="col-sm-8">
+            <div class="container-fluid">
+                <h4>Welcome</h4>
+                <div class="two-columns justify-hyphens">
+                                            <p class="dta-p">This online source edition published by the <a href="http://www.igdj-hh.de/home-175.html">Institute for the History of German Jews</a> uses a selection of sources, so-called <a href="/about/keydocuments">key documents</a>, to thematically highlight central aspects in Hamburg’s Jewish history from the early modern age to the present.</p>
+
+                        <p class="dta-p">Transcripts as well as digital facsimiles are provided for all sources, which are placed in historical context by interpretations and background information. The source material is further enriched by information on its provenance, historical responses to it, and scholarly controversies. All content is provided in both German and English.</p>
+
+                        <p class="dta-p avoid-break">The <a href="/about/audience">target audience</a> for this source edition is college students, researchers and teachers, as well as the interested public and high school students. It covers a spectrum ranging from more general, introductory texts to those developing their argument by a close study of the source, and it offers different ways of approaching the texts – through a <a href="/chronology">timeline</a>, a <a href="/topic">specific topic</a> or a <a href="/map">map</a>. The project is supported by an <a href="/about/board">advisory board</a> consisting of renowned scholars of German-Jewish history and experts in the field of digitization.</p>
+
+                        <p class="dta-p">The online edition received funding from the <a href="https://www.dfg.de/">Deutsche Forschungsgemeinschaft</a> from July 2015 until January 2021.</p>
+
+                        <p class="dta-p"><a href="/about/edition">Additional information about this edition...</a></p>
+                                    </div>
+            </div>
+
+
+            <div id="box-exhibition" class="container-fluid box">
+                <div class="row box-header" style="background-color: #478B5D;">
+                    <div class="col-sm-12">
+                        <h4 ><a href="/exhibition">Online Exhibitions</a></h4>
+                    </div>
+                </div>
+
+                <div class="row box-content" style="display: table;">
+                    <div class="col-sm-3 col-md-3 col-lg-6 hidden-xs exhibition-img" style="float: none; padding-top: 16px; padding-bottom: 16px; display: table-cell">
+                                                    <a href="/ausstellung/objektgeschichte">
+                                <img src="/viewer/exhibition/objektgeschichte/0_markk_thumbnails1_quer_small.jpg" style="width: 100%; height: auto" alt="Objektgeschichte(n). Eine Sammlung zur jüdischen Volkskunde" /></a>
+                                            </div>
+                    <div class="col-xs-12 col-sm-9 col-lg-6" style="float: none; display: table-cell; padding-top: 8px; vertical-align: top;">
+                        <h5 style="font-size: 16px; font-weight: bold"><a href="/ausstellung/objektgeschichte">Objektgeschichte(n). Eine Sammlung zur jüdischen Volkskunde</a></h5>
+                                                    <p>
+                                The online exhibition entitled <a href="/ausstellung/objektgeschichte">Objektgeschichte(n). Eine Sammlung zur jüdischen Volkskunde</a> is currently only available in German.
+                            </p>
+                                            </div>
+                </div>
+
+                <div class="row box-content" style="display: table;">
+                                            <div class="col-sm-3 col-md-3 col-lg-6 hidden-xs exhibition-img" style="float: none; padding-top: 16px; padding-bottom: 16px; display: table-cell">
+                            <a href="/exhibition/iranian-jews"><img src="/viewer/exhibition/persian-jews/bridge-mosaic.jpg" style="width: 100%; height: auto" alt="“We have
+                                    come for free trade...” A different post-war history: The Iranian-Jewish community
+                                    in Hamburg" /></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-9 col-lg-6" style="float: none; display: table-cell; padding-top: 8px; vertical-align: top;">
+                            <h5 style="font-size: 16px; font-weight: bold"><a href="/exhibition/iranian-jews">“We have come for free trade...” A different post-war history: The Iranian-Jewish community in Hamburg</a></h5>
+
+                            <p>
+                                The exhibition entitled <a href="/exhibition/iranian-jews">
+                                    “We have come for free trade...” A different post-war history: The Iranian-Jewish community in Hamburg</a> uses the example of various family histories of this group to illuminate a different Jewish post-war history, with migration and economic history intertwined and with Hamburg serving as a local and at the same time global point of reference for several decades.                             </p>
+
+                        </div>
+                                    </div>
+
+                <div class="row box-content" style="display: table;">
+                    <div class="col-sm-3 col-md-3 col-lg-6 hidden-xs exhibition-img" style="float: none; padding-top: 16px; padding-bottom: 16px; display: table-cell">
+                        <a href="/exhibition/emigration-south-america"><img src="/viewer/exhibition/emigration-south-america/emigration-to-argentinia-brasil_uruguay.jpg" style="width: 100%; height: auto" alt="Nothing. Just Leave! Escape from Germany and New Beginnings in Buenos Aires, Montevideo and São Paulo" /></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-9 col-lg-6" style="float: none; display: table-cell; padding-top: 8px; vertical-align: top;">
+                        <h5 style="font-size: 16px; font-weight: bold"><a href="/exhibition/emigration-south-america">Nothing. Just Leave! Escape from Germany and New Beginnings in Buenos Aires, Montevideo and São Paulo</a></h5>
+                                                    <p>
+                                The exhibition <a href="/exhibition/emigration-south-america">“Nothing. Just Leave!” Escape from Germany and New Beginnings in Buenos Aires, Montevideo and São Paulo</a> focuses on three cities that have so far received little attention as destinations for German-Jewish emigrants from Nazi Germany.
+                            </p>
+                            <p class="hidden-xs hidden-sm hidden-md">
+                                Using these three urban areas as examples, the difficult history of the decision to emigrate is traced through to the aftermath of this (family) biographical caesura in today's South America.
+                            </p>
+                                            </div>
+                </div>
+
+                <div class="row box-content" style="display: table;">
+                    <div class="col-sm-3 col-md-3 col-lg-6 hidden-xs exhibition-img" style="float: none; padding-top: 16px; padding-bottom: 16px; display: table-cell">
+                        <a href="/exhibition/jewish-life-since-1945-relaunch"><img src="/viewer/exhibition/jewish-life-since-1945-relaunch/jewish-life-since-1945-relaunch-index.jpg" style="width: 100%; height: auto" alt="Jewish Life since 1945 – Relaunch" /></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-9 col-lg-6" style="float: none; display: table-cell; padding-top: 8px; vertical-align: top;">
+                        <h5 style="font-size: 16px; font-weight: bold"><a href="/exhibition/jewish-life-since-1945-relaunch">Jewish Life since 1945 – Relaunch</a></h5>
+                                                    <p>
+                                The <a href="/exhibition/jewish-life-since-1945-relaunch">relaunch of our first online exhibition “Jewish Life since 1945”</a> portrays the pluralization of Jewish lifeworlds in the 20th and 21st centuries, with a focus on remigration and migration movements.
+                            </p>
+                            <p class="hidden-xs hidden-sm hidden-md">
+                                By no means without controversy, the first Jewish congregations were established in West Germany immediately after the end of the war, including in Hamburg in the summer of 1945. However, it was to take several decades before Jewish life in Germany could become a matter of course.
+                            </p>
+                                            </div>
+                </div>
+                <div class="row box-content" style="display: table;">
+                    <div class="col-sm-3 col-md-3 col-lg-6 hidden-xs exhibition-img" style="float: none; padding-top: 16px; padding-bottom: 16px; display: table-cell">
+                                                    <a href="/exhibition/womens-lives"><img src="/viewer/exhibition/womens-lives/womens-lives.jpg" style="width: 100%; height: auto" alt="Women’s Lives – Work and Impact of Jewish Women in Hamburg" /></a>
+                                            </div>
+                    <div class="col-xs-12 col-sm-9 col-lg-6" style="float: none; display: table-cell; padding-top: 8px; vertical-align: top;">
+                        <h5 style="font-size: 16px; font-weight: bold"><a href="/exhibition/womens-lives">Women’s Lives – Work and Impact of Jewish Women in Hamburg</a></h5>
+                                                    <p>
+                                Our seventh online exhibition <a href="/exhibition/womens-lives">looks at Jewish women as actors in their respective fields of activity</a>: in the family and at a medical congress, at school and in court, or at the theater and a shipping company. Using ego documents, this exhibit highlights exemplary women’s biographies and their historical significance.
+                            </p>
+                            <p class="hidden-xs hidden-sm hidden-md">
+                                Looking at historical and contemporary women’s biographies and the work of women in various fields opens up new perspectives on Jewish history.
+                            </p>
+                                            </div>
+                </div>
+                <div class="row" style="display: table;">
+                    <div class="col-sm-3 col-md-3 col-lg-6 hidden-xs exhibition-img" style="float: none; padding-top: 16px; padding-bottom: 16px; display: table-cell">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="1" xmlns="http://www.w3.org/2000/svg" aria-label="" preserveAspectRatio="xMidYMid slice" role="img"><rect width="100%" height="100%" fill="#fff"/><!--<text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>--></svg>
+                    </div>
+                    <div class="col-xs-12 col-sm-9 col-lg-6" style="float: none; display: table-cell; padding-top: 8px; vertical-align: top;">
+                        <a href="/exhibition#additional">Additional Exhibitions...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid box">
+                <div class="row box-header" style="background-color: #970376">
+                    <div class="col-sm-12">
+                        <h4><a href="/topic">Topics</a></h4>
+                    </div>
+                </div>
+                <div class="row box-content" id="topic">
+                    <div class="container-fluid">
+                        <div class="carousel row" data-ride="carousel" data-type="multi" data-interval="6000" id="topic-carousel">
+                            <div class="carousel-inner">
+                                                                    <div class="item active">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/antisemitism-and-persecution">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Antisemitism and Persecution</div>
+                                                </h5>
+                                                <img src="/img/topic/antisemitism-and-persecution.jpg" style="width: 100%; height: auto" alt="Antisemitism and Persecution" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/arts-and-culture">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Arts and Culture</div>
+                                                </h5>
+                                                <img src="/img/topic/arts-and-culture.jpg" style="width: 100%; height: auto" alt="Arts and Culture" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/demographics-and-social-structure">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Demographics and Social Structure</div>
+                                                </h5>
+                                                <img src="/img/topic/demographics-and-social-structure.jpg" style="width: 100%; height: auto" alt="Demographics and Social Structure" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/economy-and-occupational-composition">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Economy and Occupational Composition</div>
+                                                </h5>
+                                                <img src="/img/topic/economy-and-occupational-composition.jpg" style="width: 100%; height: auto" alt="Economy and Occupational Composition" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/education-and-learning">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Education and Learning</div>
+                                                </h5>
+                                                <img src="/img/topic/education-and-learning.jpg" style="width: 100%; height: auto" alt="Education and Learning" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/family-and-everyday-life">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Family and Everyday Life</div>
+                                                </h5>
+                                                <img src="/img/topic/family-and-everyday-life.jpg" style="width: 100%; height: auto" alt="Family and Everyday Life" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/law-and-politics">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Law and Politics</div>
+                                                </h5>
+                                                <img src="/img/topic/law-and-politics.jpg" style="width: 100%; height: auto" alt="Law and Politics" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/leisure-and-sports">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Leisure and Sports</div>
+                                                </h5>
+                                                <img src="/img/topic/leisure-and-sports.jpg" style="width: 100%; height: auto" alt="Leisure and Sports" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/memory-and-remembrance">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Memory and Remembrance</div>
+                                                </h5>
+                                                <img src="/img/topic/memory-and-remembrance.jpg" style="width: 100%; height: auto" alt="Memory and Remembrance" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/migration">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Migration</div>
+                                                </h5>
+                                                <img src="/img/topic/migration.jpg" style="width: 100%; height: auto" alt="Migration" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/organizations-and-institutions">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Organizations and Institutions</div>
+                                                </h5>
+                                                <img src="/img/topic/organizations-and-institutions.jpg" style="width: 100%; height: auto" alt="Organizations and Institutions" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/religion-and-identity">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Religion and Identity</div>
+                                                </h5>
+                                                <img src="/img/topic/religion-and-identity.jpg" style="width: 100%; height: auto" alt="Religion and Identity" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/scholarship">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Scholarship</div>
+                                                </h5>
+                                                <img src="/img/topic/scholarship.jpg" style="width: 100%; height: auto" alt="Scholarship" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/sephardic-jews">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Sephardic Jews</div>
+                                                </h5>
+                                                <img src="/img/topic/sephardic-jews.jpg" style="width: 100%; height: auto" alt="Sephardic Jews" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                                    <div class="item">
+                                        <div class="col-md-3 col-sm-4 col-xs-12 topic">
+                                                                                        <a href="/topic/social-issues-and-welfare">
+                                                                                                <h5 style="white-space: normal; font-size: 13px;">
+                                                    <div class="topic-label">Social Issues and Welfare</div>
+                                                </h5>
+                                                <img src="/img/topic/social-issues-and-welfare.jpg" style="width: 100%; height: auto" alt="Social Issues and Welfare" />
+                                                                                            </a>
+                                                                                    </div>
+                                    </div>
+                                                            </div>
+                            <a class="left carousel-control" href="#topic-carousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                            <a class="right carousel-control" href="#topic-carousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid box">
+                <div class="row box-header" style="background-color: #f29000">
+                    <div class="col-sm-12">
+                        <h4><a href="/map">Map</a></h4>
+                    </div>
+                </div>
+                <div class="row box-content">
+                    <div id="map">
+                        <div id="map-container">
+                            <div id="map" style="width: 100%; min-height: 320px"></div>
+                            <script>
+                                $( document).ready(function () {
+                                    showMap();
+                                });
+
+                                        var map = null;
+    function showMap() {
+        map = L.map('map');
+
+        map.fitBounds([[34.05,-118.2333],[60,122]]);
+
+            if (true) {
+        // for styles, see https://docs.mapbox.com/api/maps/#styles
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            tileSize: 512,
+            minZoom: 1,
+            maxZoom: 16,
+            zoomOffset: -1,
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+                '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            id: 'hausverstand/ck9n3jwdp2e6f1imr5ccrf682', // 'mapbox/outdoors-v11',
+            accessToken: 'pk.eyJ1IjoiaGF1c3ZlcnN0YW5kIiwiYSI6ImNpemU2OWJvaTAwNHIyd252b2ptaDV2NjkifQ.FGA8-opghZHquZJKlHSFdg',
+        }).addTo(map);
+    }
+    else {
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            minZoom: 1,
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+                '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            id: 'mapbox.streets'
+        }).addTo(map);
+    }
+
+
+        var markers = L.markerClusterGroup({
+            iconCreateFunction: function (cluster) {
+                // var childCount = cluster.getChildCount();
+                var markers = cluster.getAllChildMarkers();
+                var n = 0;
+                for (var i = 0; i < markers.length; i++) {
+                    n += markers[i].number;
+                }
+                var childCount = n;
+                var c = ' marker-cluster-';
+                if (childCount < 10) {
+                    c += 'small';
+                } else if (childCount < 100) {
+                    c += 'medium';
+                } else {
+                    c += 'large';
+                }
+
+                return new L.DivIcon({
+                    html: '<div><span>' + childCount + '</span></div>',
+                    className: 'marker-cluster' + c,
+                    iconSize: new L.Point(40, 40)
+                });
+            },
+            /*
+            spiderfyOnMaxZoom: false,
+            showCoverageOnHover: false,
+            zoomToBoundsOnClick: false,
+            */
+            disableClusteringAtZoom: 17
+        });
+
+        var labelLoading = "Loading...";
+        var markerPos = {"-34.9167,-56.1667":{"number":1,"places":1175,"name":"Montevideo","alternateName":{"en":"Montevideo"},"latLng":[-34.9167,-56.1667],"primary":true},"10.0,-25.0":{"number":1,"places":1058,"name":"Atlantic Ocean","alternateName":{"de":"Atlantischer Ozean","en":"Atlantic Ocean"},"latLng":[10,-25],"primary":true},"31.166667,121.416667":{"number":1,"places":251,"name":"Shanghai","alternateName":{"de":"Shanghai","en":"Shanghai"},"latLng":[31.166667,121.416667],"primary":true},"32.0833,34.7667":{"number":1,"places":344,"name":"Tel Aviv-Jaffa","alternateName":{"en":"Tel Aviv-Jaffa"},"latLng":[32.0833,34.7667],"primary":true},"32.0833,34.8":{"number":1,"places":343,"name":"Tel Aviv","alternateName":{"en":"Tel Aviv"},"latLng":[32.0833,34.8],"primary":true},"34.05,-118.2333":{"number":1,"places":430,"name":"Los Angeles","alternateName":{"de":"Los Angeles","en":"Los Angeles"},"latLng":[34.05,-118.2333],"primary":true},"38.716667,-9.133333":{"number":1,"places":728,"name":"Lisbon","alternateName":{"de":"Lissabon","en":"Lisbon"},"latLng":[38.716667,-9.133333],"primary":true},"39.142222,117.176667":{"number":1,"places":610,"name":"Tianjin","alternateName":{"zh-latn-pinyin-x-notone":"Tianjin"},"latLng":[39.142222,117.176667],"primary":true},"40.633333,14.483333":{"number":1,"places":353,"name":"Positano","alternateName":null,"latLng":[40.633333,14.483333],"primary":true},"40.7,-74.0":{"number":3,"places":64,"name":"New York","alternateName":{"de":"New York","en":"New York"},"latLng":[40.7,-74],"primary":true},"42.35,-71.05":{"number":1,"places":572,"name":"Boston","alternateName":null,"latLng":[42.35,-71.05],"primary":true},"43.732256,-79.493385":{"number":1,"places":683,"name":"Toronto","alternateName":null,"latLng":[43.732256,-79.493385],"primary":true},"47.5,19.05":{"number":1,"places":462,"name":"Budapest","alternateName":null,"latLng":[47.5,19.05],"primary":true},"48.866667,2.333333":{"number":1,"places":96,"name":"Paris","alternateName":{"de":"Paris","en":"Paris","fr":"Paris","es":"Par\u00eds","it":"Parigi"},"latLng":[48.866667,2.333333],"primary":true},"49.447778,11.068333":{"number":1,"places":116,"name":"Nuremberg","alternateName":{"de":"N\u00fcrnberg","en":"Nuremberg"},"latLng":[49.447778,11.068333],"primary":true},"50.0833,8.25":{"number":1,"places":204,"name":"Wiesbaden","alternateName":{"de":"Wiesbaden","en":"Wiesbaden"},"latLng":[50.0833,8.25],"primary":true},"50.116667,8.683333":{"number":1,"places":58,"name":"Frankfurt am Main","alternateName":{"de":"Frankfurt am Main","en":"Frankfurt am Main"},"latLng":[50.116667,8.683333],"primary":true},"50.933333,6.95":{"number":1,"places":134,"name":"Cologne","alternateName":{"de":"K\u00f6ln","en":"Cologne"},"latLng":[50.933333,6.95],"primary":true},"51.1,17.0":{"number":1,"places":247,"name":"Wroc\u0142aw","alternateName":{"de":"Wroc\u0142aw","en":"Wroc\u0142aw"},"latLng":[51.1,17],"primary":true},"51.3333,12.4167":{"number":2,"places":45,"name":"Leipzig","alternateName":{"de":"Leipzig","en":"Leipzig"},"latLng":[51.3333,12.4167],"primary":true},"51.514248,-0.093145":{"number":1,"places":28,"name":"London","alternateName":{"de":"London","en":"London","fr":"Londres","nl":"Londen","it":"Londra"},"latLng":[51.514248,-0.093145],"primary":true},"52.2667,15.9167":{"number":1,"places":617,"name":"Zb\u0105szy\u0144","alternateName":[],"latLng":[52.2667,15.9167],"primary":true},"52.35,14.55":{"number":1,"places":729,"name":"Frankfurt an der Oder","alternateName":{"de":"Frankfurt an der Oder"},"latLng":[52.35,14.55],"primary":true},"52.35,4.916667":{"number":1,"places":126,"name":"Amsterdam","alternateName":{"de":"Amsterdam","en":"Amsterdam","nl":"Amsterdam"},"latLng":[52.35,4.916667],"primary":true},"52.516667,13.4":{"number":7,"places":26,"name":"Berlin","alternateName":{"de":"Berlin","en":"Berlin"},"latLng":[52.516667,13.4],"primary":true},"53.5209947,10.016441399999962":{"number":2,"places":"20,26","name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.5209947,10.016441399999962],"primary":true},"53.545939,10.009035":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.545939,10.009035],"primary":true},"53.547461,9.947919":{"number":1,"places":24,"name":"Altona","alternateName":{"de":"Altona","en":"Altona"},"latLng":[53.547461,9.947919],"primary":true},"53.55,10.0":{"number":72,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.55,10],"primary":true},"53.55,9.933333":{"number":2,"places":24,"name":"Altona","alternateName":{"de":"Altona","en":"Altona"},"latLng":[53.55,9.933333],"primary":true},"53.5502228,9.990236200000027":{"number":1,"places":24,"name":"Altona","alternateName":{"de":"Altona","en":"Altona"},"latLng":[53.5502228,9.990236200000027],"primary":true},"53.5504557,10.00046999999995":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.5504557,10.00046999999995],"primary":true},"53.55046249999999,9.997296900000038":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.55046249999999,9.997296900000038],"primary":true},"53.551846,9.991323":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.551846,9.991323],"primary":true},"53.55703999999999,9.989879999999971":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.55703999999999,9.989879999999971],"primary":true},"53.56008809999990,9.975317200000063":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.5600880999999,9.975317200000063],"primary":true},"53.56089999999999,9.967899999999986":{"number":5,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.56089999999999,9.967899999999986],"primary":true},"53.56404495239258,9.98941421508789":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.56404495239258,9.98941421508789],"primary":true},"53.56550,9.79841":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.5655,9.79841],"primary":true},"53.5678756,9.983279000000039":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.5678756,9.983279000000039],"primary":true},"53.56845,9.99099000000001":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.56845,9.99099000000001],"primary":true},"53.568514,9.967876":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.568514,9.967876],"primary":true},"53.56862999999999,9.98368000000005":{"number":2,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.56862999999999,9.98368000000005],"primary":true},"53.5700093,9.985362799999962":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.5700093,9.985362799999962],"primary":true},"53.5700093,9.9853628":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.5700093,9.9853628],"primary":true},"53.570051,9.985452":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.570051,9.985452],"primary":true},"53.570051,9.98545200000001":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.570051,9.98545200000001],"primary":true},"53.57006,9.999220000000037":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.57006,9.999220000000037],"primary":true},"53.57116,9.98251":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.57116,9.98251],"primary":true},"53.57232,9.985329999999976":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.57232,9.985329999999976],"primary":true},"53.5731908,9.968793399999981":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.5731908,9.968793399999981],"primary":true},"53.57367,9.981379999999945":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.57367,9.981379999999945],"primary":true},"53.57767250000001,9.991134999999986":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.57767250000001,9.991134999999986],"primary":true},"53.5778778,9.979762700000038":{"number":1,"places":26,"name":"Berlin","alternateName":{"de":"Berlin","en":"Berlin"},"latLng":[53.5778778,9.979762700000038],"primary":true},"53.58083,10.000059999999962":{"number":1,"places":26,"name":"Berlin","alternateName":{"de":"Berlin","en":"Berlin"},"latLng":[53.58083,10.000059999999962],"primary":true},"53.586255,9.982349":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.586255,9.982349],"primary":true},"53.58768999999990,9.995990000000006":{"number":1,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.5876899999999,9.995990000000006],"primary":true},"53.6154844,10.038958900000011":{"number":2,"places":20,"name":"Hamburg","alternateName":{"de":"Hamburg","en":"Hamburg","fr":"Hambourg"},"latLng":[53.6154844,10.038958900000011],"primary":true},"53.8617,8.694067":{"number":1,"places":161,"name":"Cuxhaven","alternateName":{"de":"Cuxhaven","en":"Cuxhaven"},"latLng":[53.8617,8.694067],"primary":true},"53.866667,10.7":{"number":1,"places":117,"name":"Lubeck","alternateName":{"de":"L\u00fcbeck","en":"Lubeck"},"latLng":[53.866667,10.7],"primary":true},"54.066667,13.9":{"number":1,"places":69,"name":"Zinnowitz","alternateName":{"de":"Zinnowitz","en":"Zinnowitz"},"latLng":[54.066667,13.9],"primary":true},"56.2,15.016":{"number":2,"places":17,"name":"Europe","alternateName":{"de":"Europa","en":"Europe"},"latLng":[56.2,15.016],"primary":true},"59.3333,18.0833":{"number":1,"places":338,"name":"Stockholm","alternateName":null,"latLng":[59.3333,18.0833],"primary":true},"59.35,17.9167":{"number":1,"places":381,"name":"Bromma Kyrka","alternateName":null,"latLng":[59.35,17.9167],"primary":true}};
+        var urlTemplatePlace = '/place/tgn/%7B0%7D';
+
+        var baseUrlMarkerImg = "/vendor/leaflet-color-markers/img/";
+        var greyIcon = new L.Icon({
+            iconUrl: baseUrlMarkerImg + 'marker-icon-2x-grey.png',
+            shadowUrl: baseUrlMarkerImg + 'marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        for (var geo in markerPos) {
+            if (markerPos.hasOwnProperty(geo)) {
+                (function(info) {
+                    // anonymous function to create a closure
+                    var markerGeo = geo;
+                    var loaded = false;
+                    var options = { title: info['name'] };
+                    if (!info['primary']) {
+                        options.icon = greyIcon;
+                    }
+                    var marker = L.marker(info['latLng'], options);
+                    marker.number = info['number'];
+                    marker.bindPopup(labelLoading, { maxHeight: 160 });
+                    marker.on('click', function(e) {
+                        var popup = e.target.getPopup();
+                        if (!loaded) {
+                            loaded = true;
+                            var name = escapeHtml(info['name']);
+                            if (null != info['tgn']) {
+                                var url = decodeURIComponent(urlTemplatePlace).replace('{0}', info['tgn']);
+                                name = '<a href="' + url + '">' + name + '</a>';
+                            }
+                            else if (null != info['url']) {
+                                name = '<a href="' + info['url'] + '">' + name + '</a>';
+                            }
+
+                            var header = '<b>' + name + '</b><br />';
+                            popup.setContent(header + labelLoading);
+                            popup.update();
+                            var urlTemplate = '/map/popup-content/%7B0%7D?geo=%7B1%7D&caller=home';
+                            var url = decodeURIComponent(urlTemplate).replace('{0}', info['places']).replace('{1}', markerGeo);
+                            $.get(url).done(function(data) {
+                                popup.setContent(header + data);
+                                popup.update();
+                            });
+                        }
+                    });
+
+                    markers.addLayer(marker);
+                })(markerPos[geo]);
+            }
+        }
+
+        map.addLayer(markers);
+    }
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid box">
+                <div class="row box-header" style="background-color: #3da2da">
+                    <div class="col-sm-12">
+                        <h4><a href="/chronology">Chronology</a></h4>
+                    </div>
+                </div>
+                <div class="row box-content">
+                    <div id="chronology" data-url="/chronology/partial" style="max-height: 320px; overflow-y: scroll; overflow-x: hidden">
+                        Loading...
+                        <script>
+                            var chronologyLoaded = false;
+
+                            $( document).ready(function () {
+                                if (!chronologyLoaded) {
+                                    var pane = $( '#chronology' );
+                                    var url = pane.attr("data-url");
+
+                                    // ajax load from data-url
+                                    $( pane ).load(url, function(result){
+                                        chronologyLoaded = true;
+                                    });
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 sidebar">
+            <div class="container-fluid box">
+                <div class="row box-color-title">
+                    <div class="col-sm-12">
+                        <h4>Source of the Month</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="/source/jgo:source-178">
+                            <img src="/viewer/source-00270/thumb.jpg" style="width: 100%; height: auto" />
+                        </a>
+                    </div>
+                    <div class="col-sm-8">
+                        <a href="/source/jgo:source-178">
+                                                            <b>Letter by the Hamburg Jewish Congregation in Reply to Heinrich Alexander</b>, September 13, 1948
+                                                    </a>
+
+                        <p>
+                                                                    <a href="https://keydocuments.net/dossier/remigration-wiedergutmachung">
+                                        More on remigration
+                                    </a>
+                                
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid box top-buffer">
+                <div class="row box-color-title">
+                    <div class="col-sm-12">
+                        <h4>Dossier</h4>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="/dossier/remigration">
+                            <img src="/viewer/dossier/remigration/elsa-davidsohn-fotoalbum.jpg" style="width: 100%; height: auto" />
+                        </a>
+                    </div>
+                    <div class="col-sm-8">
+                        <a href="/dossier/remigration">
+                                                            <b>(No) return? Return and (Re-)migration to Hamburg</b><br />
+                                The source material presented in this dossier sheds light on questions concerning remigration and belonging.
+                                                    </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="/dossier/martha-glass">
+                            <img src="/viewer/dossier/martha-glass/martha-glass.jpg" style="width: 100%; height: auto" />
+                        </a>
+                    </div>
+                    <div class="col-sm-8">
+                        <a href="/dossier/martha-glass">
+                                                            <b>Martha Glass ― Theresienstadt Diaries 1943-1945</b><br />
+                                Digital republication together with an updated introduction written by Barbara Müller-Wesemann
+                                                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid box top-buffer">
+                <div class="row box-color-title">
+                    <div class="col-sm-12">
+                        <h4>New Sources</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="/source/jgo:source-246">
+                            <img src="/viewer/source-00246/thumb.jpg" style="width: 100%; height: auto" />
+                        </a>
+                    </div>
+                    <div class="col-sm-8">
+                        <a href="/source/jgo:source-246">
+                                                            <b>Occupational Questions of the Returnees from Shanghai</b>, approximately 1950
+                                                    </a>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="/source/jgo:source-262">
+                            <img src="/viewer/source-00262/thumb.jpg" style="width: 100%; height: auto" />
+                        </a>
+                    </div>
+                    <div class="col-sm-8">
+                        <a href="/source/jgo:source-262">
+                                                            <b>Interview with Elsa Davidsohn</b>, conducted by Jens Michelsen on July 24, 2001 [in excerpts], FZH/WdE 433.
+                                                    </a>
+                        <p>
+                                                            <a href="https://keydocuments.net/dossier/remigration-wde">
+                                    <b>More remigration narratives </b>
+                                </a>
+                                                    </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="/source/jgo:source-254"><img src="/viewer/source-00254/thumb.jpg" style="width: 100%; height: auto" /></a>
+                    </div>
+                    <div class="col-sm-8">
+                        <a href="/source/jgo:source-254">
+                                                <b>Register of Moving Goods of Betty Levy</b>, Hamburg, November 13, 1939
+                                                </a>
+
+                        <p>
+                        <a href="/article/jgo:article-295">
+                                                <b>Source Interpretation</b> by
+                                                Hendrik Althoff
+                        </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+                            <div class="container-fluid box top-buffer">
+                    <div class="row box-color-title">
+                        <div class="col-sm-12">
+                            <h4><a href="/about/news">Project News</a></h4>
+                        </div>
+                    </div>
+                    <div class="row menu">
+                        <div class="col-sm-12">
+                            <ul>
+                                                                    <li>
+                                                                                    <b><a href="/about/news#new-online-exhibition-about-the-iranian-jewish-community-in-hamburg">New online exhibition about the Iranian-Jewish community in Hamburg</b> (November 07, 2023)
+                                                                            </li>
+                                                                    <li>
+                                                                                    <b><a href="/about/news#a-collaborative-portal-on-jewish-history-key-documents-are-participating">A collaborative portal on Jewish history &#8211; Key Documents are participating!</b> (September 29, 2023)
+                                                                            </li>
+                                                                    <li>
+                                                                                    <b><a href="/about/news#new-source-dossier-no-return">New Source Dossier &#8222;(No) return?&#8220;</b> (August 24, 2023)
+                                                                            </li>
+                                                                    <li>
+                                                                                    <a href="/about/news#student-assistant-wanted">More &gt;</a>
+                                                                            </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="container-fluid box top-buffer">
+                <div class="row box-color-title">
+                    <div class="col-sm-12">
+                        <h4>City Map and Tours</h4>
+                    </div>
+                </div>
+                <div class="row menu">
+                    <div class="col-xs-4">
+                        <a href="/stadtplan"><img src="/img/stadtplan.jpg" alt="Places of Jewish History and the Present in Hamburg" style="width: 100%; height: auto" /></a>
+                    </div>
+                    <div class="col-xs-8">
+                        <ul>
+                            <li><a href="/stadtplan"><b>Places of Jewish History and the Present in Hamburg</b></a></li>
+                            <li><a href="https://www.jewish-places.de/en/DE-MUS-975919Z/walk/37056e1e-131b-40dd-b62b-e023d107e69c/Frauenleben---Auf-den-Spuren-j%C3%BCdischer-Frauen-in-Hamburg" target="_blank"><b>Tour Frauenleben - Auf den Spuren jüdischer Frauen in Hamburg</b> in jewish places</li>
+                            <li><a href="https://historia-app.de/juedische-geschichte-in-hamburg/" target="_blank"><b>Rundgang und Fahrrad-Tour Jüdische Geschichte in Hamburg</b> in der HistoriaApp by HHU</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid box top-buffer">
+                <div class="row box-color-title">
+                    <div class="col-sm-12">
+                        <h4><a href="/education">Teaching Resources</a></h4>
+                    </div>
+                </div>
+                <div class="row box-color-content">
+                    <div class="col-xs-4">
+                        <img src="/img/education/education.jpg" style="width: 100%; height: auto" alt="Teaching Resources" />
+                    </div>
+                    <div class="col-xs-8">
+                                                    In this section you will find <a href="/education">selected materials from the edition, supplemented by links</a> and <a href="/education/guidelines">guidelines for use in college and high school education</a>.
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        
+                        <footer>
+                        <div id="footer-social" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12" style="z-index: 1; text-align: center">
+                    <a class="twitter" target="_blank" href="https://twitter.com/keydocuments" title="@keydocuments" rel="noopener"> </a>
+                    </div>
+                </div>
+            </div>
+                        <div id="footer-navigation" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3" style="z-index: 1">
+                                                        <ul id="menu-main-footer" class="small">
+            
+                <li class="first">        <a href="/exhibition">Online Exhibitions</a>        
+    </li>
+
+    
+                <li>        <a href="/topic">Topics</a>        
+    </li>
+
+    
+                <li>        <a href="/map">Map</a>        
+    </li>
+
+    
+                <li>        <a href="/chronology">Chronology</a>        
+    </li>
+
+    
+                            <li dropdown="dropdown">        <a href="#">Look-up</a>                <ul class="menu_level_1">
+            
+                <li class="first">        <a href="/person">Persons</a>        
+    </li>
+
+    
+                <li>        <a href="/place">Places</a>        
+    </li>
+
+    
+                <li>        <a href="/organization">Organizations</a>        
+    </li>
+
+    
+                <li>        <a href="/event">Epochs and Events</a>        
+    </li>
+
+    
+                <li>        <a href="/bibliography">Bibliography</a>        
+    </li>
+
+    
+                <li>        <a href="/article">Articles</a>        
+    </li>
+
+    
+                <li class="last">        <a href="/glossary">Glossary</a>        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+    
+                <li class="last">        <a href="/education">Teaching Resources</a>        
+    </li>
+
+
+    </ul>
+
+                    </div>
+                    <div class="col-xs-6 col-sm-3" style="z-index: 1">
+                                                        <ul id="menu-top-footer" class="small">
+            
+                            <li class="first last">        <a href="/about/edition">About this edition</a>                <ul class="menu_level_1">
+            
+                <li class="first">        <a href="/about/goals">Goals</a>        
+    </li>
+
+    
+                <li>        <a href="/about/keydocuments">Key Documents</a>        
+    </li>
+
+    
+                <li>        <a href="/about/audience">Target Audience</a>        
+    </li>
+
+    
+                <li>        <a href="/about/usage">How to Use this Edition</a>        
+    </li>
+
+    
+                <li>        <a href="/about/editorial-model">Editorial Model</a>        
+    </li>
+
+    
+                <li>        <a href="/about/edition-guidelines">Edition and Edition Guidelines</a>        
+    </li>
+
+    
+                <li>        <a href="/about/technical-implementation">Technical Implementation</a>        
+    </li>
+
+    
+                <li class="last">        <a href="/about/publications">Presentations and Publications</a>        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+
+    </ul>
+
+                    </div>
+                    <div class="col-xs-6 col-sm-2" style="z-index: 1">
+                                                        <ul id="menu-top-footer" class="small">
+            
+                            <li class="first">        <a href="/about/team">About us</a>                <ul class="menu_level_1">
+            
+                <li class="first">        <a href="/about/team">Team</a>        
+    </li>
+
+    
+                <li>        <a href="/about/editors">Editors</a>        
+    </li>
+
+    
+                <li>        <a href="/about/authors">Authors</a>        
+    </li>
+
+    
+                <li>        <a href="/about/board">Advisory Board</a>        
+    </li>
+
+    
+                <li>        <a href="/about/sponsors">Sponsors and Partners</a>        
+    </li>
+
+    
+                <li class="last">        <a href="/about/news">Project News</a>        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+    
+                <li>        <a href="/terms">Terms and Conditions</a>        
+    </li>
+
+    
+                            <li class="last">        <a href="/contact">Contact</a>                <ul class="menu_level_1">
+            
+                <li class="first">        <a href="/kontakt#imprint">Imprint</a>        
+    </li>
+
+    
+                <li class="last">        <a href="/kontakt#dataprotection">Data Protection</a>        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+
+    </ul>
+
+                    </div>
+                                        <div id="footer-dfg" class="col-sm-4">
+                        <a href="https://gepris.dfg.de/gepris/projekt/396810798?language=en" target="_blank" rel="noopener">
+                            <img src="/img/dfg.png" style="width: 165px; height: auto" alt="Deutsche Forschungsgemeinschaft" />
+                        </a>
+                    </div>
+                            </div>
+            </div>
+        </footer>
+        
+        <a id="back-to-top" href="#" class="btn btn-lg back-to-top" role="button" title="Click to return to the top of the page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+        
+                                        <!-- Piwik -->
+                <script type="text/javascript">
+                    var _paq = _paq || [];
+                    _paq.push(['setDomains', ['*.juedische-geschichte-online.net','*.jewish-history-online.net']]);
+                    _paq.push(['trackPageView']);
+                    _paq.push(['enableLinkTracking']);
+
+                    (function() {
+                        var u='//juedische-geschichte-online.net/piwik/';
+                        _paq.push(['setTrackerUrl', u+'piwik.php']);
+                        _paq.push(['setSiteId', 2]);
+                        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+                    })();
+                </script>
+                <noscript><p><img src="//juedische-geschichte-online.net/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+                <!-- End Piwik Code -->
+                            </body>
+</html>

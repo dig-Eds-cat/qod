@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Hooke Folio Online</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="editorial.css" >
+<script type="text/JavaScript" src="page_setup.js"></script>
+</head>
+<body>
+
+<script>
+header();
+</script>
+
+<div id="main">
+<table>
+<tr>
+<td>
+<img src="./icons/front.jpg" width="225" height="300" alt="front cover" />
+</td>
+<td>
+
+<form method=GET action="http://www.livesandletters.ac.uk/cell/Hooke/hooke_index.php">
+<p>The Hooke Folio contains extracts from the Royal Society's Journal Books, 
+followed by the rough minutes for the period of Hooke's secretaryship. This on-line edition also 
+includes a number of supplementary papers, which were found with the manuscript and include contemporary indexes. 
+You may start your scroll through the manuscript at any of these points.
+</p>
+<p>
+<input type=radio name=ref value="003" checked />Extracts from Journal Books 1661-1677&nbsp;&nbsp;<a href="extracts.html">Details</a><br />
+<input type=radio name=ref value="105" />Minutes 1677-1691&nbsp;&nbsp;<a href="minutes.html">Details</a><br />
+<input type=radio name=ref value="s05" />Supplementary Pages
+</p>
+
+<p>Options: <input type=radio name=option value="image" />Image&nbsp;&nbsp;<input type=radio name=option value="transcript" />Text&nbsp;&nbsp;<input type=radio name=option value="both" checked />Text and Image
+</p>
+<p>
+<input type=submit value="Enter"/>
+</p>
+</form>
+<form method=GET action="http://www.livesandletters.ac.uk/cell/Hooke/hooke_index.php">
+<p>
+Go to transcript HF_<input type=text name=ref size=3 maxlength=3/> 
+(Enter 3 digits e.g. 003)
+</p>
+<p>Options: <input type=radio name=option value="image" />Image&nbsp;&nbsp;<input type=radio name=option value="transcript" />Text&nbsp;&nbsp;<input type=radio name=option value="both" checked />Text and Image
+</p>
+<p>
+<input type=submit value="Enter"/>
+</p>
+</form>
+
+</td></tr>
+
+<tr><td><a href="grey_matter.html">About this site</a></td>
+<td><a href="search.html">Search the Hooke Folio</a></td></tr>
+
+</table>
+</div>
+
+<script>
+footer();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+
+    <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=11" />
+        <title class="app:title">Austrian Baroque Corpus</title>
+        <meta class="config:app-meta" />
+        <link rel="icon" type="image/ico" href="favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="modules/shared/scripts/css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="modules/shared/scripts/css/jquery-ui-1.10.4.custom-smoothness/jquery-ui-1.10.4.custom.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/theme.css" />
+        <link rel="stylesheet" type="text/css" href="css/layout.css" />
+        <link rel="stylesheet" type="text/css" href="css/elements.css" />
+<!--        <link rel="stylesheet" type="text/css" href="modules/shared/scripts/css/cr.css"/>-->
+<!--     moved to project specific setup (to take precedence)  <link rel="stylesheet" type="text/css" href="css/custom.css"/>-->
+
+        <!--<link rel="stylesheet" type="text/css" href="modules/shared/scripts/style/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="modules/shared/scripts/style/jquery/base/jquery.ui.resizable.css"/>
+        <link rel="stylesheet" type="text/css" href="modules/shared/scripts/style/jquery/base/jquery.ui.all.css"/>
+        
+        -->
+        <script type="text/javascript" src="modules/shared/scripts/js/modernizr-2.8.3.min.js"></script>
+        <script type="text/javascript" src="modules/shared/scripts/js/jquery/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="modules/shared/scripts/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="modules/shared/scripts/js/jquery/jquery-ui-1.10.4.custom.min.js"></script>
+        <script type="text/javascript" src="modules/shared/scripts/js/jquery/jquery.treeview.js"></script>
+        <script type="text/javascript" src="modules/shared/scripts/js/jquery/jquery.modern-blink.js"></script>
+        <script type="text/javascript" src="modules/shared/scripts/js/codemirror/codemirror.js"></script>
+        <script type="text/javascript" src="modules/shared/scripts/js/codemirror/mode/xml/xml.js"></script>
+        <script type="text/javascript" src="modules/shared/scripts/js/URI.js"></script>
+<!--        <script type="text/javascript" src="js/detail.js"/>-->
+        <script type="text/javascript" src="js/main.js"></script>        
+        
+        
+            <!--<script type="text/javascript" src="modules/shared/scripts/js/webtoolkit.sprintf.js"></script>
+            <script type="text/javascript" src="modules/shared/scripts/js/query_input/qi.js"></script>
+            <script type="text/javascript" src="modules/shared/scripts/js/query_input/qi_cql.js"></script>
+            -->
+        <!--    <script type="text/javascript" src="sade/modules/fcs/scripts/js/jquery/jquery.tablesorter.js"/>
+            <script type="text/javascript" src="sade/modules/fcs/scripts/js/jquery/jquery.uitablefilter.js"/>
+        -->
+        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/sprintf.min.js"></script>
+        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/jquery/chosen.jquery.min.js"></script>
+        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/query_input/qi.js"></script>
+        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/query_input/qi_cql.js"></script>
+        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/query_input/CQLConfig.js"></script>
+        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/jquery/jquery.selection.js"></script>
+        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/jquery/jquery.jscroll.min.js"></script>
+        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/virtual-keyboard/params.js"></script>
+        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/virtual-keyboard/virtual-keyboard.js"></script>
+        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="js/abacus.js"></script>
+        <link xmlns="http://www.loc.gov/METS/" rel="stylesheet" type="text/css" href="modules/shared/scripts/css/jquery/jquery.treeview.css" />
+        <link xmlns="http://www.loc.gov/METS/" rel="stylesheet" type="text/css" href="modules/shared/scripts/virtual-keyboard/virtual-keyboard.css" />
+        <link xmlns="http://www.loc.gov/METS/" rel="stylesheet" type="text/css" href="css/custom.css" />
+        <script xmlns="http://www.loc.gov/METS/" type="text/javascript">
+                          var _paq = _paq || [];
+                          _paq.push(['trackPageView']);
+                          _paq.push(['enableLinkTracking']);
+                      (function() {
+                        var u="//clarin.oeaw.ac.at/piwik/";
+                        _paq.push(['setTrackerUrl', u+'piwik.php']);
+                        _paq.push(['setSiteId', 4]);
+                        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+                      })();
+                    </script>
+        <noscript xmlns="http://www.loc.gov/METS/">
+                                <p>
+                                    <img src="//clarin.oeaw.ac.at/piwik/piwik.php?idsite=4" style="border:0;" alt="" />
+                                </p>
+                            </noscript>
+    </head>
+    <body id="body">
+        <div id="options-invoke" title="Layout-Optionen"></div>
+        <input type="radio" id="col-layout-1c" name="layout-switch" />
+        <input type="radio" id="col-layout-2c" name="layout-switch" />
+        <input type="radio" id="col-layout-3c" name="layout-switch" />
+        <input type="radio" id="col-layout-auto" name="layout-switch" checked="checked" />
+        <div id="options-labels" class="bg">
+            <span>Layout</span>
+            <label for="col-layout-1c" id="label-1c" class="col-layout-label">1 Spalte</label>
+            <label for="col-layout-2c" id="label-2c" class="col-layout-label">2 Spalten</label>
+            <label for="col-layout-3c" id="label-3c" class="col-layout-label">3 Spalten</label>
+            <label for="col-layout-auto" id="label-auto" class="col-layout-label">automatisch</label>
+        </div>
+        <div id="header" class="bg">
+    <span id="logo" class="app:logo"><a href="./"><img src="images/Logo_A_v3_resize65.png" class="logo right" /></a></span>
+    <div id="site-name">
+        <!--                <a class="config:app-title brand" href="./index.html">App Title</a>-->
+        <a href="./">
+            <span class="app:info?key=site-name"><span xmlns="" class="site-name">BaC:us</span></span>
+        </a>
+    </div>
+    <div id="menu">
+                <div id="top-menu">
+                    <ul>
+        <!--    <li>
+                <a href="index.html">
+                    <img height="26" src="images/1Anfang.jpg" alt="Home" title="Home"/>
+                </a>
+            </li>-->
+                        <li><a href="index.html?path-detail=content/Corpus.xml"><img height="26" src="images/2Corpus.jpg" alt="Corpus" title="Corpus" /></a>
+                        </li>
+                        <li><a href="corpus.html"><img height="26" src="images/mensch_probieres.jpg" alt="Mensch! probier es" title="Direkteinstieg in das Corpus" /></a>
+                        </li>
+                        <li><a href="index.html?path-detail=content/Annotation.xml"><img height="26" src="images/3Annotation.png" alt="Annotation" title="Annotation" /></a>
+                        </li>
+                        <li><a href="index.html?path-detail=content/Nutzung.xml"><img height="26" src="images/4Nutzung.jpg" alt="Nutzung" title="Nutzung" /></a>
+                        </li>
+                        <li><a href="index.html?path-detail=content/ZitierenKontakt.xml"><img height="26" src="images/merckts_wohl.jpg" alt="Zitieren, Kontakt" title="Zitieren, Kontakt" /></a>
+                        </li>
+                        <li><a href="index.html?path-detail=content/Ueber_uns.xml"><img height="26" src="images/6Ueberuns.jpg" alt="Über uns" title="Über uns" /></a>
+                        </li>
+                        <li><a href="index.html?path-detail=content/Dank.xml"><img height="26" src="images/7Dank.jpg" alt="Dank" title="Dank" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+<!--    <div id="header-link-wrapper">        -->
+    <a id="persistent-link-invoke" onclick="return false" style="cursor:pointer" href="." title="Link teilen">link</a> 
+    <div id="persistent-link-box" class="bg">
+        <div>Link zu aktueller Ansicht teilen</div>
+        <input type="text" id="persistent-link" name="persistent-link" value="" />
+    </div>
+<!--    <a id="login-invoke" title="Login">user</a>
+    <div id="login-box" class="app:user bg"/>
+    </div>-->
+</div>
+        <div id="content-container" class="container-fluid">
+        <div class="intro-image"><a href="corpus.html"><img src="images/intro_image.jpg" alt="Intro-Bild" title="zu den Werken" /></a>
+        </div>
+        <div class="static-text templates:include-detail?path-detail=content/welcome.xml">
+                <div xmlns="" id="welcome">
+    <img height="35" src="images/GeneigterLeser.jpg" alt="Geneigter Leser" />
+    <p>Herzlich willkommen auf den Seiten des Austrian Baroque Corpus!</p>
+    <br />
+    <h3>
+        <img src="images/Aber_was_ist_das.jpg" alt="Aber was ist das" />
+    </h3>
+    <p>
+        <em>ABaC:us – Austrian Baroque Corpus</em> ist die Bezeichnung für eine digitale Sammlung von literarischen Texten aus der Barockzeit. Die Texte, die Sie hier einsehen und durchsuchen können, sind Teil einer reichhaltigen und weit verbreiteten Literatur, die sich mit der Vorbereitung auf den Tod beschäftigt und heute beinahe in Vergessenheit geraten ist. Den thematischen Kern der Sammlung bilden Schriften theologisch-erbaulichen Inhalts, insbesondere Ars moriendi-, Totentanz- und Memento mori-Literatur, die einen wesentlichen Teil damaliger Textproduktion darstellt.</p>
+    <h3>
+        <img src="images/was_man_Gutes_gethan.jpg" alt="was man Gutes gethan" />
+    </h3>
+    <p>Mit ABaC:us wird der Versuch unternommen, zeitentfernte Printprodukte der Barockzeit für ein interessiertes, öffentliches (Fach-)Publikum mit innovativen texttechnologischen Methoden zu erschließen. Durch die Anwendung international anerkannter Standards stellt das Projektteam sicher, dass die aufbereiteten, annotierten historischen Textdaten verschiedenen Erkenntnisinteressen dienlich sind.</p>
+    <p>In der texttechnologischen Erschließung dieser wertvollen Quellen wird sprachlich-kulturelles Erbe aus der Barockzeit bewahrt und eine empirische Grundlage zu dessen nachhaltiger, interdisziplinärer Erforschung und Interpretation geschaffen.</p>
+    <h3>
+        <img src="images/zurWelt_hinaus.jpg" alt="zur Welt hinaus" />
+    </h3>
+    <p>Das <em>Austrian Centre for Digital Humanities and Cultural Heritage</em> der <em>Österreichischen Akademie der Wissenschaften</em> stellt einen Teil der Sammlung testweise, kostenfrei und in hochwertiger Qualität für den wissenschaftlichen Gebrauch zur Verfügung.</p>
+</div>
+            </div>
+    </div>
+    </body>
+</html>

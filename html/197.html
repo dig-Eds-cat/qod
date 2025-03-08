@@ -1,0 +1,457 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+
+	<link type="text/css" rel="stylesheet" href="style/style1.css" />
+	<link type="text/css" rel="stylesheet" href="style/fonts.css?version=5" />
+<style type="text/css" title="currentStyle">
+	@import "style/demo_table.css";
+	@import "style/demo_table_jui.css";
+	@import "style/smoothness/jquery-ui-1.8.4.custom.css";
+</style>
+<!--  <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css"/> -->
+
+<!--[if gte IE 5.5]>
+<style type="text/css">
+div#navigation {
+  left: expression( ( ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+  top: expression( ( ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div#menu {
+  left: expression( ( ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+  top: expression( ( ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+</style>
+<![endif]-->
+<meta name="ROBOTS" content="ALL" />
+<title>Inscriptiones Alborum Amicorum</title>
+
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery/jquery-1.4.4.js"></script>
+
+<!-- /JQuery -->
+
+
+<!-- Autocomplete -->
+<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+<script type="text/javascript">
+
+</script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.multiselect.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$('#field_ids_1').multiselect();
+	$('#lang_fields').multiselect();
+});
+</script>
+-->
+
+<!-- Legacy font definition, not used anymore -->
+<!--<script src="font/typeface-0.15.js"></script>
+<script src="font/spionic_regular.typeface.js"></script>
+<script src="font/sbl_hebrew_regular.typeface.js"></script>-->
+
+<script type="text/javascript">
+$(document).ready(function() {
+	// initializing autocomplete
+	var options, a;
+	jQuery(function(){
+	  options = { 
+	  	serviceUrl:'index.php?page=ajax_personal_query', 
+	  	putId:'#person_id'
+	  };
+	  a = $('#person_name').autocomplete(options);
+	});
+	
+	var options2, b;
+	jQuery(function(){
+	  options2 = { 
+	  	serviceUrl:'index.php?page=ajax_place_query', 
+	  	putId:'#place_id'
+	  };
+	  b = $('#place_name').autocomplete(options2);
+	});
+
+	var options3, c;
+	jQuery(function(){
+	  options3 = { 
+	  	serviceUrl:'index.php?page=ajax_personal_query', 
+	  	putId:'#owner_name_id'
+	  };
+	  c = $('#owner_name_name').autocomplete(options3);
+	});
+	
+	var opts=new Array();
+	var d=new Array();
+	$.each($('.class_inscriber_name_name'), function(i, val) {
+		opts[i] = {
+	  	serviceUrl:'index.php?page=ajax_personal_query', 
+	  	putId:'#inscriber_name_id'+i
+		};
+		d[i] = $('#inscriber_name_name'+i).autocomplete(opts[i]);
+	});
+	
+	// hide browse modify form
+	$('#place_of_dating_form').css("display","none");
+	$('#dedication_form').css("display","none");
+	$('#signature_form').css("display","none");
+	
+//*****DataTables Begin
+
+	//Datatable - to sort column, which has numbers within html tags
+	jQuery.fn.dataTableExt.oSort['num-html-asc']  = function(a,b) {
+		var x = a.replace( /<.*?>/g, "" );
+		var y = b.replace( /<.*?>/g, "" );
+		x = parseFloat( x );
+		y = parseFloat( y );
+		return ((x < y) ? -1 : ((x > y) ?  1 : 0));
+	};
+
+	jQuery.fn.dataTableExt.oSort['num-html-desc'] = function(a,b) {
+		var x = a.replace( /<.*?>/g, "" );
+		var y = b.replace( /<.*?>/g, "" );
+		x = parseFloat( x );
+		y = parseFloat( y );
+		return ((x < y) ?  1 : ((x > y) ? -1 : 0));
+	};
+
+	// START OF: Quick Locale collator support for DataTables
+	// This is not ideal since it doesn't check whetever columns have a specific language
+	// but tries it's best to deal with mostly hungarian text.
+	// It also puts special characters (at least the most common ones) to the end of listing.
+	function checkIflocaleCompareSupportsHuLocale() {
+	  try {
+	    return 'a'.localeCompare('á', 'hu') == -1;
+	  } catch (e) {
+	    return false;
+	  }
+	}
+	
+	var localeCompareSupportsHuLocale = checkIflocaleCompareSupportsHuLocale();
+	
+	function specialLocaleCompare(s1, s2) {
+		var iChars = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?";
+	
+		var ss1 = s1.replace( /<.*?>/g, "" );
+		var ss2 = s2.replace( /<.*?>/g, "" );
+		
+		var ss1StartingWithIChar = ss1.length>0 && iChars.indexOf(ss1.charAt(0))!=-1;
+		var ss2StartingWithIChar = ss2.length>0 && iChars.indexOf(ss2.charAt(0))!=-1;
+		
+		if (ss1StartingWithIChar && !ss2StartingWithIChar) {
+			return 1;
+		} else if (!ss1StartingWithIChar && ss2StartingWithIChar) {
+			return -1;
+		} else if (ss1StartingWithIChar && ss2StartingWithIChar) {
+			var remainderSS1 = (ss1.length>1)?ss1.substring(1):"";
+			var remainderSS2 = (ss2.length>1)?ss2.substring(1):"";
+			return specialLocaleCompare(remainderSS1, remainderSS2);
+		} else {
+			if (localeCompareSupportsHuLocale) {
+				return ss1.localeCompare(ss2, 'hu');
+			} else {
+				return ss1.localeCompare(ss2);
+			}
+		}
+	}
+	// END OF: Quick Locale collator support for DataTables
+	
+	jQuery.fn.dataTableExt.oSort['locale-compare-asc'] = function(s1,s2) {
+			return specialLocaleCompare(s1,s2);
+	};
+	
+	jQuery.fn.dataTableExt.oSort['locale-compare-desc'] = function(s1,s2) {
+			return specialLocaleCompare(s2,s1);
+	};
+	
+	$('#search_table').dataTable({
+		"bJQueryUI": true,
+		"bPaginate": false,
+		"aaSorting": [[ 1, "asc" ]],
+		"aoColumns": [ 
+		  			/* date1 */ { "bSearchable": false,
+			                 "bVisible":    false },
+		  			/* Date */ { "iDataSort": 0 },
+		  			/* Place name indexing */    { "bVisible":    false, "sType": "locale-compare" },
+		  			/* Place */    { "iDataSort": 2 },
+		  			/* Album */  { "sType": "locale-compare" },
+		  			/* Record */    { "sType": "num-html" },
+		  			
+		  			/* Inscriber */    { "iDataSort": 7 },
+		  			/* Inscriber indexing */    { "bVisible":    false, "sType": "locale-compare" }
+		  		],
+		
+  		"oLanguage": {
+  				"sProcessing":   "Feldolgozás...",
+  				"sLengthMenu":   "_MENU_ találat oldalanként",
+  				"sZeroRecords":  "Nincs a keresésnek megfelelő találat",
+  				"sInfo":         "Találatok: _START_ - _END_ Összesen: _TOTAL_",
+  				"sInfoEmpty":    "Nulla találat",
+  				"sInfoFiltered": "(_MAX_ összes rekord közül szűrve)",
+  				"sInfoPostFix":  "",
+  				"sSearch":       "Gyors szűrés a találati listában:",
+  				"sUrl":          "",
+  				"oPaginate": {
+  					"sFirst":    "Első",
+  					"sPrevious": "Előző",
+  					"sNext":     "Következő",
+  					"sLast":     "Utolsó"
+  				}
+ 		}
+	});
+	
+//*****DataTables End
+
+});
+
+// Reset fonts on rich text
+function addClassRecursive(parent, selector, classToAdd) {
+    var elements = $(parent).find(selector);
+	$.each(elements, function(index, element) {
+		$(element).addClass(classToAdd);
+		addClassRecursive(element, selector, classToAdd);
+	});
+}
+
+$(window).load(function() {
+ var resetPoints = $(".reset_richtext");
+ 
+ // Add font classes
+ $.each(resetPoints, function(index, resetPoint) {
+ 	// Legacy font fixes
+ 	addClassRecursive(resetPoint, "*[style*='font-family: SPIonic']", 'greek_text');
+ 	addClassRecursive(resetPoint, "font[face='SPIonic']", 'greek_text');
+ 	addClassRecursive(resetPoint, "*[style*='font-family: \"SBL Hebrew\"']", 'hebrew_text');
+ 	addClassRecursive(resetPoint, '*[style*="font-family: \'SBL Hebrew\'"]', 'hebrew_text');
+ 	addClassRecursive(resetPoint, "*[style*='font-family: SBL Hebrew']", 'hebrew_text');
+ 	addClassRecursive(resetPoint, "*[style*='font-family: \"SBLHebrew\"']", 'hebrew_text');
+ 	addClassRecursive(resetPoint, '*[style*="font-family: \'SBLHebrew\'"]', 'hebrew_text');
+ 	addClassRecursive(resetPoint, "*[style*='font-family: SBLHebrew']", 'hebrew_text');
+ 	
+ 	// New font fixes
+
+ 	addClassRecursive(resetPoint, '*[style*="font-family: ChurchSlavonic"]', 'church_slavonic_text');
+ 	addClassRecursive(resetPoint, '*[style*="font-family: \'ChurchSlavonic\'"]', 'church_slavonic_text');
+ 	addClassRecursive(resetPoint, "*[style*='font-family: \"ChurchSlavonic\"']", 'church_slavonic_text');
+ 	addClassRecursive(resetPoint, "*[style*='font-family: Astrological']", 'astrological_text');
+ 	addClassRecursive(resetPoint, "*[style*='font-family: Coptic']", 'coptic_text');
+ 	addClassRecursive(resetPoint, "*[style*='font-family: Geez']", 'geez_text');
+ 	addClassRecursive(resetPoint, "*[style*='font-family: Samarit']", 'samaritan_text');
+ 	addClassRecursive(resetPoint, "*[style*='font-family: Tamil']", 'tamil_text');
+ 	addClassRecursive(resetPoint, "[dir='rtl']", 'rtl_text');
+ });
+ 
+ // Now fix attributes which stear away the aboves
+ $.each(resetPoints, function(index, resetPoint) { fixBadAttributesRecursive(resetPoint); }); 
+ 
+});
+
+function fixBadAttributes(element) {
+	var style = $(element).attr('style');
+	if (style) {
+		$(element).attr('style', style.replace(/font-size:[^;]+/g, ''));
+		style = $(element).attr('style');
+		$(element).attr('style', style.replace(/line-height:[^;]+/g, ''));
+	}
+}
+
+function fixBadAttributesRecursive(element) {
+	fixBadAttributes(element);
+	$(element).children().each(function(index, child) { fixBadAttributesRecursive(child); });
+}
+
+</script>
+<!-- /Autocomplete -->
+
+<!-- TinyMCE -->
+<script type="text/javascript" src="js/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript">
+
+	tinyMCE.init({
+		// General options
+		mode : "textareas",
+		theme : "advanced",
+		plugins : "style,preview,paste,fullscreen,noneditable,directionality",
+		content_css: "style/tinymce_style.css,style/fonts.css",
+
+		// Theme options
+		theme_advanced_buttons1 : "fontselect,|,cut,copy,paste,pastetext,pasteword,|,undo,redo,|,code,|,preview,|,fullscreen",
+		theme_advanced_buttons3_add : "|,ltr,rtl",
+		theme_advanced_toolbar_location : "top",
+		theme_advanced_toolbar_align : "left",
+		theme_advanced_statusbar_location : "bottom",
+		theme_advanced_resizing : true,
+		theme_advanced_fonts : "Arial=arial,helvetica,sans-serif; Ellinas=SPIonic; עִברִי=SBLHebrew; Astrological=Astrological; Church Slavonic=ChurchSlavonic; Coptic=Coptic; Geez=Geez; Samarit=Samarit; Tamil=Tamil",
+		force_br_newlines : true
+	});
+</script>
+<!-- /TinyMCE -->
+<script type="text/javascript">
+function checkAll(){
+	document.menu_form.elements[1].checked = true;
+	document.menu_form.elements[2].checked = true;
+	document.menu_form.elements[3].checked = true;
+	document.menu_form.elements[4].checked = true;
+	document.menu_form.elements[5].checked = true;
+	document.menu_form.elements[6].checked = true;
+	document.menu_form.elements[7].checked = true;
+	document.menu_form.elements[8].checked = true;
+	document.menu_form.elements[9].checked = true;
+}
+
+function checkNone(){
+	document.menu_form.elements[1].checked = false;
+	document.menu_form.elements[2].checked = false;
+	document.menu_form.elements[3].checked = false;
+	document.menu_form.elements[4].checked = false;
+	document.menu_form.elements[5].checked = false;
+	document.menu_form.elements[6].checked = false;
+	document.menu_form.elements[7].checked = false;
+	document.menu_form.elements[8].checked = false;
+	document.menu_form.elements[9].checked = false;
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26484780-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+
+
+	<div id="menu">
+<!--<img src="file/picture/demo.gif" style="width: 150px"/>-->
+<div id="search_in_progress">A keresés fut, kérem várjon...</div>
+<img id="default_img" src="file/picture/IAA_logo.png"><form name="menu_form" method="post" action="index.php">
+<input id="default_input" type="hidden" name="page" value="home"><div id="menulink"><a href="index.php?page=home"  >Főoldal</a></div><br/>
+<div id="menulink"><a href="index.php?page=about"  >Az adatbázisról</a></div><br/>
+<div id="menulink"><a href="index.php?page=browse"  >Böngészés</a></div><br/>
+<div id="menulink"><a href="index.php?page=search"  >Keresés</a></div><br/>
+<div id="menulink"><a href="index.php?page=indexes"  >Mutatók</a></div><br/>
+
+<div id="menulink"><a href="index.php?page=links"  >Ajánlott oldalak</a></div><br/>
+<div id="menulink"><a href="index.php?page=home&subpage=&letter=&showlogin=1"  >Munkatársaknak</a></div><br/>
+
+</form>
+<br/>
+<form name="print_view_form" method="post" action="index.php"><input id="default_submit" type="submit" name="print_view" value="Nyomtatási nézet" onClick=""></form><br/>
+<a href="index.php?page=home&subpage=&letter=&lang=hu"><img src="file/picture/hu.gif" class="flag"></a>
+<a href="index.php?page=home&subpage=&letter=&lang=en"><img src="file/picture/en.gif" class="flag"></a>
+<a href="index.php?page=home&subpage=&letter=&lang=de"><img src="file/picture/de.gif" class="flag"></a><br/><br/>
+DOI: 10.14232/iaa
+<br/><br/>
+<!-- Begin ShinyStat Free code -->
+<script type="text/javascript" language="JavaScript" src="http://codice.shinystat.com/cgi-bin/getcod.cgi?USER=peterhorvath"></script>
+<noscript>
+<a href="http://www.shinystat.com" target="_top">
+<img src="http://www.shinystat.com/cgi-bin/shinystat.cgi?USER=peterhorvath" alt="Simple counter" border="0" /></a>
+</noscript>
+<!-- End ShinyStat Free code -->
+</div>	<div id="middle_section">
+	﻿﻿﻿﻿
+
+<div id="home">
+<center>
+<table border="0" align="center">
+<tbody>
+<tr>
+	<td align="center" height="50" valign="top" colspan="2">
+		<img src="cim.jpg" border="0">
+	</td>
+</tr>
+<tr>
+	<td align="center" valign="middle" colspan="2" style="text-align:center">
+		<br><br>© Latzkovits Miklós  2003-2024<p>Member of the Cultural heritage and digital society research group</p><br><br>
+		<a href="mailto:latzkovits@t-online.hu?subject=IAA"><img src="level.jpg" border="0"></a>&nbsp;<a href="mailto:latzkovits@t-online.hu?subject=IAA"><font color="black">latzkovits@t-online.hu</a></font><br><br>
+	</td>
+</tr>
+<tr>
+	<td align="center" valign="middle" style="text-align:center" colspan="2">
+		<br><p><strong>Vezető kutat&oacute;k:<br /></strong>Adamik Lajos<br />Bujt&aacute;s L&aacute;szl&oacute; Zsigmond<br /><strong><br />Főmunkat&aacute;rsak:<br /></strong>B&aacute;cskai-Horv&aacute;th Hajnalka<br />B&eacute;la B&aacute;lint<br />Boros Attila<br />Fajt Anita<br />Gell&eacute;rfi Gergő<br />Katona T&uuml;nde  <br /> Maczelka Csaba<br />M&aacute;ndity Zor&aacute;n <br />Rab Ir&eacute;n<br />Raffel, Eva<br />Saj&oacute; Gy&ouml;rgy<br />Saj&oacute; Tam&aacute;s<br />Schnabel, Werner Wilhelm</p>
+<p><strong>Munkat&aacute;rsak:</strong><br />Berzeviczy Kl&aacute;ra<br />Brochard, Thomas<br />Demeter Zsuzsa<br />Dobos K&aacute;roly D&aacute;niel<br />F&ouml;ldesi Ferenc<br />Galamb J&aacute;nos<br />Goly&aacute;n &Aacute;d&aacute;m<br />Gortva Tam&aacute;s<br />G&ouml;m&ouml;ri Gy&ouml;rgy<br />Hegyi &Aacute;d&aacute;m Alex<br />Horv&aacute;th M&aacute;t&eacute;<br />J&oacute;n&aacute;csik L&aacute;szl&oacute;<br />Juh&aacute;sz Szandra<br />Keserű Gizella<br />Koll&aacute;rov&aacute;, Ivona<br />Laky Szilvia<br />Lők&ouml;s P&eacute;ter<br />M&aacute;t&eacute; &Aacute;gnes<br />M&aacute;trai M&oacute;nika<br />M&eacute;rcz Andr&aacute;s<br />M&eacute;sz&aacute;ros Zolt&aacute;n<br />Mik&oacute; M&oacute;nika<br />Moln&aacute;r D&aacute;vid<br />Papp Ingrid<br />P&aacute;lffy G&eacute;za<br />Radics Ren&aacute;ta<br />Radway, Robyn<br />Schelhammer Zs&oacute;fia<br />Solti D&oacute;ra Eszter<br />S&ouml;r&ouml;s Erzs&eacute;bet Borb&aacute;la<br />Sz&eacute;kely M&aacute;rton<br />Szigeti Moln&aacute;r D&aacute;vid<br />Torma Katalin<br />Vars&aacute;nyi Orsolya<br />Viskolcz No&eacute;mi</p><br>
+	</td>
+</tr>
+<tr>
+	<td align="center" valign="top" style="text-align:center" colspan="2">
+		<b>Támogatóink:</b><br>
+		<a target="_blank" href="http://www.radayleveltar.hu/">A Dunamelléki Református Egyházkerület Ráday Levéltára</a><br>
+		<a target="_blank" href="http://arhivelenationale.ro/site/directii-judetene/sibiu/">Arhivele Naționale ale României ‒ Serviciul Județean Sibiu</a><br>
+		<a target="_blank" href="http://www.bmtk.hu">Békés Megyei Tudásház és Könyvtár</a><br>
+		<a target="_blank" href="http://www.bdeg.hu/web/index.php">Berzsenyi Dániel Evangélikus (Líceum) Gimnázium, Szakképző Iskola és Kollégium</a><br>
+		Bethlen Gábor Dokumentációs Könyvtár - Biblioteca Documentara "Bethlen Gábor" (Nagyenyed)<br>
+		<a target="_blank" href="https://www.bcucluj.ro">Biblioteca Centrala Universitara "Lucian Blaga" Cluj-Napoca</a><br>
+		<a target="_blank" href="https://bibliotecaarad.ro">Biblioteca Jude&tcedil;ean&abreve; "Alexandru D. Xenopol" Arad</a><br>
+		<a target="_blank" href="https://www.burgenland.at/themen/wissenschaft/landesarchiv/">Burgenländisches Landesarchiv</a><br>
+		<a target="_blank" href="http://dhm.de">Deutsches Historisches Museum, Berlin</a><br>
+Dob&aacute;k G&eacute;za <br>
+		<a target="_blank" href="http://dornyaymuzeum.hu/">Dornyay Béla Múzeum (Salgótarján)</a><br>
+		<a target="_blank" href="http://www.papacollege.hu/">Dunántúli Református Egyházkerület Tudományos Gyűjteményei</a><br>
+		<a target="_blank" href="http://www.efkt.hu/">Egri Főegyházmegyei Könyvtár</a><br>
+		<a target="_blank" href="http://konyvtar.elte.hu/web/">Eötvös Loránd Tudományegyetem Egyetemi Könyvtár</a><br>
+		<a target="_blank" href="http://church.lutheran.hu/konyvtar">Evangélikus Országos Könyvtár</a><br>
+		<a target="_blank" href="http://eol.lutheran.hu">Evangélikus Országos Levéltár</a><br>
+		<a target="_blank" href="http://www.evangelikusmuzeum.hu/">Evangélikus Országos Múzeum</a><br>
+		Ferenc Postma<br>
+		<a target="_blank" href="http://www.hrmuzeum.ro/">Haáz Rezső Múzeum Tudományos Könyvtára</a><br>
+		Kardos Péter<br>
+		<a target="_blank" href="http://www.krek.hu">Kecskeméti Református Egyházközség Könyvtára</a><br>
+		Konrad Schlossberger<br>
+		<a target="_blank" href="http://www.lb-oldenburg.de/">Landesbibliothek Oldenburg</a><br>
+
+		<a target="_blank" href="http://www.oravskemuzeum.sk/">Oravské múzeum P.O. Hviezdoslava, Čaplovičova knižnica, Dolný Kubín</a><br>
+
+		<a target="_blank" href="http://www.oszk.hu">Országos Széchényi Könyvtár</a><br>
+		<a target="_blank" href="http://www.otka.hu">Országos Tudományos Kutatási Alapprogramok</a> (124468)<br>
+		<a target="_blank" href="http://gyor.lutheran.hu/leveltar/leveltar.html">Ráth Mátyás Evangélikus Gyűjtemény</a><br>
+		<a target="_blank" href="http://www.unitas.hu/tagkonyvtar/sarospataki-reformatus-kollegium-tudomanyos-gyujtemenyeinek-nagykonyvtara">Sárospataki Református Kollégium Tudományos Gyűjteményeinek Nagykönyvtára</a><br>
+		<a target="_blank" href="http://www.semmelweis.museum.hu">Semmelweis Orvostörténeti Múzeum, Könyvtár és Levéltár</a><br>
+		<a target="_blank" href="https://stadtarchiv.ulm.de/">Stadtarchiv Ulm</a><br>
+		<a target="_blank" href="http://www.sznm.ro/">Székely Nemzeti Múzeum</a><br>
+		<a target="_blank" href="http://ww2.bibl.u-szeged.hu/index.php">SZTE Klebelsberg Könyvtár</a><br>
+		<a target="_blank" href="http://www.ub.uni-heidelberg.de/">Universitätsbibliothek Heidelberg</a><br>
+		<a target="_blank" href="http://www.ub.uu.se/">Uppsala universitetsbibliotek</a><br>
+		<a target="_blank" href="http://uk.sav.sk/uksav/">Ústredná knižnica Slovenskej akadémie vied</a><br>
+		<a target="_blank" href="http://www.teutsch.ro/">Zentralarchiv der Evangelischen Kirche A. B. in Rumänien</a><br>
+		
+		
+	</td>
+</tr>
+
+
+<tr>
+	<td align="left" valign="bottom" style="text-align:center">
+	<small><small>
+	
+	</small></small>	
+	</td>
+	<td align="center" valign="bottom" style="text-align:center">
+		<small><small>
+		<b><a href="mailto:peter.horvath@iits.hu"><font color="gray">Programozás: Horváth Péter</a></font></b>
+		</small></small>	
+
+	</td>
+</tr>
+</tbody></table>
+</center>
+</div>
+
+
+
+
+
+</div>
+﻿</body>
+</html>

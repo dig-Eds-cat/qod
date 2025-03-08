@@ -1,344 +1,345 @@
-id,URL,status,error
-1,http://diglib.hab.de/edoc/ed000006/startx.htm,200,
-2,http://www.thomasgray.org/,200,
-3,http://www.dafyddapgwilym.net/,200,
-4,http://www.confessio.ie/#,200,
-5,http://scrineum.unipv.it/LM/home.html,404,Cannot connect to host scrineum.unipv.it:80 ssl:default [Name or service not known]
-6,http://bayle-correspondance.univ-st-etienne.fr/?lang=fr,200,
-7,http://vindolanda.csad.ox.ac.uk/index.shtml,200,
-8,http://vto2.classics.ox.ac.uk/,404,Cannot connect to host vto2.classics.ox.ac.uk:80 ssl:default [Name or service not known]
-9,http://www.berardier.org/,200,
-10,http://codexsinaiticus.org/en/,200,
-11,http://www.waddesdon.org.uk/collection/special-projects/st.-aubin,404,
-12,http://www.catullusonline.org/CatullusOnline/index.php,200,
-13,http://suprasliensis.obdurodon.org/,200,
-14,http://www.ehu.es/galicano/?l=en,200,
-15,http://www.dlv.org.uk/index.html,200,
-16,http://www.beckettarchive.org/login.html,200,
-17,http://euripidesscholia.org,200,
-18,http://omacl.org/Heimskringla/,200,
-19,https://hridigital.shef.ac.uk/partonopeus/,200,
-20,http://www.finerollshenry3.org.uk/,200,
-21,http://www.ub.unibas.ch/bernoulli/index.php/Hauptseite,200,
-22,http://www.intratext.com/X/ITA0763.HTM,200,
-23,http://orosius.monumenta.ch/,200,
-24,http://iospe.kcl.ac.uk/corpus/index.html,200,
-25,http://entretenida.outofthewings.org/index.html,200,
-26,http://www.hrionline.ac.uk/strype/,404,Cannot connect to host www.hrionline.ac.uk:80 ssl:default [Name or service not known]
-27,http://www.livesandletters.ac.uk/herle/index.html,200,
-28,http://www.livesandletters.ac.uk/bodley/bodley.html,200,
-29,http://www.livesandletters.ac.uk/cell/Hooke/Hooke.html,200,
-30,http://www.livesandletters.ac.uk/wd/index.html,200,
-31,http://jonathanswiftarchive.org.uk/index.html,200,
-32,http://www.stgallpriscian.ie,200,
-33,http://www.nietzschesource.org/,200,
-34,http://www.asnc.cam.ac.uk/irishglossaries/,200,
-35,http://www.cems.ox.ac.uk/holinshed/index.shtml,404,
-36,http://www.mun.ca/alciato/,404,
-37,http://www.csdl.tamu.edu:8080/veri/index-en.html,404,Cannot connect to host www.csdl.tamu.edu:8080 ssl:default [Name or service not known]
-38,http://www.corimu.unisi.it/,200,
-39,http://www.bensira.org/,200,
-40,http://www.pizan.lib.ed.ac.uk/,200,
-41,http://isaw.nyu.edu/publications/inscriptions/campa/,200,
-42,http://www.danteonline.it/italiano/home_ita.asp,200,
-43,http://www.darwinproject.ac.uk/,200,
-44,http://edities.kantl.be/daisne/,200,
-45,http://www.earlystuartlibels.net/htdocs/index.html,200,
-46,http://www.folgerdigitaltexts.org/,200,
-47,http://www.rc.umd.edu/editions/frankenstein/,404,
-48,http://www.glossae.net,200,
-49,http://www.heine-portal.de,200,
-50,http://www.ibsen.uio.no/forside.xhtml,200,
-51,http://www.marktwainproject.org/homepage.html,404,
-52,http://www.fondazionecanussio.org/patria.htm,200,
-53,http://txm.bfm-corpus.org/?command=documentation&path=/GRAAL,200,
-54,http://auchinleck.nls.uk/index.html,200,
-55,http://www.magicandmedicine.hps.cam.ac.uk/,200,
-56,http://www.stoa.org/hippo/,404,"Cannot connect to host www.stoa.org:80 ssl:default [Connect call failed ('15.204.130.71', 80)]"
-57,http://chs.harvard.edu/CHS/article/display/5418,404,
-58,http://www.iohannes.com/,200,
-59,http://www.oldbaileyonline.org/,200,
-60,http://www.hrionline.ac.uk/brome/,404,Cannot connect to host www.hrionline.ac.uk:80 ssl:default [Name or service not known]
-61,http://courses.washington.edu/otap/svoboda/public/index.html,404,
-62,http://godwindiary.bodleian.ox.ac.uk/index2.html,200,
-63,http://www.math.uni-augsburg.de/stochastik/llull/,200,
-64,http://www.digitalmishnah.org/,404,"Cannot connect to host www.digitalmishnah.org:443 ssl:True [SSLCertVerificationError: (1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.digitalmishnah.org'. (_ssl.c:1010)"")]"
-65,http://ocp.tyndale.ca/,200,
-66,http://dss.collections.imj.org.il/,200,
-67,http://www.historici.nl/Onderzoek/Projecten/RegistersVanDeHollandseGrafelijkheid1299-1345,200,
-68,http://quijote.bne.es/libro.html,404,Cannot connect to host quijote.bne.eslibro.html:443 ssl:default [Name or service not known]
-69,http://lewisandclarkjournals.unl.edu,200,
-70,http://beowulf.engl.uky.edu/~kiernan/eBoethius/inlad.htm,404,
-71,http://www.intellectualhistory.net/mill/,404,
-72,http://tei.oucs.ox.ac.uk/Projects/EETS/soton/,404,
-73,http://nestlealand.uni-muenster.de/,200,
-74,http://stel.ub.edu/orlando/,200,
-75,http://vergil.classics.upenn.edu/,200,
-76,http://www.laits.utexas.edu/cid/index2.php?v=nor,404,
-77,http://www.abdn.ac.uk/bestiary/,200,
-78,http://www.curculio.org/Martial/Martial04.html,200,
-79,http://www.curculio.org/Ovid/h01.html,200,
-80,http://www.curculio.org/Propertius/index.html,200,
-81,http://www.curculio.org/Sulpiciae/index.html,200,
-82,http://www.curculio.org/Claudian/index.html,200,
-83,http://www.curculio.org/Juvenal/index.html,200,
-84,http://cdlm.unipv.it/,404,Cannot connect to host cdlm.unipv.it:80 ssl:default [Name or service not known]
-85,http://press.ucalgary.ca/books/9781552380369,404,
-86,http://www.ffzg.unizg.hr/klafil/dokuwiki/doku.php/z:epidoc-hrvatska,200,
-87,http://www.gasconrolls.org/en/,403,
-88,http://www.sd-editions.com/AnaAdditional/HengwrtEx/images/hgopen.html,200,
-89,http://www.weber-gesamtausgabe.de/en/Index,200,
-90,http://livingstone.library.ucla.edu/1871diary/manuscript1.htm,404,
-91,http://hyperdonat.ens-lyon.fr/,404,
-92,http://insaph.kcl.ac.uk/index.html,200,
-93,http://ircyr.kcl.ac.uk/,404,Cannot connect to host ircyr.kcl.ac.uk:80 ssl:default [Name or service not known]
-94,http://irt.kcl.ac.uk/irt2009/,404,Cannot connect to host irt.kcl.ac.uk:80 ssl:default [No address associated with hostname]
-95,http://www.e-sequence.eu/en/,200,
-96,http://www.philological.bham.ac.uk/sylva/,200,
-97,http://www.philological.bham.ac.uk/Addison/,200,
-98,http://www.hull.ac.uk/hitm/,404,
-99,http://cancionerovirtual.liv.ac.uk/,404,Cannot connect to host cancionerovirtual.liv.ac.uk:80 ssl:default [Name or service not known]
-100,http://pom.bbaw.de/cmg/,200,
-101,http://www.benedictus.mgh.de/,200,
-102,http://oracc.museum.upenn.edu/rinap/,404,"Cannot connect to host oracc.museum.upenn.edu:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]"
-103,http://english.selu.edu/humanitiesonline/kempe/index.php,503,
-104,http://www.britac.ac.uk/pubs/dialogus/ockdial.html,403,
-105,http://www.domesdaybook.net,200,
-106,http://www.cfeo.org.uk/index.html,404,
-107,http://www.janeausten.ac.uk/index.html,200,
-108,http://www.whitmanarchive.org/,200,
-109,http://www.schenkerdocumentsonline.org,200,
-110,http://www.ocve.org.uk/index.html,404,
-111,http://www.johnfoxe.org/,403,
-112,http://petrarch.uoregon.edu/,200,
-113,http://www.stg.brown.edu/projects/pico/about.php,404,Cannot connect to host www.stg.brown.edu:80 ssl:default [Name or service not known]
-114,http://www.brown.edu/Departments/Italian_Studies/dweb/index.php,200,
-115,http://www.brown.edu/Departments/Italian_Studies/pico/index.html,200,
-116,http://www.stg.brown.edu/projects/Inscriptions/index.shtml,404,Cannot connect to host www.stg.brown.edu:80 ssl:default [Name or service not known]
-117,http://www.parzival.unibe.ch/home.html,200,
-118,http://www.rose.uzh.ch/static/decameron/index3.htm,200,
-119,http://www.rc.umd.edu/editions/shelley/devil/index.html,404,
-120,http://www.rc.umd.edu/editions/contemps/barbauld/poems1773/,404,
-121,http://www.rc.umd.edu/editions/bloomfield_letters/,404,
-122,http://www.shelleygodwinarchive.org/,200,
-123,http://www.rc.umd.edu/editions/beddoes/intro.html,404,
-124,http://www.hrionline.ac.uk/onlinefroissart/index.jsp,404,Cannot connect to host www.hrionline.ac.uk:80 ssl:default [Name or service not known]
-125,http://www.rhyddiaithganoloesol.caerdydd.ac.uk/en/,200,
-126,http://www.newtonproject.sussex.ac.uk/prism.php?id=1,200,
-127,http://vbd.humnet.unipi.it,200,
-128,http://vitanova.unipv.it/,200,
-129,http://knarf.english.upenn.edu/,200,
-130,http://www.livingstoneonline.ucl.ac.uk,404,
-131,http://rmcisadu.let.uniroma1.it/boccaccio/,200,
-132,http://en.wikibooks.org/wiki/The_Devonshire_Manuscript,200,
-133,http://www.bvh.univ-tours.fr/#,200,
-134,http://digital.library.northwestern.edu/codex/index.html,404,
-135,https://www.ucl.ac.uk/Bentham-Project/publications/martins-memorandoms/martins-memorandoms.html,502,
-136,http://www.cn-telma.fr/actesroyaux/index/,404,Cannot connect to host www.cn-telma.fr:80 ssl:default [Temporary failure in name resolution]
-137,http://quod.lib.umich.edu/a/amverse/,200,
-138,http://www.bodleianshop.co.uk/a-digital-facsimile-of-oxford-bodleian-library-ms-junius-11.html,404,
-139,http://candide.nypl.org/text/,404,Cannot connect to host candide.nypl.org:80 ssl:default [Name or service not known]
-140,http://www.getto-chronik.de/de/,200,
-141,http://www.upress.virginia.edu/content/clotel-william-wells-brown-electronic-scholarly-edition,404,
-142,http://dasi.humnet.unipi.it/,200,
-143,http://datini.archiviodistato.prato.it/la-ricerca/le-edizioni-delle-lettere#n,200,
-144,http://www.shikshapatri.org.uk/,200,
-145,http://ebeowulf.uky.edu/,200,
-146,http://www.edickinson.org/,202,
-147,http://rotunda.upress.virginia.edu/edc/,200,
-148,http://abo.annotatedbooksonline.com/#binding-5-1,200,
-149,http://www.mpiwg-berlin.mpg.de/Galileo_Prototype/MAIN.HTM,200,
-150,http://kundigebok.stadtarchiv.goettingen.de/kb2Web/html/,404,Cannot connect to host kundigebok.stadtarchiv.goettingen.de:80 ssl:default [Name or service not known]
-151,http://rotunda.upress.virginia.edu/melville/,200,
-152,http://letters.mozartways.com/,200,
-153,http://courses.washington.edu/otap/intibah/intibah.html,404,
-154,http://www.nma.gov.au/collections/collection_interactives/jerilderie_letter,404,
-155,http://www.chlt.org/sandbox/colloquia/argenis/index.html,404,Cannot connect to host chlt.orgsandbox:443 ssl:default [Name or service not known]
-156,http://rotunda.upress.virginia.edu/EmilyShore/make-page.xqy,200,
-157,http://www.phalese.fr/Maldoror/index.php?title=Accueil,500,
-158,http://www.cn-telma.fr/nesle/index/,404,Cannot connect to host www.cn-telma.fr:80 ssl:default [Temporary failure in name resolution]
-159,http://dohistory.org/diary/index.html,200,
-160,http://www.oliveschreiner.org/,200,
-161,http://rabindranathtagore-150.gov.in/online-voriourum.html,404,Cannot connect to host rabindranathtagore-150.gov.in:80 ssl:default [Temporary failure in name resolution]
-162,http://www.cn-telma.fr/ordonnances/index/,404,Cannot connect to host www.cn-telma.fr:80 ssl:default [Temporary failure in name resolution]
-163,http://septuaginta.net/,200,
-164,http://www.siratbanihilal.ucsb.edu/start-0,404,
-165,http://sks.dk/forside/indhold.asp,200,
-166,http://ctb.kantl.be/publicaties/de-teleurgang-van-den-waterhoek-elektronisch-kritische-editie-electronic-c,200,
-167,http://rotunda.upress.virginia.edu/founders/ADMS.html,200,
-168,http://drapier.dho.ie/node/232,404,
-169,http://hridigital.shef.ac.uk/gide,200,
-170,http://www.lib.unb.ca/Texts/marston/,404,
-171,http://rth.org.uk/collections/bevan-dewar-letters,200,
-172,http://www.abdn.ac.uk/diss/historic/collects/bps/index.html,200,
-173,http://www.textualcommunities.usask.ca/web/canterbury-tales,404,Cannot connect to host www.textualcommunities.usask.ca:80 ssl:default [Name or service not known]
-174,http://digitaltemple.rotunda.upress.virginia.edu/,200,
-175,http://www.nb.no/baser/diriks/virtuellealbum/index.html,404,
-176,http://rotunda.upress.virginia.edu/founders/RNCN.html,200,
-177,http://rotunda.upress.virginia.edu/dmde/,200,
-178,http://geesebook.asu.edu,200,
-179,https://www.hrionline.ac.uk/hartlib/,404,Cannot connect to host www.hrionline.ac.uk:443 ssl:default [Name or service not known]
-180,http://rotunda.upress.virginia.edu/crossetti/,200,
-181,http://rotunda.upress.virginia.edu/arnold/,200,
-182,http://www.maloryproject.com/,200,
-183,http://rotunda.upress.virginia.edu/founders/ARHN.html,200,
-184,http://rotunda.upress.virginia.edu/PinckneyHorry/,200,
-185,http://rotunda.upress.virginia.edu/founders/GEWN.html,200,
-186,http://rotunda.upress.virginia.edu/founders/JSMN.html,200,
-187,http://rotunda.upress.virginia.edu/founders/TSJN.html,200,
-188,http://hridigital.shef.ac.uk/galdos,200,
-189,http://vlib.iue.it/carrie/documents/planctus/planctus/index.html,503,
-190,http://www.birmingham.ac.uk/research/activity/leopardi/projects/index.aspx,200,
-191,http://edities.kantl.be/loveling/,200,
-192,http://nzetc.victoria.ac.nz/tm/scholarly/tei-corpus-golder.html,200,
-193,http://trove.nla.gov.au/work/33020507,200,
-194,http://www.nlx.com/collections/124,200,
-195,http://www.birmingham.ac.uk/research/activity/leopardi/projects/barcelona.aspx,404,
-196,http://www.getty.edu/research/mellini/,200,
-197,http://iaa.bibl.u-szeged.hu/index.php,200,
-198,http://hellenic-institute.rhul.ac.uk/Research/Etheridge/,404,Server disconnected
-199,http://www.ssrq-sds-fds.ch/teiviewer/,200,
-200,http://dantiscus.al.uw.edu.pl/,200,
-201,http://sd-editions.com/AnaAdditional/commediaonline/home.html,200,
-202,http://quod.lib.umich.edu/m/machyn/,200,
-203,http://www.ssrq-sds-fds.ch/online/,200,
-204,http://www.realbiblioteca.es/gomez_manrique/cancionero.html,200,
-205,http://www.aschart.kcl.ac.uk/index.html,200,
-206,http://byzantini.st/ChronicleME/,200,
-207,http://www.desgodets.net,200,
-208,http://diglib.hab.de/wdb.php?dir=edoc/ed000228&lang=en,200,
-209,http://www.forschungsdatenarchiv.escience.uni-tuebingen.de/adlils/,404,Cannot connect to host www.forschungsdatenarchiv.escience.uni-tuebingen.de:80 ssl:default [Name or service not known]
-210,http://jechante.exeter.ac.uk/archive/index.html,404,Cannot connect to host jechante.exeter.ac.uk:80 ssl:default [Name or service not known]
-211,http://www.alberteinstein.info/,200,
-212,http://pelavicino.labcd.unipi.it/,200,
-213,http://www.woolfonline.com/,200,
-214,http://www.bovary.fr/,200,
-215,http://digital.nypl.org/schomburg/writers_aa19/,200,
-216,http://beta.faustedition.net/,200,
-217,https://fontane-nb.dariah.eu/index.html,404,
-218,http://senckenberg.ub.uni-frankfurt.de/s/startpage,200,
-219,http://alexandredumas.org/,200,
-220,http://telota.bbaw.de/AvHBriefedition/index.html,200,
-221,http://burckhardtsource.org/,200,
-222,http://jewish-history-online.net/,200,
-223,http://inamidst.com/stuff/sappho/,200,
-224,http://www.orlandofurioso.org/,404,
-225,http://www.schopenhauer.uni.wroc.pl/,200,
-226,http://claviusontheweb.it/,404,
-227,http://fleischmanndiaries.ucc.ie/,200,
-228,http://www.deutschestextarchiv.de/,200,
-229,http://tarsian.vital-it.ch/,200,
-230,http://dh.tcd.ie/letters1916/,404,"Cannot connect to host dh.tcd.ie:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]"
-231,http://www.ittig.cnr.it,200,
-232,http://wjc.bodleian.ox.ac.uk,200,
-233,https://romaninscriptionsofbritain.org/,200,
-234,http://ta.sandrart.net/de/,200,
-235,https://acdh.oeaw.ac.at/abacus/,200,
-236,http://darwin-online.org.uk/Variorum/,200,
-237,https://www2.hf.uio.no/damos/,200,
-238,http://www.vnsbrieven.org/VNS/,200,
-239,http://edities.kantl.be/streuvels/,200,
-240,http://sauer-seuffert.onb.ac.at/,200,
-241,http://www1.unipa.it/paolo.monella/ursus/transcription.html,404,
-242,http://codyarchive.org/,200,
-243,http://earlymusictheory.org/Tinctoris/,200,
-244,http://digitalathenaeus.org/,404,Cannot connect to host digitalathenaeus.org:80 ssl:default [No address associated with hostname]
-245,http://guillelmus.uni-koeln.de/,200,
-246,http://musilonline.at/,200,
-247,http://www.univie.ac.at/tocharian/,200,
-248,http://www.berliner-intellektuelle.eu/,200,
-249,http://www.bdpn.unam.mx/,404,Cannot connect to host www.bdpn.unam.mx:80 ssl:default [Name or service not known]
-250,http://www.doaks.org/resources/bliss-tyler-correspondence/,200,
-251,https://edition-humboldt.de/,200,
-252,http://vespasianodabisticciletters.unibo.it,200,
-253,http://erdmuthe.thulb.uni-jena.de,200,
-254,https://digital.janeaddams.ramapo.edu/,200,
-255,http://www.penseesdepascal.fr,200,
-256,http://gams.uni-graz.at/horvath-edition,200,
-257,http://library.trinity.edu/lament/index.html,200,
-258,http://beethovens-werkstatt.de/,200,
-259,http://charles-harpur.org/,200,
-260,http://damaboba.unibo.it/,200,
-261,http://www.cartas-de-ultramar.net/,200,
-262,http://magyar-irodalom.elte.hu/gepesk/kd/edesanna/,200,
-263,http://digiphil.hu/context:edesanna,200,
-264,http://digiphil.hu/context:alomeghal,200,
-265,http://digiphil.hu/context:aranysarkany,200,
-266,http://digiphil.hu/context:estikornel,200,
-267,http://www.tankonyvtar.hu/hu/tartalom/tkt/fanchali-job-kodex/adatok.html,404,Cannot connect to host regi.tankonyvtar.hu:443 ssl:default [Name or service not known]
-268,http://magyar-irodalom.elte.hu/totnes/eotvos/,200,
-269,http://magyar-irodalom.elte.hu/ja/,200,
-270,http://textus.elte.hu/ja/,200,
-271,http://estoria.bham.ac.uk/,200,
-272,http://www.tankonyvtar.hu/en/tartalom/tkt/argirus-historiaja/adatok.html,404,
-273,http://magyar-irodalom.elte.hu/gepesk/wathay/,200,
-274,http://magyar-irodalom.elte.hu/gepesk/zrinyi/,200,
-275,http://magyar-irodalom.elte.hu/gepesk/rimay/,200,
-276,http://www.tankonyvtar.hu/hu/tartalom/tkt/rimay-janos-ifjukori/,404,Cannot connect to host regi.tankonyvtar.hu:443 ssl:default [Name or service not known]
-277,http://magyar-irodalom.elte.hu/effectus/,200,
-278,http://sermones.elte.hu/erdy/,200,
-279,http://sermones.elte.hu/exemplumadatbazis/,200,
-280,http://deba.unideb.hu/deba/kazinczy_muvei/,200,
-281,http://deba.unideb.hu/deba/csokonai_muvei/,200,
-282,http://deba.unideb.hu/deba/szerdahely/,200,
-283,http://deba.unideb.hu/deba/gyongyossi/,200,
-284,http://deba.unideb.hu/deba/berzsenyi/,200,
-285,http://deba.unideb.hu/deba/levelezes/,200,
-286,http://deba.unideb.hu/deba/raday/,200,
-287,http://deba.unideb.hu/deba/Margit-legenda_Szent_Margit_elete_1510/index.html,200,
-288,http://deba.unideb.hu/deba/orpheus/,200,
-289,http://deba.unideb.hu/deba/magyar_museum/,200,
-290,https://sturm-edition.de,200,
-291,http://magyar-irodalom.elte.hu/gepesk/bbom/itart.htm,200,
-292,http://magyar-irodalom.elte.hu/gepesk/eloszo/,200,
-293,http://krk.szabolorinc.hu/dokumentumok.htm,200,
-294,http://digiphil.hu/context:atett,404,
-295,http://digiphil.hu/context:mkk39,200,
-296,http://digiphil.hu/context:mkk42,200,
-297,http://ps.clul.ul.pt/,200,
-298,https://www.jeanpaul-edition.de/,200,
-299,http://digi.ub.uni-heidelberg.de/ahd/,200,
-300,https://astree.tufts.edu,200,
-302,https://traveldigital.acdh.oeaw.ac.at/,200,
-303,https://maechtekongresse.acdh.oeaw.ac.at/,200,
-304,https://edition.onb.ac.at/okopenko,200,
-305,https://edition.mgh.de/001/,200,
-306,http://frhu20.iti.btk.mta.hu/,200,
-307,https://www.arthur-schnitzler.de/edition/genetisch,200,
-308,https://www.hamann-ausgabe.de,200,
-309,http://grundtvigsvaerker.dk,200,
-310,https://thun-korrespondenz.acdh.oeaw.ac.at/,200,
-311,https://igcyr.unibo.it,200,
-312,http://www1.unipa.it/paolo.monella/romualdus/,404,
-313,https://www.hahnemann-edition.de/index.html,200,
-314,https://schnitzler-briefe.acdh.oeaw.ac.at,200,
-315,http://www.ehu.eus/monumenta/lazarraga/index.html,200,
-316,https://www.bayerischer-staatsrat.de,200,
-317,https://db.innovatingknowledge.nl/edition,200,
-318,https://lts.fortunoff.library.yale.edu/,200,
-319,https://humboldt.unibe.ch/text,200,
-320,https://making-mysticism.org/edition/1.0/html/,200,
-321,http://edition.onb.ac.at/handke-notizbuecher,200,
-322,https://semper-edition.ch/,200,
-323,https://tir.univie.ac.at,200,
-324,https://lexlep.univie.ac.at,200,
-325,https://schnitzler-chronik.acdh.oeaw.ac.at/,200,
-326,https://pollaczek.acdh.oeaw.ac.at/,200,
-327,https://schnitzler-orte.acdh.oeaw.ac.at/,200,
-328,https://schnitzler-lektueren.acdh.oeaw.ac.at/,200,
-329,https://schnitzler-tagebuch.acdh.oeaw.ac.at/,200,
-330,https://schnitzler-zeitungen.acdh.oeaw.ac.at/,200,
-331,https://pmb.acdh.oeaw.ac.at/,200,
-332,https://schnitzler-bahr.acdh.oeaw.ac.at/,200,
-333,https://irt2021.inslib.kcl.ac.uk/,200,
-334,https://ancientwisdoms.ac.uk/library/kekaumenos-consilia-et-narrationes/index.html,200,
-335,https://ancientwisdoms.ac.uk/library/,200,
-336,https://www.koenigsfelden.uzh.ch,200,
-337,https://megadigital.bbaw.de/,200,
-338,https://amp.acdh.oeaw.ac.at,200,
-339,https://pta.bbaw.de,200,
-340,https://openarabicpe.github.io/,200,
-341,https://tei.nplp.pl/categories/korespondencja-jana-lechonia-i-kazimierza-wierzynskiego,200,
-342,https://tei.nplp.pl/categories/korespondencja-mieczyslawa-grydzewskiego-i-kazimierza-i-haliny-wierzynski,200,
-343,https://mrp.oeaw.ac.at,200,
-344,https://qhod.net/,200,
+id,URL,status,error,response_time,content_size
+1,http://diglib.hab.de/edoc/ed000006/startx.htm,200,,0.084,2.93
+2,http://www.thomasgray.org/,200,,0.703,30.88
+3,http://www.dafyddapgwilym.net/,200,,0.757,5.29
+4,http://www.confessio.ie/#,200,,0.33,20.5
+5,http://scrineum.unipv.it/LM/home.html,404,Cannot connect to host scrineum.unipv.it:80 ssl:default [Name or service not known],-1.0,-1.0
+6,http://bayle-correspondance.univ-st-etienne.fr/?lang=fr,200,,0.614,31.47
+7,http://vindolanda.csad.ox.ac.uk/index.shtml,200,,0.09,17.51
+8,http://vto2.classics.ox.ac.uk/,404,Cannot connect to host vto2.classics.ox.ac.uk:80 ssl:default [Name or service not known],-1.0,-1.0
+9,http://www.berardier.org/,200,,0.064,3.07
+10,http://codexsinaiticus.org/en/,200,,0.458,13.47
+11,http://www.waddesdon.org.uk/collection/special-projects/st.-aubin,404,,1.077,50.11
+12,http://www.catullusonline.org/CatullusOnline/index.php,200,,0.356,723.49
+13,http://suprasliensis.obdurodon.org/,200,,0.296,52.12
+14,http://www.ehu.es/galicano/?l=en,200,,0.578,36.12
+15,http://www.dlv.org.uk/index.html,200,,0.775,11.11
+16,http://www.beckettarchive.org/login.html,200,,0.417,14.19
+17,http://euripidesscholia.org,200,,0.778,10.11
+18,http://omacl.org/Heimskringla/,200,,0.631,70.96
+19,https://hridigital.shef.ac.uk/partonopeus/,200,,0.501,2.74
+20,http://www.finerollshenry3.org.uk/,200,,0.757,3.15
+21,http://www.ub.unibas.ch/bernoulli/index.php/Hauptseite,200,,1.141,15.31
+22,http://www.intratext.com/X/ITA0763.HTM,200,,0.445,17.3
+23,http://orosius.monumenta.ch/,200,,0.087,0.34
+24,http://iospe.kcl.ac.uk/corpus/index.html,200,,2.411,8.52
+25,http://entretenida.outofthewings.org/index.html,200,,0.555,8.39
+26,http://www.hrionline.ac.uk/strype/,404,Cannot connect to host www.hrionline.ac.uk:80 ssl:default [Name or service not known],-1.0,-1.0
+27,http://www.livesandletters.ac.uk/herle/index.html,200,,0.165,5.65
+28,http://www.livesandletters.ac.uk/bodley/bodley.html,200,,0.162,6.35
+29,http://www.livesandletters.ac.uk/cell/Hooke/Hooke.html,200,,0.163,2.15
+30,http://www.livesandletters.ac.uk/wd/index.html,200,,0.163,3.63
+31,http://jonathanswiftarchive.org.uk/index.html,200,,2.182,5.39
+32,http://www.stgallpriscian.ie,200,,0.225,19.64
+33,http://www.nietzschesource.org/,200,,0.138,13.47
+34,http://www.asnc.cam.ac.uk/irishglossaries/,200,,0.429,7.71
+35,http://www.cems.ox.ac.uk/holinshed/index.shtml,404,,0.141,0.19
+36,http://www.mun.ca/alciato/,404,,1.098,26.42
+37,http://www.csdl.tamu.edu:8080/veri/index-en.html,404,Cannot connect to host www.csdl.tamu.edu:8080 ssl:default [Name or service not known],-1.0,-1.0
+38,http://www.corimu.unisi.it/,200,,0.478,21.14
+39,http://www.bensira.org/,200,,0.386,3.57
+40,http://www.pizan.lib.ed.ac.uk/,200,,0.469,10.66
+41,http://isaw.nyu.edu/publications/inscriptions/campa/,200,,0.848,5.47
+42,http://www.danteonline.it/italiano/home_ita.asp,404,'utf-8' codec can't decode byte 0xe0 in position 10272: invalid continuation byte,-1.0,-1.0
+43,http://www.darwinproject.ac.uk/,200,,0.673,156.95
+44,http://edities.kantl.be/daisne/,200,,0.5,6.77
+45,http://www.earlystuartlibels.net/htdocs/index.html,200,,1.009,13.59
+46,http://www.folgerdigitaltexts.org/,200,,0.66,187.75
+47,https://romantic-circles.org/editions/frankenstein/editions.2009.frankenstein,200,,0.55,45.55
+48,http://www.glossae.net,200,,0.836,121.96
+49,http://www.heine-portal.de,200,,0.137,2.8
+50,http://www.ibsen.uio.no/forside.xhtml,200,,0.606,12.64
+51,http://www.marktwainproject.org/homepage.html,404,,1.712,0.19
+52,http://www.fondazionecanussio.org/patria.htm,200,,0.547,2.79
+53,http://txm.bfm-corpus.org/?command=documentation&path=/GRAAL,200,,0.438,2.94
+54,http://auchinleck.nls.uk/index.html,200,,0.582,11.36
+55,http://www.magicandmedicine.hps.cam.ac.uk/,200,,0.528,21.79
+56,http://www.stoa.org/hippo/,404,"Cannot connect to host www.stoa.org:80 ssl:default [Connect call failed ('15.204.130.71', 80)]",-1.0,-1.0
+57,http://chs.harvard.edu/CHS/article/display/5418,404,,1.027,47.0
+58,http://www.iohannes.com/,200,,0.495,5.75
+59,http://www.oldbaileyonline.org/,200,,0.495,0.84
+60,http://www.hrionline.ac.uk/brome/,404,Cannot connect to host www.hrionline.ac.uk:80 ssl:default [Name or service not known],-1.0,-1.0
+61,http://courses.washington.edu/otap/svoboda/public/index.html,404,,1.058,0.16
+62,http://godwindiary.bodleian.ox.ac.uk/index2.html,200,,0.533,6.62
+63,http://www.math.uni-augsburg.de/stochastik/llull/,200,,0.67,123.8
+64,http://www.digitalmishnah.org/,404,"Cannot connect to host www.digitalmishnah.org:443 ssl:True [SSLCertVerificationError: (1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.digitalmishnah.org'. (_ssl.c:1000)"")]",-1.0,-1.0
+65,http://ocp.tyndale.ca/,200,,0.644,59.41
+66,http://dss.collections.imj.org.il/,200,,0.275,10.86
+67,http://www.historici.nl/Onderzoek/Projecten/RegistersVanDeHollandseGrafelijkheid1299-1345,200,,0.715,9.63
+68,http://quijote.bne.es/libro.html,404,Cannot connect to host quijote.bne.eslibro.html:443 ssl:default [Name or service not known],-1.0,-1.0
+69,http://lewisandclarkjournals.unl.edu,200,,1.064,10.02
+70,http://beowulf.engl.uky.edu/~kiernan/eBoethius/inlad.htm,404,,-1.0,-1.0
+71,http://www.intellectualhistory.net/mill/,404,,0.674,76.14
+72,http://tei.oucs.ox.ac.uk/Projects/EETS/soton/,404,,-1.0,-1.0
+73,http://nestlealand.uni-muenster.de/,200,,0.203,4.2
+74,http://stel.ub.edu/orlando/,200,,0.951,4.34
+75,http://vergil.classics.upenn.edu/,200,,2.063,8.27
+76,http://www.laits.utexas.edu/cid/index2.php?v=nor,404,,0.437,0.19
+77,http://www.abdn.ac.uk/bestiary/,200,,0.632,4.68
+78,http://www.curculio.org/Martial/Martial04.html,404,'utf-8' codec can't decode byte 0x9c in position 13142: invalid start byte,-1.0,-1.0
+79,http://www.curculio.org/Ovid/h01.html,200,,0.652,21.49
+80,http://www.curculio.org/Propertius/index.html,200,,0.651,3.9
+81,http://www.curculio.org/Sulpiciae/index.html,200,,0.657,5.12
+82,http://www.curculio.org/Claudian/index.html,200,,0.656,3.83
+83,http://www.curculio.org/Juvenal/index.html,200,,0.656,4.86
+84,http://cdlm.unipv.it/,404,Cannot connect to host cdlm.unipv.it:80 ssl:default [Name or service not known],-1.0,-1.0
+85,http://press.ucalgary.ca/books/9781552380369,404,,1.295,56.28
+86,http://www.ffzg.unizg.hr/klafil/dokuwiki/doku.php/z:epidoc-hrvatska,200,,0.235,12.42
+87,http://www.gasconrolls.org/en/,403,,0.575,0.2
+88,http://www.sd-editions.com/AnaAdditional/HengwrtEx/images/hgopen.html,200,,0.299,0.48
+89,http://www.weber-gesamtausgabe.de/en/Index,200,,0.827,29.69
+90,http://livingstone.library.ucla.edu/1871diary/manuscript1.htm,404,,-1.0,-1.0
+91,http://hyperdonat.ens-lyon.fr/,200,,0.548,6.33
+92,http://insaph.kcl.ac.uk/index.html,200,,0.668,0.23
+93,http://ircyr.kcl.ac.uk/,404,Cannot connect to host ircyr.kcl.ac.uk:80 ssl:default [Name or service not known],-1.0,-1.0
+94,http://irt.kcl.ac.uk/irt2009/,404,Cannot connect to host irt.kcl.ac.uk:80 ssl:default [No address associated with hostname],-1.0,-1.0
+95,http://www.e-sequence.eu/en/,200,,0.535,6.9
+96,http://www.philological.bham.ac.uk/sylva/,200,,0.637,1.99
+97,http://www.philological.bham.ac.uk/Addison/,200,,0.657,2.59
+98,http://www.hull.ac.uk/hitm/,404,,0.954,14.79
+99,http://cancionerovirtual.liv.ac.uk/,404,Cannot connect to host cancionerovirtual.liv.ac.uk:80 ssl:default [Name or service not known],-1.0,-1.0
+100,http://pom.bbaw.de/cmg/,200,,0.666,0.82
+101,http://www.benedictus.mgh.de/,200,,1.044,2.64
+102,http://oracc.museum.upenn.edu/rinap/,404,"Cannot connect to host oracc.museum.upenn.edu:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]",-1.0,-1.0
+103,http://english.selu.edu/humanitiesonline/kempe/index.php,404,,-1.0,-1.0
+104,http://www.britac.ac.uk/pubs/dialogus/ockdial.html,403,,1.415,7.17
+105,http://www.domesdaybook.net,200,,1.635,700.36
+106,http://www.cfeo.org.uk/index.html,404,,1.49,0.17
+107,http://www.janeausten.ac.uk/index.html,200,,1.276,7.37
+108,http://www.whitmanarchive.org/,200,,1.79,0.01
+109,http://www.schenkerdocumentsonline.org,200,,1.832,10.28
+110,http://www.ocve.org.uk/index.html,404,,1.554,0.17
+111,http://www.johnfoxe.org/,403,,0.945,6.83
+112,http://petrarch.uoregon.edu/,200,,1.697,56.92
+113,http://www.stg.brown.edu/projects/pico/about.php,404,Cannot connect to host www.stg.brown.edu:80 ssl:default [Name or service not known],-1.0,-1.0
+114,http://www.brown.edu/Departments/Italian_Studies/dweb/index.php,200,,1.425,1.68
+115,http://www.brown.edu/Departments/Italian_Studies/pico/index.html,200,,1.686,2.49
+116,http://www.stg.brown.edu/projects/Inscriptions/index.shtml,404,Cannot connect to host www.stg.brown.edu:80 ssl:default [Name or service not known],-1.0,-1.0
+117,http://www.parzival.unibe.ch/home.html,200,,1.241,4.59
+118,http://www.rose.uzh.ch/static/decameron/index3.htm,200,,1.021,0.5
+119,http://www.rc.umd.edu/editions/shelley/devil/index.html,404,,1.664,29.77
+120,http://www.rc.umd.edu/editions/contemps/barbauld/poems1773/,404,,1.986,29.77
+121,http://www.rc.umd.edu/editions/bloomfield_letters/,404,,2.038,29.77
+122,http://www.shelleygodwinarchive.org/,200,,1.695,14.43
+123,http://www.rc.umd.edu/editions/beddoes/intro.html,404,,1.996,29.77
+124,http://www.hrionline.ac.uk/onlinefroissart/index.jsp,404,Cannot connect to host www.hrionline.ac.uk:80 ssl:default [Name or service not known],-1.0,-1.0
+125,http://www.rhyddiaithganoloesol.caerdydd.ac.uk/en/,200,,0.538,2.6
+126,http://www.newtonproject.sussex.ac.uk/prism.php?id=1,200,,1.585,9.25
+127,http://vbd.humnet.unipi.it,404,"Cannot connect to host vbd.humnet.unipi.it:80 ssl:default [Connect call failed ('131.114.72.8', 80)]",-1.0,-1.0
+128,http://vitanova.unipv.it/,404,'utf-8' codec can't decode byte 0xe0 in position 849: invalid continuation byte,-1.0,-1.0
+129,http://knarf.english.upenn.edu/,200,,2.64,1.81
+130,http://www.livingstoneonline.ucl.ac.uk,404,,0.999,0.19
+131,http://rmcisadu.let.uniroma1.it/boccaccio/,404,'utf-8' codec can't decode byte 0x92 in position 597: invalid start byte,-1.0,-1.0
+132,http://en.wikibooks.org/wiki/The_Devonshire_Manuscript,200,,1.191,107.58
+133,http://www.bvh.univ-tours.fr/#,404,'utf-8' codec can't decode byte 0xe9 in position 272: invalid continuation byte,-1.0,-1.0
+134,http://digital.library.northwestern.edu/codex/index.html,404,,1.516,4.38
+135,https://www.ucl.ac.uk/Bentham-Project/publications/martins-memorandoms/martins-memorandoms.html,502,,1.052,6.21
+136,http://www.cn-telma.fr/actesroyaux/index/,404,Cannot connect to host www.cn-telma.fr:80 ssl:default [Temporary failure in name resolution],-1.0,-1.0
+137,http://quod.lib.umich.edu/a/amverse/,200,,2.175,28.14
+138,http://www.bodleianshop.co.uk/a-digital-facsimile-of-oxford-bodleian-library-ms-junius-11.html,404,,1.051,126.28
+139,http://candide.nypl.org/text/,404,Cannot connect to host candide.nypl.org:80 ssl:default [Name or service not known],-1.0,-1.0
+140,http://www.getto-chronik.de/de/,200,,0.676,8.3
+141,http://www.upress.virginia.edu/content/clotel-william-wells-brown-electronic-scholarly-edition,404,,0.957,413.99
+142,http://dasi.humnet.unipi.it/,200,,0.986,1.17
+143,http://datini.archiviodistato.prato.it/la-ricerca/le-edizioni-delle-lettere#n,200,,1.227,22.59
+144,http://www.shikshapatri.org.uk/,200,,1.004,4.1
+145,http://ebeowulf.uky.edu/,200,,1.439,9.29
+146,http://www.edickinson.org/,202,,1.16,0.0
+147,http://rotunda.upress.virginia.edu/edc/,200,,1.614,4.69
+148,http://abo.annotatedbooksonline.com/#binding-5-1,200,,0.804,19.32
+149,http://www.mpiwg-berlin.mpg.de/Galileo_Prototype/MAIN.HTM,200,,1.144,3.04
+150,http://kundigebok.stadtarchiv.goettingen.de/kb2Web/html/,404,Cannot connect to host kundigebok.stadtarchiv.goettingen.de:80 ssl:default [Name or service not known],-1.0,-1.0
+151,http://rotunda.upress.virginia.edu/melville/,200,,1.62,6.91
+152,http://letters.mozartways.com/,200,,2.633,125.26
+153,http://courses.washington.edu/otap/intibah/intibah.html,404,,1.047,0.16
+154,http://www.nma.gov.au/collections/collection_interactives/jerilderie_letter,404,,2.112,69.29
+155,http://www.chlt.org/sandbox/colloquia/argenis/index.html,404,Cannot connect to host chlt.orgsandbox:443 ssl:default [Name or service not known],-1.0,-1.0
+156,http://rotunda.upress.virginia.edu/EmilyShore/make-page.xqy,200,,1.72,6.01
+157,http://www.phalese.fr/Maldoror/index.php?title=Accueil,500,,1.153,0.0
+158,http://www.cn-telma.fr/nesle/index/,404,Cannot connect to host www.cn-telma.fr:80 ssl:default [Temporary failure in name resolution],-1.0,-1.0
+159,http://dohistory.org/diary/index.html,200,,1.708,22.59
+160,http://www.oliveschreiner.org/,200,,1.143,6.13
+161,http://rabindranathtagore-150.gov.in/online-voriourum.html,404,Cannot connect to host rabindranathtagore-150.gov.in:80 ssl:default [Temporary failure in name resolution],-1.0,-1.0
+162,http://www.cn-telma.fr/ordonnances/index/,404,Cannot connect to host www.cn-telma.fr:80 ssl:default [Temporary failure in name resolution],-1.0,-1.0
+163,http://septuaginta.net/,200,,1.887,41.04
+164,http://www.siratbanihilal.ucsb.edu/start-0,404,,0.932,33.9
+165,http://sks.dk/forside/indhold.asp,200,,2.112,18.57
+166,http://ctb.kantl.be/publicaties/de-teleurgang-van-den-waterhoek-elektronisch-kritische-editie-electronic-c,200,,1.295,19.07
+167,http://rotunda.upress.virginia.edu/founders/ADMS.html,200,,1.713,3.5
+168,http://drapier.dho.ie/node/232,404,,1.57,80.17
+169,http://hridigital.shef.ac.uk/gide,200,,1.324,3.07
+170,http://www.lib.unb.ca/Texts/marston/,404,,2.499,105.74
+171,http://rth.org.uk/collections/bevan-dewar-letters,200,,0.913,24.5
+172,http://www.abdn.ac.uk/diss/historic/collects/bps/index.html,200,,0.621,2.8
+173,http://www.textualcommunities.usask.ca/web/canterbury-tales,404,Cannot connect to host www.textualcommunities.usask.ca:80 ssl:default [Name or service not known],-1.0,-1.0
+174,http://digitaltemple.rotunda.upress.virginia.edu/,200,,1.066,3.97
+175,http://www.nb.no/baser/diriks/virtuellealbum/index.html,404,,1.521,0.32
+176,http://rotunda.upress.virginia.edu/founders/RNCN.html,200,,1.745,3.42
+177,http://rotunda.upress.virginia.edu/dmde/,200,,1.874,5.56
+178,http://geesebook.asu.edu,200,,0.468,2.68
+179,https://www.hrionline.ac.uk/hartlib/,404,Cannot connect to host www.hrionline.ac.uk:443 ssl:default [Name or service not known],-1.0,-1.0
+180,http://rotunda.upress.virginia.edu/crossetti/,200,,1.881,5.77
+181,http://rotunda.upress.virginia.edu/arnold/,200,,1.895,5.31
+182,http://www.maloryproject.com/,200,,0.958,16.92
+183,http://rotunda.upress.virginia.edu/founders/ARHN.html,200,,1.868,3.92
+184,http://rotunda.upress.virginia.edu/PinckneyHorry/,200,,1.896,6.74
+185,http://rotunda.upress.virginia.edu/founders/GEWN.html,200,,1.879,3.49
+186,http://rotunda.upress.virginia.edu/founders/JSMN.html,200,,1.898,3.58
+187,http://rotunda.upress.virginia.edu/founders/TSJN.html,200,,1.898,3.84
+188,http://hridigital.shef.ac.uk/galdos,200,,1.398,0.19
+189,http://vlib.iue.it/carrie/documents/planctus/planctus/index.html,503,,0.918,56.19
+190,http://www.birmingham.ac.uk/research/activity/leopardi/projects/index.aspx,200,,1.644,0.0
+191,http://edities.kantl.be/loveling/,200,,1.143,7.04
+192,http://nzetc.victoria.ac.nz/tm/scholarly/tei-corpus-golder.html,200,,2.562,0.81
+193,http://trove.nla.gov.au/work/33020507,200,,2.384,5.51
+194,http://www.nlx.com/collections/124,200,,1.498,11.02
+195,http://www.birmingham.ac.uk/research/activity/leopardi/projects/barcelona.aspx,404,,1.521,33.04
+196,http://www.getty.edu/research/mellini/,200,,2.116,102.77
+197,http://iaa.bibl.u-szeged.hu/index.php,200,,0.621,19.93
+198,http://hellenic-institute.rhul.ac.uk/Research/Etheridge/,404,Server disconnected,-1.0,-1.0
+199,http://www.ssrq-sds-fds.ch/teiviewer/,200,,1.322,0.73
+200,http://dantiscus.al.uw.edu.pl/,200,,0.916,33.17
+201,http://sd-editions.com/AnaAdditional/commediaonline/home.html,200,,0.857,2.43
+202,http://quod.lib.umich.edu/m/machyn/,200,,1.018,9.66
+203,http://www.ssrq-sds-fds.ch/online/,200,,1.362,6.38
+204,http://www.realbiblioteca.es/gomez_manrique/cancionero.html,200,,1.236,162.7
+205,http://www.aschart.kcl.ac.uk/index.html,200,,1.162,5.98
+206,http://byzantini.st/ChronicleME/,200,,1.141,3.23
+207,http://www.desgodets.net,200,,0.667,9.28
+208,http://diglib.hab.de/wdb.php?dir=edoc/ed000228&lang=en,200,,0.532,0.9
+209,http://www.forschungsdatenarchiv.escience.uni-tuebingen.de/adlils/,404,Cannot connect to host www.forschungsdatenarchiv.escience.uni-tuebingen.de:80 ssl:default [Name or service not known],-1.0,-1.0
+210,http://jechante.exeter.ac.uk/archive/index.html,404,Cannot connect to host jechante.exeter.ac.uk:80 ssl:default [Name or service not known],-1.0,-1.0
+211,http://www.alberteinstein.info/,200,,1.565,56.21
+212,http://pelavicino.labcd.unipi.it/,200,,1.538,44.88
+213,http://www.woolfonline.com/,404,'utf-8' codec can't decode byte 0xe9 in position 35564: invalid continuation byte,-1.0,-1.0
+214,http://www.bovary.fr/,200,,1.209,2420.97
+215,http://digital.nypl.org/schomburg/writers_aa19/,200,,2.032,37.25
+216,http://beta.faustedition.net/,200,,1.045,16.08
+217,https://fontane-nb.dariah.eu/index.html,200,,1.996,37.21
+218,http://senckenberg.ub.uni-frankfurt.de/s/startpage,200,,1.173,8.71
+219,http://alexandredumas.org/,200,,1.236,7.92
+220,http://telota.bbaw.de/AvHBriefedition/index.html,200,,1.519,15.94
+221,http://burckhardtsource.org/,200,,1.286,6.32
+222,http://jewish-history-online.net/,200,,1.138,77.55
+223,http://inamidst.com/stuff/sappho/,200,,0.609,173.87
+224,http://www.orlandofurioso.org/,404,,-1.0,-1.0
+225,http://www.schopenhauer.uni.wroc.pl/,200,,1.106,489.82
+226,http://claviusontheweb.it/,404,,-1.0,-1.0
+227,http://fleischmanndiaries.ucc.ie/,200,,1.325,29.76
+228,http://www.deutschestextarchiv.de/,200,,1.357,33.65
+229,http://tarsian.vital-it.ch/,200,,1.032,15.09
+230,http://dh.tcd.ie/letters1916/,404,"Cannot connect to host dh.tcd.ie:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]",-1.0,-1.0
+231,http://www.ittig.cnr.it,200,,1.909,60.51
+232,http://wjc.bodleian.ox.ac.uk,200,,1.087,6.29
+233,https://romaninscriptionsofbritain.org/,200,,0.785,33.65
+234,http://ta.sandrart.net/de/,200,,1.172,3.4
+235,https://acdh.oeaw.ac.at/abacus/,200,,0.406,11.49
+236,http://darwin-online.org.uk/Variorum/,200,,1.394,7.63
+237,https://www2.hf.uio.no/damos/,200,,1.001,5.85
+238,http://www.vnsbrieven.org/VNS/,200,,1.248,9.11
+239,http://edities.kantl.be/streuvels/,200,,1.582,10.81
+240,http://sauer-seuffert.onb.ac.at/,200,,1.265,26.34
+241,http://www1.unipa.it/paolo.monella/ursus/transcription.html,404,,1.367,0.54
+242,http://codyarchive.org/,200,,1.036,8.02
+243,http://earlymusictheory.org/Tinctoris/,200,,0.436,6.88
+244,http://digitalathenaeus.org/,404,Cannot connect to host digitalathenaeus.org:80 ssl:default [No address associated with hostname],-1.0,-1.0
+245,http://guillelmus.uni-koeln.de/,200,,0.994,367.71
+246,http://musilonline.at/,200,,0.425,105.36
+247,http://www.univie.ac.at/tocharian/,200,,1.164,10.85
+248,http://www.berliner-intellektuelle.eu/,200,,1.134,3.86
+249,http://www.bdpn.unam.mx/,404,Cannot connect to host www.bdpn.unam.mx:80 ssl:default [Name or service not known],-1.0,-1.0
+250,http://www.doaks.org/resources/bliss-tyler-correspondence/,200,,2.379,42.88
+251,https://edition-humboldt.de/,200,,1.06,35.4
+252,http://vespasianodabisticciletters.unibo.it,404,'utf-8' codec can't decode byte 0xe0 in position 1014: invalid continuation byte,-1.0,-1.0
+253,http://erdmuthe.thulb.uni-jena.de,200,,1.348,25.57
+254,https://digital.janeaddams.ramapo.edu/,200,,1.187,18.68
+255,http://www.penseesdepascal.fr,200,,1.088,31.63
+256,http://gams.uni-graz.at/horvath-edition,200,,1.253,13.02
+257,http://library.trinity.edu/lament/index.html,200,,1.341,29.42
+258,http://beethovens-werkstatt.de/,200,,0.798,55.27
+259,http://charles-harpur.org/,200,,1.621,0.1
+260,http://damaboba.unibo.it/,200,,1.101,4.02
+261,http://www.cartas-de-ultramar.net/,200,,0.745,4.9
+262,http://magyar-irodalom.elte.hu/gepesk/kd/edesanna/,404,'utf-8' codec can't decode byte 0xe1 in position 26: invalid continuation byte,-1.0,-1.0
+263,http://digiphil.hu/context:edesanna,200,,1.922,6.39
+264,http://digiphil.hu/context:alomeghal,200,,1.84,9.3
+265,http://digiphil.hu/context:aranysarkany,200,,1.978,7.96
+266,http://digiphil.hu/context:estikornel,200,,2.063,12.95
+267,http://www.tankonyvtar.hu/hu/tartalom/tkt/fanchali-job-kodex/adatok.html,404,Cannot connect to host regi.tankonyvtar.hu:443 ssl:default [Name or service not known],-1.0,-1.0
+268,http://magyar-irodalom.elte.hu/totnes/eotvos/,404,'utf-8' codec can't decode byte 0xf6 in position 91: invalid start byte,-1.0,-1.0
+269,http://magyar-irodalom.elte.hu/ja/,404,'utf-8' codec can't decode byte 0xf3 in position 22: invalid continuation byte,-1.0,-1.0
+270,http://textus.elte.hu/ja/,200,,1.279,1.7
+271,http://estoria.bham.ac.uk/,200,,1.212,28.41
+272,http://www.tankonyvtar.hu/en/tartalom/tkt/argirus-historiaja/adatok.html,404,,1.303,10.98
+273,http://magyar-irodalom.elte.hu/gepesk/wathay/,404,'utf-8' codec can't decode byte 0xf6 in position 752: invalid start byte,-1.0,-1.0
+274,http://magyar-irodalom.elte.hu/gepesk/zrinyi/,404,'utf-8' codec can't decode byte 0xed in position 150: invalid continuation byte,-1.0,-1.0
+275,http://magyar-irodalom.elte.hu/gepesk/rimay/,404,'utf-8' codec can't decode byte 0xe1 in position 32: invalid continuation byte,-1.0,-1.0
+276,http://www.tankonyvtar.hu/hu/tartalom/tkt/rimay-janos-ifjukori/,404,Cannot connect to host regi.tankonyvtar.hu:443 ssl:default [Name or service not known],-1.0,-1.0
+277,http://magyar-irodalom.elte.hu/effectus/,200,,1.268,0.46
+278,http://sermones.elte.hu/erdy/,200,,1.241,212.21
+279,http://sermones.elte.hu/exemplumadatbazis/,200,,1.31,70.81
+280,http://deba.unideb.hu/deba/kazinczy_muvei/,200,,0.706,17.8
+281,http://deba.unideb.hu/deba/csokonai_muvei/,200,,0.814,19.14
+282,http://deba.unideb.hu/deba/szerdahely/,200,,1.016,7.34
+283,http://deba.unideb.hu/deba/gyongyossi/,200,,1.169,6.93
+284,http://deba.unideb.hu/deba/berzsenyi/,200,,1.209,9.54
+285,http://deba.unideb.hu/deba/levelezes/,200,,1.234,10.89
+286,http://deba.unideb.hu/deba/raday/,200,,1.273,10.08
+287,http://deba.unideb.hu/deba/Margit-legenda_Szent_Margit_elete_1510/index.html,200,,1.3,0.47
+288,http://deba.unideb.hu/deba/orpheus/,200,,1.318,8.42
+289,http://deba.unideb.hu/deba/magyar_museum/,200,,1.337,5.59
+290,https://sturm-edition.de,200,,0.526,12.61
+291,http://magyar-irodalom.elte.hu/gepesk/bbom/itart.htm,404,'utf-8' codec can't decode byte 0xe1 in position 32: invalid continuation byte,-1.0,-1.0
+292,http://magyar-irodalom.elte.hu/gepesk/eloszo/,200,,1.336,0.11
+293,http://krk.szabolorinc.hu/dokumentumok.htm,404,'utf-8' codec can't decode byte 0xf3 in position 218: invalid continuation byte,-1.0,-1.0
+294,http://digiphil.hu/context:atett,404,,1.34,0.62
+295,http://digiphil.hu/context:mkk39,200,,2.542,24.78
+296,http://digiphil.hu/context:mkk42,200,,2.466,16.87
+297,http://ps.clul.ul.pt/,200,,0.603,8.11
+298,https://www.jeanpaul-edition.de/,200,,1.747,17.67
+299,http://digi.ub.uni-heidelberg.de/ahd/,200,,1.0,14.98
+300,https://astree.tufts.edu,200,,1.081,0.31
+302,https://traveldigital.acdh.oeaw.ac.at/,200,,1.19,9.17
+303,https://maechtekongresse.acdh.oeaw.ac.at/,200,,0.955,93.13
+304,https://edition.onb.ac.at/okopenko,200,,1.64,30.78
+305,https://edition.mgh.de/001/,200,,1.018,5.69
+306,http://frhu20.iti.btk.mta.hu/,200,,1.233,10.79
+307,https://www.arthur-schnitzler.de/edition/genetisch,200,,1.029,3.27
+308,https://www.hamann-ausgabe.de,200,,1.016,7.75
+309,http://grundtvigsvaerker.dk,200,,3.763,21.65
+310,https://thun-korrespondenz.acdh.oeaw.ac.at/,200,,1.151,8.99
+311,https://igcyr.unibo.it,200,,0.928,15.1
+312,http://www1.unipa.it/paolo.monella/romualdus/,404,,1.408,0.54
+313,https://www.hahnemann-edition.de/index.html,200,,1.248,29.33
+314,https://schnitzler-briefe.acdh.oeaw.ac.at,200,,1.231,23.56
+315,http://www.ehu.eus/monumenta/lazarraga/index.html,404,'utf-8' codec can't decode byte 0xf3 in position 2505: invalid continuation byte,-1.0,-1.0
+316,https://www.bayerischer-staatsrat.de,200,,0.662,24.16
+317,https://db.innovatingknowledge.nl/edition,200,,1.127,221.29
+318,https://lts.fortunoff.library.yale.edu/,200,,1.992,0.35
+319,https://humboldt.unibe.ch/text,200,,1.274,16.79
+320,https://making-mysticism.org/edition/1.0/html/,200,,0.922,32.65
+321,http://edition.onb.ac.at/handke-notizbuecher,200,,0.942,20.52
+322,https://semper-edition.ch/,200,,0.898,0.42
+323,https://tir.univie.ac.at,200,,1.153,27.84
+324,https://lexlep.univie.ac.at,200,,0.7,32.46
+325,https://schnitzler-chronik.acdh.oeaw.ac.at/,200,,1.283,16.82
+326,https://pollaczek.acdh.oeaw.ac.at/,200,,0.9,15.31
+327,https://schnitzler-orte.acdh.oeaw.ac.at/,200,,1.34,17.99
+328,https://schnitzler-lektueren.acdh.oeaw.ac.at/,200,,0.305,24.51
+329,https://schnitzler-tagebuch.acdh.oeaw.ac.at/,200,,0.52,14.26
+330,https://schnitzler-zeitungen.acdh.oeaw.ac.at/,200,,1.083,9.86
+331,https://pmb.acdh.oeaw.ac.at/,200,,0.851,21.42
+332,https://schnitzler-bahr.acdh.oeaw.ac.at/,200,,0.819,17.1
+333,https://irt2021.inslib.kcl.ac.uk/,200,,0.925,6.85
+334,https://ancientwisdoms.ac.uk/library/kekaumenos-consilia-et-narrationes/index.html,200,,0.914,13.0
+335,https://ancientwisdoms.ac.uk/library/,200,,1.233,13.15
+336,https://www.koenigsfelden.uzh.ch,200,,2.479,61.09
+337,https://megadigital.bbaw.de/,200,,1.305,39.96
+338,https://amp.acdh.oeaw.ac.at,200,,0.634,21.74
+339,https://pta.bbaw.de,200,,1.033,36.41
+340,https://openarabicpe.github.io/,200,,0.582,18.0
+341,https://tei.nplp.pl/categories/korespondencja-jana-lechonia-i-kazimierza-wierzynskiego,200,,1.247,184.4
+342,https://tei.nplp.pl/categories/korespondencja-mieczyslawa-grydzewskiego-i-kazimierza-i-haliny-wierzynski,200,,1.27,643.1
+343,https://mrp.oeaw.ac.at,200,,0.737,50.76
+344,https://qhod.net/,200,,1.17,16.24
+345,https://kaiserin-eleonora.oeaw.ac.at/,200,,1.25,14.74

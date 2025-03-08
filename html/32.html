@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>St Gall Priscian Glosses</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+<!-- Custom CSS -->
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,400i|GFS+Neohellenic" rel="stylesheet">
+<link rel="stylesheet" media="screen" href="includes/priscian.css" />
+
+<!-- scripts --> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="includes/jquery-3.2.1.min.js"></script>
+<script src="includes/jquery.auto-complete.min.js"></script>
+<script src="includes/sorttable.js"></script>
+
+<script type="text/javascript">
+// sroll up on load; this brings anchored text into view (from behind the sticky navbar)
+window.addEventListener('load', function() {
+	window.scrollBy(0, -500);
+});
+
+</script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg px-4 py-2 border-bottom border-secondary shadow sticky-top" style="background-color: #eee8aa; ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">St Gall Priscian Glosses</a>
+    <span class="small">v2.1</span>
+    
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ps-5 me-auto mb-2 mb-lg-0">
+        <li class="nav-item px-2"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="/forms">Old Irish forms</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="/glosses">About the glosses</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="/resource">About the digital resource</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- main row, with two columns (collapsable) -->
+<div class="row bg-light px-4 py-3 border-bottom collapse show" id="searchPanel">
+
+  <!-- browse column -->
+  <div class="col-lg-5 px-4 pb-5 border-end">
+
+<h2 class="h3 border-bottom">Browse Priscian</h2>
+
+<!-- go to book -->
+<form action="index.php" method="get" id="goToBook">
+    <div class="row">
+      <div class="col-lg-4 py-1">
+<label class="form-label" class="form-label" for="bb">Go to book:</label>
+      </div>
+      <div class="col-lg-8 py-1">
+
+<select class="form-select" id="bb" name="bb" onchange="document.getElementById('goToBook').submit(); ">
+<option value=""></option>
+<option value="0">Praefatio</option><option value="1">1: De uoce, de littera</option><option value="2">2: De syllaba, de dictione, de oratione, de nomine, etc.</option><option value="3">3: De comparatione, de superlativo, de diminutivo</option><option value="4">4: De denominatiuis</option><option value="5">5: De generibus, de numeris, de figuris, de casu</option><option value="6">6: De nominatiuo et genetiuo casu</option><option value="7">7: De ceteris casibus</option><option value="8">8: De uerbo</option><option value="9">9: De generali uerbi declinatione</option><option value="10">10: De praeterito perfecto tertiae coniugationis</option><option value="11">11: De participio</option><option value="12">12: De pronomine</option><option value="13">13: De casibus [pronominum]</option><option value="14">14: De praepositione</option><option value="15">15: De aduerbio, de interiectione</option><option value="16">16: De coniunctione</option><option value="17">17: De constructione</option><option value="18">18: De constructione</option></select> 
+      </div>
+    </div>
+</form>
+
+<!-- go to Keil page -->
+<form action="index.php" method="get" id="goToBook">
+    <div class="row">
+      <div class="col-lg-4 py-1">
+<label class="form-label" for="kP">Or to Hertz, ed.:</label>
+      </div>
+      <div class="col-lg-8 py-1">
+      
+<i>GL</i> 
+<select class="form-select d-inline-flex" style="width: 70px;" name="kV">
+<option value="2">II </option><option value="3">III </option></select>
+page 
+<input class="form-control d-inline-flex" type="text" id="kP" name="kP" value="" style="width: 60px; "/>
+<input class="btn btn-secondary btn-sm" type="submit" value="go" />
+      </div>
+    </div>
+</form>
+
+<!-- go to MS page -->
+<form action="index.php" method="get" id="goToBook">
+    <div class="row">
+      <div class="col-lg-4 py-1">
+<label class="form-label" for="ms">Or to MS page:</label>
+      </div>
+      <div class="col-lg-8 py-1">
+<input class="form-control d-inline-flex" type="text" id="ms" name="ms" value=""  style="width: 60px; "/>
+<input class="btn btn-secondary btn-sm" type="submit" value="go" />
+(e.g. 10, 10b; range 1–249)
+      </div>
+    </div>
+</form>
+
+  </div>
+
+
+  <!-- search column -->
+  <div class="col-lg-5 px-4 border-end">
+
+<!-- search options -->
+<h2 class="h3 border-bottom">Search glosses</h2>
+
+<form action="index.php" method="get">
+
+<!-- search for text -->
+    <div class="row">
+      <div class="col-lg-4 py-1">
+<label class="form-label" for="s">Search for text:</label> 
+      </div>
+      <div class="col-lg-8 py-1">
+<input class="form-control" class="search" type="text" id="s" name="s" value="" />
+
+Search in:
+<div class="form-check-inline">
+<input class="form-check-input" type="radio" id="si_gl" name="si" value="gl" checked="checked" />
+<label class="form-label" class="option" for="si_gl">glosses/lemmata</label>
+</div>
+<div class="form-check-inline">
+<input class="form-check-input" type="radio" id="si_pr" name="si" value="pr" />
+<label class="form-label" class="option" for="si_pr">Priscian</label>
+</div>
+
+      </div>
+    </div>
+
+<!-- search Thes. 
+<form action="index.php" method="get">
+<label class="form-label" for="thes">Search by <i>Thes.</i> ref.</label>
+<input class="form-control" type="text" id="thes" name="thes" style="width: 35px; "/>
+<input type="submit" value="go"/>
+<span class="note">(e.g. 14a6)</span>
+-->
+
+<!-- restrict by type -->
+    <div class="row">
+      <div class="col-lg-4 py-1">
+<label class="form-label" for="t">Within gloss type:</label>
+      </div>
+      <div class="col-lg-8 py-1">
+
+<select class="form-select" id="t" name="t">
+<option value="">(any)</option>
+<option value="1">1: [Glosses on prosody]</option><option value="11">11: Length mark indicating syllable length in poetic quotations</option><option value="12">12: Glosses on the length of syllables</option><option value="13">13: Elaborate comment on metre</option><option value="2">2: [Lexical glosses]</option><option value="211">211: Trans. into Old Irish</option><option value="212">212: Synonyms</option><option value="213">213: Negated antonyms</option><option value="214">214: Hyponym defined by a hypernym with differentia specifica</option><option value="215">215: Definition given by an entire sentence</option><option value="221">221: Greek glosses and glosses over Greek words</option><option value="222">222: Use of different prefixes</option><option value="223">223: Adjectives glossed with a noun in the genitive (or another case)</option><option value="23">23: Differentiae</option><option value="24">24: Further derivations in a gloss</option><option value="25">25: Glosses showing the original form of the word</option><option value="3">3: [Glosses on morphology (grammatical glosses))]</option><option value="31">31: Grammatical glosses on the noun</option><option value="311">311: Glosses on case forms</option><option value="3111">3111: Glosses on case: nominative</option><option value="3112">3112: Glosses on case: vocative</option><option value="3113">3113: Glosses on case: genitive</option><option value="3114">3114: Glosses on case: dative</option><option value="3115">3115: Glosses on case: accusative</option><option value="3116">3116: Glosses on case: ablative</option><option value="312">312: Glosses on number</option><option value="313">313: Glosses on gender and various other morphological points</option><option value="32">32: Grammatical glosses on the pronoun</option><option value="321">321: Glosses on pronouns in general</option><option value="322">322: Glosses on relative pronouns</option><option value="3221">3221: Rel. pronoun glossed by its antecedent</option><option value="3222">3222: Rel. pronoun glossed by the gloss above the antecedent</option><option value="3223">3223: Rel. pronoun glossed by an interpretation or lexical equivalent of the antecedent</option><option value="3224">3224: Rel. pronoun without identifiable antecedent</option><option value="323">323: Other pronouns</option><option value="3231">3231: Interchangeability of demonstrative pronouns or Old Irish glosses solving ambiguity</option><option value="3232">3232: Glosses over pronouns referring to a concept in the preceding/following line/paragraph</option><option value="3233">3233: Glosses which differ in case from the pronoun and can substitute it</option><option value="33">33: Grammatical glosses on the verb and the participle</option><option value="331">331: General glosses on morphology</option><option value="332">332: Morphological glosses on tense</option><option value="333">333: Morphological glosses on mood</option><option value="334">334: Morphological glosses on the participle and the gerund</option><option value="34">34: Grammatical glosses on the adverb</option><option value="35">35: Grammatical glosses on the conjunction</option><option value="36">36: Grammatical glosses on the preposition</option><option value="37">37: Grammatical glosses on the interjection</option><option value="4">4: [Glosses on syntax]</option><option value="41">41: Syntactical glosses using symbols</option><option value="4111">4111: Symbols correlating adjectives/prepositions with substantives</option><option value="4112">4112: Symbols correlating a genitive in apposition with a substantive</option><option value="4121">4121: Symbols correlating a rel. pronoun with its antecedent</option><option value="4122">4122: Symbols correlating other pronouns with nouns</option><option value="4123">4123: Symbols correlating verbal forms, verbs—subjects, etc.</option><option value="413">413: Glosses establishing word order with the help of different symbols</option><option value="4141">4141: Symbols clarifying the skeletal structure of a sentence</option><option value="4142">4142: Symbols correlating two sentences</option><option value="4143">4143: Symbols supplying word(s) ommited by the author</option><option value="4144">4144: Symbols correlating theoretical explanation with examples</option><option value="4145">4145: Various other uses</option><option value="42">42: Syntactical glosses using words</option><option value="421">421: Glosses identifying a speaker or an example</option><option value="422">422: Suppletive glosses</option><option value="4221">4221: Suppletive nouns/pronouns in the nominative</option><option value="4222">4222: Suppletive nouns/pronouns in the genitive</option><option value="4223">4223: Suppletive nouns/pronouns in the dative</option><option value="4224">4224: Suppletive nouns/pronouns in the accusative</option><option value="4225">4225: Suppletive nouns/pronouns in the vocative</option><option value="4226">4226: Suppletive adverbial adjuncts</option><option value="4227">4227: Suppletive adjectives and adjectival clauses</option><option value="4228">4228: Suppletive verbs and short clauses</option><option value="4229">4229: Suppletive conjunctions or prepositions</option><option value="423">423: Glosses modifying adjectives</option><option value="424">424: <i>adit</i> glosses</option><option value="5">5: [Explanatory glosses]</option><option value="51">51: Glosses decoding figures of speech</option><option value="52">52: Glosses summarizing content</option><option value="53">53: Cross-references</option><option value="541">541: (Elaborate) comment on the main text</option><option value="542">542: <i>quia</i> glosses</option><option value="543">543: Glosses elucidating the main text</option><option value="55">55: Etymological glosses</option><option value="56">56: Encyclopedic glosses</option><option value="561">561: Geographical names</option><option value="562">562: Unusual objects</option><option value="563">563: Proper names</option><option value="57">57: Source glosses</option><option value="571">571: Grammatical sources identified/Priscian confronted with other sources</option><option value="572">572: Glosses revealing an acquaintance with Latin authors or Roman mythology</option><option value="58">58: Glosses giving variant readings</option><option value="59">59: Glosses giving information about the socio-historical context</option></select>
+      </div>
+    </div>
+
+<!-- restrict to book -->
+    <div class="row">
+      <div class="col-lg-4 py-1">
+<label class="form-label" for="b">In book:</label>
+      </div>
+      <div class="col-lg-8 py-1">
+<select class="form-select" id="b" name="b">
+<option value="">(all)</option>
+<option value="0">Praefatio</option><option value="1">1: De uoce, de littera</option><option value="2">2: De syllaba, de dictione, de oratione, de nomine, etc.</option><option value="3">3: De comparatione, de superlativo, de diminutivo</option><option value="4">4: De denominatiuis</option><option value="5">5: De generibus, de numeris, de figuris, de casu</option><option value="6">6: De nominatiuo et genetiuo casu</option><option value="7">7: De ceteris casibus</option><option value="8">8: De uerbo</option><option value="9">9: De generali uerbi declinatione</option><option value="10">10: De praeterito perfecto tertiae coniugationis</option><option value="11">11: De participio</option><option value="12">12: De pronomine</option><option value="13">13: De casibus [pronominum]</option><option value="14">14: De praepositione</option><option value="15">15: De aduerbio, de interiectione</option><option value="16">16: De coniunctione</option><option value="17">17: De constructione</option><option value="18">18: De constructione</option></select> 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 py-1"></div>
+      <div class="col-lg-8 py-1">
+<input class="btn btn-secondary btn-sm" type="submit" value="go" />
+      </div>
+    </div>
+
+<!--
+<span class="note">(Or search for <a href="forms.php">Old Irish forms</a>.)</span>
+-->
+</form>
+
+    <!-- end search colum -->
+  </div>
+<!-- end panel -->
+</div>
+
+<div id="searchPanelToggle" class="container mt-3 d-lg-none">
+<button type="button" class="btn btn-sm btn-outline-secondary"
+  data-bs-toggle="collapse" data-bs-target="#searchPanel" aria-expanded="false" aria-controls="searchPanel">Show/hide browse and search options</button>
+</div>
+
+<script type="text/javascript">
+// on small screens, hide search panel by default; then make sure toggle button is available
+if ($(window).width() < 992) {
+  $('#searchPanel').removeClass('show');
+  $('#searchPanelToggle').removeClass('d-lg-none');
+}
+
+</script>
+
+
+<div class="container mt-5">
+
+<div class="row">
+   <div class="col-lg-6">
+
+<h2>The St Gall Priscian glosses</h2>
+
+<p>The Latin grammarian Priscian wrote his magisterial <i>Ars grammatica</i> at Constantinople around AD 527. His work is the most exhaustive compendium 
+of information on Latin (and Greek) language and literature to survive from the ancient world.
+</p>
+
+<p>The <a href="https://www.stiftsbezirk.ch/en/stiftsbibliothek">Stiftsbibliothek</a> (Abbey Library) in St Gall in Switzerland contains a manuscript, 
+numbered <a href="http://www.e-codices.unifr.ch/en/list/one/csg/0904">904</a>, that is a copy of Priscian
+written by Irish scribes in AD 850–1, probably in Ireland.
+It was brought to the Continent between 855 and 863, reaching St Gall sometime after 888. 
+</p>   
+
+<p>The manuscript also contains a commentary of over 9,400 interlinear and marginal glosses, as well as c. 3,000 symbol glosses. 
+About one-third of the verbal glosses are written in Old Irish, providing one of our earliest sources for the Irish language.</p>
+
+<p>This digital edition provides access to the text of the glosses alongside that of Priscian, and to additional resources inlcuding links to manuscript images 
+ and linguistic information on the Old Irish glosses.
+</p>
+
+<p>The text of the glosses was originally transcribed by <a href="https://www.ru.nl/en/people/hofman-r">Rijcklof Hofman</a> in the early 1990s. 
+<a href="http://www.pmoran.ie">Pádraic Moran</a> created the digital edition in 2010 and continues to maintain this site.
+<a href="https://uni-graz.academia.edu/BernhardBauer">Bernhard Bauer</a> supplied translations and linguistic information for the Old Irish glosses in 2017.
+(<a href="/resource">Read more…</a>)
+</p>
+
+<p>Browse the text and glosses by book:
+</p>
+
+<ul class="list-unstyled">
+<li><a href="/index.php?bb=0">Praefatio</a></li>
+<li><a href="/index.php?bb=1">Book 1: <i>De uoce, de littera</i></a></li>
+<li><a href="/index.php?bb=2">Book 2: <i>De syllaba, de dictione, de oratione, de nomine, etc.</i></a></li>
+<li><a href="/index.php?bb=3">Book 3: <i>De comparatione, de superlativo, de diminutivo</i></a></li>
+<li><a href="/index.php?bb=4">Book 4: <i>De denominatiuis</i></a></li>
+<li><a href="/index.php?bb=5">Book 5: <i>De generibus, de numeris, de figuris, de casu</i></a></li>
+<li><a href="/index.php?bb=6">Book 6: <i>De nominatiuo et genetiuo casu</i></a></li>
+<li><a href="/index.php?bb=7">Book 7: <i>De ceteris casibus</i></a></li>
+<li><a href="/index.php?bb=8">Book 8: <i>De uerbo</i></a></li>
+<li><a href="/index.php?bb=9">Book 9: <i>De generali uerbi declinatione</i></a></li>
+<li><a href="/index.php?bb=10">Book 10: <i>De praeterito perfecto tertiae coniugationis</i></a></li>
+<li><a href="/index.php?bb=11">Book 11: <i>De participio</i></a></li>
+<li><a href="/index.php?bb=12">Book 12: <i>De pronomine</i></a></li>
+<li><a href="/index.php?bb=13">Book 13: <i>De casibus [pronominum]</i></a></li>
+<li><a href="/index.php?bb=14">Book 14: <i>De praepositione</i></a></li>
+<li><a href="/index.php?bb=15">Book 15: <i>De aduerbio, de interiectione</i></a></li>
+<li><a href="/index.php?bb=16">Book 16: <i>De coniunctione</i></a></li>
+<li><a href="/index.php?bb=17">Book 17: <i>De constructione</i></a></li>
+<li></li>
+</ul>
+
+<p>(The manuscript breaks off in book 17. Book 18 is missing.)</p>
+
+   </div>
+   <div class="col-lg-6">
+
+<a href="http://www.e-codices.unifr.ch/en/csg/0904/25/medium"><img src="images/home_025.jpg" alt="St Gall, MS 904" class="img-fluid" /></a>
+
+   </div>
+</div>
+</div>
+
+
+<div class="container-fluid bg-secondary mt-5 p-5 text-light">
+Rijcklof Hofman, Pádraic Moran, Bernhard Bauer, <i>St Gall Priscian Glosses</i>, version 2.1 (2023)  &lt;http://www.stgallpriscian.ie/&gt; [accessed 8 March 2025]
+</div>
+
+<!-- scripts -->
+
+<!-- script for tooltips -->
+<script language="JavaScript" type="text/javascript">
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
+
+<!-- Default Statcounter code for stgallpriscian.ie
+http://www.stgallpriscian.ie -->
+<script type="text/javascript">
+var sc_project=5311348; 
+var sc_invisible=1; 
+var sc_security="e6af1850"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/5311348/0/e6af1850/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
+

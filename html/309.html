@@ -1,0 +1,517 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+ <meta http-equiv="Pragma" content="no-cache">
+<!-- Pragma content set to no-cache tells the browser not to cache the page
+     This may or may not work in IE -->
+ <meta http-equiv="expires" content="0">
+ <meta name="description" content="Læs Grundtvig på nettet - en ny tekstkritisk og videnskabelig udgave af N.F.S. Grundtvigs trykte forfatterskab" />
+<title>GV Grundtvigs Værker </title>
+<base href="https://www.xn--grundtvigsvrker-7lb.dk/">
+<link rel="shortcut icon"  href="img/gv.ico" />
+
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+
+<link href="css/jquery.cluetip.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="https://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="public/javascripts/jquery.mousewheel.min.js" ></script>
+<script type="text/javascript" src="public/javascripts/jquery.iviewer.js" ></script>
+<script type="text/javascript" src="public/javascripts/jquery.cluetip.js" ></script>
+<script type="text/javascript" src="public/javascripts/jquery.hoverIntent.js" ></script>
+<script type="text/javascript" src="public/javascripts/jquery.cookie.js" ></script>
+<script type="text/javascript" src="public/javascripts/jquery.scrollTo-min.js" ></script>
+<script type="text/javascript" src="public/javascripts/gv.js" ></script>
+<script type="text/javascript" src="public/javascripts/jquery.simplePagination.js" ></script>
+
+<link rel="stylesheet" href="public/stylesheets/jquery.iviewer.css" />
+
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="css/varListCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/msCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/txrCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/introCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/txtCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/comCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/mythCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/varCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/placeCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/simplePagination.css" rel="stylesheet" type="text/css" />
+
+
+
+<link href="css/bible.css" rel="stylesheet" type="text/css" />
+<link href="css/varListCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/bookInventoryCSS.css" rel="stylesheet" type="text/css" />
+<link href="css/biblDescCSS.css" rel="stylesheet" type="text/css" />
+
+<link href="css/jquery.cluetip.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript">
+		resize_window = function() {
+
+			// finn høyde på nettleservinduet
+			var window_height = $(window).height();
+                        var window_width = $(window).width();
+
+                     
+			hovedtekst_outer_offset = 140; // hvor mye mindre enn window_height de ytre boksene skal være
+			høyre_outer_offset = 137; // hvor mye mindre enn window_height de ytre boksene skal være
+
+			$("#hovedtekst").height(window_height - hovedtekst_outer_offset);
+			$("#høyre").height(window_height - høyre_outer_offset);
+                        $(".tabReader").height(window_height - høyre_outer_offset - 0);
+			$("#ny_kolonne_bar").height(window_height - høyre_outer_offset - 3);
+
+			hovedtekst_inner_offset = 257; // hvor mye mindre enn window_height de indre boksene skal være
+			høyre_inner_offset = 198; // hvor mye mindre enn window_height de indre boksene skal være
+
+                        if ($("#hovedtekst_select").css('display') == 'none') {
+                            
+                            $("#tekst_innhold").height(window_height - hovedtekst_inner_offset);
+                            
+                        } else {
+                            
+                          $("#tekst_innhold").height(window_height - hovedtekst_inner_offset - 41);
+                        }
+
+			$("#høyre_innhold").height(window_height - høyre_inner_offset);
+                        $(".ui-tabs-panel").height(window_height - høyre_inner_offset - 8 );
+                        $(".variantContent").height(window_height - høyre_inner_offset - 39 );
+                        $(".innledningContent").parent().height(window_height - høyre_inner_offset - 8 );
+                        $(".manusContent").height(window_height - høyre_inner_offset - 61 );
+                        $(".faksimileContent").height(window_height - høyre_inner_offset - 15 );
+                        $(".faksimile_frame").height(window_height - høyre_inner_offset + 24 );
+                        
+
+                       //resize html element so it fills the entire width
+                       
+                       var test =  $('#main .container').width();
+                     
+                       if(test > window_width) {$('html').width(test + 50);} // if we need to make the html bigger
+                         else {$('html').css('width', '100%');} // or if it needs to be smaller or stay the same
+
+                  };
+
+
+                var selectChapter = function() {
+
+                }
+
+		$(document).ready(function() {
+
+			// resize layout når siden laster
+			resize_window();
+                        $('.chapterSelector').change(function() {
+                            window.location = "/tekstvisning//" + $(this).val();
+                        });
+
+                        $('.chapterSelector').val("");
+
+                        // searchbox focus
+
+
+                        $('.clearSearch').bind('focus', function(){
+                            if( this.value == this.defaultValue ) {
+                                this.value = "";
+                            }
+                            $(this).css('color', '#222');
+                        });
+                        $('.clearSearch').bind('blur', function(){
+                            if( !this.value.length ) {
+                                this.value = this.defaultValue;
+                            }
+                            $(this).css('color', '#aaa');
+                        });
+                        
+
+
+                  });
+
+        $(window).resize(function() {
+
+                // resize layout når nettleserens vindu endrer størrelse
+                resize_window();
+
+        });
+
+	</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+
+  _gaq.push(['_setAccount', 'UA-54741983-1']);
+  _gaq.push(['_trackPageview']);
+
+
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body>
+    <script type='text/javascript' src='js/wz_tooltip_auto.js'></script>
+    
+<div id="header_small">
+
+	<div class="container">
+ 
+	<div id="logo"><a href="#"><img src="img/logo.png" /></a></div>
+
+	<div id="menu">
+	<ul id="nav">
+                
+		<li class="with_dropdown">
+                    <a class="a_with_dropdown" onclick="return true">Værker</a>
+                    <ul>
+                            <li><a href="/krono">Kronologisk</a></li>
+                            <li><a href="/alfa">Alfabetisk</a></li>
+                            <li><a href="/genre">Genrer</a></li>
+			</ul>
+		</li>
+                
+		<li class="with_dropdown">
+                    <a class="a_with_dropdown" onclick="return true">Registre</a>
+                    <ul>
+                        <li><a href="../reg">Registranten</a></li>
+                        <li><a href="../myter">Mytologisk register</a></li>
+                        <li><a href="../personer">Personregister</a></li>
+                        <!--li><a href="../steder">Stedregister</a></li-->
+                        <li><a href="/salmer">Salmeregister</a></li>
+                        <li><a href="../bibel">Bibelstedsregister</a></li>
+                        <li><a href="../bookinvent">Bogfortegnelse 1805</a></li>
+                        <li><a href="../bookinvent1839">Bogfortegnelse 1839</a></li>
+                    </ul>
+		</li>
+
+		<li class="with_dropdown">
+                    <a class="a_with_dropdown" onclick="return true">Værktøj</a>
+                    <ul>
+                        <li><a href="../tidslinje">Tidslinje</a></li>
+                        <li><a href="/kort">Kort</a></li>
+                        <li><a href="./avanceret">Avanceret søgning</a></li>
+                        <!--li><a href="./tools">Flere værktøjer</a></li-->
+                    </ul>
+		</li>
+
+		<li class="with_dropdown">
+                    <a class="a_with_dropdown" onclick="return true">Om GV</a>
+                    <ul>
+                        <li><a href="../vejledning/om_udgaven_vej">Vejledning</a></li>
+                        <li><a href="https://grundtvigcenteret.au.dk/kontakt">Kontakt</a></li>
+                        <li><a href="mailto:baunvig@cas.au.dk">Tilmeld nyhedsbrev</a></li>
+                    </ul>
+		</li>
+
+	</ul>
+
+	</div>
+
+		<div id="sok">
+                    <div id="sok_1">
+                    <form action="avanceret">
+                        <span id="avansert_sok">
+                            <br/>
+                        </span>
+                        <input type="hidden" name="grundtvig" value="jatak"/>
+                        <input type="hidden" name="kommentar" value="jatak"/>
+                        <input name="words" type="text" class="clearSearch" value="Søg i alt indhold"/>
+                        <input type="submit" value="Søg" />
+                    </form>
+                    </div>
+                    <div id="sok_2">
+                        <a href="/avanceret" style="color: #808080; font-size: 12px; font-family: sans-serif; text-decoration: none">Avanceret søgning</a>
+                    </div>
+                    
+                </div>
+        
+
+	</div>
+</div>
+
+
+
+<script>
+
+  $(document).ready(function() {
+// load intro
+ var introUrl = "ajax/getVeiledning/gv_vej";
+         $.ajax({
+             url: introUrl,
+             success: function(data) {
+                 var introContent = $("#intro_tekst");
+                 introContent.html(data);
+             }
+         });
+  });
+  
+//  .mySlides{display:none;}
+  
+</script>
+
+<div id="main">
+
+	<div class="container" id="underside_innhold">
+
+		<div id="submenu">
+		<div id="breadcrumbs"><a href="#">Forside</a> &raquo; </div>
+
+		</div>
+
+	<div class="kolonne1">
+
+	    <ul id="kolonne1_meny">
+	        
+	        <li class="header">Grundtvigs Værker</li>
+	        
+	        <li class="kolofon">Version 1.24</li>                       
+	        <li class="kolofon">November 2024</li>
+	        <li class="kolofon">© Center for Grundtvigforskning</li>
+	        <li class="kolofon">ved Aarhus Universitet</li>
+	        <li class="last"><a href="/vejledning/kolofon_vej">Medarbejdere</a></li>
+	        
+	        <li class="header">Værker</li>
+	        
+	        <li><a href="/krono">Kronologisk</a></li>
+	        <li><a href="/alfa">Alfabetisk</a></li>
+	        <li class="last"><a href="/genre">Genrer</a></li>
+
+	        <li class="header">Registre</li>
+	        
+	        <li><a href="../reg">Registranten </a></li>
+	        <li><a class="" href="../myter">Mytologisk register</a></li>
+	        <li><a href="../personer">Personregister</a></li>
+	        <!--li><a href="../steder">Stedregister</a></li-->
+	        <li><a href="/salmer">Salmeregister</a></li>
+	        <li><a href="../bibel">Bibelstedsregister</a></li>
+	        <li><a href="../bookinvent">Bogfortegnelse 1805</a></li>
+	        <li class="last"><a href="../bookinvent1839">Bogfortegnelse 1839</a></li>
+
+	        <li class="header">Værktøj</li>
+	        
+	        <li><a href="../tidslinje">Tidslinje</a></li>
+	        <li class="last"><a href="./avanceret">Avanceret søgning</a></li>
+	        
+
+	        <li class="header">Om GV</li>
+	        
+	        <li><a href="../vejledning/om_udgaven_vej">Vejledning</a></li>                        
+	    	<li class="last"><a href="mailto:baunvig@cas.au.dk">Kontakt</a></li>
+	        
+		</ul>
+
+	</div>
+
+	<div class="kolonne2" id="intro_tekst">
+
+	</div>
+
+	<div class="kolonne_right">
+		
+		<!--		
+		<div>
+			<img class="mySlides" src="img/grundtvig4.jpg" title="Kobberstik af E. Eckersberg efter tegning af C.W. Eckersberg, 1829" style="margin-left: -0.8em">
+			<img class="mySlides" src="img/grundtvig6.jpg" title="Constantin Hansen, 1847" style="margin-left: -0.1em"/>
+			<img class="mySlides" src="img/grundtvig5.jpg" title="C.F. Christensen, 1820, Frederiksborg Museum" style="margin-left: -0.1em"/>
+		</div>
+		
+		<script>
+			var myIndex=0;
+			carousel();
+			
+			function carousel() {
+				var i;
+				var x=document.getElementsByClassName("mySlides");
+				for (i=0; i < x.length; i++) {
+					x[i].style.display="none";
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex=1}
+				x[myIndex-1].style.display="block";
+				setTimeout(carousel, 4000);
+			}
+		</script>		
+		-->
+            
+		<ul id="kolonne1_meny">
+			
+			<li class="header">
+				<img src="img/grundtvig20.jpg" style="margin-left: 0.4em" title="N.F.S. Grundtvig, 1847, efter pennetegning af P. C. Skovgaard, kilde: Det Kgl. Biblioteks billedsamling."/>
+			</li>			
+			<a href="/tekstvisning/32604/0">
+				<li class="header">
+					<img src="img/faxIndex20.jpg" style="margin-left: 0em; width: 100%" title="Den Skielskørske Valgkamp (1853)."/>
+				</li>
+			</a>
+			
+			<!--li class="header">
+				<img src="img/grundtvig18.jpg" style="margin-left: -0.20em" title="Grundtvig, 1843, fra J. Th. Lundbyes dagbog, Ny Kgl. Saml. 4201, 4°, s. 142."/>
+			</li>			
+			<a href="/tekstvisning/29683/0">
+				<li class="header">
+					<img src="img/faxIndex18.jpg" style="margin-left: 0em; width: 100%" title="Stålstik af Martin Luther ledsaget af Grundtvigs 'Frihed, Tro og Moders-Maal' (1846)."/>
+				</li>
+			</a>
+			
+			<li class="header">
+				<img src="img/grundtvig17.jpg" style="margin-left: -0.20em" title="Grundtvig og sønnen Frederik (1857, ubekendt fotograf)."/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex17.jpg" style="margin-left: 0em; width: 100%" title="Den christelige Børnelærdom, 2. udg. (1868)."/>
+			</li>			
+			<li class="header">
+				<img src="img/grundtvig16.jpg" style="margin-left: -0.20em" title="Herman Vilhelm Bissens buste (1847-1848)."/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex16.jpg" style="margin-left: 0em; width: 100%" title="Danskeren, et Ugeblad, bind 3 (1850)."/>
+			</li>
+			<li class="header">
+				<img src="img/grundtvig15.jpg" style="margin-left: -0.35em" title="Julius Jacobsen, 1863."/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex15.jpg" style="margin-left: 0em; width: 100%" title="Tale til Folkeraadet om Dansk Kirkefrihed (1839)."/>
+			</li>			
+			<li class="header">
+				<img src="img/grundtvig14.jpg" style="margin-left: -0.35em" title="Fotografi efter maleri af C.F. Christensen. Det Kgl. Biblioteks billedsamling."/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex14.jpg" style="margin-left: 0em; width: 100%" title="Norges Konge-Krønike af Snorro Sturlesøn. Første Deel (1818)."/>
+			</li>
+			
+			<li class="header">
+				<img src="img/grundtvig13.jpg" style="margin-left: -0.35em" title="Biskop Grundtvig. Efter tegning i Frederika Bremers skitsebog. Det Kgl. Biblioteks billedsamling."/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex13.jpg" style="margin-left: 0em; width: 100%" title="Beowulfes Beorh eller Bjovulfs-Drapen, det Old-Angelske Heltedigt paa Grund-Sproget."/>
+			</li>			
+			<li class="header">
+				<img src="img/grundtvig12.jpg" style="margin-left: -0.1em" title="H.P. Hansen, 1883. Træsnit efter maleri af P.C. Skovgaard, 1847"/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex12.jpg" style="margin-left: 0em; width: 100%" title="[Til mine to Sønner], Grundtvig-arkivet, fasc. 389.35, Det Kongelige Bibliotek, København."/>
+			</li>
+			
+			<li class="header">
+				<img src="img/grundtvig11.jpg" title="xxx" style="margin-left: -0.1em"/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex11.jpg" style="margin-left: 0em; width: 100%" title="xxx"/>
+			</li>
+			
+			<li class="header">
+				<img src="img/grundtvig10.jpg" title="Ad. Lønborg, 1872" style="margin-left: -0.1em"/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex11.jpg" style="margin-left: 0em; width: 100%" title="Titelbladet til N.F.S. Grundtvig: &#x201C;Sang i Anledning af Majestæternes Sölvbryllup den 22de Mai 1840&#x201D; (1840)"/>
+			</li>
+			<li class="header">
+				<img src="img/grundtvig8.jpg" title="Constantin Hansen, 1846" style="margin-left: -0.1em"/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex9.jpg" style="margin-left: 0em; width: 100%" title="Titelbladet til N.F.S. Grundtvig: Til Gotfred af Ghemens Skaal den 24de Juni 1840 (1840)"/>
+			</li>
+			
+			<li class="header">
+				<img src="img/grundtvig7.jpg" title="Adolph Lønborg, 1872" style="margin-left: -0.1em"/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex7.jpg" style="margin-left: 0em; width: 100%" title="Titelbladet til N.F.S. Grundtvig: Udsigt over Verdens-Krøniken fornemmelig i det Lutherske Tidsrum (1817)"/>
+			</li>			
+			<li class="header">
+				<img src="img/grundtvig6.jpg" title="Constantin Hansen, 1847" style="margin-left: -0.1em"/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex6.jpg" style="margin-left: 0em; width: 100%" title="Titelbladet til N.F.S. Grundtvig: Danske Ordsprog og Mundheld (1845)"/>
+			</li-->
+			<!--li class="header">
+				<img src="img/grundtvig5.jpg" title="C.F. Christensen, 1820, Frederiksborg Museum" style="margin-left: -0.1em"/>
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex5.jpg" style="margin-left: 0em; width: 100%" title="Titelbladet til N.F.S. Grundtvig: Bjowulfs Drape. Et Gothisk Helte-Digt fra forrige Aar-Tusinde af Angel-Saxisk paa Danske Riim (1820)"/>
+			</li>
+                        
+			<li class="header">
+			    <img src="img/grundtvig4.jpg" title="Kobberstik af E. Eckersberg efter tegning af C.W. Eckersberg, 1829" style="margin-left: -0.8em">
+			</li>			
+			<li class="header">
+				<img src="img/faxIndex4.jpg" style="margin-left: 2.1em" title="Titelbladet til N.F.S. Grundtvig: Politiske Betragtninger med Blik paa Danmark og Holsteen (1831)">
+			</li-->	
+			
+			<!-- version 1.7 
+			    <li class="header"><img src="img/grundtvig3.jpg" title="Litografi efter maleri af C.A. Jensen, 1831"></li>			
+			    <li class="header"><img src="img/faxIndex3.jpg" style="margin-left: 1.5em" title="Titelbladet til N.F.S. Grundtvig: Haandbog i Verdens-Historien (1833)"></li>
+			-->
+			
+			<!-- version 1.6
+			    <li class="header"><img src="img/grundtvig2.jpg" title="Fotografi optaget af Ad. Lønborg i Grundtvigs hjem på Store Tuborg, den 27. august 1872"></li>			
+			    <li class="header"><img src="img/faxIndex2.jpg" style="margin-left: 1.15em" title="Titelbladet til N.F.S. Grundtvig: Idunna. En Nytaarsgave for 1811"></li>
+			-->
+		</ul>
+	
+	</div>
+	</div>
+</div>
+
+</body>
+
+</html>
+    
+<div id="footer">
+	<div class="container"> 
+
+		<div id="logo_footer"><a href="#"><img src="img/logo.png" /></a></div>
+
+			<div id="columns">                            
+                            <ul id="column2">
+                                <li><h2>Registre</h2></li>
+                                
+                                <li><a href="../reg">Registranten</a></li>
+                                <li><a class="" href="../myter">Mytologisk register</a></li>
+                                <li><a href="../personer">Personregister</a></li>
+                                <!--li><a href="../steder">Stedregister</a></li-->
+                                <li><a href="/salmer">Salmeregister</a></li>
+                                <li><a href="../bibel">Bibelstedsregister</a></li>
+                                <li><a class="" href="../bookinvent">Bogfortegnelse 1805</a></li>
+                                <li class="last"><a class="" href="../bookinvent1839">Bogfortegnelse 1839</a></li>
+                            </ul>
+                            
+                            <ul id="column3">
+                                <li><h2>Værktøj</h2></li>
+                                <li><a href="../tidslinje">Tidslinje</a></li>
+                                <li><a href="/kort">Kort</a></li>
+                                <li><a href="./avanceret">Avanceret søgning</a></li>
+                                <!--li><a href="./tools">Flere værktøjer</a></li-->
+                            </ul>
+                            
+                            <ul id="column3">
+                                <li><h2>Om GV</h2></li>
+                                <li><a href="/vejledning/kolofon_vej">Medarbejdere</a></li>
+                                <li><a href="../vejledning/om_udgaven_vej">Vejledning</a></li>
+                            </ul>
+			    
+			                <!-- test -->
+                            
+                            <ul id="column3">
+                                <li><h2>Kontakt</h2></li>
+                                <li><a href="https://grundtvigcenteret.au.dk/kontakt">Kontakt</a></li>
+                                <li><a href="mailto:baunvig@cas.au.dk">Nyhedsbrev</a></li>
+                                <li><a href="https://grundtvigcenteret.au.dk">Center for Grundtvigforskning</a></li>
+                            </ul>
+
+			</div>
+
+	</div>
+</div>
+</body>
+</html>

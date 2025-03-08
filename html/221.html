@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="" ng-app="Burckhardt">
+
+<head itemscope itemtype="http://schema.org/WebSite">
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title itemprop="name">Burckhardt Source</title>
+    <link rel="canonical" href="https://burckhardtsource.org" itemprop="url">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <base href='https://burckhardtsource.org/'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/burckhardt.min.css">
+    <link rel="stylesheet" href="css/timeline.css">
+
+    <!-- CSS EVT -->
+    <link rel="stylesheet" href="css/page_data-include.css">
+
+    <!-- Fontawesome -->
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700'
+          rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cambo' rel='stylesheet' type='text/css'>
+
+    <!-- Smart Menu -->
+    <!-- TODO Cosa vogliamo farne di questo??? -->
+    <!--[if IE 8]>
+    <style type="text/css">
+        .slim-menu .search {
+            border-top: 0;
+            float: none;
+            border: 0px;
+            padding-top: 3px;
+            width: auto;
+        }
+    </style>
+    <![endif]-->
+
+    <!-- Enables use of HTML5 sectioning elements in legacy Internet Explorer -->
+    <!-- TODO Cosa vogliamo farne di questo??? -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- SVG support for gradients -->
+    <!-- TODO Cosa vogliamo farne di questo??? -->
+    <!--[if gte IE 9]>
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+    <script type="text/javascript">
+        var punditConfig = {
+
+        modules: {
+            // 'Consolidation': {
+            //     debug: true
+            // }, 
+            'TextFragmentAnnotator': {
+                // debug: true,
+                addIcon: false
+            }
+        }
+    }
+    </script>
+
+    <!-- Javascripts -->
+    <script src="js/burckhardt.min.js"></script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="slim/favicon/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="slim/favicon/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="slim/favicon/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="slim/favicon/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="slim/favicon/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="slim/favicon/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="slim/favicon/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="slim/favicon/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="slim/favicon/apple-touch-icon-152x152.png"/>
+    <meta name="msapplication-square70x70logo" content="slim/favicon/smalltile.png"/>
+    <meta name="msapplication-square150x150logo" content="slim/favicon/mediumtile.png"/>
+    <meta name="msapplication-wide310x150logo" content="slim/favicon/widetile.png"/>
+    <meta name="msapplication-square310x310logo" content="slim/favicon/largetile.png"/>
+
+
+    <!-- modal box -->
+    <link href="css/featherlight.css" type="text/css" rel="stylesheet" title="Featherlight Styles"/>
+
+
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.2/leaflet-dvf.markers.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.2/leaflet-dvf.min.js"></script>
+
+    <script src="js/featherlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/infobox.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js"></script>
+
+
+    <script src="js/vertical-timeline.main.js"></script> <!-- Resource jQuery -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+    <script data-main="/ajax-solr/js/reuters" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.5/require.min.js"></script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmQLhkR7epHYqIiVt3y_TaAfR0tMe5JnE">
+    </script>
+    <script type="text/javascript" src="https://rawgit.com/googlemaps/js-marker-clusterer/gh-pages/src/markerclusterer.js"></script>
+
+</head>
+
+<body>
+
+<!-- Header Include -->
+<header ng-include="'app/includes/header.html'"></header>
+<!-- / Header Include -->
+
+<div class="bg-page">
+
+    <!-- Ng View directive -->
+    <div ng-view autoscroll="true"></div>
+    <!-- / Ng View directive -->
+
+    <!-- Footer Include -->
+    <header class="bk-footer" ng-include="'app/includes/footer.html'"></header>
+    <!-- / Footer Include -->
+
+</div>
+
+<!-- Live reload -->
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+<div data-featherlight data-featherlight-type="ajax" id="modal"></div>
+
+<div id="map_canvas" style="display: none"></div>
+
+</body>
+</html>
