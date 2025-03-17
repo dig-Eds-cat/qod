@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Renan Source - Home</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="copyright" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="css/homepage/renan/style.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" >
+<!--    <link rel="stylesheet" href="css/homepage/style.css">-->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">//<![CDATA[
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-7393632-1']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_setDomainName', '']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        //]]>
+    </script>
+</head>
+<body>
+
+<!--
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" ></script>
+-->
+
+<link rel="stylesheet" type="text/css" media="screen" href="/mgI18nPlugin/css/redmond-jquery-ui.css" />
+<script type="text/javascript" src="/mgI18nPlugin/js/gui.js" ></script>
+
+<div id="mg-i18n-dialog" class="ui-widget">
+  <div id="mg-i18n-on-top-box">
+    <h2 class="ui-widget-header ui-corner-all">title_translation</h2>
+  </div>
+
+  <div id="mg-i18n-container" class="ui-widget ui-widget-content ui-corner-all">
+    <div id="mg-i18n-left-box">
+      <ul>
+        <li><a href="#mg-i18n-panel-page">tabs_translation_current_page</a></li>
+        <li><a href="#mg-i18n-panel-ajax_lib_application">tabs_translation_ajax_lib_application</a></li>
+        <li><a href="#mg-i18n-panel-database">tabs_translation_db</a></li>
+      </ul>
+
+              <div id="mg-i18n-panel-page" rel="page">
+          <div class="mg-i18n-toolbar">
+            <input type="checkbox" class="mg-i18n-hide-translated" />
+            <label for="mg-18n-current-page-hide-translated">label_hide_translated_page</label>
+
+            label_filter_list            <input type="text" class="mg-i18n-current-page-search" />
+          </div>
+          <div class="mg-i18n-messages">
+            <table>
+              <thead>
+                <tr>
+                  <td class="mg-i18n-td-catalogue">header_target</td>
+                  <td class="mg-i18n-td-targets">header_source</td>
+                </tr>
+              </thead>
+              <tbody />
+              <tfoot />
+            </table>
+          </div>
+        </div>
+              <div id="mg-i18n-panel-ajax_lib_application" rel="ajax_lib_application">
+          <div class="mg-i18n-toolbar">
+            <input type="checkbox" class="mg-i18n-hide-translated" />
+            <label for="mg-18n-current-page-hide-translated">label_hide_translated_page</label>
+
+            label_filter_list            <input type="text" class="mg-i18n-current-page-search" />
+          </div>
+          <div class="mg-i18n-messages">
+            <table>
+              <thead>
+                <tr>
+                  <td class="mg-i18n-td-catalogue">header_target</td>
+                  <td class="mg-i18n-td-targets">header_source</td>
+                </tr>
+              </thead>
+              <tbody />
+              <tfoot />
+            </table>
+          </div>
+        </div>
+            
+      <div id="mg-i18n-panel-database">
+        <div class="mg-i18n-toolbar">
+          label_filter_list          <input type="text" class="mg-i18n-current-database-search" />
+        </div>
+        <div class="mg-i18n-messages">
+          <table>
+            <thead>
+              <tr>
+                <td class="mg-i18n-td-catalogue">header_catalogue</td>
+                <td class="mg-i18n-td-targets">header_targets</td>
+              </tr>
+            </thead>
+            <tbody />
+            <tfoot />
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="mg-i18n-right-box">
+      <strong class="mg-i18n-parameters">label_parameters</strong>
+      <span class="mg-i18n-parameters" id="mg-i18n-parameters-text"></span>
+      <br class="mg-i18n-parameters" /><br class="mg-i18n-parameters" />
+
+      <form action="/frontend.php/mg-i18n-plugin/update-targets" id="mg-i18n-form-update">
+        <input type="hidden" readonly="true" name="catalogue" id="mg-i18n-catalogue" value="" />
+        <input type="hidden" readonly="true" name="source" id="mg-i18n-source" value="" />
+
+        <div class="mg-i18-translations">
+                      <div class="mg-i18n-translation">
+              <strong>Deutsch</strong><br />
+              <textarea class="mg-i18n-translation-input" name='targets[de]' id='mg-i18n-target-de'></textarea>
+            </div>
+                      <div class="mg-i18n-translation">
+              <strong>English</strong><br />
+              <textarea class="mg-i18n-translation-input" name='targets[en]' id='mg-i18n-target-en'></textarea>
+            </div>
+                      <div class="mg-i18n-translation">
+              <strong>Español</strong><br />
+              <textarea class="mg-i18n-translation-input" name='targets[es]' id='mg-i18n-target-es'></textarea>
+            </div>
+                      <div class="mg-i18n-translation">
+              <strong>Français</strong><br />
+              <textarea class="mg-i18n-translation-input" name='targets[fr]' id='mg-i18n-target-fr'></textarea>
+            </div>
+                      <div class="mg-i18n-translation">
+              <strong>Italiano</strong><br />
+              <textarea class="mg-i18n-translation-input" name='targets[it]' id='mg-i18n-target-it'></textarea>
+            </div>
+                      <div class="mg-i18n-translation">
+              <strong>Portuguese</strong><br />
+              <textarea class="mg-i18n-translation-input" name='targets[pt]' id='mg-i18n-target-pt'></textarea>
+            </div>
+                  </div>
+
+        <div>
+          <img src="/mgI18nPlugin/images/tiny_red.gif" id="mg-i18n-loading"/>
+          <input type="submit" value="btn_save_translation" id="mg-i18n-submit" />
+        </div>
+      </form>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+
+  <div id="mg-i18n-loading-box" class="ui-widget ui-widget-content ui-corner-all">
+    message_loading <br />
+    <img src="/mgI18nPlugin/images/tiny_red.gif"/>
+  </div>
+  
+</div>
+
+<script>
+
+if(typeof jQuery != 'undefined')
+{
+  
+  jQuery(window).bind('load', function() {
+    mgI18nPlugin.instance = new mgI18nPlugin({
+      url_translation: '/frontend.php/mg-i18n-plugin/get-targets',
+      url_messages: '/frontend.php/mg-i18n-plugin/get-messages/MESSAGE_TYPE'
+    });
+  });
+}
+else
+{
+
+  alert('Please add jQuery UI to see the translation tools');
+}
+
+</script><div class="page-wrap">
+    <div class="page">
+
+        <div class="page__top_menu">
+            <ul>
+                <li><a target="_blank" href="/documentation/" title="">home#about</a></li> 
+            </ul>
+        </div>
+
+        <header class="page__header">
+            <h1>Renan Source</h1>
+        </header>
+
+        <nav class="page__nav">
+            <ul>
+              <li><a href="/EC/change_language?language=fr">Français</a></li>
+              <li><a href="/EC/change_language?language=en">English</a></li>
+              <li><a href="/EC/change_language?language=it">Italiano</a></li>
+	      <li><a href="/EC/change_language?language=es">ΕΛΛΗΝΙΚΑ</a></li>
+              
+            </ul>
+        </nav>
+
+        <main class="page__content">
+            <ul>
+                <li class="facsimile">
+                    <a href="http://www.renansource.org/EF">
+                        <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
+                        <strong>home#DFGA_name</strong>
+                        &ndash; home#DFGA_description                    </a>
+                </li>
+                <li class="critical">
+                    <a href="http://www.renansource.org/EC/">
+                        <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
+                        <strong>home#eKGWB_name</strong>
+                        &ndash; home#eKGWB_description                </li>
+<!--                <li class="genetic">-->
+<!--                    <a href="http://nietzschesource.org/DFGA">-->
+<!--                        <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>-->
+<!--                        <strong>&Eacute;dition g&eacute;n&eacute;tique</strong>-->
+<!--                        Dossiers g&eacute;n&eacute;tiques des œuvres de Renan-->
+<!--                    </a>-->
+<!--                </li>-->
+            </ul>
+        </main>
+
+        <!-- Footer -->
+        <div class="page__footer">
+            <ul>
+                <li><a href="http://www.cnrs.fr/" target="_blank"><img src="/css/homepage/images/footer_logo_cnrs.png" alt="Centre national de la recherche scientifique" width="84" height="51"></a></li>
+                <li><a href="http://www.ens.fr/" target="_blank"><img src="/css/homepage/images/footer_logo_ens.png" alt="École Normale Supérieure" width="74" height="51"></a></li>
+                <li><a href="http://www.item.ens.fr/" target="_blank"><img src="/css/homepage/images/footer_logo_item.png" alt="Institut des textes et manuscrits modernes" width="143" height="51"></a></li>
+                <li><a href="http://www.bnf.fr/" target="_blank"><img src="/css/homepage/images/footer_logo_bnf.png" alt="Bibliothèque nationale de France" width="105" height="51"></a></li>
+                <li><a href="http://www.vie-romantique.paris.fr/" target="_blank"><img src="/css/homepage/images/footer_logo_mvr.png" alt="Musée de la Vie romantique" width="75" height="51"></a></li>
+                <li><a href="http://www.paris.fr/" target="_blank"><img src="/css/homepage/images/footer_logo_mdp.png" alt="Mairie de Paris" width="145" height="51"></a></li>
+                <li><a href="https://www.college-de-france.fr/fr" target="_blank"><img src="/css/homepage/images/footer_logo_cdf.png" alt="Collège de France" width="116" height="51"></a></li>
+            </ul>
+        </div>
+        <!-- Footer -->
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+       $("#mg-i18n-dialog").remove();
+    });
+</script>
+
+</body>
+
+</html>
