@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title data-target="title-template" data-template-page="index">Bullinger Digital</title><meta data-target="title-template" name="pb-template" content="index.html">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-16.png" sizes="16x16">
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-24.png" sizes="24x24">
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-32.png" sizes="32x32">
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-64.png" sizes="64x64">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="resources/css/theme.css">
+    <link rel="stylesheet" href="resources/css/bullinger-theme.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.7.0/webcomponents-loader.js"></script><script defer src="https://cdn.jsdelivr.net/npm/web-animations-js/web-animations.min.js"></script><script type="module" src="resources/scripts/pb-components-bundle.js"></script>
+    <script type="module" src="resources/scripts/pb-tify.js"></script>
+    <script type="module" src="resources/scripts/fore-dev.js"></script>    
+    <script src="resources/scripts/menu.js"></script>
+
+    <script id="script-preload"></script>
+</head>
+    <body>
+        <pb-page data-template="pages:pb-page" unresolved="unresolved" locales="resources/i18n/{{ns}}/{{lng}}.json" require-language="require-language" locale-fallback-ns="app" app-root="" template="" endpoint=""><header class="top-header">
+                <nav class="menubar center-l">
+    <a href="/index.html" class="logo"></a>
+    <pb-media-query class="menubar-left desktop" query="min-width: 48rem">
+        <ul class="dropdown-menu">
+            <li>
+                <a href="/letters.html">
+                    <pb-i18n key="letters">Briefe</pb-i18n>
+                </a>
+            </li>
+            <li>
+                <a tabindex="0"><pb-i18n key="register">Register</pb-i18n></a>
+                <ul>
+                    <li><a href="/persons/">
+                        <pb-i18n key="menu.persons">Personen</pb-i18n>
+                    </a></li>
+                    <li><a href="/localities/">
+                        <pb-i18n key="menu.localities">Orte</pb-i18n>
+                    </a></li>
+                    <li><a href="/organizations/">
+                        <pb-i18n key="menu.organizations">Institutionen / Gruppen</pb-i18n>
+                    </a></li>
+                    <li><a href="/archives/">
+                        <pb-i18n key="menu.archives">Archive</pb-i18n>
+                    </a></li>
+                    <li><a href="/bibliography/">
+                        <pb-i18n key="menu.bibliography">Bibliography</pb-i18n>
+                    </a></li>
+                </ul>
+            </li>
+            <li>
+                <a tabindex="0"><pb-i18n key="menu.about-parent">(About-Parent)</pb-i18n></a>
+                <ul>
+                    <li><a href="/static/about">
+                        <pb-i18n key="menu.about">(About)</pb-i18n>
+                    </a></li>
+                    <li><a href="/static/about-project">
+                        <pb-i18n key="menu.about-project">(About-Project)</pb-i18n>
+                    </a></li>
+                    <li><a href="/static/privacy">
+                        <pb-i18n key="menu.privacy">(Privacy)</pb-i18n>
+                    </a></li>
+                    <li><a href="/static/disclaimers">
+                        <pb-i18n key="menu.disclaimers">(Impressum)</pb-i18n>
+                    </a></li>
+                </ul>
+            </li>
+        </ul>
+    </pb-media-query>
+
+    <fx-fore src="/fore-search.html"></fx-fore>
+
+    <pb-media-query class="mobile" query="max-width: 48rem">
+        <details class="mobile-menu">
+            <summary>
+                <iron-icon icon="menu"></iron-icon>
+                <iron-icon icon="close"></iron-icon>
+            </summary>
+            <section>
+                <header><pb-i18n key="mobile.menu">Menu</pb-i18n></header>
+                <div>
+                    <a href="/letters.html">
+                        <pb-i18n key="letters">Briefe</pb-i18n>
+                    </a>
+                    <p><pb-i18n key="register">Register</pb-i18n></p>
+                    <ul>
+                        <li><a href="/persons/">
+                            <pb-i18n key="menu.persons">Personen</pb-i18n>
+                        </a></li>
+                        <li><a href="/localities/">
+                            <pb-i18n key="menu.localities">Orte</pb-i18n>
+                        </a></li>
+                        <li><a href="/organizations/">
+                            <pb-i18n key="menu.organizations">Institutionen / Gruppen</pb-i18n>
+                        </a></li>
+                        <li><a href="/archives/">
+                            <pb-i18n key="menu.archives">Archive</pb-i18n>
+                        </a></li>
+                        <li><a href="/bibliography/">
+                            <pb-i18n key="menu.bibliography">Bibliography</pb-i18n>
+                        </a></li>
+                    </ul>
+                    <p><pb-i18n key="menu.about-parent">(About-Parent)</pb-i18n></p>
+                    <ul>
+                        <li><a href="/static/about">
+                            <pb-i18n key="menu.about">(About)</pb-i18n>
+                        </a></li>
+                        <li><a href="/static/about-project">
+                            <pb-i18n key="menu.about-project">(About-Project)</pb-i18n>
+                        </a></li>
+                        <li><a href="/static/privacy">
+                            <pb-i18n key="menu.privacy">(Privacy)</pb-i18n>
+                        </a></li>
+                        <li><a href="/static/disclaimers">
+                            <pb-i18n key="menu.disclaimers">(Impressum)</pb-i18n>
+                        </a></li>
+                    </ul>
+                </div>
+                <pb-lang name="lang2" data-template="pages:languages"><paper-item value="de">Deutsch</paper-item><paper-item value="en">English</paper-item></pb-lang>
+            </section>
+        </details>
+    </pb-media-query>
+
+    <pb-media-query style="flex:auto" class="" query="min-width: 48rem">
+        <pb-lang style="margin-top: 4px;" name="lang" data-template="pages:languages"><paper-item value="de">Deutsch</paper-item><paper-item value="en">English</paper-item></pb-lang>
+    </pb-media-query>
+</nav>
+            </header><main class="center-l indexpage">
+                <pb-load url="api/content/home" auto="" use-language="true">Loading...</pb-load>
+            </main><footer>
+    <p class="center-l">
+        <pb-i18n key="footer.text">(footer.text)</pb-i18n>
+        <span class="whitespace"> | </span>
+        <a href="/static/about-project"><pb-i18n key="footer.contact">(footer.contact)</pb-i18n></a>
+        <span class="whitespace"> | </span>
+        <a href="/static/privacy"><pb-i18n key="footer.privacy">(footer.privacy)</pb-i18n></a>
+        <span class="whitespace"> | </span>
+        <a href="/static/disclaimers"><pb-i18n key="footer.disclaimers">(footer.disclaimers)</pb-i18n></a>
+    </p>
+</footer></pb-page>
+    </body>
+</html>
