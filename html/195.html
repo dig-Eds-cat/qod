@@ -1,533 +1,1174 @@
-<!DOCTYPE html>
- 
-<html lang="en-GB">
-<head>
-<meta charset="utf-8">
-<title>
-	Error 404
-</title><meta name="GENERATOR" content="Contensis CMS Version 12.1" /><meta name="Description" content="Error Page: 404" />
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MM4Z3Q');
+    </script>
+    <!-- End Google Tag Manager -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.birmingham.ac.uk/favicon.ico"
+    />
+    <title>University of Birmingham 404 page</title>
+    <style>
+      .link-with-arrow:hover .link-with-arrow__title {
+          transform: translateX(1.25rem)
+      }
 
-    <meta name="UoB_TemplateName" content="ErrorPage" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<style>
-/*! CSS Used from: https://www.birmingham.ac.uk/assets/css/styles.css?versionId=1961526 */
-.grid{display:block;padding:0;margin:0 -1em;text-align:left;letter-spacing:-0.31em;text-rendering:optimizespeed;}
-.grid{word-spacing:-0.43em;}
-.grid__cell{box-sizing:border-box;width:100%;display:inline-block;margin:0;padding:0 1em;vertical-align:top;text-align:left;letter-spacing:normal;word-spacing:normal;text-rendering:auto;}
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
-body{margin:0;}
-article,aside,footer,header,main,nav,section{display:block;}
-a{background-color:transparent;}
-a:active,a:hover{outline:0;}
-h1{font-size:2em;margin:0.67em 0;}
-small{font-size:80%;}
-img{border:0;}
-button,input{color:inherit;font:inherit;margin:0;}
-button{overflow:visible;}
-button{text-transform:none;}
-button{-webkit-appearance:button;cursor:pointer;}
-button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
-input{line-height:normal;}
-@media screen and (min-width: 30em){
-.unit-1-2--bp1{width:50%;}
-}
-@media screen and (min-width: 48em){
-.unit-5-6--bp2{width:83.33333%;}
-}
-@media screen and (min-width: 55em){
-.unit-1-3--bp3{width:33.33333%;}
-.unit-1-4--bp3{width:25%;}
-}
-.grid--spaced .grid__cell{margin-bottom:1.5em;}
-html{box-sizing:border-box;overflow-y:scroll;}
-*{box-sizing:inherit;-webkit-font-smoothing:antialiased;}
-::-moz-selection{background:rgba(102,102,102,0.5);color:#FFF;text-shadow:none;}
-::selection{background:rgba(102,102,102,0.5);color:#FFF;text-shadow:none;}
-a:link{-webkit-tap-highlight-color:rgba(102,102,102,0.5);}
-img{display:block;margin:0 auto;font-style:italic;color:#666;vertical-align:middle;}
-img[width]{width:auto!important;}
-img[height]{height:auto!important;}
-img{max-width:100%;}
-label{cursor:pointer;}
-button,input{line-height:normal;}
-input{width:100%;margin-bottom:.5em;}
-button{width:auto;}
-html{font-family:Arial,Helvetica,Verdana,Corbel,"Lucida Grande","Lucida Sans Unicode","Lucida Sans","DejaVu Sans","Bitstream Vera Sans","Liberation Sans","Verdana Ref",sans-serif;line-height:1.5;font-size:100%;}
-@media screen and (min-width: 65em){
-html{font-size:112.5%;}
-}
-body{color:#4C4C4C;background-color:#fff;}
-ul{margin-left:1em;padding-left:0;}
-li{margin-bottom:.5em;line-height:1.4;}
-label{display:block;padding-bottom:.25em;}
-input{padding:1em;color:#666;background-color:#FFF;border:1px solid #CECBC6;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0;}
-input:focus{outline:0;border-color:#4C4C4C;}
-button{background-color:transparent;font-family:Georgia,Garamond,"Apple Garamond","Palatino Linotype",Palatino,Palladio,"URW Palladio L","Book Antiqua",Baskerville,"Bookman Old Style","Bitstream Charter","Nimbus Roman No9 L","ITC Garamond Narrow","New Century Schoolbook","Century Schoolbook","Century Schoolbook L",serif;border:0;}
-a{text-decoration:none;color:#006892;border-bottom:1px solid;border-bottom-color:#b3d2de;border-bottom-color:rgba(0,104,146,0.3);transition:border-color .25s linear;}
-a:hover,a:focus{border-bottom-color:#006892;}
-h1,h2,h3,.epsilon{font-family:Georgia,Garamond,"Apple Garamond","Palatino Linotype",Palatino,Palladio,"URW Palladio L","Book Antiqua",Baskerville,"Bookman Old Style","Bitstream Charter","Nimbus Roman No9 L","ITC Garamond Narrow","New Century Schoolbook","Century Schoolbook","Century Schoolbook L",serif;font-weight:normal;margin-bottom:.65em;margin-top:1.5em;line-height:1;}
-h1,p,ul{margin-top:0;}
-p,ul,form{margin-bottom:1.5em;}
-p,ul{max-width:50em;}
-ul>:last-child{margin-bottom:0;}
-small{font-size:90%;}
-h1{font-size:38px;font-size:2.375rem;}
-@media screen and (min-width: 30em){
-h1{font-size:42px;font-size:2.625rem;}
-}
-h2{font-size:28px;font-size:1.75rem;}
-h3{font-size:22px;font-size:1.375rem;font-family:Arial,Helvetica,Verdana,Corbel,"Lucida Grande","Lucida Sans Unicode","Lucida Sans","DejaVu Sans","Bitstream Vera Sans","Liberation Sans","Verdana Ref",sans-serif;font-weight:bold;}
-.epsilon{font-size:18px;font-size:1.125rem;font-weight:bold;font-family:Arial,Helvetica,Verdana,Corbel,"Lucida Grande","Lucida Sans Unicode","Lucida Sans","DejaVu Sans","Bitstream Vera Sans","Liberation Sans","Verdana Ref",sans-serif;}
-@media print{
-[role="navigation"],.duo,body>form>.accordion,.cc-cookies{display:none!important;}
-div.grid__cell{display:block;}
-}
-.container{position:relative;margin:0 auto;width:90%;min-width:15em;max-width:68.5em;}
-.container--head{position:relative;width:100%;}
-@media screen and (min-width: 59em){
-.container--head{width:90%;height:auto;}
-}
-.main{margin:1em auto;}
-@media screen and (min-width: 55em){
-.main{margin:3em auto;}
-}
-.row{padding:2em 0;position:relative;}
-.row--narrow{padding:1em 0;}
-.row--black{background-color:#4C4C4C;}
-.row--light-gray{background-color:#F7F7F7;}
-.duo{margin:1em 0;width:100%;}
-@media screen and (min-width: 48em){
-.duo{display:table;}
-}
-@media screen and (min-width: 65em){
-.media__body{padding:1.5em 1.5em 1.5em 0;overflow:hidden;}
-}
-.media__body:last-child{margin-bottom:0;}
-@media screen and (min-width: 65em){
-.media__img{float:left;margin-bottom:0;margin-right:2em;max-width:45%;}
-}
-.nav--inline li,.nav--inline a{margin-bottom:0;display:inline-block;*display:inline;zoom:1;}
-a.btn,.btn:visited,.btn{font-family:Arial,Helvetica,Verdana,Corbel,"Lucida Grande","Lucida Sans Unicode","Lucida Sans","DejaVu Sans","Bitstream Vera Sans","Liberation Sans","Verdana Ref",sans-serif;text-align:left;display:inline-block;color:#FFF;line-height:1;border:1px solid #605270;background-color:#605270;text-decoration:none;margin-bottom:1.5em;margin-top:.25em;padding:.65em 3.5em .65em 1em;background-position:top right;background-size:contain;}
-a.btn:hover,.btn:visited:hover,.btn:hover{background-color:#534761;border-color:#534761;}
-@media screen and (min-width: 55em){
-.btn--large,a.btn--large,.btn--large:visited{padding:1em 6em 1em 3em;}
-}
-.form--inline .form--inline__fields{position:relative;}
-.form--inline input,.form--inline button{display:block;font-size:18px;font-size:1.125rem;line-height:1;height:3em;padding:0 1em;margin:0;}
-.form--inline input{width:100%;}
-@media screen and (min-width: 59em){
-.form--inline input{padding-right:11em;}
-}
-@media screen and (min-width: 55em){
-.form--inline input{padding-right:1em;}
-}
-.form--inline button{width:8em;position:absolute;top:0;right:0;font-size:22px;font-size:1.375rem;height:100%;padding:0;border:0;max-width:100%;}
-@media screen and (min-width: 30em){
-.list--cols-4 li{width:50%;padding-right:1em;float:left;}
-}
-@media screen and (min-width: 55em){
-.list--cols-4 li{width:25%;}
-}
-@media screen and (min-width: 30em){
-.list--cols-4 li{width:50%;padding-right:1em;float:left;}
-}
-@media screen and (min-width: 55em){
-.list--cols-4 li{width:25%;}
-}
-.accordion{background-color:#F4F4F4;margin-bottom:1.5em;clear:both;}
-.accordion h2:first-child{margin-top:0;}
-.accordion__block{clear:both;border-bottom:1px solid #FFF;}
-.accordion__head{background-color:#757575;position:relative;cursor:pointer;padding:.75em 2.6em .75em .75em;color:#FFF;}
-.accordion__head .container{position:relative;}
-.accordion__title{font-size:20px;font-size:1.25rem;margin:0;}
-.accordion__body{display:none;padding:1.5em;}
-.accordion__block:first-child .accordion__body{display:block;}
-.accordion__control{display:block;height:1.5em;width:1.5em;background-position:top right;background-size:contain;position:absolute;right:1em;top:50%;margin-top:-.70em;}
-.accordion__block:first-child .accordion__body{display:none;}
-.accordion__head{padding:.75em 1.5em .75em .75em;}
-@media print{
-.accordion__body{display:block!important;}
-}
-.alert{display:block;padding:1em;background-color:rgba(220,220,112,0.3);border-color:#DCDC70;border-style:solid;border-width:1px 0 1px 0;}
-.banner{position:relative;background-color:#000;background-color:rgba(0,0,0,0.75);}
-@media screen and (min-width: 59em){
-.banner{padding:2em 0;}
-}
-.icon--uob-logo{background-size:contain;display:block;width:140px;height:33px;margin:8px 0 8px 1em;border-bottom:0;}
-@media screen and (min-width: 30em){
-.icon--uob-logo{margin:8px 0 2px 1em;width:222px;height:53px;}
-}
-@media screen and (min-width: 59em){
-.icon--uob-logo{position:absolute;margin:0;top:0;left:0;}
-}
-@media screen and (min-width: 65em){
-.icon--uob-logo{width:237px;height:56px;}
-}
-@media screen and (min-width: 78em){
-.icon--uob-logo{width:315px;height:74px;}
-}
-.logo--footer{width:200px;height:48px;margin:0 auto 1.5em auto;}
-@media screen and (min-width: 48em){
-.logo--footer{margin:0;position:absolute;top:0;left:0;}
-}
-@media screen and (min-width: 78em){
-.logo--footer{margin-bottom:0;}
-}
-@media screen and (min-width: 59em){
-.navbar{position:relative;padding-right:4.5em;float:right;}
-}
-.nav--primary,.nav--secondary--mobile{font-size:20px;font-size:1.25rem;background-color:#FFF;font-family:Georgia,Garamond,"Apple Garamond","Palatino Linotype",Palatino,Palladio,"URW Palladio L","Book Antiqua",Baskerville,"Bookman Old Style","Bitstream Charter","Nimbus Roman No9 L","ITC Garamond Narrow","New Century Schoolbook","Century Schoolbook","Century Schoolbook L",serif;color:#FFF;z-index:15;margin-bottom:0;}
-.nav--primary .nav__item,.nav--secondary--mobile .nav__item{display:block;}
-.nav--primary .nav__link,.nav--secondary--mobile .nav__link{color:#4C4C4C;display:block;padding:.5em .5em;border-bottom:1px solid #e6e6e6;transition:background-color .1s linear;}
-.nav--primary .nav__link:hover,.nav--secondary--mobile .nav__link:hover{background-color:#e6e6e6;}
-@media screen and (min-width: 59em){
-.nav--primary,.nav--secondary--mobile{font-size:16px;font-size:1rem;background-color:transparent;margin-top:.25em;text-align:right;float:right;}
-.nav--primary .nav__item,.nav--secondary--mobile .nav__item{display:table-cell;padding-left:.5em;}
-.nav--primary .nav__link,.nav--secondary--mobile .nav__link{display:block;padding:0;color:#DCDC70;border:1px solid transparent;transition:border-bottom-color .1s linear;}
-.nav--primary .nav__link:hover,.nav--secondary--mobile .nav__link:hover{border-bottom-color:#DCDC70;background-color:transparent;}
-}
-@media screen and (min-width: 65em){
-.nav--primary .nav__item,.nav--secondary--mobile .nav__item{padding-left:.6em;}
-}
-@media screen and (min-width: 70em){
-.nav--primary .nav__item,.nav--secondary--mobile .nav__item{padding-left:0.5em;}
-}
-@media screen and (min-width: 78em){
-.nav--primary,.nav--secondary--mobile{font-size:20px;font-size:1.25rem;}
-}
-@media screen and (min-width: 94em){
-.nav--primary,.nav--secondary--mobile{font-size:22px;font-size:1.375rem;}
-.nav--primary .nav__item,.nav--secondary--mobile .nav__item{padding-left:1em;}
-}
-.nav--primary__toggle{font-size:18px;font-size:1.125rem;background-color:rgba(255,255,255,0.1);background-size:50%;background-position:center;display:table-cell;vertical-align:middle;position:absolute;width:50px;height:50px;right:50px;top:0;padding:0;border-bottom:0;}
-@media screen and (min-width: 30em){
-.nav--primary__toggle{width:65px;height:65px;right:65px;}
-}
-@media screen and (min-width: 59em){
-.nav--primary__toggle{display:none;}
-}
-.navbox{display:none;}
-@media screen and (min-width: 59em){
-.navbox{display:block!important;}
-}
-.utility-nav{float:right;}
-.nav__link--switch{display:block;background-color:#605270;color:#fff;}
-.nav--secondary{font-size:14px;font-size:.875rem;display:none;margin-bottom:0;}
-@media screen and (min-width: 59em){
-.nav--secondary{display:table;line-height:1;}
-.nav--secondary .nav__item{display:table-cell;padding-left:1em;}
-.nav--secondary .nav__link{display:block;color:#F4F4F4;background-size:.4em;border:1px solid transparent;transition:border-bottom-color .1s linear;}
-.nav--secondary .nav__link:hover{border-bottom-color:#F4F4F4;}
-}
-.nav-switch{border:1px solid #DCDC70;}
-.nav-switch__button{border:0;padding:.1em .5em;color:#DCDC70;}
-.nav-switch__button--active{color:#605270;background-color:#DCDC70;}
-.nav--secondary--mobile{margin-bottom:0;}
-.nav--secondary--mobile .nav__item{margin:0;}
-.nav--secondary--mobile .nav__link--switch{background-color:#F0F0F0;color:#4C4C4C;padding:.5em;border-bottom:1px solid #E6E6EB;}
-.nav--secondary--mobile .nav__link--switch:hover,.nav--secondary--mobile .nav__link--switch:active,.nav--secondary--mobile .nav__link--switch:focus{background-color:#757575;color:#F7F7F7;}
-@media screen and (min-width: 59em){
-.nav--secondary--mobile{display:none;}
-}
-.nav--support{text-align:center;width:100%;margin-bottom:0;}
-@media screen and (min-width: 78em){
-.nav--support{text-align:left;width:auto;}
-}
-.nav--support .nav__item{font-size:13px;font-size:.8125rem;display:inline-block;padding:0 .3em;border-right:1px solid #7f7f7f;line-height:.7;}
-.nav--support .nav__item:first-child{margin-left:0;}
-.nav--support .nav__item:last-child{border:none;}
-.nav--support .nav__item:hover{text-decoration:underline;}
-.nav--support .nav__item a{color:#4C4C4C;border-bottom:0;}
-.nav--footer{margin-bottom:.25em;}
-.nav--footer a{color:#4C4C4C;border-bottom:0;}
-.nav--footer a:hover{border-bottom:1px solid #4C4C4C;}
-.nav--footer img{display:block;margin:1.5em 0 0.25em 0;}
-@media screen and (min-width: 59em){
-.nav--primary,.nav--secondary--mobile{position:static;}
-}
-.navbox{clear:both;}
-.search-toggle{display:block;right:0;position:absolute;top:0;border-bottom:0;width:50px;height:50px;font-size:18px;font-size:1.125rem;background-color:rgba(255,255,255,0.2);background-repeat:no-repeat;background-size:80%;background-position:center;background-image:url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2253%22%20height%3D%2253%22%20viewBox%3D%22-3.5%20-4.5%2053%2053%22%20enable-background%3D%22new%20-3.5%20-4.5%2053%2053%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20d%3D%22M8.5%2018.4c0-6%204.9-10.9%2010.9-10.9s10.9%204.9%2010.9%2010.9-4.9%2010.9-10.9%2010.9S8.5%2024.5%208.5%2018.4z%22%2F%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22%23fff%22%20d%3D%22M28.1%2025.1L37%2034c.8.8.7%202-.1%202.9-.9.8-2.2.8-2.9.1l-9.1-9%203.2-2.9z%22%2F%3E%3C%2Fsvg%3E");}
-@media screen and (min-width: 30em){
-.search-toggle{width:65px;height:65px;}
-}
-@media screen and (min-width: 59em){
-.search-toggle{width:50px;height:50px;}
-}
-@media screen and (min-width: 65em){
-.search-toggle{width:62px;height:62px;}
-}
-@media screen and (min-width: 59em){
-.search-toggle{font-size:14px;font-size:.875rem;position:absolute;display:block;float:left;margin-left:1em;background-size:contain;background-color:transparent;background-image:url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2253%22%20height%3D%2253%22%20viewBox%3D%22-3.5%20-4.5%2053%2053%22%20enable-background%3D%22new%20-3.5%20-4.5%2053%2053%22%3E%3Cg%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M-3.5%2022C-3.5%207.4%208.4-4.5%2023-4.5S49.5%207.4%2049.5%2022%2037.6%2048.5%2023%2048.5-3.5%2036.6-3.5%2022z%22%2F%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23605270%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20d%3D%22M8.5%2018.4c0-6%204.9-10.9%2010.9-10.9s10.9%204.9%2010.9%2010.9-4.9%2010.9-10.9%2010.9S8.5%2024.5%208.5%2018.4z%22%2F%3E%3Cpath%20fill%3D%22%23605270%22%20d%3D%22M28.1%2025.1L37%2034c.8.8.7%202-.1%202.9-.9.8-2.2.8-2.9.1l-9.1-9%203.2-2.9z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");transition:background-color .2s linear;box-sizing:content-box;padding:0;}
-.search-toggle:hover{background-image:url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2253%22%20height%3D%2253%22%20viewBox%3D%22-3.5%20-4.5%2053%2053%22%20enable-background%3D%22new%20-3.5%20-4.5%2053%2053%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22%23605270%22%20d%3D%22M-3.5%2022C-3.5%207.4%208.4-4.5%2023-4.5S49.5%207.4%2049.5%2022%2037.6%2048.5%2023%2048.5-3.5%2036.6-3.5%2022z%22%2F%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20d%3D%22M8.5%2018.4c0-6%204.9-10.9%2010.9-10.9s10.9%204.9%2010.9%2010.9-4.9%2010.9-10.9%2010.9S8.5%2024.5%208.5%2018.4z%22%2F%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20fill%3D%22%23fff%22%20d%3D%22M28.1%2025.1L37%2034c.8.8.7%202-.1%202.9-.9.8-2.2.8-2.9.1l-9.1-9%203.2-2.9z%22%2F%3E%3C%2Fsvg%3E");}
-}
-.search-form{display:none;padding:1em 0;background-color:#F0F0F0;width:100%;margin:0;border-bottom:2px solid #4C4C4C;}
-@media screen and (min-width: 59em){
-.search-form{padding:2em 0;position:relative;z-index:5;bottom:-2em;}
-}
-.search-form button{text-align:center;font-family:Georgia,Garamond,"Apple Garamond","Palatino Linotype",Palatino,Palladio,"URW Palladio L","Book Antiqua",Baskerville,"Bookman Old Style","Bitstream Charter","Nimbus Roman No9 L","ITC Garamond Narrow","New Century Schoolbook","Century Schoolbook","Century Schoolbook L",serif;}
-@media screen and (max-width: 59em){
-.search-form button{width:2.5em;background:#FFF;border:1px solid #CECBC6;border-left:0;}
-.search-form button:hover{background:#FFF;border-color:#CECBC6;}
-}
-@media screen and (min-width: 55em){
-.search-form__fields{margin:0 auto;width:100%;}
-}
-.search-form__icon{display:block;height:100%;width:100%;background-size:60%;background-position:center;}
-@media screen and (min-width: 59em){
-.search-form__icon{display:none;}
-}
-.search-form__text{display:none;}
-@media screen and (min-width: 59em){
-.search-form__text{display:block;}
-}
-.contact-details{font-family:Georgia,Garamond,"Apple Garamond","Palatino Linotype",Palatino,Palladio,"URW Palladio L","Book Antiqua",Baskerville,"Bookman Old Style","Bitstream Charter","Nimbus Roman No9 L","ITC Garamond Narrow","New Century Schoolbook","Century Schoolbook","Century Schoolbook L",serif;line-height:1.2;color:white;width:100%;}
-@media screen and (min-width: 48em){
-.contact-details{float:right;width:28em;}
-}
-@media screen and (min-width: 78em){
-.contact-details{float:left;margin-left:16em;}
-}
-.contact-details p{text-align:center;}
-@media screen and (min-width: 30em){
-.contact-details p{margin:0;}
-}
-@media screen and (min-width: 48em){
-.contact-details p{text-align:left;}
-}
-.contact-details a[href^="tel:"],.contact-details a[href^="tel:"]:hover,.contact-details a[href^="tel:"]:focus,.contact-details a[href^="tel:"]:visited{-webkit-appearance:none;-moz-appearance:none;appearance:none;color:white;}
-.social{text-align:center;clear:both;padding-top:1.5em;}
-@media screen and (min-width: 78em){
-.social{text-align:left;padding:0;clear:none;float:right;margin-top:1em;}
-}
-.social__link{display:inline-block;height:41px;width:41px;margin-right:.5em;border:0;}
-.social__link:hover{opacity:.6;}
-@media screen and (min-width: 78em){
-.social__link{margin:0 0 0 .5em;}
-}
-.copyright{display:block;margin-top:.5em;color:#4C4C4C;text-align:center;clear:both;}
-@media screen and (min-width: 78em){
-.copyright{text-align:left;}
-}
-.copyright{padding-bottom:.5em;}
-.container,.article,.duo,.nav,.list--cols-4,.navbar,.navbox{zoom:1;}
-.container:before,.article:before,.duo:before,.nav:before,.list--cols-4:before,.navbar:before,.navbox:before,.container:after,.article:after,.duo:after,.nav:after,.list--cols-4:after,.navbar:after,.navbox:after{content:"";display:table;}
-.container:after,.article:after,.duo:after,.nav:after,.list--cols-4:after,.navbar:after,.navbox:after{clear:both;}
-.accessibility{border:0!important;clip:rect(0 0 0 0)!important;height:1px!important;margin:-1px!important;overflow:hidden!important;padding:0!important;position:absolute!important;width:1px!important;}
-.skip-link{position:absolute;top:-60px;padding:10px;left:0;color:white;background:#006892;z-index:10000;}
-.skip-link:focus{left:0;top:0;}
-.zero--top{margin-top:0!important;}
-.zero--bottom{margin-bottom:0!important;}
-.zero-pad--top{padding-top:0!important;}
-.zero-pad--bottom{padding-bottom:0!important;}
-.list--unset,.nav{list-style:none!important;margin-left:0!important;max-width:100%;}
-.icon--action-search{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/action-search.svg");background-repeat:no-repeat;}
-.icon--facebook{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/facebook.svg");background-repeat:no-repeat;}
-.icon--instagram-circle{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/instagram-circle.svg");background-repeat:no-repeat;}
-.icon--maximise{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/maximise.svg");background-repeat:no-repeat;}
-.icon--menu{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/menu.svg");background-repeat:no-repeat;}
-.icon--search{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/search.svg");background-repeat:no-repeat;}
-.icon--twitter{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/twitter.svg");background-repeat:no-repeat;}
-.icon--uob-logo{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/uob-logo.svg");background-repeat:no-repeat;}
-.icon--warning{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/warning.svg");background-repeat:no-repeat;}
-.icon--wechat_logo{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/wechat_logo.svg");background-repeat:no-repeat;}
-.icon--weibo_logo{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/weibo_logo.svg");background-repeat:no-repeat;}
-.icon--youtube{background-image:url("https://www.birmingham.ac.uk/assets/img/icons/youtube.svg");background-repeat:no-repeat;}
-.cc-cookies a.cc-cookie-accept{display:inline-block;color:#545658;font-weight:500;text-decoration:none;background:#9FDD4A;padding:0.5em 0.75em;border-radius:3px;box-shadow:0 0 2px rgba(0,0,0,0.25);text-shadow:0 -1px 0 rgba(0,0,0,0.35);}
-.cc-cookies{position:fixed;width:100%;left:0;top:0;padding:0.5em 5%;background:#565656;background:rgba(86,86,86,0.95);color:#fff;font-size:13px;font-weight:700;text-shadow:0 -1px 0 rgba(0,0,0,0.35);z-index:99999;text-align:center;color:#fff;}
-.cc-cookies a{color:#fff;text-decoration:underline;}
-.cc-cookies a:hover{color:#fff;text-decoration:underline;text-decoration:none;}
-.cc-cookies a:hover.cc-cookie-accept{background:#000;}
-@media screen and (max-width: 768px){
-.cc-cookies a.cc-cookie-accept{display:block;margin:1em 0;}
-}
-@media screen and (max-width: 480px){
-.cc-cookies{float:left;position:fixed;top:0px!important;bottom:auto!important;}
-}
+      .link-with-arrow__title {
+          text-decoration-thickness: 1px;
+          text-underline-offset: 5px
+      }
 
-.accordion__head a {color: #FFF;}
+      .campus-selector-link {
+          text-decoration-color: rgba(0,0,0,0)
+      }
 
-</style>
-</head>
-<body>
+          .campus-selector-link.theme-uobmain:focus-visible {
+              background: #dcc266;
+              color: #0d0d0d;
+          }
 
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MM4Z3Q"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MM4Z3Q');</script>
-<!-- End Google Tag Manager -->
+      .header__logo-link:focus {
+          outline: solid 4px;
+          outline-offset: 2px;
+          color: inherit;
+      }
+
+      }
+
+      a {
+          color: inherit
+      }
+
+      .footer__bottom-wrapper {
+          max-width: 1152px;
+          padding: 0 1.5rem;
+          margin: 0 auto
+      }
+
+      .footer__arrow-link, .footer__telephone {
+          margin-bottom: 1.5rem
+      }
+
+      .footer ul {
+          margin-bottom: 0;
+          margin-left: 0
+      }
+
+      .footer p {
+          margin-bottom: 0
+      }
+
+      .footer.theme-uobmain {
+          background: #0d0d0d;
+          color: #f7f7f7
+      }
+
+      .footer__hygiene-link a, .footer__location a, .footer__telephone a {
+          text-decoration: none
+      }
+
+      .footer__address {
+          padding-bottom: 1.5rem
+      }
+
+      .footer__map {
+          display: none
+      }
+
+      .footer__container {
+          max-width: 1152px;
+          padding: 1.5rem;
+          margin: 0 auto
+      }
+
+      .footer__summary-links {
+          font-family: Larken,"Times New Roman",Times,serif;
+          font-weight: 400
+      }
+
+      .footer.theme-uobmain .footer__bottom-container {
+          padding: .75rem 0;
+          background: #3c3c3b
+      }
+
+      .footer.theme-uobmain .footer__details {
+          padding-bottom: 1.75rem;
+          border-bottom: 1px solid #58595b;
+          margin-bottom: 1.5rem
+      }
+
+      .footer.theme-uobmain summary:focus-visible {
+          outline-color: #dcc266;
+          outline-offset: 0.625rem;
+      }
+
+      @media screen and (min-width:768px) {
+
+          .footer__bottom-wrapper, .footer__container {
+              padding: 0 3rem
+          }
+      }
+
+      @media screen and (min-width:1248px) {
+
+          .footer__bottom-wrapper {
+              padding: 0;
+              display: flex;
+              align-items: flex-end;
+              justify-content: space-between
+          }
+      }
+
+      .footer__logo-wrapper {
+          width: 8.75rem;
+          margin-bottom: 1.5rem
+      }
+
+      .footer__logo-link {
+          display: block;
+          border: 2px solid transparent
+      }
+
+          .footer__logo-link:focus {
+              outline: solid 4px;
+              outline-offset: 2px;
+              color: inherit;
+          }
+
+      .footer__address-line {
+          font-size: 1rem;
+          line-height: 1.375
+      }
+
+      .footer__social-wrapper {
+          display: grid;
+          gap: 1.5rem;
+          grid-template-columns: repeat(4,40px);
+          padding: 1.875rem 0
+      }
+
+          .footer__social-wrapper li {
+              margin-right: .375rem
+          }
+
+      .footer__summary-links {
+          font-style: normal;
+          font-size: 1.4375rem;
+          line-height: 1.725rem;
+          display: flex;
+          align-items: center;
+          cursor: pointer
+      }
+
+      .footer__copyright, .footer__hygiene-link {
+          font-size: .875rem;
+          line-height: 1.5714285714
+      }
+
+      .footer__summary-links::-webkit-details-marker, .footer__summary-links::marker {
+          display: none;
+          content: ""
+      }
+
+      .footer__summary-icon {
+          width: 2.25rem;
+          margin-top: .5rem;
+          margin-left: .625rem
+      }
+
+          .footer__summary-icon svg {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform .3s ease-out
+          }
+
+      .footer__location {
+          display: flex;
+          align-items: center
+      }
+
+      .footer__location-icon {
+          width: 1.5rem;
+          margin-top: .5rem
+      }
+
+          .footer__location-icon svg {
+              width: 100%;
+              height: 100%;
+              object-fit: cover
+          }
+
+      .footer__hygiene-link-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 2.5rem
+      }
+
+      .footer__hygiene-link {
+          display: inline;
+          padding: .625rem 0;
+          margin-right: .625rem
+      }
+
+      .header {
+          z-index: 10
+      }
+
+      .header--is-closed {
+          position: sticky;
+          top: 0;
+          transition: top .2s ease-out
+      }
+
+      .header.theme-uobmain .header__closed {
+          background: #f7f7f7;
+          color: #0d0d0d
+      }
+
+      .header__top-container {
+          max-width: 1152px;
+          padding: .75rem 1.5rem;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between
+      }
+
+      @media screen and (min-width:768px) {
+          .footer__container {
+              padding-top: 3.75rem;
+              padding-bottom: 3.75rem
+          }
+
+          .footer__column-container {
+              display: grid;
+              gap: 1.5rem;
+              grid-template-columns: repeat(2,1fr)
+          }
+
+          .footer__logo-wrapper {
+              width: 15rem
+          }
+
+          .footer__address-line {
+              font-size: 1.125rem;
+              line-height: 1.3888888889
+          }
+
+          .footer__social-wrapper li {
+              margin-right: .5rem
+          }
+
+          .footer__summary-links {
+              font-size: 1.75rem;
+              line-height: 2.1rem
+          }
+
+          .header__top-container {
+              padding: 0 3rem
+          }
+      }
+
+      @media screen and (min-width:1248px) {
+          .footer__container {
+              padding-top: 4.5rem;
+              padding-bottom: 4.5rem
+          }
+
+          .footer__column-container {
+              display: grid;
+              gap: 1.5rem;
+              grid-template-columns: repeat(3,1fr)
+          }
+
+          .footer__column-left {
+              flex-basis: 22%
+          }
+
+          .footer__column-middle {
+              flex-basis: 30%
+          }
+
+          .footer__social-wrapper li {
+              margin-right: 1.125rem
+          }
+
+          .footer__summary-links {
+              font-size: 2.25rem;
+              line-height: 2.7rem
+          }
+
+          .footer__hygiene-link-wrapper {
+              margin-right: 1.875rem;
+              margin-bottom: 0
+          }
+
+          .footer__map {
+              display: block;
+              flex-basis: 40%
+          }
+
+          .footer__copyright {
+              flex-basis: 40%;
+              padding-bottom: .625rem;
+              text-align: right
+          }
+
+          .header__top-container {
+              padding: .75rem 0
+          }
+      }
+
+      .header__logo-wrapper img {
+          width: auto;
+          height: 2.875rem
+      }
+
+      .header__logo-link {
+          display: block;
+          border: 2px solid transparent
+      }
+
+          .header__logo-link:focus {
+              outline: solid 4px;
+              outline-offset: 2px;
+          }
+
+      @media screen and (min-width:768px) {
+          .header__top-container {
+              padding-top: .75rem;
+              padding-bottom: .75rem
+          }
+
+          .header__logo-wrapper img {
+              height: 4.3125rem
+          }
+      }
+
+      .link-with-arrow__title::before {
+          opacity: 1
+      }
+
+      .icon--facebook.theme-uobmain, .icon--facebook.theme-uobmain path, .icon--instagram.theme-uobmain, .icon--instagram.theme-uobmain path, .icon--twitter.theme-uobmain, .icon--twitter.theme-uobmain path, .icon--wechat.theme-uobmain, .icon--wechat.theme-uobmain path, .icon--weibo.theme-uobmain, .icon--weibo.theme-uobmain path, .icon--youtube.theme-uobmain, .icon--youtube.theme-uobmain path {
+          fill: #f7f7f7
+      }
+
+      .skip-to-content {
+          position: relative;
+          width: 100%
+      }
+
+          .skip-to-content.theme-uobmain {
+              background: #dcc266
+          }
+
+      .skip-to-content__link {
+          position: absolute;
+          top: 0;
+          left: -1000px;
+          display: block;
+          padding: .625rem 1.5rem;
+          text-decoration: underline;
+          font-family: Manrope,Arial,sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 1.4rem
+      }
+
+          .skip-to-content__link:focus {
+              position: static
+          }
+
+      .skip-to-content.theme-uobmain a {
+          color: #0d0d0d
+      }
+
+      @media screen and (min-width:768px) {
+
+          .skip-to-content__link {
+              padding: .625rem 3rem
+          }
+      }
+
+      @media screen and (min-width:1248px) {
+
+          .skip-to-content__link {
+              font-size: 1.125rem;
+              line-height: 1.575rem;
+              padding: .625rem 1rem
+          }
+      }
+
+      .scrollable-table ol li::marker {
+          font-weight: 700
+      }
 
 
-        
-<header class="banner">
-<a class="skip-link" href="#maincontent">Skip to main content</a>
+      .icon-chevron-down path {
+          stroke: #f7f7f7;
+          stroke-width: "1.5"
+      }
 
+      .image {
+          display: block;
+          width: 100%;
+          height: auto;
+          object-fit: cover
+      }
 
-<div class="container container--head">
-    <a href="https://www.birmingham.ac.uk/index.aspx" class="logo icon--uob-logo">
-        <span class="accessibility">University of Birmingham</span>
-    </a>
+      .icon--arrow-right.theme-uobmain, .icon--arrow-right.theme-uobmain path, .icon--chevron-down.theme-uobmain, .icon--chevron-down.theme-uobmain path {
+          stroke: #f7f7f7
+      }
 
-    <div class="navbar">
-        <nav class="utility-nav" role="navigation">
-            <ul class="nav nav--secondary nav--inline">
-                <li class="nav__item"><a href="https://www.birmingham.ac.uk/university/hefi/index.aspx" class="nav__link">Teaching excellence</a></li>
-                <li class="nav__item"><a href="https://www.birmingham.ac.uk/alumni/index.aspx" class="nav__link">Alumni</a></li>
-                <li class="nav__item"><a href="https://www.birmingham.ac.uk/staff/index.aspx" class="nav__link">Work here</a></li>
-                <li class="nav__item"><a href="https://www.birmingham.ac.uk/events/index.aspx" class="nav__link">Events</a></li>
-                   <li class="nav__item"><a href="https://www.birmingham.ac.uk/visit/index.aspx" class="nav__link">Visit</a></li>
-                
-                <li class="nav__item nav__item--switch">
-                    <div class="nav-switch">
-                  		<label class="accessibility">Switch between the UK and Dubai websites.</label>
-                        <a href="https://www.birmingham.ac.uk/index.aspx" class="nav-switch__button nav-switch__button--active">UK</a>
-                        <a href="https://www.birmingham.ac.uk/dubai/index.aspx" class="nav-switch__button">Dubai</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+      .icon-button:disabled {
+          opacity: .15;
+          pointer-events: none
+      }
 
-        <nav class="navbox js-nav-menu" role="navigation">
-            <ul class="nav nav--primary nav--inline">
-                <li class="nav__item"><a href="https://www.birmingham.ac.uk/study/index.aspx" class="nav__link">Study</a></li>
-                <li class="nav__item"><a href="https://www.birmingham.ac.uk/research/index.aspx" class="nav__link">Research</a></li>
-                <li class="nav__item"><a href="https://www.birmingham.ac.uk/International/index.aspx" class="nav__link">International</a></li>
-                <li class="nav__item"><a href="https://www.birmingham.ac.uk/partners/index.aspx" class="nav__link">Business</a></li>
-                <li class="nav__item"><a href="https://www.birmingham.ac.uk/news/index.aspx" class="nav__link">News</a></li>
-                <li class="nav__item"><a href="https://www.birmingham.ac.uk/university/index.aspx" class="nav__link">About us</a></li>
-            </ul>
+      .icon-button__icon {
+          display: flex;
+          width: 24px;
+          align-items: center;
+          justify-content: center
+      }
 
-        </nav>
-        <a href="https://www.birmingham.ac.uk/search" class="search-toggle js-search-toggle"><span class="accessibility">Search</span></a>
+      .icon-button.theme-uobmain:hover {
+          filter: invert(100%)
+      }
 
+      .icon-button.theme-uobmain:focus-visible {
+          border: 2px solid #dcc266;
+          background: #0d0d0d;
+          color: #f7f7f7;
+          outline: 2px solid #0d0d0d;
+      }
+
+      .link-standard.theme-uobmain {
+          border-bottom: 2px solid transparent;
+          color: #f7f7f7
+      }
+
+      .link-with-arrow.theme-uobmain {
+          color: #f7f7f7
+      }
+
+      .link-with-arrow:hover .link-with-arrow__title::before {
+          opacity: 1
+      }
+
+      .link-with-arrow {
+          text-decoration: none;
+          font-family: Manrope,Arial,sans-serif;
+          font-style: normal;
+          font-weight: 700
+      }
+
+      .link-with-arrow {
+          padding-right: 1.5rem;
+          border-bottom: 2px solid transparent;
+          transition: border .2s ease-in;
+          font-size: 1rem;
+          line-height: 1.4rem
+      }
+
+      .link-with-arrow__title {
+          transition: transform .2s ease-in
+      }
+
+      .link-with-arrow__icon {
+          position: absolute;
+          width: 1.0625rem;
+          height: 1.5rem;
+          flex-shrink: 0;
+          margin-top: .125rem;
+          margin-left: .375rem
+      }
+
+      .link-with-arrow__icon {
+          line-height: 2rem;
+      }
+
+          .link-with-arrow__icon path:first-child {
+              transition: transform .3s ease-in
+          }
+
+          .link-with-arrow__icon path:nth-child(2) {
+              transition: transform .5s ease-in
+          }
+
+          .link-with-arrow__icon svg {
+              width: 100%;
+              height: 100%;
+              object-fit: cover
+          }
+
+      .link-with-arrow__title {
+          position: relative;
+          display: inline-block;
+          text-decoration: underline
+      }
+
+          .link-with-arrow__title::before {
+              position: absolute;
+              top: 50%;
+              left: -1.25rem;
+              width: .875rem;
+              content: '•';
+              opacity: 0;
+              transform: translateY(-50%);
+              transition: .3s ease-in
+          }
+
+      .link-with-arrow:hover .link-with-arrow__icon path:first-child {
+          transform: scaleX(2);
+          transition: transform .5s ease-in
+      }
+
+      .link-with-arrow:hover .link-with-arrow__icon path:nth-child(2) {
+          transform: translateX(5px);
+          transition: transform .3s ease-in
+      }
+
+      .footer__arrow-link:focus-within {
+          outline: solid 4px;
+          outline-offset: 2px;
+          color: inherit;
+      }
+
+      .campus-selector.theme-uobmain {
+          background: #0d0d0d;
+          color: #f7f7f7
+      }
+
+      .campus-selector-link.theme-uobmain:focus {
+          outline: solid 4px;
+          outline-offset: 2px;
+      }
+
+      @media screen and (min-width:1248px) {
+
+          .link-with-arrow {
+              font-size: 1.125rem;
+              line-height: 1.575rem
+          }
+      }
+
+      .icon-button {
+          display: flex;
+          width: 2.75rem;
+          height: 2.75rem;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100%
+      }
+
+      .icon-button__icon svg {
+          width: 100%;
+          object-fit: cover
+      }
+
+      .icon-button.theme-uobmain {
+          border: 1px solid #f7f7f7;
+          background: #0d0d0d;
+          color: #f7f7f7;
+          transition: filter .3s ease-in
+      }
+
+      .link-standard {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          transition: .3s ease-in
+      }
+
+          .link-standard:hover {
+              border-bottom: 2px solid #f7f7f7;
+              text-decoration: none
+          }
+
+          .link-standard.theme-uobmain:focus {
+              outline: solid 4px;
+              outline-offset: 2px;
+              color: inherit;
+          }
+
+      .campus-selector__container {
+          max-width: 1152px;
+          padding: 0 1.5rem;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          gap: .625rem
+      }
+
+      @media screen and (min-width:768px) {
+          .campus-selector__container {
+              padding: 0 3rem
+          }
+
+          .icon-button {
+              width: 3rem;
+              height: 3rem
+          }
+      }
+
+      @media screen and (min-width:1248px) {
+          .campus-selector__container {
+              padding: 0
+          }
+      }
+
+      .campus-selector--desktop {
+          display: none
+      }
+
+      .campus-selector-link.theme-uobmain:hover {
+          background: #58595b
+      }
+
+      .sr-only {
+          overflow: hidden
+      }
+
+      @media screen and (min-width:768px) {
+          .campus-selector__container {
+              justify-content: flex-end;
+              padding-top: 1.0625rem;
+              padding-bottom: 1.0625rem;
+              gap: 1rem
+          }
+
+          .campus-selector--desktop {
+              display: block
+          }
+      }
+
+      @media screen and (min-width:1248px) {
+          .campus-selector__container {
+              gap: 1.5rem
+          }
+      }
+
+      .campus-selector-link.theme-uobmain {
+          background: #0d0d0d;
+          color: #f7f7f7
+      }
+
+      .campus-selector-link, body {
+          font-family: Manrope,Arial,sans-serif;
+          font-style: normal;
+          line-height: 1.4rem
+      }
+
+      .campus-selector-link {
+          transition: .2s ease-in
+      }
+
+      .campus-selector-link {
+          padding-bottom: .0625rem;
+          text-decoration: underline;
+          text-decoration-thickness: 0.125rem;
+          text-underline-offset: 0.3125rem;
+          font-weight: 700;
+          font-size: 1rem
+      }
+
+      .campus-selector-link--active {
+          text-decoration-color: currentcolor
+      }
+
+      .sr-only {
+          padding: 0;
+          border: 0
+      }
+
+      body, html {
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0
+      }
+
+      html {
+          box-sizing: border-box;
+          font-size: 16px
+      }
+
+      .sr-only, body {
+          font-size: 1rem
+      }
+
+      body {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          overflow-x: hidden
+      }
+
+      @media screen and (min-width:1248px) {
+
+          .campus-selector-link, body {
+              font-size: 1.125rem;
+              line-height: 1.575rem
+          }
+      }
+
+      *, ::after, ::before {
+          box-sizing: inherit
+      }
+
+      body, h1, h2, p, ul {
+          padding: 0;
+          margin: 0;
+          font-weight: 400
+      }
+
+      ul {
+          list-style: none
+      }
+
+      a {
+          outline: 0
+      }
+
+      a {
+          cursor: pointer
+      }
+
+      .sr-only {
+          position: absolute;
+          top: auto;
+          left: -10000px;
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          clip: rect(0,0,0,0);
+          color: transparent;
+          white-space: nowrap
+      }
+
+      ::selection.theme-uobmain {
+          background: #dcc266
+      }
+
+      .header.theme-uobmain .header__logo-link:focus-visible {
+          border: 2px solid #dcc266;
+          outline: 2px solid #0d0d0d;
+      }
+    </style>
+    <style>
+      .main-content-wrapper {
+        background: #f7f7f7;
+      }
+
+      .main-content-container {
+        max-width: 1152px;
+        padding: 1.5rem;
+        margin: 0 auto;
+        font-size: 1rem;
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      .main-content-container-grid-span {
+        grid-column: 3 / span 8;
+      }
+
+      .main-content-container h1 {
+        font-family: 'Larken', 'Times New Roman', 'Times', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+
+      @media screen and (min-width: 768px) {
+        .main-content-container h1 {
+          font-size: 2.75rem;
+          line-height: 2.75rem;
+        }
+      }
+
+      @media screen and (min-width: 1248px) {
+        .main-content-container h1 {
+          font-size: 3.3rem;
+          line-height: 3.3rem;
+        }
+      }
+
+      .main-content-container p {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        word-wrap: break-word;
+      }
+
+      .main-content-container ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .list-disc {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+      }
+
+      .main-content-container a {
+        border-bottom: 1px solid #0d0d0d;
+        font-family: 'Manrope', 'Arial', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        text-decoration: none;
+        padding-bottom: 0.0625rem;
+        color: inherit;
+      }
+
+      .main-content-container a:hover {
+        background: #eee1b3;
+      }
+
+      .main-content-container a:focus {
+        border-bottom: 2px solid #0d0d0d;
+        background: #dcc266;
+        outline: solid 4px;
+        outline-offset: 2px;
+      }
+
+      @media screen and (min-width: 768px) {
+        .main-content-container {
+          padding: 3.75rem 3rem;
+          font-size: 1.125rem;
+        }
+
+        .main-content-container h2 {
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+        }
+      }
+
+      @media screen and (min-width: 1248px) {
+        .main-content-container {
+          padding: 4.5rem 0;
+          margin: 0 auto;
+        }
+
+        .main-content-container ul {
+          gap: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MM4Z3Q"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="skip-to-content theme-uobmain">
+      <a class="skip-to-content__link" href="#main">Skip to main content</a>
     </div>
-</div>
-</header>
-<main class="container main" id="maincontent">
-<article class="article">
-
-<h1>Page not found: 404</h1>
-
-
-<div class="alert">
-<div class="media__img"><span class="icon--warning" style="display: inline-block; width: 35px; height: 35px;">&nbsp;</span></div>
-<div class="media__body zero-pad--bottom zero-pad--top">
-<h2 class="zero--top zero--bottom">Oops! We're sorry - we can't find the page you're looking for at the moment.</h2>
-</div>
-</div>
-<h3>It might be because:</h3>
-<ul>
-<li>If you entered a web address, please check it was correct</li>
-<li>The page has moved, updated, or recently deleted</li>
-</ul>
-<p><a class="btn btn--large icon--action-search" title="Search" href="https://www.birmingham.ac.uk/search">Search the website to find courses and what you need</a></p>
-<p>Still having problems? Let us know where via our <a title="Website feedback" class="sys_0 sys_t0" href="https://www.birmingham.ac.uk/contact/feedback/index.aspx">website feedback</a></p>
-
-</article>
-</main>
-<div class="accordion js-accordion zero--bottom">
-
-
-<section class="accordion__block">
-            <header class="accordion__head" role="button" tabindex="0" aria-controls="pageFooterAccordion1">
-                <div class="container">
-                    <a href="https://www.birmingham.ac.uk/culture"><h2 class="accordion__title">Culture and collections</h2></a>
-                    <i class="accordion__control icon--maximise"></i>
-                </div>
-            </header>
-        </section>
-
-
-
-<section class="accordion__block">
-            <header class="accordion__head" role="button" tabindex="0" aria-controls="pageFooterAccordion2">
-                <div class="container">
-                    <a href="https://www.birmingham.ac.uk/schools"><h2 class="accordion__title">Schools, institutes and departments</h2></a>
-                    <i class="accordion__control icon--maximise"></i>
-                </div>
-            </header>
-        </section>
-
-
-
-<section class="accordion__block">
-            <header class="accordion__head" role="button" tabindex="0" aria-controls="pageFooterAccordion3">
-                <div class="container">
-				<a href="https://www.birmingham.ac.uk/facilities">
-                    <h2 class="accordion__title">Services and facilities</h2>
-				</a>
-                    <i class="accordion__control icon--maximise"></i>
-                </div>
-            </header>
-         </section>
-
-</div>
-<footer>
-
-
-<footer class="footer ">
-
-    <div class="row row--black">
-        <div class="container">
-                <a href="http://www.birmingham.ac.uk" class="logo logo--footer icon--uob-logo"><span class="accessibility">University of Birmingham</span></a>
-                <div class="contact-details">
-                    <div class="grid">
-                        <div class="grid__cell unit-1-2--bp1">
-                            <p>
-                                Edgbaston<br>
-                                Birmingham B15 2TT<br>
-                                United Kingdom
-                            </p>
-                        </div>
-                        <div class="grid__cell unit-1-2--bp1">
-                            <p>
-                                Main Switchboard:<br>
-                                Tel: <a href="tel:441214143344">+44 (0)121 414 3344</a><br>
-                                </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="social">
-                    <a href="https://instagram.com/unibirmingham/" class="social__link icon--instagram-circle"><span class="accessibility">Instagram</span></a>
-                    <a href="https://www.facebook.com/unibirmingham" class="social__link icon--facebook"><span class="accessibility">Facebook</span></a>
-                    <a href="https://twitter.com/unibirmingham" class="social__link icon--twitter"><span class="accessibility">Twitter</span></a>
-                    <a href="https://www.youtube.com/user/unibirmingham" class="social__link icon--youtube"><span class="accessibility">YouTube</span></a>
-                  	<a href="https://www.weibo.com/unibirmingham" class="social__link icon--weibo_logo"><span class="accessibility">Weibo</span></a>
-                  	<a href="https://www.birmingham.ac.uk/contact/we-chat.aspx" class="social__link icon--wechat_logo"><span class="accessibility">Weibo</span></a>
-                </div>
-        </div>
-    </div>
-
-    <div class="row row--narrow row--light-gray">
-        <div class="container">
-            <div class="grid">
-                <div class="grid__cell unit-5-6--bp2">
-                    <ul class="nav nav--support">
-                        <li class="nav__item"><a href="https://www.birmingham.ac.uk/privacy/index.aspx">Privacy</a></li>
-                        <li class="nav__item"><a href="https://www.birmingham.ac.uk/legal/index.aspx">Legal</a></li>
-                        <li class="nav__item"><a href="https://www.birmingham.ac.uk/accessibility/index.aspx">Accessibility</a></li>
-                        <li class="nav__item"><a href="https://intranet.birmingham.ac.uk">Intranet</a></li>
-                        <li class="nav__item"><a href="https://www.my.bham.ac.uk">my.bham portal</a></li>
-                        <li class="nav__item"><a href="https://canvas.bham.ac.uk">Canvas Learning Environment</a></li>
-                        <li class="nav__item"><a href="https://www.birmingham.ac.uk/university/governance/publication-scheme/index.aspx">Publication Scheme</a></li>
-                        <li class="nav__item"><a href="https://www.birmingham.ac.uk/undergraduate/courses/applicant-information.aspx">Information for Applicants</a></li>
-                        <li class="nav__item"><a href="https://www.birmingham.ac.uk/university/governance/policies-regs/information/index.aspx">Freedom of information</a></li>
-                        <li class="nav__item"><a href="https://www.birmingham.ac.uk/university/governance/publication-scheme/charitable.aspx">Charitable information</a></li>
-                        <li class="nav__item"><a href="https://www.birmingham.ac.uk/privacy/cookies.aspx">Cookies and cookie policy</a></li>
-                        <li class="nav__item"><a href="https://www.birmingham.ac.uk/sitemap/SiteMap.aspx">Site map</a></li>
-                        <li class="nav__item"><a href="https://www.birmingham.ac.uk/contact/feedback/index.aspx">Website feedback</a></li>
-          				<li class="nav__item"><a href="https://www.birmingham.ac.uk/contact/index.aspx">Contact us</a></li>
-                    </ul>
-                    <small class="copyright">&copy; University of Birmingham 2020</small>
-                </div>
+    <header
+      class="header theme-uobmain header--is-closed header--uk"
+      id="header"
+      style="top: -60px"
+    >
+      <div class="header__closed">
+        <div class="header__campus-selector header__campus-selector--desktop">
+          <div class="campus-selector theme-uobmain campus-selector--desktop">
+            <div class="campus-selector__container">
+              <span class="campus-selector__label">Select campus:</span>
+              <a
+                class="campus-selector-link theme-uobmain campus-selector-link--active"
+                href="https://www.birmingham.ac.uk/"
+                target="_self"
+                rel="noreferrer"
+              >
+                UK
+              </a>
+              <a
+                class="campus-selector-link theme-uobmain"
+                href="https://www.birmingham.ac.uk/dubai"
+                target="_self"
+                rel="noreferrer"
+              >
+                Dubai
+              </a>
             </div>
+          </div>
         </div>
-    </div>
-</footer>
 
-</footer>
-    
-</body>
+        <div class="header__top-container">
+          <div class="header__logo-wrapper">
+            <a href="https://www.birmingham.ac.uk/" class="header__logo-link">
+              <img
+                class="image"
+                src="https://www.birmingham.ac.uk/Images/logos/uob/uob-uk-logo-light.svg"
+                alt=""
+                title=""
+                loading="lazy"
+                width="69"
+                height="210"
+                fetchpriority="auto"
+              />
+              <h1 class="sr-only">University of Birmingham</h1>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-content-wrapper">
+      <div class="main-content-container" id="main">
+        <span class="main-content-container-grid-span">
+          <h1>Page not found</h1>
+          <p>We can't find the page you're looking for.</p>
+          <ul class="list-disc">
+            <li>Check the web address. Maybe there's a typo?</li>
+            <li>Sometimes pages move or are retired.</li>
+          </ul>
+          <p>Here are some pages you may find useful.</p>
+          <ul>
+            <li>
+              <a href="https://www.birmingham.ac.uk/search">Our search page</a>
+            </li>
+            <li><a href="https://www.birmingham.ac.uk/welcome">Welcome</a></li>
+            <li>
+              <a
+                href="https://www.birmingham.ac.uk/study/undergraduate/open-days"
+                >Undergraduate open days</a
+              >
+            </li>
+            <li>
+              <a href="https://www.birmingham.ac.uk/study/undergraduate"
+                >Undergraduate study</a
+              >
+            </li>
+            <li>
+              <a href="https://www.birmingham.ac.uk/study/postgraduate"
+                >Postgraduate study</a
+              >
+            </li>
+            <li>
+              <a href="https://www.birmingham.ac.uk/research">Research</a>
+            </li>
+            <li>
+              <a
+                href="https://www.birmingham.ac.uk/collaborate/business-engagement"
+                >Industry engagement</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.birmingham.ac.uk/collaborate/global-engagement"
+                >Global engagement</a
+              >
+            </li>
+            <li>
+              <a href="https://www.birmingham.ac.uk/news">News and opinions</a>
+            </li>
+            <li><a href="https://www.birmingham.ac.uk/events">What's on</a></li>
+          </ul>
+        </span>
+      </div>
+    </div>
+    <footer id="footer" class="footer theme-uobmain" data-element="footer">
+      <div class="footer__container">
+        <div class="footer__column-container">
+          <div class="footer__column-left">
+            <div class="footer__logo-wrapper">
+              <a href="https://www.birmingham.ac.uk" class="footer__logo-link">
+                <img
+                  class="image"
+                  src="https://www.birmingham.ac.uk/Images/logos/uob/uob-uk-logo-dark.svg"
+                  alt=""
+                  title=""
+                  loading="lazy"
+                  width="368"
+                  height="240"
+                  fetchpriority="auto"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom-container">
+          <div class="footer__bottom-wrapper">
+            <ul class="footer__hygiene-link-wrapper">
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://www.birmingham.ac.uk/privacy"
+                  target="_self"
+                  rel=""
+                >
+                  Privacy
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://www.birmingham.ac.uk/legal"
+                  target="_self"
+                  rel=""
+                >
+                  Legal
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://www.birmingham.ac.uk/legal/modern-slavery"
+                  target="_self"
+                  rel=""
+                >
+                  Modern slavery
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://www.birmingham.ac.uk/accessibility"
+                  target="_self"
+                  rel=""
+                >
+                  Accessibility
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://bham.sharepoint.com/sites/intranet/"
+                  target="_self"
+                  rel=""
+                >
+                  Staff Intranet (auth required)
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://intranet.birmingham.ac.uk/"
+                  target="_self"
+                  rel=""
+                >
+                  Student Intranet
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://canvas.bham.ac.uk/"
+                  target="_self"
+                  rel=""
+                >
+                  Canvas Learning Environment
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://www.birmingham.ac.uk/university/leadership/governance/publication-scheme"
+                  target="_self"
+                  rel=""
+                >
+                  Publication scheme
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://www.birmingham.ac.uk/study/applicants"
+                  target="_self"
+                  rel=""
+                >
+                  Information for applicants
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://www.birmingham.ac.uk/university/leadership/governance/policies-regs/information"
+                  target="_self"
+                  rel=""
+                >
+                  Freedom of information
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://www.birmingham.ac.uk/university/leadership/governance/publication-scheme/charitable"
+                  target="_self"
+                  rel=""
+                >
+                  Charitable information
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://www.birmingham.ac.uk/privacy/cookies-settings"
+                  target="_self"
+                  rel=""
+                >
+                  Cookies and cookie policy
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://www.birmingham.ac.uk/contact/feedback"
+                  target="_self"
+                  rel=""
+                >
+                  Website feedback
+                </a>
+              </li>
+              <li class="footer__hygiene-link">
+                <a
+                  class="link-standard theme-uobmain"
+                  href="https://www.birmingham.ac.uk/contact"
+                  target="_self"
+                  rel=""
+                >
+                  Contact information
+                </a>
+              </li>
+            </ul>
+
+            <p class="footer__copyright">© University of Birmingham</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

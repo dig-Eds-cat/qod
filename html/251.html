@@ -19,15 +19,19 @@
         <script src="https://edition-humboldt.de/resources/js/jquery.ui.totop.js" type="text/javascript"> </script>
         <link rel="stylesheet" href="https://edition-humboldt.de/resources/css/leaflet.css">
         <script src="https://edition-humboldt.de/resources/js/leaflet.js" type="text/javascript"> </script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
+        <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
         <script src="https://edition-humboldt.de/resources/js/jquery.collapser.min.js" type="text/javascript"> </script>
         <script src="https://edition-humboldt.de/resources/js/jquery.truncate.js" type="text/javascript"> </script>
         <script src="https://edition-humboldt.de/resources/js/headerFootnote.js" type="text/javascript"> </script>
         <script src="https://edition-humboldt.de/resources/js/popupFussnotePosition.js" type="text/javascript"> </script>
-        <script src="https://edition-humboldt.de/resources/xslt/popup.js" type="text/javascript"> </script>
+        <script src="https://edition-humboldt.de/resources/js/main.js" type="text/javascript"> </script>
+        <script src="https://edition-humboldt.de/resources/js/popup.js" type="text/javascript"> </script>
         <script>
                 $(function() {
                     $( ".accordion" ).accordion({
-                        active: 1,
+                        active: 2,
                         heightStyle: "content",
                     });
                 });     
@@ -75,7 +79,9 @@
                 })();
             </script>
         <noscript><img src="https://piwik.bbaw.de/piwik.php?idsite=28&amp;rec=1" style="border:0" alt=""></noscript>
-        <meta name="google-site-verification" content="CFybFEFKB-guBQivbjy_Z6-MSID1ZtRJSoBl5oiLwxY"></head>
+        <meta name="google-site-verification" content="CFybFEFKB-guBQivbjy_Z6-MSID1ZtRJSoBl5oiLwxY">
+        <script src="https://ccm.bbaw.de/app.js?apiKey=b190800ef917b88efb57dbc23cc39590f8e1f792536a65fb&domain=9b4c3b4" referrerpolicy="origin"></script>
+    </head>
     <body id="">
         <div class="outerLayer" id="navbar">
             <div class="container_16">
@@ -90,7 +96,7 @@
                                         <ul>
                                             <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0018393&amp;l=de">Tagebuch I</a></li>
                                             <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H2743378&amp;l=de">Tagebuch II u. VI</a></li>
-                                            <li class="no-link"><span>Tagebuch III</span></li>
+                                            <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H5874646&amp;l=de">Tagebuch III</a></li>
                                             <li class="no-link"><span>Tagebuch IV</span></li>
                                             <li><a href="https://edition-humboldt.de/reisetagebuecher/index.xql?id=H0020393&amp;l=de">Tagebuch V</a></li>
                                             <li class="no-link"><span>Tagebuch VII a et b</span></li>
@@ -125,9 +131,10 @@
                                     <li><a href="https://edition-humboldt.de/themen/index.xql?id=H0018386&amp;l=de">Überblick</a></li>
                                     <li><a href="https://edition-humboldt.de/themen/biowissenschaften.xql?l=de">Pflanzengeographie und Biowissenschaften</a></li>
                                     <li><a href="https://edition-humboldt.de/themen/forschungsreisen.xql?l=de">Forschungsreisen</a></li>
-                                    <li class="no-link"><span>Das Wissen von der Erde</span></li>
+                                    <li><a href="https://edition-humboldt.de/themen/wissen-von-der-erde.xql?l=de">Das Wissen von der Erde</a></li>
                                     <li class="no-link"><span>Kartographie und Entdeckungsgeschichte</span></li>
                                     <li class="no-link"><span>Globalisierungsgeschichte und Anthropologie</span></li>
+                                    <li><a href="https://edition-humboldt.de/themen/list.xql?l=de">Liste aller Dokumente</a></li>
                                 </ul>
                             </li>
                             <li><a href="https://edition-humboldt.de/briefe/index.xql?l=de">Briefe</a>
@@ -187,7 +194,7 @@
                     <div id="edition-title">
                         <h1>edition <br>humboldt <br>digital</h1>
                         <p class="edited-by">Herausgegeben von der <br>Berlin-Brandenburgischen <br>Akademie der Wissenschaften durch Ottmar Ette</p>
-                        <p class="version"><a href="about/index.xql?id=H0020382&amp;l=de">Version 10 vom 2. Juli 2024</a></p>
+                        <p class="version"><a href="about/index.xql?id=H0020382&amp;l=de">Version 11 vom 4. Juni 2025</a></p>
                     </div>
                     <div id="search-panel">
                         <form id="search" action="https://edition-humboldt.de/suche/index.xql"><input name="q" id="q" value="" placeholder="Suchbegriff" autofocus><select name="type">
@@ -216,39 +223,41 @@
         </div>
         <div class="outerLayer" id="content">
             <div class="container_12">
-                <div class="grid_8 row1" id="gallery">
-                    <h3>Zeichnungen und Skizzen</h3>
+                <div class="grid_4 row1" id="gallery">
+                    <h3>Zeichnungen &amp; Skizzen</h3>
                     <section class="carousel" aria-label="Gallery">
                         <ol class="carousel__viewport">
                             <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/29r_1.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/ART_II-VI/00000033.tif&amp;dw=1858&amp;ww=0.0603&amp;wh=0.0234&amp;wx=0.4828&amp;wy=0.1417 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/6v.tif&amp;dw=820&amp;dh=1414&amp;ww=0.1915&amp;wh=0.125&amp;wx=0.5644&amp;wy=0.1338 "><a href="#carousel__slide9" class="carousel__prev">Go to last slide</a><a href="#carousel__slide2" class="carousel__next">Go to next slide</a></li>
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/25v_1.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/ART_II-VI/00000059.tif&amp;dw=1858&amp;ww=0.0323&amp;wh=0.0222&amp;wx=0.4499&amp;wy=0.8995 "><a href="#carousel__slide9" class="carousel__prev">Go to last slide</a><a href="#carousel__slide2" class="carousel__next">Go to next slide</a></li>
                             <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/103r&amp;dw=1618&amp;dh=897&amp;ww=0.6272&amp;wh=0.1249&amp;wx=0.2022&amp;wy=0.6834 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/138v&amp;dw=1586&amp;dh=865&amp;ww=0.2275&amp;wh=0.2185&amp;wx=0.1722&amp;wy=0.1572 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/Schinkel/2r.jpg&amp;dh=180 "><a href="#carousel__slide1" class="carousel__prev">Go to last slide</a><a href="#carousel__slide3" class="carousel__next">Go to next slide</a></li>
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/servlet/Scaler?fn=projects/avhr/T2_Forschungsreisen/Briefe/Hooker/1849-04-26/00000019.tif&amp;dw=1858&amp;dh=889&amp;ww=0.9322&amp;wh=0.5669&amp;wx=0.039&amp;wy=0.009 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/servlet/Scaler?fn=projects/avhr/ART/III/00000020.tif&amp;dw=1858&amp;dh=909&amp;ww=0.1935&amp;wh=0.1067&amp;wx=0.3563&amp;wy=0.132 "><a href="#carousel__slide1" class="carousel__prev">Go to last slide</a><a href="#carousel__slide3" class="carousel__next">Go to next slide</a></li>
                             <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/servlet/Scaler?fn=projects/avhr/ART_II-VI/00000240.tif&amp;dw=1018&amp;ww=0.1726&amp;wh=0.0258&amp;wx=0.6403&amp;wy=0.1342 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/Ehrenberg-Briefwechsel/1840_03_24-vEhrenberg.jpg&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/89v_1.JPG&amp;dh=180 "><a href="#carousel__slide2" class="carousel__prev">Go to last slide</a><a href="#carousel__slide4" class="carousel__next">Go to next slide</a></li>
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/Spanien-Tagebuch/Spanien-Tb_gr-Kasten-5-Nr-15-16-Bl-8v_PPN826363342_00000006-Detail.jpg&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/servlet/Scaler?fn=projects/avhr/ART/AvH-Parallelismus-der-Schichten/00000016.tif&amp;dw=1858&amp;ww=0.0791&amp;wh=0.0265&amp;wx=0.155&amp;wy=0.8497 "><a href="#carousel__slide2" class="carousel__prev">Go to last slide</a><a href="#carousel__slide4" class="carousel__next">Go to next slide</a></li>
                             <li id="carousel__slide4" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/Kunth/1848_11_24_1r.jpg&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/23r.tif&amp;dw=1586&amp;dh=865&amp;ww=0.1869&amp;wh=0.0601&amp;wx=0.5763&amp;wy=0.6451 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/25r_1.JPG&amp;dh=180 "><a href="#carousel__slide3" class="carousel__prev">Go to last slide</a><a href="#carousel__slide5" class="carousel__next">Go to next slide</a></li>
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/88v_4.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/ART_II-VI/00000048.tif&amp;dw=1858&amp;ww=0.0716&amp;wh=0.0682&amp;wx=0.1819&amp;wy=0.2673 "><a href="#carousel__slide3" class="carousel__prev">Go to last slide</a><a href="#carousel__slide5" class="carousel__next">Go to next slide</a></li>
                             <li id="carousel__slide5" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/94r_1.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/95v_5.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/4v.tif&amp;dw=820&amp;dh=1414&amp;ww=0.4341&amp;wh=0.1258&amp;wx=0.2107&amp;wy=0.7464 "><a href="#carousel__slide4" class="carousel__prev">Go to last slide</a><a href="#carousel__slide6" class="carousel__next">Go to next slide</a></li>
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/74r&amp;dw=1586&amp;dh=865&amp;ww=0.0913&amp;wh=0.0605&amp;wx=0.4196&amp;wy=0.2671 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/Spanien-Tagebuch/Spanien-Tb_gr-Kasten-5-Nr-15-16-Bl-8v_PPN826363342_00000006-Detail.jpg&amp;dh=180 "><a href="#carousel__slide4" class="carousel__prev">Go to last slide</a><a href="#carousel__slide6" class="carousel__next">Go to next slide</a></li>
                             <li id="carousel__slide6" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/94r_1.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/Ehrenberg-Briefwechsel/1849_00_00-1850_00_00-vEhrenberg_2.jpg&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/Soemmerring/1796_04_09_2r_I.jpg&amp;dh=180 "><a href="#carousel__slide5" class="carousel__prev">Go to last slide</a><a href="#carousel__slide7" class="carousel__next">Go to next slide</a></li>
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/93v_3.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/95v_5.JPG&amp;dh=180 "><a href="#carousel__slide5" class="carousel__prev">Go to last slide</a><a href="#carousel__slide7" class="carousel__next">Go to next slide</a></li>
                             <li id="carousel__slide7" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/138v&amp;dw=1586&amp;dh=865&amp;ww=0.1358&amp;wh=0.096&amp;wx=0.4861&amp;wy=0.3711 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/TS2/H_FWIV/heilige_Seen.jpg&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/14v_1.JPG&amp;dh=180 "><a href="#carousel__slide6" class="carousel__prev">Go to last slide</a><a href="#carousel__slide8" class="carousel__next">Go to next slide</a></li>
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/servlet/Scaler?fn=projects/avhr/ART/AvH-Parallelismus-der-Schichten/00000016.tif&amp;dw=1858&amp;ww=0.1507&amp;wh=0.0345&amp;wx=0.6539&amp;wy=0.6932 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/ART_II-VI/00000017.tif&amp;dw=1858&amp;ww=0.0549&amp;wh=0.0238&amp;wx=0.2164&amp;wy=0.371 "><a href="#carousel__slide6" class="carousel__prev">Go to last slide</a><a href="#carousel__slide8" class="carousel__next">Go to next slide</a></li>
                             <li id="carousel__slide8" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/94r_1.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/56v&amp;dw=1618&amp;dh=897&amp;ww=0.5807&amp;wh=0.2205&amp;wx=0.0917&amp;wy=0.1681 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/75v_1.JPG&amp;dh=180 "><a href="#carousel__slide7" class="carousel__prev">Go to last slide</a><a href="#carousel__slide9" class="carousel__next">Go to next slide</a></li>
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/ART_II-VI/00000035.tif&amp;dw=1858&amp;ww=0.0409&amp;wh=0.0218&amp;wx=0.2454&amp;wy=0.3855 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/6v.tif&amp;dw=1618&amp;dh=897&amp;ww=0.4642&amp;wh=0.0925&amp;wx=0.1446&amp;wy=0.2674 "><a href="#carousel__slide7" class="carousel__prev">Go to last slide</a><a href="#carousel__slide9" class="carousel__next">Go to next slide</a></li>
                             <li id="carousel__slide9" tabindex="0" class="carousel__slide">
-                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/Zeichnungen/ARTI/94r_3.JPG&amp;dh=180 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/74r&amp;dw=1586&amp;dh=865&amp;ww=0.0913&amp;wh=0.0605&amp;wx=0.4196&amp;wy=0.2671 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/29v&amp;dw=1618&amp;dh=897&amp;ww=0.0921&amp;wh=0.0749&amp;wx=0.6998&amp;wy=0.6276 "><a href="#carousel__slide8" class="carousel__prev">Go to last slide</a><a href="#carousel__slide1" class="carousel__next">Go to next slide</a></li>
+                                <div class="carousel__snapper"></div><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/138v&amp;dw=1586&amp;dh=865&amp;ww=0.1358&amp;wh=0.096&amp;wx=0.4861&amp;wy=0.3711 "><img class="img-gallery" src="https://digilib.bbaw.de/digilib/Scaler?fn=projects/avhr/RSTI/59r&amp;dw=1618&amp;dh=897&amp;ww=0.5294&amp;wh=0.0636&amp;wx=0.1825&amp;wy=0.8874 "><a href="#carousel__slide8" class="carousel__prev">Go to last slide</a><a href="#carousel__slide1" class="carousel__next">Go to next slide</a></li>
                         </ol>
-                    </section><span><a class="button" style="float:right" href="gallery/index.xql?&amp;l=de">Zeichnungen und Skizzen</a></span></div>
+                    </section><span><a class="button" href="gallery/index.xql?&amp;l=de">Galerie</a></span></div>
                 <div class="grid_4 row1">
-                    <h3>Heute vor 197 Jahren</h3>
-                    <h4>27.03.1828</h4>
+                    <h3>Humboldts Orte</h3><a href="register/orte/map.xql?l=de"><img src="https://edition-humboldt.de/resources/images/home-map-thumb.png" width="265" style="margin-bottom: 10px"></a>
+                    <p>Mehr als 4000 Orte weltweit sind im Ortsregister verzeichnet.</p><a class="button" href="register/orte/map.xql?l=de">Weltkarte</a></div>
+                <div class="grid_4 row1">
+                    <h3>Heute vor 236 Jahren</h3>
+                    <h4>25.03.1790</h4>
                     <p>
-                 Letzte ‚Kosmos-Vorlesung‘ H.s in der Sing-Akademie, womit nach
-                    insgesamt 16 Vorträgen dieser am 6. Dezember 1827 begonnene Zyklus sein
-                    Ende findet. 
-                Zu Humboldts Vorträgen an [...]</p>
-                    <p><a href="https://edition-humboldt.de/chronologie/detail.xql?id=H0000648&amp;l=de"><i class="fa fa-arrow-circle-right"> </i>Zum Eintrag in der Chronologie</a></p>
+                H. bricht mit Georg Forster in Mainz auf zu einer Reise den Rhein abwärts bis Düsseldorf, durch die Österreichischen Niederlande, den
+                    Nordosten Frankreichs, Flandern und die
+                    Republik der [...]</p>
+                    <p><a href="https://edition-humboldt.de/chronologie/detail.xql?id=H0015097&amp;l=de"><i class="fa fa-arrow-circle-right"> </i>Zum Eintrag in der Chronologie</a></p>
                 </div>
                 <hr class="clear">
                 <div class="grid_4 row1">
@@ -283,7 +292,9 @@
                 </div>
                 <div class="grid_4">
                     <p class="italic">
-            edition humboldt digital ist eine Publikation des Akademienvorhabens »Alexander von Humboldt auf Reisen – Wissenschaft aus der Bewegung« der Berlin-Brandenburgischen Akademie der Wissenschaften.</p>
+            edition humboldt digital ist eine Publikation des Akademienvorhabens »Alexander von Humboldt auf Reisen – Wissenschaft aus der Bewegung« der Berlin-Brandenburgischen Akademie der Wissenschaften.</p><br>
+                    <p><a href="https://edition-humboldt.de/impressum.xql?l=de">Impressum &amp; Datenschutz</a></p><br>
+                    <p><a href="https://edition-humboldt.de/about/index.xql?id=H0020382&amp;l=de#section3">Version 11 (04.06.2025)</a></p>
                 </div>
                 <div class="grid_5">
                     <p class="italic">Das Akademienvorhaben »Alexander von Humboldt auf Reisen – Wissenschaft aus der Bewegung« ist Teil des von Bund und Ländern geförderten Akademienprogramms, das der Erhaltung, Sicherung und Vergegenwärtigung unseres kulturellen Erbes dient. Koordiniert wird das Programm von der Union der Deutschen Akademien der Wissenschaften.</p>
@@ -292,10 +303,7 @@
                     <p><br>Alle Texte und TEI-XML-Daten dieser Website können – soweit nicht anders vermerkt – unter den Bedingungen der Creative Commons-Lizenz CC BY-SA 4.0 nachgenutzt werden.</p>
                     <p><br><a href="https://github.com/telota/edition-humboldt-digital"><img src="https://edition-humboldt.de/resources/images/github_logo_light_32px.png" width="20"> Daten-Download ehd</a></p>
                 </div>
-                <div class="grid_3"><a href="http://www.bbaw.de"><img style="width: 180px;" src="https://edition-humboldt.de/resources/images/bbaw_logo.svg" title="Berlin-Brandeburgische Akademie der Wissenschaften" alt="Das Logo der Berlin-Brandenburgischen Akademie der Wissenschaften zeigt den Schriftzug neben einem Adler vor einem Sternenhimmel"></a><br><br><br>
-                    <p style="text-align: right;"><a href="https://edition-humboldt.de/impressum.xql?l=de">Impressum &amp; Datenschutz</a></p>
-                    <p style="text-align: right; color: silver;">Version 10 (02.07.2024)</p>
-                </div>
+                <div class="grid_3"><a href="https://www.bbaw.de"><img style="width: 180px;" src="https://edition-humboldt.de/resources/images/bbaw_logo.svg" title="Berlin-Brandeburgische Akademie der Wissenschaften" alt="Das Logo der Berlin-Brandenburgischen Akademie der Wissenschaften zeigt den Schriftzug neben einem Adler vor einem Sternenhimmel"></a><br><br><br><a href="https://www.akademienunion.de"><img style="width: 180px;" src="https://edition-humboldt.de/resources/images/akademienunion_logo.png" title="Akademienunion" alt="Das Logo der Akademienunion zeigt den Schriftzug und zwei übereinandergelegte Quadrate"></a></div>
             </footer>
         </div>
         <script type="text/javascript">
@@ -314,7 +322,7 @@
                         });
                     </script>
         <script type="text/javascript">
-                    $('.tooltip').not('.add').not('.measure').not('.gap').mouseover(function(){
+                    $('.tooltip').not('.add').not('.measure').not('.gap').not('.headPlace').mouseover(function(){
                     
                         //If this item is already selected, forget about it. 
                         if ($(this).hasClass('active')) return;

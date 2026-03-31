@@ -132,9 +132,7 @@
          <div class="panel-body">
 			     <p><a href="kronologia.php?sztipus=1">Dráma</a></p>
 			     <p><a href="kronologia.php?sztipus=6">Feljegyzés</a></p>
-			     
-			     			     <p>Költemény</p>
-			     			     
+			     <p><a href="kronologia.php?sztipus=2">Költemény</a></p>
 			     
            <p><a href="kronologia.php?sztipus=3">Levél</a></p>
            <p><a href="kronologia.php?sztipus=5">Önéletírás</a></p>
@@ -199,21 +197,13 @@
              <div class="panel-body">
               <p><a href="nyomtatvanyok.php?tipus=onallo_kotet">Önálló kötet</a></p>
               <p><a href="nyomtatvanyok.php?tipus=gyujtemenyes_kotet">Gyűjteményes kötet</a></p>
-						  <p>Aprónyomtatvány</p>
-						  <p><a href="nyomtatvanyok.php?tipus=folyoirat">Folyóirat</a></p>
-						  <p>Hírlap</p>
-						  <p>Könyvrészlet</p>
-						  <p><a href="nyomtatvanyok.php?tipus=utolagos_publikacio">Utólagos publikáció</a></p>
-
-						  <!--
-						  <p><a href="nyomtatvanyok.php?tipus=onallo_kotet">Önálló kötetek</a></p>
-              <p><a href="nyomtatvanyok.php?tipus=gyujtemenyes_kotet">Gyűjteményes kötetek</a></p>
-              <p><a href="nyomtatvanyok.php?tipus=apronyomtatvany">Aprónyomtatványok</a></p>
-              <p><a href="nyomtatvanyok.php?tipus=folyoirat">Folyóiratok</a></p>
-              <p><a href="nyomtatvanyok.php?tipus=hirlap">Hírlapok</a></p>
-              <p><a href="nyomtatvanyok.php?tipus=konyvreszlet">Könyvrészletek</a></p>
-              <p><a href="nyomtatvanyok.php?tipus=utolagos_publikacio">Utólagos publikációk</a></p>
-						   -->
+			  
+			  <p><a href="nyomtatvanyok.php?tipus=apronyomtatvany">Aprónyomtatvány</a></p>
+			  <p><a href="nyomtatvanyok.php?tipus=evkonyv">Évkönyv</a></p>
+			  <p><a href="nyomtatvanyok.php?tipus=folyoirat">Folyóirat</a></p>
+			  <p><a href="nyomtatvanyok.php?tipus=hirlap">Hírlap</a></p>			  
+			  
+			  <p><a href="nyomtatvanyok.php?tipus=utolagos_publikacio">Utólagos publikáció</a></p>
 
              </div>
           </div>
@@ -271,30 +261,30 @@
 		         <div class="panel-body">
 		          <p><a href="nyomtatvanyok.php?tipus=onallo_kotet&m=sz">Önálló kötet</a></p>
 		          <p><a href="nyomtatvanyok.php?tipus=gyujtemenyes_kotet&m=sz">Gyűjteményes kötet</a></p>
-              <p>Aprónyomtatvány</p>
-
-              <!--
-              <p><a href="nyomtatvanyok.php?tipus=onallo_kotet&m=sz">Önálló kötetek</a></p>
-              <p><a href="nyomtatvanyok.php?tipus=gyujtemenyes_kotet&m=sz">Gyűjteményes kötetek</a></p>
-              <p><a href="nyomtatvanyok.php?tipus=apronyomtatvany&m=sz">Aprónyomtatványok</a></p>
-               -->
+                            
+              	  <p><a href="nyomtatvanyok.php?tipus=apronyomtatvany&m=sz">Aprónyomtatvány</a></p>              	                	                	  
 
 		         </div>
 		      </div>
          </div>
          </div>
 
-
-
-         <div class="panel-group">
+         
+         
+         <div class="panel-group" id="accordion_szkomp_2">
          <div class="panel panel-default">
-            <div class="panel-heading">
-               <h4 class="panel-title">
-                  <a href="keziratok.php?tipus=szerzoi_kezirat&m=szk">Kézirat</a>
-               </h4>
-            </div>
+          <div class="panel-heading">
+             <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion_szkomp_2" href="#collapse_szerz_komp_k">Kézirat</a></h4>
+          </div>
+          <div id="collapse_szerz_komp_k" class="panel-collapse collapse ">
+             <div class="panel-body">             
+              <p><a href="keziratok.php?tipus=szerzoi_kezirat&tipus2=autograf_tisztazat&m=szk">Autográf tisztázat</a></p>
+              <p><a href="keziratok.php?tipus=szerzoi_kezirat&tipus2=autograf_fogalmazvany&m=szk">Autográf fogalmazvány</a></p>
+             </div>
+          </div>
          </div>
          </div>
+         
 
 
          </div>
@@ -433,6 +423,31 @@
          </div>
       </div>
    </div>
+
+
+
+
+<div class="menu_label menu_label_2">Kapcsolódó források</div>
+
+  <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="hitelesseg.php?x=ketes">
+               Bizonytalan szerzőségű szövegek            </a>
+         </h4>
+      </div>
+  </div>
+      
+
+  <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a href="tanulmany_monografia.php">Tanulmányok és monográfiák</a>
+         </h4>
+      </div>
+  </div>
+
+
 
 
 
@@ -585,8 +600,8 @@ Informatikai fejlesztés<br>
 
 <div class="container-fluid" id="footer">    
     <div class="col-sm-12" id="footer_text">
-      Copyright &copy; 2016-2025 HUN–REN–DE Klasszikus Magyar Irodalmi Textológiai Kutatócsoport<br>
-			Copyright &copy; 2016-2025 Debreceni Egyetemi Kiadó (DOI: 10.5484/Kazinczy_Ferenc_muvei)<br>
+      Copyright &copy; 2016-2026 HUN–REN–DE Klasszikus Magyar Irodalmi Textológiai Kutatócsoport<br>
+			Copyright &copy; 2016-2026 Debreceni Egyetemi Kiadó (DOI: 10.5484/Kazinczy_Ferenc_muvei)<br>
       A kiadást a K108831. sz. OTKA kutatási program támogatta.    </div>
 </div>
 

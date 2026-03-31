@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Jean Paul - Sämtliche Briefe Digital</title>
         <link rel="icon" href="resources/images/favi.png" type="image/png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Jean Paul – Sämtliche Briefe digital ist eine digitale Neuausgabe der Briefe von Jean Paul, in der Fassung der von Eduard Berend herausgegebenen 3. Abteilung der Historisch-kritischen Ausgabe (1952–1964), im Auftrag der Berlin-Brandenburgischen Akademie der Wissenschaften überarbeitet und herausgegeben von Markus Bernauer, Norbert Miller und Frederike Neuber.">
-        
+    
         <!-- bootstrap mobile first -->
-        <meta name="description" content="Jean Paul Briefwechsel">
-        <meta name="creator" content="">
-        <link rel="stylesheet" type="text/css" href="shared-resources-copied/shared-resources/resources/css/bootstrap-3.0.3.min.css">
-        <link rel="stylesheet" type="text/css" href="shared-resources-copied/shared-resources/resources/css/bootstrap-3.3.7.min.css">
+        <meta name="description" content="Jean Paul">
+        <meta name="creator" content="TELOTA">
+        <link rel="stylesheet" type="text/css" href="shared-resources/resources/css/bootstrap-3.0.3.min.css">
+        <!--<link rel="stylesheet" type="text/css" href="shared-resources/resources/css/bootstrap-3.3.7.min.css"/>-->
         <!-- FN: Gesamtlayout -->
         <link rel="stylesheet" type="text/css" href="resources/css/fonts.css">
         <link rel="stylesheet" type="text/css" href="resources/css/main.css">
         <link rel="stylesheet" type="text/css" href="resources/css/start.css">
         <!-- FN: Navigation speziell -->
         <link rel="stylesheet" type="text/css" href="resources/css/navbar.css">
+        <!-- AL: Suche -->
+        <link rel="stylesheet" type="text/css" href="resources/css/suche.css">
         <!-- FN: Briefansicht -->
         <link rel="stylesheet" type="text/css" href="resources/css/briefansicht.css">
         <link rel="stylesheet" type="text/css" href="resources/css/popover-tooltips.css">
-        <!-- AL: Suche -->
-        <link rel="stylesheet" type="text/css" href="resources/css/suche.css">
         <!-- Responsive Tabs -->
         <link rel="stylesheet" type="text/css" href="resources/css/responsiveTabs.css">
         <!-- FN: Leaflet für Ortsregister -->
         <link rel="stylesheet" type="text/css" href="resources/css/leaflet.css">
-        <link rel="stylesheet" type="text/css" href="resources/js/bootstrap-select.min.js">
-        <link rel="stylesheet" type="text/css" href="resources/css/bootstrap-select.min.css">
+        <!--<link rel="stylesheet" type="text/css" href="resources/js/bootstrap-select.min.js"/>
+        <link rel="stylesheet" type="text/css" href="resources/css/bootstrap-select.min.css"/>-->
         <!-- FN: Fontawesome für Icons -->
         <link rel="stylesheet" href="resources/css/fontawesome.css">
         <script type="text/javascript" src="resources/js/leaflet.js"></script>
-        
+       
         <!-- JS, Bootstrap -->
-        <script type="text/javascript" src="shared-resources-copied/shared-resources/resources/scripts/jquery/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="shared-resources-copied/shared-resources/resources/scripts/loadsource.js"></script>
-        <script type="text/javascript" src="shared-resources-copied/shared-resources/resources/scripts/bootstrap-3.0.3.min.js"></script>
+        <script type="text/javascript" src="shared-resources/resources/scripts/jquery/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="shared-resources/resources/scripts/loadsource.js"></script>
+        <script type="text/javascript" src="shared-resources/resources/scripts/bootstrap-3.0.3.min.js"></script>
         
         <!-- eigene JS -->
         <script type="text/javascript" src="resources/js/top-button.js"></script>
         <script type="text/javascript" src="resources/js/popover.js"></script>
         <script type="text/javascript" src="resources/js/filter.js"></script>
+        <script type="text/javascript" src="resources/js/comment-teaser.js"></script>
+        <script type="text/javascript" src="resources/js/accordion.js"></script>
         <script>$(function () {
   $('.example-popover').popover({
     container: 'body'
   })
 })</script>
+    <!-- Matomo -->
+    <script>
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://piwik.bbaw.de/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '38']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+
     </head>
     
     <body id="body">
@@ -86,7 +105,7 @@
                 <h1>Jean Paul – Sämtliche Briefe <span class="glyphicon glyphicon-refresh" style="font-size: 75%" aria-hidden="true"></span> digital</h1>
                 <h4>Herausgegeben im Auftrag der Berlin-Brandenburgischen Akademie der
                     Wissenschaften von Markus Bernauer, Norbert Miller und Frederike Neuber
-                    (2018–)</h4>
+                    (2018–2027).</h4>
             </div>
             <div class="col-md-10">
                 <div style="display: block;clear: both;"></div>
@@ -100,21 +119,18 @@
     </div>
     <div class="container">
         <div class="row">
-            <h2 align="center" style="color: #939393; font-size: 150%; font-family: Source Sans Pro; letter-spacing: 0.1em;"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                <br>Korpora<br></h2>
+            <h2 align="center" style="color: #939393; font-size: 150%; font-family: Source Sans Pro; letter-spacing: 0.1em;">
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                <br>Korpora<br>
+            </h2>
             <br>
             <div class="col-md-4">
                 <div class="card card-start">
                     <img class="card-img-top" width="100%" src="resources/images/start-from_jp.png" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title"> Briefe von Jean Paul </h4>
-                        <p class="card-text">Digitale Neuausgabe der Briefe von Jean Paul in der
-                            Fassung der von Eduard Berend herausgegebenen 3. Abteilung der
-                            Historisch-kritischen Ausgabe (1952–1964), im Auftrag der
-                            Berlin-Brandenburgischen Akademie der Wissenschaften überarbeitet und
-                            herausgegeben von Markus Bernauer, Norbert Miller und Frederike Neuber
-                            (2018).</p>
-                        <p>Das Korpus umfasst <a href="briefe.html?sort=date&amp;corpus=letter">5525 Briefe</a>.</p>
+                        <p class="card-text">Digitale Neuausgabe der Briefe von Jean Paul in der Fassung der von Eduard Berend herausgegebenen 3. Abteilung der Historisch-kritischen Ausgabe (1952–1964), im Auftrag der Berlin-Brandenburgischen Akademie der Wissenschaften, editorisch eingerichtet von Markus Bernauer, Entwicklung der digitalen Edition von Frederike Neuber (2017–2018).</p>
+                        <p>Das Korpus umfasst <a href="briefe.html?sort=date&amp;corpus=letter">5526 Briefe</a>.</p>
                         <br>
                         <a href="briefe.html?sort=date&amp;corpus=letter" class="btn btn-primary jp-btn">Korpus
                             öffnen</a>
@@ -129,9 +145,8 @@
                     <img class="card-img-top" width="100%" src="resources/images/start-jp_context.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title">Briefe aus Jean Pauls Umfeld </h4>
-                        <p class="card-text">Briefe aus Jean Pauls Umfeld. Herausgegeben an der Berlin-Brandenburgischen Akademie der Wissenschaften von
-                            Selma Jahnke und Michael Rölcke (2020–2023).</p>
-                        <p>Derzeit umfasst das Korpus <a href="briefe.html?sort=date&amp;corpus=context">2198 Briefe</a>.</p>
+                        <p class="card-text">Die Briefe aus dem Umfeld Jean Pauls wurden 2019 bis 2023 digital ediert, herausgegeben an der Berlin-Brandenburgischen Akademie der Wissenschaften von Selma Jahnke und Michael Rölcke, Entwicklung der digitalen Edition von Frederike Neuber und Axelle Lecroq.</p>
+                        <p>Derzeit umfasst das Korpus <a href="briefe.html?sort=date&amp;corpus=context">2203 Briefe</a>.</p>
                         <br>
                         <a href="briefe.html?sort=date&amp;corpus=context" class="btn btn-primary jp-btn">Korpus
                             öffnen</a>
@@ -146,11 +161,20 @@
                     <img class="card-img-top" width="100%" src="resources/images/4abt-teaser.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title">Briefe an Jean Paul </h4>
-                        <p style="color: gray">[In Vorbereitung.]</p>
-                        <p class="card-text">Briefe an Jean Paul. Herausgegeben von der
-                            Berlin-Brandenburgischen Akademie der Wissenschaften durch Christian
-                            Begemann, Markus Bernauer und Norbert Miller (2003-2017). </p>
-                        <p>Das Korpus umfasst 3197 Briefe.</p>
+                        <p class="card-text">Die Briefe an Jean Paul werden seit 2025 in einer digitalen Neuausgabe erarbeitet, die auf der von Christian Begemann, Markus Bernauer und Norbert Miller herausgegebenen 4. Abteilung der Historisch-kritischen Ausgabe (2003–2017) aufbaut. Editorisch eingerichtet und ergänzt von Angela Steinsiek, Entwicklung der digitalen Edition von Johannes Ioannu und Fernanda Wolff (2025–2027).</p>
+                        
+                         <!--     @JI - mit Anbriefen :) -->
+
+                        <p>Das Korpus umfasst <a href="briefe.html?sort=date&amp;corpus=letter-to">3195 Briefe</a>.</p>
+                        <br>
+                        <a href="briefe.html?sort=date&amp;corpus=letter-to" class="btn btn-primary jp-btn">Korpus
+                            öffnen</a>
+                         
+
+                             <!--     @JI - ohne Anbriefe :) -->
+                            <!--    
+                            <p>Das Korpus umfasst 3197 Briefe.</p>
+                            -->
                         <a href="an-briefe.html" class="btn btn-primary jp-btn-lighter">Über das
                             Korpus</a>
                     </div>
@@ -161,44 +185,51 @@
             <div class="col-md-4">
                 <div class="start-info">
                     <h4 class="highlight">Über die digitale Edition </h4>
-                    <p><i>Jean Paul - Sämtliche Briefe digital</i> präsentiert derzeit zwei Korpora, 
-                        die auf verschiedenen Materialien und Daten basieren: 1) die Briefe von Jean Paul 
-                        in der Fassung der von Eduard Berend herausgegeben dritten Abteilung der historisch-kritischen
-                        Gesamtausgabe, die 2017-2018 retrodigitalisiert und -konvertiert wurden und 2) die seit 2019 erstmals digital edierten Briefe aus Jean Pauls Umfeld,
-                        d. h. von Familie, Freund/innen und Kolleg/innen des Dichters. 
+                    <p>
+                        <i>Jean Paul – Sämtliche Briefe <span class="glyphicon glyphicon-refresh" style="font-size: 75%" aria-hidden="true"></span> digital</i> präsentiert drei Korpora, die auf verschiedenen Materialien und Daten basieren: 1) die Briefe von Jean Paul in der Fassung der von Eduard Berend herausgegeben dritten Abteilung der historisch-kritischen Gesamtausgabe, die 2017–2018 retrodigitalisiert und -konvertiert wurden, 2) die Briefe aus Jean Pauls Umfeld, d. h. von Familie, Freund/innen und Kolleg/innen des Dichters, die 2019–2023 digital ediert wurden und 3) die Briefe an Jean Paul in einer Betaversion (Stand Februar 2025), basierend auf der von Christian Begemann, Markus Bernauer und Norbert Miller herausgegebenen vierten Abteilung der Historisch-kritischen Gesamtausgabe (2003–2017).  
                     </p>
-                    <p>Beide Korpora werden auf der Editionsplattform zusammengeführt und mit dem Gesamtregister der historisch-kritischen Gesamtausgabe verknüpft, welches zu diesem Zwecke digitalisiert, inhaltlich erweitert und mit Normdaten angereichert wurde.</p>
-                    <p>Anfang 2025 wurden die Arbeiten zur Erweiterung der digitalen Edition um die Briefe an Jean Paul, die als vierte Abteilung der
-                        historisch-kritischen Gesamtausgabe erschienen sind, aufgenommen.</p>                    
-                </div>           
-                
-            </div>
-            <div class="col-md-4">
+                    <p>Die 2025 begonnene Erweiterung der digitalen Edition um die Briefe an Jean Paul führt alle drei Korpora auf der Editionsplattform zusammen. Durch die Integration in bestehende Tools, die Verknüpfung mit dem inhaltlich erweiterten, mit Normdaten angereicherten Gesamtregister der historisch-kritischen Gesamtausgabe und durch die vorgesehene Entwicklung eines neuen korpusübergreifenden Forschungswerkzeuges wird die digitale Editionsplattform zu einem im Ganzen benutzbaren Tool für die Forschung zugänglich gemacht.</p>                         
+                </div>
+                    
                 <div class="start">
                     <div>
                         <h4>Register</h4>
                     </div>
                     <p>Das Gesamtregister umfasst 
-                        insgesamt <span>12644</span> Einträge, darunter
+                        insgesamt <span>12684</span> Einträge, darunter
                     <ul>
                             <li>
-                                <a href="personen.html?section=all">6643 Personen</a>,</li>
+                                <a href="personen.html?section=all">6658 Personen</a>,</li>
                         <li>
-                                <a href="orte.html?section=all">2164 Orte</a>,</li>
+                                <a href="orte.html?section=all">2294 Orte</a>,</li>
                         <li>
                                 <a href="werke-jp.html?section=all">475 Werke Jean Pauls</a> und</li>
                         <li>
-                                <a href="werke.html?section=all">2753 Werke</a>.</li>
+                                <a href="werke.html?section=all">2783 Werke</a>.</li>
                         </ul>
                         </p>
                     <p> Zwei eigens für die Edition der Umfeldbriefe entwickelte
                         Register verzeichnen außerdem <ul>
                             <li>
-                            <a href="korrespondenzkreise.html">37 Korrespondenzkreise</a> und</li>
+                            <a href="korrespondenzkreise.html">38 Korrespondenzkreise</a> und</li>
                             <li>
                                 <a href="themen.html">168 Themen</a>.</li>
                         </ul>
                             </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                        <div class="start" style="overflow:hidden;">
+                    <div>
+                        <h4>Konzert: »Flegeljahre«.</h4>
+                        <h6>»Flegeljahre«. Monodrama für einen Schauspieler und zwei Pianisten von Stefan Litwin nach Jean Paul. Textadaptation von Holger Schröder</h6>
+                    </div>
+                    <p>14. November 2025, 18:00 Uhr<br>
+                    Akademiegebäude am Gendarmenmarkt, Erdgeschoss bis 3. Stock, Jägerstraße 22/23, 10117 Berlin<br>
+                        </p>
+                    <img width="50%" src="resources/images/Jean_Paul_Klenner_Otto_2025.JPG" alt="Jean Paul-Kopf, Zeichnung von Stephan Klenner-Otto" style="float:left;margin-right: 15px;">
+                    <p>Erfahren Sie mehr die Ausstellung auf unserer <a href="https://www.bbaw.de/veranstaltungen/veranstaltung-zum-200-todestag-von-jean-paul-flegeljahre">Projektwebsite</a>. </p>
+                    <p></p>
                 </div>
                 <div class="start">
                     <div>
@@ -209,9 +240,32 @@
                         BY-SA-Lizenz versioniert bereit</a> und bietet CMIF und BEACON-Schnittstellen.</p>
                     <p>Seit September 2023 steht das ediarum-Framework, das für die Erfassung der
                         Umfeldbriefe verwendet wurde, auf <a href="https://github.com/telota/jean_paul_briefe_ediarum">GitHub</a> zur Verfügung.</p>
-                </div>               
+                </div>  
+                <div class="start-bottom">
+                    <p class="bold">Feedback</p>
+                    <p> Die Erstellung der digitalen Edition und Datenbestände ist
+                        ein fortlaufender Prozess. Hinweise und Ergänzungen 
+                        werden dankbar entgegengenommen. Bitte schreiben
+                        Sie an <a href="mailto:bernauer@bbaw.de">bernauer@bbaw.de</a> für inhaltliche, an <a href="mailto:neuber@bbaw.de">neuber@bbaw.de</a> für technische Hinweise.</p>
+                </div>
             </div>
             <div class="col-md-4">
+            <div class="start" style="overflow:hidden;">
+                    <div>
+                        <h4>Becoming Jean Paul.</h4>
+                        <h6>Eine Ausstellung der Jean Paul Edition zum 200. Todestag</h6>
+                    </div>
+                    <p>14. November 2025 bis 8. Januar 2026<br>
+                    Akademiegebäude am Gendarmenmarkt, Leibniz-Saal, Jägerstraße 22/23, 10117 Berlin<br>
+                        </p>
+                    <img width="60%" src="resources/images/Jean_Paul_Kombo.png" alt="Vier Porträts von Jean Paul im Pop Art Stil" style="float:left;margin-right: 15px;">
+                    <p>Erfahren Sie mehr die Ausstellung auf unserer <a href="https://www.bbaw.de/veranstaltungen/veranstaltung-becoming-jean-paul-eine-ausstellung-der-jean-paul-edition-zum-200-todestag">Projektwebsite</a>. </p>
+                    <p>
+                                        <b>RUNDGANG 14.11.2025 <br>16.00 Uhr</b>
+                                    </p>
+        <p>Mit der Kuratorin Angela Steinsiek</p>
+                    <p></p>
+                </div>
                 <div class="start">
                     <div>
                         <h4>Jean Paul auf Mastodon</h4>
@@ -224,13 +278,6 @@
                     <p>Erfahren Sie mehr über Jean Pauls Weg in die Social Media <a href="https://github.com/FrederikeNeuber/jeanpaultoday">auf GitHub</a>. </p>
                     <p></p>
                 </div>
-                <div class="start-bottom">
-                    <p class="bold">Feedback</p>
-                    <p> Die Erstellung der digitalen Edition und Datenbestände ist
-                        ein fortlaufender Prozess. Hinweise und Ergänzungen 
-                        werden dankbar entgegengenommen. Bitte schreiben
-                        Sie an <a href="mailto:bernauer@bbaw.de">bernauer@bbaw.de</a> für inhaltliche, an <a href="mailto:neuber@bbaw.de">neuber@bbaw.de</a> für technische Hinweise.</p>
-                </div>
             </div>
         </div>
     </div>
@@ -239,24 +286,27 @@
             <div class="innerWrap container">
                 <div id="footer-content" class="row">
                     <div class="col-md-6">
-                        <h4>DFG-Projekte:</h4>
+                        <h4>Forschungsprojekte:</h4>
                         <ul>
-                            <li>»<a href="https://gepris.dfg.de/gepris/projekt/537078797">Jean Paul – Sämtliche Briefe digital: Einbindung der IV. Abteilung – Briefe an Jean Paul</a>« (2025–2027)</li>
-                            <li>»<a href="https://gepris.dfg.de/gepris/projekt/398776857">Edition von Briefen aus Jean Pauls Umfeld</a>« (2018–2023)</li>
-                            <li>»<a href="https://gepris.dfg.de/gepris/projekt/282799084">Digitalisierung von Jean Pauls sämtlichen Briefen in Historisch-kritischer Ausgabe</a>« (2016–2018)</li>
+
+                            <!--  @JI - mit Anbriefen und Projektnummern  -->
                             
+                            <li>DFG-Projekt »<a href="https://gepris.dfg.de/gepris/projekt/537078797">Einbindung der IV. Abteilung – Briefe an Jean Paul</a>« (2025–2027). <br>Projektnummer 537078797</li>
+                            
+                            <li>DFG-Projekt »<a href="https://gepris.dfg.de/gepris/projekt/398776857">Edition von Briefen aus Jean Pauls Umfeld</a>« (2018–2023). <br>Projektnummer 398776857</li>
+                            <li>DFG-Projekt »<a href="https://gepris.dfg.de/gepris/projekt/282799084">Digitalisierung von Jean Pauls sämtlichen Briefen in Historisch-kritischer Ausgabe</a>« (2017–2018). Projektnummer 282799084</li>
                         </ul>
                         <p> <a href="impressum.html"> Impressum und Datenschutz</a>
-                            | <a href="http://www.bbaw.de/forschung/jean_paul/uebersicht">
-                                Vorhaben</a> | <a href="impressum.html"> Kontakt</a>
-                        </p>
+                               | <a href="http://www.bbaw.de/forschung/jean_paul/uebersicht">
+                                   Vorhaben</a> | <a href="impressum.html"> Kontakt</a>
+                                </p>
                     </div>
-                    
+
                     <div class="col-md-6">
                         <div class="row is-table-row">
                             <div class="col-md-7">
                                 <a href="http://www.bbaw.de">
-                                    <img id="bbaw-logo" class="img-responsive" src="resources/images/BBAW_Logo_ws.png" title="Berlin-Brandeburgische Akademie der Wissenschaften" alt="Das Logo der Berlin-Brandenburgischen Akademie der Wissenschaften zeigt den Schriftzug neben einem Adler vor einem Sternenhimmel">
+                                    <img id="bbaw-logo" class="img-responsive" src="resources/images/BBAW_Logo_ws_neu.png" title="Berlin-Brandeburgische Akademie der Wissenschaften" alt="Das Logo der Berlin-Brandenburgischen Akademie der Wissenschaften zeigt den Schriftzug vor einem Sternenhimmel">
                                 </a>
                             </div>
                             <div class="col-md-5">
@@ -267,17 +317,18 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <p><img src="resources/images/cc-by-sa.png" width="90">
+                        <p>
+                            <img src="resources/images/cc-by-sa.png" width="90">
                             Die Inhalte dieser Website können unter den Bedingungen der <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative
                                 Commons-Lizenz CC-BY-SA 4.0</a> nachgenutzt werden.</p>
                     </div>
-                    
-                    
-                    
-                    
+                   
+
+
+
                 </div>
             </div>
-            
+
         </footer>
         <a style="z-index: 999;" id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" title="Zurück nach oben" data-toggle="tooltip" data-placement="left">
             <span class="glyphicon glyphicon-chevron-up"></span>

@@ -15,12 +15,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script type="text/javascript">__cudl_webpack_public_path__ = '/ui/';</script>
 
-<link href="/ui/css/common-ad2cc0609c97655967a8.css" rel="stylesheet"></link><link href="/ui/css/page-mdc-grid-b160857857aeb1b092ea.css" rel="stylesheet"></link><script src="/ui/js/chunks/common-ad2cc0609c97655967a8.js" type="text/javascript"></script><script src="/ui/js/page-mdc-grid-b160857857aeb1b092ea.js" type="text/javascript"></script><link href="https://libapps.manchester.ac.uk/assets/mdc/css/mdc.css" rel="stylesheet"></link>
+<link href="/ui/css/common-bdb48f87493afdcd1353.css" rel="stylesheet"></link><link href="/ui/css/page-mdc-grid-17861b6a1e8cee70f43a.css" rel="stylesheet"></link><script src="/ui/js/chunks/common-bdb48f87493afdcd1353.js" type="text/javascript"></script><script src="/ui/js/page-mdc-grid-17861b6a1e8cee70f43a.js" type="text/javascript"></script><link href="https://libapps.manchester.ac.uk/assets/mdc/css/mdc.css" rel="stylesheet"></link>
 <script src="//assets.manchester.ac.uk/corporate/js/libs/jquery-1.11.0.min.js"></script>
 <script src="https://libapps.manchester.ac.uk/assets/mdc/js/mdc.js" type="text/javascript"></script>
 
 </head>
-<body data-context="{&#034;gaTrackingId&#034;:&#034;UA-10976633-3&#034;,&#034;csrf&#034;:{&#034;token&#034;:&#034;9061c6df-ffa6-4467-9ac5-efe936102d4a&#034;,&#034;header&#034;:&#034;X-CSRF-TOKEN&#034;},&#034;collectionUrl&#034;:&#034;/collections/maryhamilton&#034;,&#034;collectionTitle&#034;:&#034;The Mary Hamilton Papers&#034;,&#034;collectionId&#034;:&#034;maryhamilton&#034;,&#034;rootURL&#034;:&#034;https://www.digitalcollections.manchester.ac.uk&#034;,&#034;imageServer&#034;:&#034;https://image.digitalcollections.manchester.ac.uk/iiif/&#034;,&#034;services&#034;:&#034;https://services.digitalcollections.manchester.ac.uk&#034;}">
+<body data-context="{&#034;gaTrackingId&#034;:&#034;UA-10976633-3&#034;,&#034;csrf&#034;:{&#034;token&#034;:&#034;acb11e28-9838-4619-a427-8733d3f7c667&#034;,&#034;header&#034;:&#034;X-CSRF-TOKEN&#034;},&#034;collectionUrl&#034;:&#034;/collections/maryhamilton&#034;,&#034;collectionTitle&#034;:&#034;The Mary Hamilton Papers&#034;,&#034;collectionId&#034;:&#034;maryhamilton&#034;,&#034;rootURL&#034;:&#034;https://www.digitalcollections.manchester.ac.uk&#034;,&#034;imageServer&#034;:&#034;https://image.digitalcollections.manchester.ac.uk/iiif/&#034;,&#034;services&#034;:&#034;https://services.digitalcollections.manchester.ac.uk&#034;}">
   <!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PL377B"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -212,7 +212,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
-</div>
+<aside id="collection-content-warning" style="display: none;">
+                                <section class="icon"><span class="material-symbols-outlined">warning</span></section>
+                                <section id="collection-content-warning-message" class="inner">
+                                    <p>These items are blurred and you can choose to show each item individually. If you would like to show all these items by default, you can disable content warnings here.</p>
+                                    <section class="buttons">
+                                        <button class="content-warning-enabler">Enable content warnings</button>
+                                        <button class="content-warning-more">Find out more</button>
+                                    </section>
+                                </section>
+                            </aside>
+                        </div>
+
                     </div>
 
                     <!-- Nav tabs -->
@@ -282,6 +293,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <section>
                                     <select type="text" id="selectauthor">
                                         <option class="placeholder" value="">Any Author</option>
+                                    </select>
+                                </section>
+                            </details>
+                            <details id="printer_details" open>
+                                <summary>Printer</summary>
+                                <section>
+                                    <select type="text" id="selectprinter">
+                                        <option class="placeholder" value="">Any Printer</option>
+                                    </select>
+                                </section>
+                            </details>
+                            <details id="commentator_details" open>
+                                <summary>Commentator</summary>
+                                <section>
+                                    <select type="text" id="selectcommentator">
+                                        <option class="placeholder" value="">Any Commentator</option>
                                     </select>
                                 </section>
                             </details>
@@ -417,8 +444,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							</a>
 						</li>
 						<li>
-							<a href="https://twitter.com/OfficialUoM" class="socialMediaLinks" onclick="var href = this.href; ga('send', 'event', 'Social media link (footer)', 'Open', href, { 'hitCallback': function() { document.location = href; } }); return false;">
-								<img class="lazy" src="//assets.manchester.ac.uk/phase1/templates/images/icon-twitter-50.png" data-original="//assets.manchester.ac.uk/phase1/templates/images/icon-twitter-50.png" alt="Twitter page for The University of Manchester" style="display: inline;">
+							<a href="https://bsky.app/profile/uniofmanchester.bsky.social" class="socialMediaLinks" onclick="var href = this.href; ga('send', 'event', 'Social media link (footer)', 'Open', href, { 'hitCallback': function() { document.location = href; } }); return false;">
+								<img class="lazy" src="https://assets.manchester.ac.uk/shared/images/design/social-media-icons/icon-bluesky-50.png" data-original="https://assets.manchester.ac.uk/shared/images/design/social-media-icons/icon-bluesky-50.png" alt="Bluesky page for The University of Manchester" style="display: inline;">
 							</a>
 						</li>
 						<li>

@@ -1,19 +1,105 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Visualisierung der Aufenthaltsorte des österreichischen Schriftstellers Arthur Schnitzler (1879-1931) basierend auf seinen Tagebucheinträgen. Interaktive Karten und Netzwerkdarstellungen seiner Reisen durch Europa.">
+    <meta name="keywords" content="Arthur Schnitzler, Tagebuch, Aufenthaltsorte, Visualisierung, Digital Humanities, ACDH-CH, Reisen, Wien, Literaturgeschichte">
+    <meta name="author" content="Peter Andorfer, Martin Anton Müller, Laura Puntigam, Laura Untner">
+    <meta name="google-site-verification" content="dc888ZmCroA0_VKEB86Vss7wy4Jbkaro0j2QfM8GOak">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://schnitzler-orte.acdh.oeaw.ac.at/">
+    <meta property="og:title" content="Arthur Schnitzler – Aufenthalte">
+    <meta property="og:description" content="Visualisierung der Aufenthaltsorte des österreichischen Schriftstellers Arthur Schnitzler (1879-1931) basierend auf seinen Tagebucheinträgen.">
+    <meta property="og:image" content="https://shared.acdh.oeaw.ac.at/schnitzler-orte/schnitzler-orte-farbe.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://schnitzler-orte.acdh.oeaw.ac.at/">
+    <meta property="twitter:title" content="Arthur Schnitzler – Aufenthalte">
+    <meta property="twitter:description" content="Visualisierung der Aufenthaltsorte des österreichischen Schriftstellers Arthur Schnitzler (1879-1931).">
+    <meta property="twitter:image" content="https://shared.acdh.oeaw.ac.at/schnitzler-orte/schnitzler-orte-farbe.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://schnitzler-orte.acdh.oeaw.ac.at/">
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://schnitzler-orte.acdh.oeaw.ac.at/sitemap.xml">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdn.knightlab.com" crossorigin>
+    <link rel="preconnect" href="https://shared.acdh.oeaw.ac.at" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://d3js.org">
+    <link rel="dns-prefetch" href="https://basemaps.cartocdn.com">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.knightlab.com/libs/storymapjs/latest/css/storymap.css">
     <link rel="stylesheet" href="./static/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <script type="text/javascript" src="https://cdn.knightlab.com/libs/storymapjs/latest/js/storymap-min.js"></script>
-    <script type="text/javascript" src="./static/js/utils.js"></script>
+    <script type="text/javascript" src="https://cdn.knightlab.com/libs/storymapjs/latest/js/storymap-min.js" defer></script>
+    <script type="text/javascript" src="./static/js/utils.js" defer></script>
     
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Arthur Schnitzler – Aufenthaltsorte",
+  "url": "https://schnitzler-orte.acdh.oeaw.ac.at/",
+  "description": "Visualisierung der Aufenthaltsorte des österreichischen Schriftstellers Arthur Schnitzler (1879-1931) basierend auf seinen Tagebucheinträgen.",
+  "inLanguage": "de",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Peter Andorfer",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "ACDH-CH"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Martin Anton Müller"
+    },
+    {
+      "@type": "Person",
+      "name": "Laura Puntigam"
+    },
+    {
+      "@type": "Person",
+      "name": "Laura Untner"
+    }
+  ],
+  "about": {
+    "@type": "Person",
+    "name": "Arthur Schnitzler",
+    "birthDate": "1862",
+    "deathDate": "1931",
+    "nationality": "Austrian",
+    "jobTitle": "Schriftsteller"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ACDH-CH",
+    "url": "https://www.oeaw.ac.at/acdh/"
+  }
+}
+</script>
+
     <!-- Matomo -->
             <script type="text/javascript">
                 var _paq = _paq || [];
@@ -46,60 +132,64 @@
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <!-- Your menu goes here -->
                         <ul id="main-menu" class="navbar-nav">
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                     aria-expanded="false"> Links </a>
-                  <ul class="dropdown-menu">
-                     <li>
-                        <a class="dropdown-item"
-                           href="https://github.com/arthur-schnitzler/schnitzler-orte/tree/main/editions"
-                           >Datei bei gitHub</a>
-                     </li>
-                     <li>
-                        <a class="dropdown-item" href="https://schnitzler.acdh.oeaw.ac.at">Schnitzler
-                           am ACDH-CH</a>
-                     </li>
-                     <li>
-                        <a class="dropdown-item" href="https://schnitzler-tagebuch.acdh.oeaw.ac.at"
-                           >Tagebuch</a>
-                     </li>
-                     <li>
-                        <a class="dropdown-item" href="https://schnitzler-briefe.acdh.oeaw.ac.at"
-                           >Briefe</a>
-                     </li>
-                  </ul>
-               </li>
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                     aria-expanded="false"> Visualisierungen </a>
-                  <ul class="dropdown-menu">
-                     <li>
-                        <a class="dropdown-item" href="flourish.html">Animierte Reiseabfolge</a>
-                     </li>
-                     <li>
-                        <a class="dropdown-item" href="itineraries.html">Ziele nach Jahren</a>
-                     </li>
+   
+   <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+         aria-expanded="false"> Visualisierungen </a>
+      <ul class="dropdown-menu">
+         <li>
+            <a class="dropdown-item" href="flourish.html">Animierte Reiseabfolge</a>
+         </li>
+         <li>
+            <a class="dropdown-item" href="itineraries.html">Ziele nach Jahren</a>
+         </li>
+         <li>
+            <a class="dropdown-item" href="arcs.html">Beziehungen zwischen Orten</a>
+         </li>
+         <li>
+            <a class="dropdown-item" href="network.html">Netzwerk</a>
+         </li>
+         <li>
+            <a class="dropdown-item" href="towers.html">Quantitativ auf einer Karte</a>
+         </li>
+         <li>
+            <a class="dropdown-item" href="travel-net-map.html">Netzwerk auf einer
+               Karte</a>
+         </li>
+         <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="schnitzlerLinksDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Schnitzler</a>
+                                    <ul class="dropdown-menu" aria-labelledby="schnitzlerLinksDropdown">
+                                    <li>
+            <a class="dropdown-item"
+               href="https://github.com/arthur-schnitzler/schnitzler-orte/tree/main/editions"
+               >Datei bei gitHub</a>
+         </li>
+                                        <li><a class="dropdown-item" href="https://de.wikipedia.org/wiki/Arthur_Schnitzler" target="_blank">Wikipedia</a></li>
+                                        <li><a class="dropdown-item" href="https://www.geschichtewiki.wien.gv.at/Arthur_Schnitzler" target="_blank">Wien Geschichte Wiki</a></li>
+                                        <li><a class="dropdown-item" href="https://schnitzler-tagebuch.acdh.oeaw.ac.at/" target="_blank">Tagebuch (1879–1931)</a></li>
+                                        <li><a class="dropdown-item" href="https://schnitzler-briefe.acdh.oeaw.ac.at/" target="_blank">Briefe (1888–1931)</a></li>
+                                        <li><a class="dropdown-item" href="https://www.arthur-schnitzler.de" target="_blank">Werke digital (1905–1931)</a></li>
+                                        <li><a class="dropdown-item" href="https://schnitzler-mikrofilme.acdh.oeaw.ac.at/" target="_blank">Mikrofilme</a></li>
+                                        <li><a class="dropdown-item" href="https://schnitzler-zeitungen.acdh.oeaw.ac.at/" target="_blank">Archiv der Zeitungsausschnitte</a></li>
+                                        <li><a class="dropdown-item" href="https://schnitzler-interviews.acdh.oeaw.ac.at/" target="_blank">Interviews, Meinungen, Proteste</a></li>
+                                        <li><a class="dropdown-item" href="https://schnitzler-bahr.acdh.oeaw.ac.at/" target="_blank">Korrespondenz mit Hermann Bahr</a></li>
+                                        <li><a class="dropdown-item" href="https://schnitzler-chronik.acdh.oeaw.ac.at/" target="_blank">Chronik</a></li>
+                                        <li><a class="dropdown-item" href="https://schnitzler-lektueren.acdh.oeaw.ac.at/" target="_blank">Lektüren</a></li>
+                                        <li><a class="dropdown-item" href="https://pollaczek.acdh.oeaw.ac.at/" target="_blank">Pollaczek: Schnitzler und ich</a></li>
+                                        <li><a class="dropdown-item" href="https://pmb.acdh.oeaw.ac.at/" target="_blank" >PMB – Personen der Moderne</a></li>
+                                    </ul>
+                                </li>
+      </ul>
+   </li>
 
-                     <li>
-                        <a class="dropdown-item" href="arcs.html">Beziehungen zwischen Orten</a>
-                     </li>
-                                          <li>
-                        <a class="dropdown-item" href="network.html">Netzwerk</a>
-                     </li>
-                       <li>
-                        <a class="dropdown-item" href="towers.html">Quantitativ auf einer Karte</a>
-                     </li>
+   <!-- Neuer Menüpunkt -->
+   <li class="nav-item">
+      <a class="nav-link" href="https://www.wienerschnitzler.org" style="color: red; font-weight: bold;">
+         wienerschnitzler.org
+      </a>
+   </li>
+</ul>
 
-                     <li>
-                        <a class="dropdown-item" href="travel-net-map.html">Netzwerk auf einer
-                           Karte</a>
-                     </li>
-                    <!-- <li>
-                        <a class="dropdown-item" href="travels.html">Tabelle</a>
-                     </li> -->
-                  </ul>
-               </li>
-            </ul>
 
                        
                     </div>
@@ -118,7 +208,7 @@
     <div class="wrapper" id="wrapper-hero">
     <!-- ******************* The Hero Area ******************* -->
     <div class="wrapper" id="wrapper-hero-content"
-    style="background-image:url(https://shared.acdh.oeaw.ac.at/schnitzler-orte/schnitzler-orte-farbe.jpg);">
+    style="background-image: url('https://shared.acdh.oeaw.ac.at/schnitzler-orte/schnitzler-orte-farbe.jpg');">
     <div class="container-fluid-empty hero-light" id="wrapper-hero-inner"
     tabindex="-1">
     <div style="min-height: 250px;">
@@ -138,17 +228,17 @@
              wo er sich gerade aufhielt und welche Ausflüge er unternommen hatte. Er selbst beauftragte ein Exzerpt seiner Reisen 
              zu erstellen. Das Ergebnis ist ein Typoskript mit 67 Seiten, das heute in seinem Nachlass in der Cambridge University Library liegt (Mappe A175). 
              </p>
-             <p  style="font-size:18px;line-height:27px;">Ausgehend von diesen Daten unternahmen wir es, eine vollständige Auflistung seiner Aufenthaltsorte zu erstellen. An einer getreuen Edition der Liste war uns nicht gelegen. 
-             Mit Hilfe des Tagebuchs wurden einzelne Korrekturen vorgenommen und auch die fehlenden Jahre 1928 bis 1931 nachgetragen. Die Daten sind insofern unvollständig, als eine mögliche feinere Granulierung – genauere Punkte 
-             innerhalb von Städten, etwa Gebäude
-                und Sehenswürdigkeiten –  nicht durchgängig gemacht ist. Diese Uneinheitlichkeiten innerhalb der Daten bestehen auf unabsehbare Zeit, lassen sich aber leicht herausfiltern. Die Quelldatei mit den Daten kann bei <a href="https://github.com/arthur-schnitzler/schnitzler-orte/tree/main/editions">gitHub</a> 
+             <p  style="font-size:18px;line-height:27px;">Diese Liste wurde von uns im Jahr 2023 zu einer vollständigen Auflistung seiner Aufenthaltsorte ausgearbeitet. 2025 wurde
+             nochmals eine Verfeinerung vorgenommen, so dass nun auch Häuser und Straßen berücksichtigt sind. Die detaillierte Website findet sich auf
+             <a href="https://wienerschnitzler.org/" target="_blank" rel="noopener noreferrer">wienerschnitzler.org</a>. Sie macht die vorliegende Website weitgehend obsolet. Trotzdem wurde von
+             den korrigierten Daten der neuen Website die vorliegenden Daten zurückgerechnet und korrigiert.</p>
+             <p>Die Quelldatei mit den Daten kann bei <a href="https://github.com/arthur-schnitzler/schnitzler-orte/tree/main/editions" target="_blank" rel="noopener noreferrer">GitHub</a>
                 geladen werden.</p>
-            
+
         <p style="font-size:18px;line-height:27px;">Auf der vorliegenden Seite sind mehrere Visualisierungen umgesetzt, mit der der geografische Raum ermessbar wird, in dem sich Schnitzler seit seiner Volljährigkeit
                     bewegt hat. Der experimentelle Charakter soll explizit betont sein. Visualisierungen können jederzeit hinzukommen oder
                     verschwinden.</p>
-                    <p  style="font-size:18px;line-height:27px;"/>
-                    <p style="font-size:18px;line-height:27px;"><i>Die Website und die 
+                    <p style="font-size:18px;line-height:27px;"><i>Die Website und die
                         Visualisierungen verantwortete Peter Andorfer. Die Daten wurden von Martin Anton Müller, Laura Puntigam und Laura Untner aufbereitet.</i></p>
              
 
@@ -165,7 +255,10 @@
                             <h2>Reiseabfolge</h2>
                         </a>
                         <img
-                        src="https://shared.acdh.oeaw.ac.at/schnitzler-orte/flourish.jpg" width="100%" 
+                        src="https://shared.acdh.oeaw.ac.at/schnitzler-orte/flourish.jpg"
+                        alt="Screenshot der animierten Reiseabfolge-Visualisierung"
+                        width="100%"
+                        loading="lazy"
                         />
                     </div>
 
@@ -183,7 +276,10 @@
                             <h2>Ziele nach Jahren
                         </h2>
                         <img
-                        src="https://shared.acdh.oeaw.ac.at/schnitzler-orte/mit-postkarte.jpg" width="100%" 
+                        src="https://shared.acdh.oeaw.ac.at/schnitzler-orte/mit-postkarte.jpg"
+                        alt="Screenshot der Ziele nach Jahren Visualisierung mit historischen Postkartenbildern"
+                        width="100%"
+                        loading="lazy"
                         />
                         </a>
                     </div>
@@ -200,7 +296,10 @@
                         <a href="arcs.html">
                             <h2>Beziehungen zwischen Orten</h2>
                             <img
-                            src="https://shared.acdh.oeaw.ac.at/schnitzler-orte/arcs.jpg" width="100%" 
+                            src="https://shared.acdh.oeaw.ac.at/schnitzler-orte/arcs.jpg"
+                            alt="Screenshot der Beziehungen zwischen Orten - Arc-Visualisierung auf Karte"
+                            width="100%"
+                            loading="lazy"
                             />
                         </a>
                     </div>
@@ -223,7 +322,10 @@
                             <h2>Netzwerkdarstellung</h2>
                         </a>
                         <img
-                        src="/img/network.png" width="100%" 
+                        src="./img/network.png"
+                        alt="Screenshot der Netzwerkdarstellung der Reisen"
+                        width="100%"
+                        loading="lazy"
                         />
                     </div>
                     <div class="card-body">
@@ -238,7 +340,10 @@
                         <a href="towers.html">
                             <h2>Quantitativ</h2>
                             <img
-                            src="/img/network_on_map.png" width="100%" 
+                            src="./img/network_on_map.png"
+                            alt="Screenshot der quantitativen Darstellung der Aufenthaltstage auf Karte"
+                            width="100%"
+                            loading="lazy"
                             />
                         </a>
                     </div>
@@ -253,7 +358,10 @@
                         <a href="travel-net-map.html">
                             <h2>Netzwerkdarstellung auf einer Karte</h2>
                             <img
-                            src="https://shared.acdh.oeaw.ac.at/schnitzler-orte/netzwerk-geo.jpg" width="100%" 
+                            src="https://shared.acdh.oeaw.ac.at/schnitzler-orte/netzwerk-geo.jpg"
+                            alt="Screenshot der Netzwerkdarstellung auf geografischer Europakarte"
+                            width="100%"
+                            loading="lazy"
                             />
                         </a>
                     </div>
@@ -292,9 +400,7 @@
     <div class="container">
 <div class="wrapper fundament-default-footer" id="wrapper-footer-full" style="margin-top: 4em;">
            <div class="container" id="footer-full-content" tabindex="-1">
-    <div class="footer-separator">
-        KONTAKT
-    </div>
+    <div class="row-footer footer-separator">KONTAKT</div>
     <div class="row justify-content-center">
         <div class="footer-widget col-lg-1 col-md-2 col-sm-2 col-xs-6 text-center">
             <div class="textwidget custom-html-widget">
@@ -322,7 +428,7 @@
                                 E: <a
                                     href="mailto:acdh-ch-helpdesk@oeaw.ac.at
                                     "
-                                    >acdh-ch-helpdesk@oeaw.ac.at</a>
+                                    >acdh-ch-helpdesk(at)oeaw.ac.at</a>
                             </p>
                       </div>
         </div>

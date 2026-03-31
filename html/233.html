@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=latin-ext">
 	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- CSS only -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 
@@ -73,6 +73,7 @@
                         <li><a class="dropdown-item" href="/tablondbloomberg/">Bloomberg Tablets</a></li>
                         <li><a class="dropdown-item" href="/tabsulis/">Bath Tablets</a></li>
                         <li><a class="dropdown-item" href="/inscriptions/search">Search</a></li>
+                        <li><a class="dropdown-item" href="/inscriptions/searchadv">Advanced Search</a></li>
                         <li><a class="dropdown-item" href="/inscriptions/searchnumber">Search by Number</a></li>
                     </ul>
                 </li>
@@ -144,7 +145,10 @@
                             <p>This on-line edition is fully indexed and searchable. Here's some guidance:</p>
                             <ul>
    <li>
-      If you already know the number of the inscription from <em>RIB</em>, or tablet from the Vindolanda or Bloomberg Tablets, you could <a href="/inscriptions/searchnumber">Search by number</a>. Note that only those inscriptions in <em>RIB</em> volumes I (1-2400) and III (3001-3550) may currently be found.
+      If you already know the number of the inscription from <em>RIB</em>, or tablet from the Vindolanda or Bloomberg Tablets, you could <a href="/inscriptions/searchnumber">Search by number</a>. Numbers in volume I (1-2400), volume II (2401-2504), volume III (3001-3550) have all now been digitised, albeit those from Volume II are still in provisional form awaiting final publication. Similarly, inscriptions published for the first time in the annual 'Roman Britain in …' reports in the journal <em>Britannia</em> (through volume 54) have also been digitised.
+   </li>
+   <li>
+      The search functionality currently searches the texts of each inscription, as well as its English translation and all associated metadata. The filtering function can help to narrow the number of search results. An advanced search interface is also available allowing for more targeted and fine-grained search queries and gives the user significantly more control over search results. Click the Advanced Search button above to access this interface.
    </li>
    <li>
       Enter the search term you are interested in, e.g., <strong>Mithras</strong>, <strong>Vindolanda</strong>, or <strong>Caracalla</strong>.
@@ -166,9 +170,6 @@
    </li>
    <li>
       Note that all Latin words have been lemmatised. This means searching for 'cohors' will return inscriptions containing <em>cohors</em>, <em>cohortis</em>, etc.
-   </li>
-   <li>
-      The search functionality currently searches the texts of each inscription, as well as its English translation and all associated metadata. It is hoped that the filtering function can help to reduce the number of search results. An advanced search interface is being developed that will permit more fine-grained search queries and give the user significantly more control over search results.
    </li>
    <li>
       Dates: Given the inherent difficulty in dating inscriptions, most have not been assigned a particular date or range of dates any more specific than those of the traditionally recognized Romano-British era (<span class="sc">a.d.</span> 43-410). This means that queries for a certain range of dates will be over-inclusive,
@@ -269,7 +270,7 @@
             <!-- -->
             <div class="card-body">
                 <p><em>RIB</em> vol. 2 presents thousands of inscribed objects in 8 fascicules, starting with the military diplomata and ending with stamps on coarse pottery.
-                Select inscriptions from this corpus will first be published in Autumn 2022, with the full release in Summer 2024.</p>
+                Final versions of these inscriptions are still in-progress, but have all now been published in provisional form.</p>
             </div>
             
             <div class="card-footer">
@@ -376,6 +377,37 @@
             </div>
         </div>
     </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header dark">
+                <h5 class="card-title">
+                    <a href="/tablondbloomberg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M240 384c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm160 32c8.8 0 16-7.2 16-16s-7.2-16-16-16-16 7.2-16 16 7.2 16 16 16zM624 0H16C7.2 0 0 7.2 0 16v32c0 8.8 7.2 16 16 16h608c8.8 0 16-7.2 16-16V16c0-8.8-7.2-16-16-16zm0 448h-48V96H64v352H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h608c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM480 248c0 4.4-3.6 8-8 8H336v32h104c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H336v32h64c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48v-16h-64v16c0 26.5-21.5 48-48 48s-48-21.5-48-48 21.5-48 48-48h64v-32H200c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h104v-32H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h136v-32H200c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h104v-24c0-4.4 3.6-8 8-8h16c4.4 0 8 3.6 8 8v24h104c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H336v32h136c4.4 0 8 3.6 8 8v16z"/></svg>
+                        Roman Britain in 2023 and 2024
+                    </a>
+                </h5>
+            </div>
+            <!-- if image -->
+            <div class="card-img">
+                <a href="/inscriptions/Brit.55.1">
+                    <img src="/images/Brit.55.1-fig1a-homepage.jpg" class="card-img-top" alt="Brit.55.1">
+                    <span class="caption">View the inscription</span>
+                </a>
+            </div>
+
+            <div class="card-body">
+                <p>The two most recent annual inscription round-ups (<em>Roman Britain in 2023</em> and <em>2024</em>) from <em>Britannia</em> volumes 55 and 56 have now been published.
+                These two reports add 84 new inscriptions.</p>
+            </div>
+            
+            <div class="card-footer">
+                <span class="float-lg-end">
+                    <a href="/inscriptions/search?q=authority:Britannia%20AND%20volumeNum:54&amp;mode=searchstd" class="btn btn-primary">Browse Volume 54</a>
+                    <a href="/inscriptions/search?q=authority:Britannia%20AND%20volumeNum:55&amp;mode=searchstd" class="btn btn-primary">Browse Volume 55</a>
+                </span>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Info cards -->
@@ -432,7 +464,7 @@
          <div class="row footer justify-content-center">
     <footer>
 	    <div class="col-md-12">
-			<p>&copy; 2014-2024 - <a href="/about/terms-of-use">Terms of Use</a> - <a href="/about/privacy-cookies">Privacy &amp; Cookie policy</a></p>
+			<p>&copy; 2014-2025 - <a href="/about/terms-of-use">Terms of Use</a> - <a href="/about/privacy-cookies">Privacy &amp; Cookie policy</a></p>
 		</div>
 
 	    <div class="cookies-box hide" id="cookie-disclaimer">
@@ -527,7 +559,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js" integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="/js/typeahead.min.js"></script>
