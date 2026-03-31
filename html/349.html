@@ -18,9 +18,25 @@
     <script src="resources/scripts/menu.js"></script>
 
     <script id="script-preload"></script>
+
+    <!-- Matomo -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//matomo.sources-online.org/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '9']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
 </head>
     <body>
-        <pb-page data-template="pages:pb-page" unresolved="unresolved" locales="resources/i18n/{{ns}}/{{lng}}.json" require-language="require-language" locale-fallback-ns="app" app-root="" template="" endpoint=""><header class="top-header">
+        <pb-page id="pb-page-home" data-template="pages:pb-page" unresolved="unresolved" locales="resources/i18n/{{ns}}/{{lng}}.json" require-language="require-language" locale-fallback-ns="app" app-root="" template="" endpoint=""><header class="top-header">
                 <nav class="menubar center-l">
     <a href="/index.html" class="logo"></a>
     <pb-media-query class="menubar-left desktop" query="min-width: 48rem">
@@ -53,14 +69,14 @@
             <li>
                 <a tabindex="0"><pb-i18n key="menu.about-parent">(About-Parent)</pb-i18n></a>
                 <ul>
-                    <li><a href="/static/about">
-                        <pb-i18n key="menu.about">(About)</pb-i18n>
-                    </a></li>
                     <li><a href="/static/about-project">
                         <pb-i18n key="menu.about-project">(About-Project)</pb-i18n>
                     </a></li>
-                    <li><a href="/static/privacy">
-                        <pb-i18n key="menu.privacy">(Privacy)</pb-i18n>
+                    <li><a href="/static/about-edition">
+                        <pb-i18n key="menu.about-edition">(About-Edition)</pb-i18n>
+                    </a></li>
+                    <li><a href="/static/about">
+                        <pb-i18n key="menu.about">(About)</pb-i18n>
                     </a></li>
                     <li><a href="/static/disclaimers">
                         <pb-i18n key="menu.disclaimers">(Impressum)</pb-i18n>
@@ -104,14 +120,14 @@
                     </ul>
                     <p><pb-i18n key="menu.about-parent">(About-Parent)</pb-i18n></p>
                     <ul>
-                        <li><a href="/static/about">
-                            <pb-i18n key="menu.about">(About)</pb-i18n>
-                        </a></li>
                         <li><a href="/static/about-project">
                             <pb-i18n key="menu.about-project">(About-Project)</pb-i18n>
                         </a></li>
-                        <li><a href="/static/privacy">
-                            <pb-i18n key="menu.privacy">(Privacy)</pb-i18n>
+                        <li><a href="/static/about-edition">
+                            <pb-i18n key="menu.about-edition">(About-Edition)</pb-i18n>
+                        </a></li>
+                        <li><a href="/static/about">
+                            <pb-i18n key="menu.about">(About)</pb-i18n>
                         </a></li>
                         <li><a href="/static/disclaimers">
                             <pb-i18n key="menu.disclaimers">(Impressum)</pb-i18n>
@@ -131,14 +147,13 @@
                 <pb-load url="api/content/home" auto="" use-language="true">Loading...</pb-load>
             </main><footer>
     <p class="center-l">
-        <pb-i18n key="footer.text">(footer.text)</pb-i18n>
-        <span class="whitespace"> | </span>
-        <a href="/static/about-project"><pb-i18n key="footer.contact">(footer.contact)</pb-i18n></a>
+        <pb-i18n key="footer.contact">(footer.contact)</pb-i18n>: <a href="mailto:staatsarchivzh@ji.zh.ch">staatsarchivzh@ji.zh.ch</a>
         <span class="whitespace"> | </span>
         <a href="/static/privacy"><pb-i18n key="footer.privacy">(footer.privacy)</pb-i18n></a>
         <span class="whitespace"> | </span>
         <a href="/static/disclaimers"><pb-i18n key="footer.disclaimers">(footer.disclaimers)</pb-i18n></a>
     </p>
 </footer></pb-page>
+        <script src="./resources/scripts/home.js" type="text/javascript"></script>
     </body>
 </html>

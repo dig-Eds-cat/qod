@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-capable" content="yes">
-      <meta name="apple-mobile-web-app-title" content="Familiensache">
+      <meta name="apple-mobile-web-app-title" content="Die Korrespondenz der Kaiserin Eleonora Magdalena von Pfalz-Neuburg">
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="msapplication-TileImage" content="img/logo.png">
       <link rel="None" type="image/ico" href="img/favicons/favicon.ico">
@@ -32,7 +32,7 @@
       <link rel="shortcut icon" type="image/png" href="img/favicons/favicon-196x196.png">
       <link rel="icon" type="image/svg+xml" href="img/logo.png" sizes="any">
       <link rel="profile" href="http://gmpg.org/xfn/11">
-      <title>Familiensache</title>
+      <title>Die Korrespondenz der Kaiserin Eleonora Magdalena von Pfalz-Neuburg</title>
       <link href="vendor/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
       <link href="vendor/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
       <link href="vendor/tabulator-tables/css/tabulator_bootstrap5.min.css" rel="stylesheet">
@@ -48,7 +48,12 @@
               var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
               g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
             })();
-        </script></head>
+        </script><meta name="citation_editors" content="Keller, Katrin; Peper, Ines; Vargová, Dorota; Spitzbart, Anna">
+      <meta name="citation_date" content="2024">
+      <meta name="citation_publisher" content="Austrian Centre for Digital Humanities (ACDH)">
+      <meta name="citation_public_url" content="https://kaiserin-eleonora.oeaw.ac.at/index.html">
+      <meta name="citation_pdf_url" content="">
+   </head>
    <body class="d-flex flex-column h-100">
       <header>
          <nav class="navbar navbar-expand-lg">
@@ -93,6 +98,7 @@
                            <li><a class="dropdown-item" data-i18n="navbar__persons" href="listperson.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__places" href="listplace.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__orgs" href="listorg.html"></a></li>
+                           <li><a class="dropdown-item" data-i18n="navbar__attachments" href="attachments.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar_timeline" href="timeline.html"></a></li>
                            <li>
                               <hr class="dropdown-divider">
@@ -100,7 +106,7 @@
                            <li><a class="dropdown-item" href="cmif.xml">Correspondence Metadata Interchange Format (XML)</a></li>
                         </ul>
                      </li>
-                  </ul><a title="Suche" href="search.html" class="nav-link pe-3 fs-2"><i class="bi bi-search"></i></a><button type="button" class="btn btn-outline-secondary nav-link" id="lang-switch-de">DE</button><button type="button" class="btn btn-outline-secondary nav-link ps-3" id="lang-switch-en">EN</button></div>
+                  </ul><a title="Suche" href="search.html" class="nav-link pe-3 fs-2"><i class="bi bi-search"></i></a><button type="button" class="btn nav-link" id="lang-switch-de">DE</button><button type="button" class="btn nav-link ps-3" id="lang-switch-en">EN</button></div>
             </div>
          </nav>
       </header>
@@ -118,8 +124,7 @@
          <div class="row p-3">
             <div class="col-2"></div>
             <div class="col-8">
-               <h1 class="display-2 text-center" data-i18n="index__h1"></h1>
-               <h2 class="display-5 text-center" data-i18n="index__h2"></h2>
+               <h1 class="display-5 text-center" data-i18n="index__h1"></h1>
                <p class="text-center fs-5" data-i18n="index__teaser"></p>
                <div class="d-grid gap-2 col-6 mx-auto p-3"><a href="projekt.html" type="button" class="btn btn-outline-secondary btn-lg button-custom" data-i18n="index__about_the_project"></a></div>
             </div>
@@ -169,9 +174,9 @@
                <div class="col">
                   <div class="pt-5 pb-5 text-center">
                      <h2 class="display-5" data-i18n="index__quote_h"></h2>
-                     <p class="fs-5">Familiensache? Die Korrespondenz der Kaiserin
-                        Eleonora Magdalena (1655–1720). Bearbeitet von Katrin
-                        Keller, Ines Peper, Anna Spitzbart. Technische Umsetzung
+                     <p class="fs-5">Die Korrespondenz der Kaiserin
+                        Eleonora Magdalena (1655–1720) von Pfalz-Neuburg. Bearbeitet von Katrin
+                        Keller, Ines Peper, Dorota Vargová, Anna Spitzbart. Technische Umsetzung
                         durch Peter Andorfer, Matthias Schlögl, Levente Kiraly. Wien
                         2024.</p>
                   </div>
@@ -186,20 +191,20 @@
                <div class="col col-lg-4">
                   <div><a href="https://www.oeaw.ac.at/ihb/home"><img class="footerlogo" src="./logos/ihb-logo-en-text.png" alt="IHB Logo"></a></div>
                   <div class="text-center p-4">
-                     Institute for Habsburg and Balkan Studies Dominikanerbastei
-                     <a href="mailto:katrin.keller@oeaw.ac.at">katrin.keller@oeaw.ac.at</a></div>
+                     Institute for Habsburg and Balkan Studies
+                     <br /><a href="mailto:katrin.keller@oeaw.ac.at">katrin.keller@oeaw.ac.at</a></div>
                </div>
                <div class="col col-lg-4">
-                  <div><a href="https://www.oeaw.ac.at/acdh/acdh-ch-home"><img class="footerlogo" src="./logos/acdh_logo_with_text.svg" alt="ACDH-CH Logo"></a></div>
+                  <div><a href="https://www.oeaw.ac.at/acdh/acdh-ch-home"><img class="footerlogo" src="./logos/acdh_logo_with_text.png" alt="ACDH-CH Logo"></a></div>
                   <div class="text-center p-4">
-                     Austrian Centre for Digital Humanities and Cultural Heritage Bäckerstraße
-                     <a href="mailto:acdh-ch-helpdesk@oeaw.ac.at">acdh-ch-helpdesk@oeaw.ac.at</a></div>
+                     Austrian Centre for Digital Humanities
+                     <br /><a href="mailto:acdh-helpdesk@oeaw.ac.at">acdh-helpdesk@oeaw.ac.at</a></div>
                </div>
             </div>
             <div class="pb-2 pt-2"><span class="fs-3">Förderinstitutionen</span></div>
             <div class="row justify-content-md-center">
                <div class="col"><img src="./logos/fwf-logo-transparent.png" alt="FWF Logo" class="footerlogo"><div class="text-center p-3">
-                     Gefördert aus Mitteln Wissenschaftsfonds FWF <a href="https://www.fwf.ac.at/forschungsradar/10.55776/P34651" class="dse-dotted">10.55776/P34651</a></div>
+                     Gefördert aus Mitteln Wissenschaftsfonds FWF <a href="https://www.fwf.ac.at/forschungsradar/10.55776/P34651" class="dse-dotted">10.55776/P34651</a> und <a href="https://www.fwf.ac.at/forschungsradar/10.55776/PAT3146724" class="dse-dotted">10.55776/PAT3146724</a></div>
                </div>
             </div>
          </div>

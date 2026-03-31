@@ -1,0 +1,228 @@
+<HTML>
+<HEAD>
+<TITLE>Dante On line</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+		<csscriptdict>
+			<script><!--
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { return CSFindElement(s,0); }
+function CSFindElement(n,ly) { if (CSBVers < 4) return document[n];
+	var curDoc = ly ? ly.document : document; var elem = curDoc[n];
+	if (!elem) { for (var i=0;i<curDoc.layers.length;i++) {
+		elem = CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+
+function CSButtonReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return false; // follow link
+	else return true; // follow link
+}
+
+CSIm = new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img = (!IsIE()) ? CSFindElement(n,0) : document[n];
+			if (img && typeof(CSIm[n][i].src) != "undefined") {img.src = CSIm[n][i].src;}
+			if(i != 0)
+				self.status = CSIm[n][3];
+			else
+				self.status = " ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im = action[1];
+	if (document.images) {
+		CSIm[im] = new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i] != '') { CSIm[im][i-2] = new Image(); CSIm[im][i-2].src = action[i]; }
+			else CSIm[im][i-2] = 0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution = false;
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		if (actArray == null) return false;
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button',/*URL*/'../images/home_ita_pics/dante-home3_04b.gif',/*URL*/'../images/home_ita_pics/dante-home3_04b_on.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button2',/*URL*/'../images/home_ita_pics/dante-home3_05b.gif',/*URL*/'../images/home_ita_pics/dante-home3_05b_on.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button3',/*URL*/'../images/home_ita_pics/dante-home3_06b.gif',/*URL*/'../images/home_ita_pics/dante-home3_06b_on.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button4',/*URL*/'../images/home_ita_pics/dante-home3_07b.gif',/*URL*/'../images/home_ita_pics/dante-home3_07b_on.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button5',/*URL*/'../images/home_ita_pics/dante-home3_08b.gif',/*URL*/'../images/home_ita_pics/dante-home3_08b_on.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button6',/*URL*/'../images/home_ita_pics/dante-home3_09b.gif',/*URL*/'../images/home_ita_pics/dante-home3_09b_on.gif',/*URL
+*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button7',/*URL*/'../images/home_ita_pics/dante-home3_12.gif',/*URL*/'../images/home_ita_pics/dante-home3_12_on.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button8',/*URL*/'../images/home_ita_pics/news.gif',/*URL*/'../images/home_ita_pics/news_on.gif',/*URL*/'','');
+
+// --></script>
+		</csactiondict>
+	</HEAD>
+<BODY BGCOLOR=#FFFFFF onload="CSScriptInit();" leftMargin="0" marginHeight="0" marginWidth="0" topMargin="0" background="../images/home_ita_pics/sfondo.gif">
+		<TABLE WIDTH=705 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD ROWSPAN=8>
+			<IMG USEMAP="#mapinfo" border=no SRC="../images/home_ita_pics/dante-home3_01.gif" WIDTH=410 HEIGHT=248></TD>
+		<TD>
+			<IMG SRC="../images/home_ita_pics/dante-home3_02b.gif" WIDTH=92 HEIGHT=35></TD>
+		<TD ROWSPAN=8>
+			<IMG USEMAP="#mapsdi" border=no SRC="../images/home_ita_pics/dante-home3_03b.gif" WIDTH=203 HEIGHT=248></TD>
+	</TR>
+	<TR>
+		<TD><csobj w="92" h="20" t="Button" ht="../images/home_ita_pics/dante-home3_04b_on.gif"><a href="vita_indice.htm" onmouseover="return CSIShow(/*CMP*/'button',1)" onmouseout="return CSIShow(/*CMP*/'button',0)" onclick="return CSButtonReturn()"><img src="../images/home_ita_pics/dante-home3_04b.gif" width="92" height="20" name="button" border="0"></a></csobj></TD>
+	</TR>
+	<TR>
+		<TD><csobj w="92" h="21" t="Button" ht="../images/home_ita_pics/dante-home3_05b_on.gif"><a href="opere_indice.htm" onmouseover="return CSIShow(/*CMP*/'button2',1)" onmouseout="return CSIShow(/*CMP*/'button2',0)" onclick="return CSButtonReturn()"><img src="../images/home_ita_pics/dante-home3_05b.gif" width="92" height="21" name="button2" border="0"></a></csobj></TD>
+	</TR>
+	<TR>
+		<TD><csobj w="92" h="22" t="Button" ht="../images/home_ita_pics/dante-home3_06b_on.gif"><a href="codici_indice.htm" onmouseover="return CSIShow(/*CMP*/'button3',1)" onmouseout="return CSIShow(/*CMP*/'button3',0)" onclick="return CSButtonReturn()"><img src="../images/home_ita_pics/dante-home3_06b.gif" width="92" height="22" name="button3" border="0"></a></csobj></TD>
+	</TR>
+	<TR>
+		<TD><csobj w="92" h="24" t="Button" ht="../images/home_ita_pics/dante-home3_07b_on.gif"><a href="biblio.htm" onmouseover="return CSIShow(/*CMP*/'button4',1)" onmouseout="return CSIShow(/*CMP*/'button4',0)" onclick="return CSButtonReturn()"><img src="../images/home_ita_pics/dante-home3_07b.gif" width="92" height="24" name="button4" border="0"></a></csobj></TD>
+	</TR>
+	<TR>
+		<TD><csobj w="92" h="21" t="Button" ht="../images/home_ita_pics/dante-home3_08b_on.gif"><a href="interviste_indice.htm" onmouseover="return CSIShow(/*CMP*/'button5',1)" onmouseout="return CSIShow(/*CMP*/'button5',0)" onclick="return CSButtonReturn()"><img src="../images/home_ita_pics/dante-home3_08b.gif" width="92" height="21" name="button5" border="0"></a></csobj></TD>
+	</TR>
+	<TR>
+		<TD><csobj w="92" h="22" t="Button" ht="../images/home_ita_pics/dante-home3_09b_on.gif"><a href="risorse.htm" onmouseover="return CSIShow(/*CMP*/'button6',1)" onmouseout="return CSIShow(/*CMP*/'button6',0)" onclick="return CSButtonReturn()"><img src="../images/home_ita_pics/dante-home3_09b.gif" width="92" height="22" name="button6" border="0"></a></csobj></TD>
+	</TR>
+	<TR>
+		<TD>
+			<IMG SRC="../images/home_ita_pics/dante-home3_10.gif" WIDTH=92 HEIGHT=83></TD>
+	</TR>
+</TABLE>
+		<TABLE WIDTH=705 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+			<TR>
+				<TD ROWSPAN=2><IMG SRC="../images/home_ita_pics/dante-home3_11.gif" WIDTH=410 HEIGHT=74></TD>
+				<TD><csobj w="92" h="17" t="Button" ht="../images/home_ita_pics/dante-home3_12_on.gif"><a href="../english/home_ita.asp" onmouseover="return CSIShow(/*CMP*/'button7',1)" onmouseout="return CSIShow(/*CMP*/'button7',0)" onclick="return CSButtonReturn()"><img src="../images/home_ita_pics/dante-home3_12.gif" width="92" height="17" name="button7" border="0"></a></csobj></TD>
+				<TD ROWSPAN=2><IMG SRC="../images/home_ita_pics/dante-home3_13.gif" WIDTH=203 HEIGHT=74></TD>
+			</TR>
+			<TR>
+				<TD><IMG SRC="../images/home_ita_pics/dante-home3_14.gif" WIDTH=92 HEIGHT=57></TD>
+			</TR>
+		</TABLE>
+		<table border="0" cellpadding="0" cellspacing="0" width="705">
+			<tr>
+				<td valign="top" width="405"><a href="http://entecarifirenze.it/" target="_balnk"><img src="../images/home_ita_pics/cassadirisparmio.gif" width="152" height="48" border="0"></a><br>
+					<img src="../images/home_ita_pics/spacer.gif" width="405" height="5" border="0"></td>
+				<td valign="top"><font size="1" face="Arial,Helvetica" color="#6c6c6c">
+						<table border="0" cellpadding="0" cellspacing="5" width="100%">
+							<tr>
+								<td valign="top"><csobj w="47" h="14" t="Button" ht="../images/home_ita_pics/news_on.gif"><img src="../images/home_ita_pics/news.gif" width="47" height="14" name="button8" border="0"></csobj></td>
+								
+					          <td>
+								<a HREF="http://www.news.danteonline.it"  TARGET="_blank" onmouseover="return CSIShow(/*CMP*/'button8',1)" onmouseout="return CSIShow(/*CMP*/'button8',0)" onclick="return CSButtonReturn()">
+								<font size="1" face="Arial,Helvetica" color="#6c6c6c">
+				                 Leggi le ultime novit&agrave;
+				                 </font>
+					               </a>
+								</td>
+							</tr>
+							
+							<tr> 
+								<td valign="top">&nbsp;</td>
+								
+					          <td>
+								<a HREF="http://www.leggeredante.it" TARGET="_blank">
+										<font size="1" face="Arial,Helvetica" color="#000000"><blink>Attivo WWW.LEGGEREDANTE.IT</blink></font>
+									 </a>
+								</td>
+							</tr>										   
+						</table>
+					</td>
+			</tr>
+		</table>
+
+<MAP NAME="mapinfo">
+  <AREA SHAPE="RECT" COORDS="7,220,79,242" HREF="http://www.infogroup.it" TARGET="_blank" ALT="Sito: Infogroup">
+  <!--<AREA SHAPE="POLY" COORDS="230,60,287,41,265,20,193,17" HREF="#">-->
+</MAP>
+<MAP NAME="mapsdi">
+  <AREA SHAPE="RECT" COORDS="25,220,177,235" HREF="http://www.dantesca.it" TARGET="_blank" ALT="Sito: Società Dantesca Italiana">
+  <!--<AREA SHAPE="POLY" COORDS="230,60,287,41,265,20,193,17" HREF="#">-->
+</MAP>
+
+<!-- Start of TheCounter.com Code -->
+<SCRIPT TYPE="text/javascript" LANGUAGE="javascript">
+s="na";c="na";j="na";f=""+escape(document.referrer)
+</SCRIPT>
+<SCRIPT TYPE="text/javascript" LANGUAGE="javascript1.2">
+s=screen.width;v=navigator.appName
+if (v != "Netscape") {c=screen.colorDepth}
+else {c=screen.pixelDepth}
+j=navigator.javaEnabled()
+</SCRIPT>
+<SCRIPT TYPE="text/javascript" LANGUAGE="javascript">
+function pr(n) {document.write(n,"\n");}
+NS2Ch=0
+if (navigator.appName == "Netscape" &&
+navigator.appVersion.charAt(0) == "2") {NS2Ch=1}
+if (NS2Ch == 0) {
+r="&size="+s+"&colors="+c+"&referer="+f+"&java="+j+""
+pr("<A HREF=\"http://www.TheCounter.com\" TARGET=\"_top\"><IMG"+
+" BORDER=0 SRC=\"http://c3.thecounter.com/id=2480130"+r+"\"><\/A>")}
+</SCRIPT>
+<NOSCRIPT><A HREF="http://www.TheCounter.com" TARGET="_top"><IMG
+SRC="http://c3.thecounter.com/id=2480130" ALT="TC" BORDER=0></A>
+</NOSCRIPT>
+<!-- End of TheCounter.com Code -->
+		
+	</BODY>
+</HTML>

@@ -1,156 +1,76 @@
-
-    <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=11" />
-        <title class="app:title">Austrian Baroque Corpus</title>
-        <meta class="config:app-meta" />
-        <link rel="icon" type="image/ico" href="favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="modules/shared/scripts/css/normalize.css" />
-        <link rel="stylesheet" type="text/css" href="modules/shared/scripts/css/jquery-ui-1.10.4.custom-smoothness/jquery-ui-1.10.4.custom.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/theme.css" />
-        <link rel="stylesheet" type="text/css" href="css/layout.css" />
-        <link rel="stylesheet" type="text/css" href="css/elements.css" />
-<!--        <link rel="stylesheet" type="text/css" href="modules/shared/scripts/css/cr.css"/>-->
-<!--     moved to project specific setup (to take precedence)  <link rel="stylesheet" type="text/css" href="css/custom.css"/>-->
-
-        <!--<link rel="stylesheet" type="text/css" href="modules/shared/scripts/style/bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="modules/shared/scripts/style/jquery/base/jquery.ui.resizable.css"/>
-        <link rel="stylesheet" type="text/css" href="modules/shared/scripts/style/jquery/base/jquery.ui.all.css"/>
-        
-        -->
-        <script type="text/javascript" src="modules/shared/scripts/js/modernizr-2.8.3.min.js"></script>
-        <script type="text/javascript" src="modules/shared/scripts/js/jquery/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="modules/shared/scripts/js/jquery/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="modules/shared/scripts/js/jquery/jquery-ui-1.10.4.custom.min.js"></script>
-        <script type="text/javascript" src="modules/shared/scripts/js/jquery/jquery.treeview.js"></script>
-        <script type="text/javascript" src="modules/shared/scripts/js/jquery/jquery.modern-blink.js"></script>
-        <script type="text/javascript" src="modules/shared/scripts/js/codemirror/codemirror.js"></script>
-        <script type="text/javascript" src="modules/shared/scripts/js/codemirror/mode/xml/xml.js"></script>
-        <script type="text/javascript" src="modules/shared/scripts/js/URI.js"></script>
-<!--        <script type="text/javascript" src="js/detail.js"/>-->
-        <script type="text/javascript" src="js/main.js"></script>        
-        
-        
-            <!--<script type="text/javascript" src="modules/shared/scripts/js/webtoolkit.sprintf.js"></script>
-            <script type="text/javascript" src="modules/shared/scripts/js/query_input/qi.js"></script>
-            <script type="text/javascript" src="modules/shared/scripts/js/query_input/qi_cql.js"></script>
-            -->
-        <!--    <script type="text/javascript" src="sade/modules/fcs/scripts/js/jquery/jquery.tablesorter.js"/>
-            <script type="text/javascript" src="sade/modules/fcs/scripts/js/jquery/jquery.uitablefilter.js"/>
-        -->
-        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/sprintf.min.js"></script>
-        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/jquery/chosen.jquery.min.js"></script>
-        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/query_input/qi.js"></script>
-        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/query_input/qi_cql.js"></script>
-        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/query_input/CQLConfig.js"></script>
-        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/jquery/jquery.selection.js"></script>
-        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/js/jquery/jquery.jscroll.min.js"></script>
-        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/virtual-keyboard/params.js"></script>
-        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="modules/shared/scripts/virtual-keyboard/virtual-keyboard.js"></script>
-        <script xmlns="http://www.loc.gov/METS/" type="text/javascript" src="js/abacus.js"></script>
-        <link xmlns="http://www.loc.gov/METS/" rel="stylesheet" type="text/css" href="modules/shared/scripts/css/jquery/jquery.treeview.css" />
-        <link xmlns="http://www.loc.gov/METS/" rel="stylesheet" type="text/css" href="modules/shared/scripts/virtual-keyboard/virtual-keyboard.css" />
-        <link xmlns="http://www.loc.gov/METS/" rel="stylesheet" type="text/css" href="css/custom.css" />
-        <script xmlns="http://www.loc.gov/METS/" type="text/javascript">
-                          var _paq = _paq || [];
-                          _paq.push(['trackPageView']);
-                          _paq.push(['enableLinkTracking']);
-                      (function() {
-                        var u="//clarin.oeaw.ac.at/piwik/";
-                        _paq.push(['setTrackerUrl', u+'piwik.php']);
-                        _paq.push(['setSiteId', 4]);
-                        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-                      })();
-                    </script>
-        <noscript xmlns="http://www.loc.gov/METS/">
-                                <p>
-                                    <img src="//clarin.oeaw.ac.at/piwik/piwik.php?idsite=4" style="border:0;" alt="" />
-                                </p>
-                            </noscript>
-    </head>
-    <body id="body">
-        <div id="options-invoke" title="Layout-Optionen"></div>
-        <input type="radio" id="col-layout-1c" name="layout-switch" />
-        <input type="radio" id="col-layout-2c" name="layout-switch" />
-        <input type="radio" id="col-layout-3c" name="layout-switch" />
-        <input type="radio" id="col-layout-auto" name="layout-switch" checked="checked" />
-        <div id="options-labels" class="bg">
-            <span>Layout</span>
-            <label for="col-layout-1c" id="label-1c" class="col-layout-label">1 Spalte</label>
-            <label for="col-layout-2c" id="label-2c" class="col-layout-label">2 Spalten</label>
-            <label for="col-layout-3c" id="label-3c" class="col-layout-label">3 Spalten</label>
-            <label for="col-layout-auto" id="label-auto" class="col-layout-label">automatisch</label>
-        </div>
-        <div id="header" class="bg">
-    <span id="logo" class="app:logo"><a href="./"><img src="images/Logo_A_v3_resize65.png" class="logo right" /></a></span>
-    <div id="site-name">
-        <!--                <a class="config:app-title brand" href="./index.html">App Title</a>-->
-        <a href="./">
-            <span class="app:info?key=site-name"><span xmlns="" class="site-name">BaC:us</span></span>
-        </a>
-    </div>
-    <div id="menu">
-                <div id="top-menu">
-                    <ul>
-        <!--    <li>
-                <a href="index.html">
-                    <img height="26" src="images/1Anfang.jpg" alt="Home" title="Home"/>
-                </a>
-            </li>-->
-                        <li><a href="index.html?path-detail=content/Corpus.xml"><img height="26" src="images/2Corpus.jpg" alt="Corpus" title="Corpus" /></a>
-                        </li>
-                        <li><a href="corpus.html"><img height="26" src="images/mensch_probieres.jpg" alt="Mensch! probier es" title="Direkteinstieg in das Corpus" /></a>
-                        </li>
-                        <li><a href="index.html?path-detail=content/Annotation.xml"><img height="26" src="images/3Annotation.png" alt="Annotation" title="Annotation" /></a>
-                        </li>
-                        <li><a href="index.html?path-detail=content/Nutzung.xml"><img height="26" src="images/4Nutzung.jpg" alt="Nutzung" title="Nutzung" /></a>
-                        </li>
-                        <li><a href="index.html?path-detail=content/ZitierenKontakt.xml"><img height="26" src="images/merckts_wohl.jpg" alt="Zitieren, Kontakt" title="Zitieren, Kontakt" /></a>
-                        </li>
-                        <li><a href="index.html?path-detail=content/Ueber_uns.xml"><img height="26" src="images/6Ueberuns.jpg" alt="Über uns" title="Über uns" /></a>
-                        </li>
-                        <li><a href="index.html?path-detail=content/Dank.xml"><img height="26" src="images/7Dank.jpg" alt="Dank" title="Dank" /></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-    
-<!--    <div id="header-link-wrapper">        -->
-    <a id="persistent-link-invoke" onclick="return false" style="cursor:pointer" href="." title="Link teilen">link</a> 
-    <div id="persistent-link-box" class="bg">
-        <div>Link zu aktueller Ansicht teilen</div>
-        <input type="text" id="persistent-link" name="persistent-link" value="" />
-    </div>
-<!--    <a id="login-invoke" title="Login">user</a>
-    <div id="login-box" class="app:user bg"/>
-    </div>-->
-</div>
-        <div id="content-container" class="container-fluid">
-        <div class="intro-image"><a href="corpus.html"><img src="images/intro_image.jpg" alt="Intro-Bild" title="zu den Werken" /></a>
-        </div>
-        <div class="static-text templates:include-detail?path-detail=content/welcome.xml">
-                <div xmlns="" id="welcome">
-    <img height="35" src="images/GeneigterLeser.jpg" alt="Geneigter Leser" />
-    <p>Herzlich willkommen auf den Seiten des Austrian Baroque Corpus!</p>
-    <br />
-    <h3>
-        <img src="images/Aber_was_ist_das.jpg" alt="Aber was ist das" />
-    </h3>
-    <p>
-        <em>ABaC:us – Austrian Baroque Corpus</em> ist die Bezeichnung für eine digitale Sammlung von literarischen Texten aus der Barockzeit. Die Texte, die Sie hier einsehen und durchsuchen können, sind Teil einer reichhaltigen und weit verbreiteten Literatur, die sich mit der Vorbereitung auf den Tod beschäftigt und heute beinahe in Vergessenheit geraten ist. Den thematischen Kern der Sammlung bilden Schriften theologisch-erbaulichen Inhalts, insbesondere Ars moriendi-, Totentanz- und Memento mori-Literatur, die einen wesentlichen Teil damaliger Textproduktion darstellt.</p>
-    <h3>
-        <img src="images/was_man_Gutes_gethan.jpg" alt="was man Gutes gethan" />
-    </h3>
-    <p>Mit ABaC:us wird der Versuch unternommen, zeitentfernte Printprodukte der Barockzeit für ein interessiertes, öffentliches (Fach-)Publikum mit innovativen texttechnologischen Methoden zu erschließen. Durch die Anwendung international anerkannter Standards stellt das Projektteam sicher, dass die aufbereiteten, annotierten historischen Textdaten verschiedenen Erkenntnisinteressen dienlich sind.</p>
-    <p>In der texttechnologischen Erschließung dieser wertvollen Quellen wird sprachlich-kulturelles Erbe aus der Barockzeit bewahrt und eine empirische Grundlage zu dessen nachhaltiger, interdisziplinärer Erforschung und Interpretation geschaffen.</p>
-    <h3>
-        <img src="images/zurWelt_hinaus.jpg" alt="zur Welt hinaus" />
-    </h3>
-    <p>Das <em>Austrian Centre for Digital Humanities and Cultural Heritage</em> der <em>Österreichischen Akademie der Wissenschaften</em> stellt einen Teil der Sammlung testweise, kostenfrei und in hochwertiger Qualität für den wissenschaftlichen Gebrauch zur Verfügung.</p>
-</div>
-            </div>
-    </div>
-    </body>
-</html>
+<!DOCTYPE html><html lang="de" style="scrollbar-width: thin;"> <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Austrian Baroque Corpus"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="icon.svg"><!-- favicon --><!-- <link rel="None" type="image/ico" href="images/favicons/favicon.ico" />
+			<link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" />
+			<link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" />
+			<link rel="icon" type="image/png" href="images/favicons/favicon-64x64.png" />
+			<link rel="icon" type="image/png" href="images/favicons/favicon-96x96.png" />
+			<link rel="icon" type="image/png" href="images/favicons/favicon-180x180.png" />
+			<link rel="apple-touch-icon" type="image/png" href="images/favicons/apple-touch-icon-57x57.png" />
+			<link rel="apple-touch-icon" type="image/png" href="images/favicons/apple-touch-icon-60x60.png" />
+			<link rel="apple-touch-icon" type="image/png" href="images/favicons/apple-touch-icon-72x72.png" />
+			<link rel="apple-touch-icon" type="image/png" href="images/favicons/apple-touch-icon-76x76.png" />
+			<link rel="apple-touch-icon" type="image/png" href="images/favicons/apple-touch-icon-114x114.png" />
+			<link rel="apple-touch-icon" type="image/png" href="images/favicons/apple-touch-icon-120x120.png" />
+			<link rel="apple-touch-icon" type="image/png" href="images/favicons/apple-touch-icon-144x144.png" />
+			<link rel="apple-touch-icon" type="image/png" href="images/favicons/apple-touch-icon-152x152.png" />
+			<link rel="apple-touch-icon" type="image/png" href="images/favicons/apple-touch-icon-167x167.png" />
+			<link rel="apple-touch-icon" type="image/png" href="images/favicons/apple-touch-icon-180x180.png" />
+			<link rel="None" type="image/png" href="images/favicons/mstile-70x70.png" />
+			<link rel="None" type="image/png" href="images/favicons/mstile-270x270.png" />
+			<link rel="None" type="image/png" href="images/favicons/mstile-310x310.png" />
+			<link rel="None" type="image/png" href="images/favicons/mstile-310x150.png" />
+			<link rel="shortcut icon" type="image/png" href="images/favicons/favicon-196x196.png" /> --><!-- favicon end --><link rel="icon" type="image/svg+xml" href="/Logo_A_v3_resize65.png" sizes="any"><link rel="profile" href="http://gmpg.org/xfn/11"><title>Austrian Baroque Corpus</title><link rel="stylesheet" href="/_astro/annotation.Cf3C2uOg.css" />
+<link rel="stylesheet" href="/_astro/_slug_.C0Ghf3Hr.css" /><script type="module" src="/_astro/hoisted.B3JKg51q.js"></script></head> <body class="flex min-h-screen flex-col justify-between"> <header id="header" class="sticky top-0"> <nav class="bg-abacus z-50 border-b border-l-2 border-red-700"> <div class="mx-auto max-w-[1400px] p-4 sm:px-6 lg:px-8"> <div class="relative flex items-center justify-between"> <div class="xs:flex absolute inset-y-0 left-0 hidden items-center sm:flex md:flex lg:flex"> <button type="button" class="relative inline-flex rounded-md bg-white p-2 text-gray-400 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false"> <span class="absolute -inset-0.5"></span> <span class="sr-only">Open main menu</span> <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path> </svg> <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> <div class="xs:justify-center flex flex-1 items-center sm:justify-center md:justify-center lg:justify-center"> <div class="float-left flex shrink-0 content-start"> <a href="/" aria-label="Index"> <img class="inline h-14 w-auto" src="/Logo_A_v3_resize65.png" alt="ABaC:us" title="ABaC:us"> <h1 class="ml-0 mt-2 inline align-middle font-sans text-5xl font-bold">BaC:us</h1> </a> <!-- <p class="p-4 font-bold text-yellow-300">
+					<span>in Arbeit</span>
+				</p> --> </div> <div class="xs:hidden absolute right-2 ml-6 block sm:hidden md:hidden lg:hidden"> <div class="flex space-x-4"> <a href="/corpus" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="Corpus" src="/Corpus-Button.png" title="Corpus"> <!--<figcaption class="pt-1 text-sm text-red-600">Korpus</figcaption>--> </figure> </a> <a href="/suche" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="Mensch! probier es" title="Mensch! probier es" src="/mensch_probieres.png"> <!--<figcaption class="pt-1 text-sm text-red-600">Suche</figcaption>--> </figure> </a> <a href="/annotation" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="Annotation" title="Annotation" src="/3Annotation.png"> <!--<figcaption class="pt-1 text-sm text-red-600">Annotation</figcaption>--> </figure> </a> <a href="/nutzung" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="Nutzbarkeit" title="Nutzbarkeit" src="/4Nutzung.png"> <!--<figcaption class="pt-1 text-sm text-red-600">Nutzbarkeit</figcaption>--> </figure> </a> <a href="/zitieren-kontakt" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="merckts wohl" title="Projekt" src="/merckts_wohl.png"> <!--<figcaption class="pt-1 text-sm text-red-600">Projekt</figcaption>--> </figure> </a> <a href="/ueber-uns" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[100px]" alt="über uns" title="über uns" src="/6Ueberuns.png"> <!--<figcaption class="pt-1 text-sm text-red-600">Über Uns</figcaption>--> </figure> </a> <a href="/dank" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="Danck!" title="Danck!" src="/Danck.png"> <!--<figcaption class="pt-1 text-sm text-red-600">Dank</figcaption>--> </figure> </a> </div> </div> </div> </div> </div> <div class="hidden" id="mobile-menu"> <div class="space-y-1 px-2 pb-3 pt-2 text-left"> <a href="/corpus" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="Corpus" src="/Corpus-Button.png"> <!-- <figcaption class="pt-1 text-sm text-red-600">Korpus</figcaption> --> </figure> </a> <a href="/suche" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="Mensch! probier es" src="/mensch_probieres.png"> <!-- <figcaption class="pt-1 text-sm text-red-600">Suche</figcaption> --> </figure> </a> <a href="/annotation" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="Annotation" src="/3Annotation.png"> <!-- <figcaption class="pt-1 text-sm text-red-600">Annotation</figcaption> --> </figure> </a> <a href="/nutzung" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="Nutzbarkeit" src="/4Nutzung.png"> <!-- <figcaption class="pt-1 text-sm text-red-600">Nutzbarkeit</figcaption> --> </figure> </a> <a href="/zitieren-kontakt" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="merckts wohl" src="/merckts_wohl.png"> <!-- <figcaption class="pt-1 text-sm text-red-600">Projekt</figcaption> --> </figure> </a> <a href="/ueber-uns" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[100px]" alt="über uns" src="/6Ueberuns.png"> <!-- <figcaption class="pt-1 text-sm text-red-600">Über Uns</figcaption> --> </figure> </a> <a href="/dank" class="block px-1 text-lg text-white" role="menuitem" tabindex="-1"> <figure> <img class="max-w-[200px]" alt="Danck!" src="/Danck.png"> <!-- <figcaption class="pt-1 text-sm text-red-600">Dank</figcaption> --> </figure> </a> </div> </div>  </nav> </header> <main class="container mx-auto mb-auto max-w-[1400px] font-antiqua" id="main"> <div class="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1"> <div class="p-4">  <div class="flex flex-col p-1 sm:mx-auto sm:flex-col sm:items-center sm:p-2"> <figure class="py-4 sm:mb-4 sm:flex sm:flex-col"> <img class="mr-4 max-w-[300px] sm:mr-0 sm:max-w-[200px]" alt="Geneigter Leser." title="Geneigter Leser." src="/GeneigterLeser.jpg"> <!--<figcaption class="pr-1 text-sm text-gray-500">Geneigter Leser.</figcaption> --> </figure> <h1 class="text-base font-medium">
+Herzlich willkommen auf den Seiten des Austrian Baroque Corpus!
+</h1> </div> <div class="flex flex-col p-1 sm:mx-auto sm:flex-col sm:items-center sm:p-2"> <figure class="py-4 sm:mb-4 sm:flex sm:flex-col"> <img class="mr-4 max-w-[300px] sm:mr-0 sm:max-w-[200px]" alt="Aber was ist das?" title="Aber was ist das?" src="/Aber_was_ist_das.jpg"> <!--<figcaption class="pr-1 text-sm text-gray-500">Aber was ist das?</figcaption> --> </figure> <p> <strong>ABaC:us – Austrian Baroque Corpus</strong> ist die Bezeichnung für eine digitale Sammlung
+			von literarischen Texten aus der Barockzeit. Die Texte, die Sie hier einsehen und durchsuchen können,
+			sind Teil einer reichhaltigen und weit verbreiteten Literatur, die sich mit der Vorbereitung auf
+			den Tod beschäftigt und heute beinahe in Vergessenheit geraten ist. Den thematischen Kern der Sammlung
+			bilden Schriften theologisch-erbaulichen Inhalts, insbesondere Ars moriendi-, Totentanz- und Memento
+			mori-Literatur, die einen wesentlichen Teil damaliger Textproduktion darstellt.
+</p> </div> <div class="flex flex-col p-1 sm:mx-auto sm:flex-col sm:items-center sm:p-2"> <figure class="py-4 sm:mb-4 sm:mr-0 sm:flex sm:max-w-[200px] sm:flex-col"> <img class="mr-4 block max-w-[300px]" alt="was man Gutes gethan" title="was man Gutes gethan" src="/was_man_Gutes_gethan.jpg"> <!--<figcaption class="pr-1 text-sm text-gray-500">was man Gutes gethan</figcaption>--> </figure> <p>
+Mit ABaC:us wird der Versuch unternommen, zeitentfernte Printprodukte der Barockzeit für ein
+			interessiertes, öffentliches (Fach-)Publikum mit innovativen texttechnologischen Methoden zu
+			erschließen. Durch die Anwendung international anerkannter Standards stellt das Projektteam
+			sicher, dass die aufbereiteten, annotierten historischen Textdaten verschiedenen
+			Erkenntnisinteressen dienlich sind. In der texttechnologischen Erschließung dieser wertvollen
+			Quellen wird sprachlich-kulturelles Erbe aus der Barockzeit bewahrt und eine empirische
+			Grundlage zu dessen nachhaltiger, interdisziplinärer Erforschung und Interpretation
+			geschaffen.
+</p> </div> <div class="flex flex-col p-1 sm:mx-auto sm:flex-col sm:items-center sm:p-2"> <figure class="py-4 sm:mb-4 sm:mr-0 sm:flex sm:max-w-[200px] sm:flex-col"> <img class="mr-4 block max-w-[300px]" alt="zur Welt hinaus." title="zur Welt hinaus." src="/zurWelt_hinaus.jpg"> <!--<figcaption class="pr-1 text-sm text-gray-500">zur Welt hinaus.</figcaption>--> </figure> <p>
+Das <strong>Austrian Centre for Digital Humanities</strong> der <strong>Österreichischen Akademie der Wissenschaften</strong> stellt einen Teil der Sammlung seit 2015 testweise, kostenfrei und in hochwertiger Qualität für
+			den wissenschaftlichen Gebrauch zur Verfügung. Im Jahr 2025 wurde für ABaC:us eine neue technische
+			Basis geschaffen, die den Erhalt der Applikation sicherstellt und neue, erweiterte Suchfunktionalitäten
+			bietet (vgl. "<strong><a href="nutzung" class="text-red-600">Nutzbarkeit</a></strong>").
+</p> </div>  </div> <div class="p-4"> <div class="py-6"> <a href="/suche"> <img class="max-w-[600px] rounded-md sm:max-w-[300px] md:max-w-[400px]" src="/intro_image.jpg" alt="Austrian Baroque Corpus"></a> </div> </div> </div> </main> <footer class="mt-auto flex min-w-full flex-col"> <div class="bg-white text-stone-700 flex flex-col" tabindex="-1"> <div class="mx-auto grid max-w-7xl grid-cols-3 border-t-2 border-gray-200 p-10 sm:grid-cols-1"> <div class="flex flex-col text-left sm:text-center lg:py-0"> <div class="mb-4"> <h6 class="font-semibold">KONTAKT</h6> </div> <div class="py-6 sm:self-center"> <a href="https://www.oeaw.ac.at/acdh"><img src="/acdh_logo.svg" alt="ACDH Logo" style="max-width: 100%; height: auto;" title="ACDH Logo"></a> </div> <div class="py-6"> <div> <p>
+ACDH OEAW
+<br>
+Austrian Centre for Digital Humanities
+<br>
+Österreichische Akademie der Wissenschaften
+</p> <p class="py-2">
+Bäckerstraße 13
+<br>
+1010 Wien
+</p> <p class="py-2">
+T: +43 1 51581-2200
+<br>
+E: <a class="hover:text-blue-600" href="mailto:acdh-helpdesk@oeaw.ac.at">acdh-helpdesk@oeaw.ac.at</a> </p> </div> </div> </div> <div class="flex flex-col text-left sm:text-center lg:pt-0"> <!-- <div class="mb-4">
+					<h6 class="font-semibold">PROJEKT PARTNER</h6>
+				</div> --> <div class="my-6 self-center"> <a href="https://oeaw.ac.at"><img class="w-52 flex-auto" src="https://www.oeaw.ac.at/typo3conf/ext/oeaw_website/Resources/Public/Images/oeaw_logo_446x192.png" alt="OEAW Österreichische Akademie der Wissenschaften Logo"></a> </div> </div> <!-- .footer-widget --> <div class="flex flex-col pt-0 text-left sm:pt-4 sm:text-center"> <div> <h6 class="font-semibold">HELPDESK</h6> <p class="py-4">
+ACDH runs a helpdesk offering advice for questions related to various digital humanities
+						topics.
+</p> <p class="pb-4 hover:text-blue-600"> <a href="mailto:acdh-helpdesk@oeaw.ac.at">ASK US!</a> </p> </div> <div> <div class="mb-4"> <p style="margin-bottom:0 !important;">Medien:</p> </div> <div class="inline-flex py-2"> <a class="w-16 px-4" title="Auden Musulin on GitHub" href="https://github.com/Austrian-Baroque-Corpus/" target="_blank"> <img class="flex-auto" alt="Github White Blue" src="/github-mark.svg"> </a> </div> </div> </div> </div> </div> <div class="bg-blue-950 py-2 text-center text-white"> <span>© Copyright OEAW</span> | <a href="/imprint">Impressum/Imprint</a> </div> <!-- <div id="cookie-overlay">
+		<div class="container hidden">
+			<div class="cookie-message">
+				This website uses cookies to ensure you get the best experience on our website. <a
+					href="imprint.html">More info</a
+				><br />
+			</div>
+			<div class="cookie-buttons">
+				<div class="cookie-accept-btn">Accept All Cookies (functional and tracking)</div>
+				<div class="cookie-accept-necessary-btn">Accept Necessary Cookies Only</div>
+			</div>
+		</div>
+	</div> --> </footer> <!-- <MatomoAnalytics matomoUrl={matomoUrl} siteId={siteId} /> --> </body></html>
