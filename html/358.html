@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="de"><head><title>KWAe</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link rel="stylesheet" href="/css/kwae.css"><link rel="icon" href="/images/kwa.png" type="image/png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><style type="text/css">
+            html, body {
+                height: 100%;
+                min-height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .split-pane-divider {
+               background-color: gray;
+            }           
+            #filterPanel {
+            	width: 400px;
+            }
+            #vertical-divider{
+            	left: 400px;
+            	width: 2.5px;
+            }            
+            #tcOverviewFrame {
+            	left: 400px;
+            	margin-left: 5px;
+            	margin-top: 10px;
+            }             
+        </style></head><body> <div style="position: sticky; height: 80px; border-bottom: solid #888 1px;"> <br> <span class="landing-txt-nomargin" style="font-family:'Roboto';font-size: 18pt; font-weight: 400; margin-top: 50px; margin-left: 20px">&nbsp;Robert Walser, Kritische Ausgabe sämtlicher Drucke und Manuskripte – KWA<sup>e</sup></span> </div> <div style="height: calc(100% - 80px); padding: 5px"> <div id="outer-split-pane" class="fixed-left split-pane"> <div id="filterPanel" class="split-pane-component" style="padding-top: 6px;"> <div style="overflow: auto;height: calc(100% - 40px)"> <div id="filterTree" class="treeview"> </div> </div> <div id="quickseach" style="padding-left: 5px; padding-top: 5px; padding-bottom: 5px;  background-color: white; z-index: 9999;"> <form action="search.html" target="searchform"> <i class="fa fa-search"></i>&nbsp;<input style="width: 90%" type="text" name="searchterms" id="searchterms">  </form> </div> </div> <div id="vertical-divider" class="split-pane-divider"></div> <div id="tcOverviewFrame" class="split-pane-component"> <div id="tcInfoText" class="infoText infoTextFrame"></div> <div id="tcOverview" class="infoTextFrame"></div> </div> </div> </div> <script src="overviewer-bundle.js" defer async></script> </body></html>
