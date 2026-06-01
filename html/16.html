@@ -9,6 +9,8 @@
         <link type="TEXT/CSS" href="$resources/css/navbar.css" rel="STYLESHEET">
         <link type="TEXT/CSS" href="$resources/css/carousel.css" rel="STYLESHEET">
         <link type="TEXT/CSS" href="$resources/css/bootstrap-select.min.css" rel="STYLESHEET">
+        <link rel="STYLESHEET" href="$resources/css/search.css" type="TEXT/CSS">
+        <link rel="STYLESHEET" href="$resources/css/pagination.css" type="TEXT/CSS">
         
         <!-- scripts -->
         <script src="$resources/scripts/jquery.min.js" type="text/javascript">
@@ -23,7 +25,7 @@
         <script src="$resources/scripts/transition.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-            $('#tglFDV').click(function() {$('#tglcrFDV').toggleClass( 'upcaret' );});$('#tglFDV').click(function() {src = $('#collapseFDV').attr('data-src');if($('#collapseFDV div iframe').attr('src')==''){$('#collapseFDV div iframe').attr('src',src);}}); $('#tglFGD').click(function() {$('#tglcrFGD').toggleClass( 'upcaret' );});$('#tglFGD').click(function() {src = $('#collapseFGD').attr('data-src');if($('#collapseFGD div iframe').attr('src')==''){$('#collapseFGD div iframe').attr('src',src);}}); $('#tgl8').click(function() {$('#tglcr8').toggleClass( 'upcaret' );});$('#tgl8').click(function() {src = $('#collapsefindepartie').attr('data-src');if($('#collapsefindepartie div iframe').attr('src')==''){$('#collapsefindepartie div iframe').attr('src',src);}}); $('#tgl7').click(function() {$('#tglcr7').toggleClass( 'upcaret' );});$('#tgl7').click(function() {src = $('#collapsegodot').attr('data-src');if($('#collapsegodot div iframe').attr('src')==''){$('#collapsegodot div iframe').attr('src',src);}}); $('#tgl6').click(function() {$('#tglcr6').toggleClass( 'upcaret' );});$('#tgl6').click(function() {src = $('#collapsemalonemeurt').attr('data-src');if($('#collapsemalonemeurt div iframe').attr('src')==''){$('#collapsemalonemeurt div iframe').attr('src',src);}}); $('#tgl5').click(function() {$('#tglcr5').toggleClass( 'upcaret' );});$('#tgl5').click(function() {src = $('#collapsemolloy').attr('data-src');if($('#collapsemolloy div iframe').attr('src')==''){$('#collapsemolloy div iframe').attr('src',src);}}); $('#tgl4').click(function() {$('#tglcr4').toggleClass( 'upcaret' );});$('#tgl4').click(function() {src = $('#collapsekrapp').attr('data-src');if($('#collapsekrapp div iframe').attr('src')==''){$('#collapsekrapp div iframe').attr('src',src);}}); $('#tgl3').click(function() {$('#tglcr3').toggleClass( 'upcaret' );});$('#tgl3').click(function() {src = $('#collapseinnommable').attr('data-src');if($('#collapseinnommable div iframe').attr('src')==''){$('#collapseinnommable div iframe').attr('src',src);}}); $('#tgl9').click(function() {$('#tglcr9').toggleClass( 'upcaret' );});$('#tgl9').click(function() {src = $('#collapsenoti').attr('data-src');if($('#collapsenoti div iframe').attr('src')==''){$('#collapsenoti div iframe').attr('src',src);}}); $('#tgl10').click(function() {$('#tglcr10').toggleClass( 'upcaret' );});$('#tgl10').click(function() {src = $('#collapsethattime').attr('data-src');if($('#collapsethattime div iframe').attr('src')==''){$('#collapsethattime div iframe').attr('src',src);}}); $('#tgl11').click(function() {$('#tglcr11').toggleClass( 'upcaret' );});$('#tgl11').click(function() {src = $('#collapsefootfalls').attr('data-src');if($('#collapsefootfalls div iframe').attr('src')==''){$('#collapsefootfalls div iframe').attr('src',src);}}); $('#tgl1').click(function() {$('#tglcr1').toggleClass( 'upcaret' );});$('#tgl1').click(function() {src = $('#collapsestirringsstill').attr('data-src');if($('#collapsestirringsstill div iframe').attr('src')==''){$('#collapsestirringsstill div iframe').attr('src',src);}}); $('#tgl2').click(function() {$('#tglcr2').toggleClass( 'upcaret' );});$('#tgl2').click(function() {src = $('#collapsecommentdire').attr('data-src');if($('#collapsecommentdire div iframe').attr('src')==''){$('#collapsecommentdire div iframe').attr('src',src);}});
+            $('#tglFDV').click(function() {$('#tglcrFDV').toggleClass( 'upcaret' );});$('#tglFDV').click(function() {src = $('#collapseFDV').attr('data-src');if($('#collapseFDV div iframe').attr('src')==''){$('#collapseFDV div iframe').attr('src',src);}}); $('#tglFGD').click(function() {$('#tglcrFGD').toggleClass( 'upcaret' );});$('#tglFGD').click(function() {src = $('#collapseFGD').attr('data-src');if($('#collapseFGD div iframe').attr('src')==''){$('#collapseFGD div iframe').attr('src',src);}}); $('#tgl8').click(function() {$('#tglcr8').toggleClass( 'upcaret' );});$('#tgl8').click(function() {src = $('#collapsefindepartie').attr('data-src');if($('#collapsefindepartie div iframe').attr('src')==''){$('#collapsefindepartie div iframe').attr('src',src);}}); $('#tgl7').click(function() {$('#tglcr7').toggleClass( 'upcaret' );});$('#tgl7').click(function() {src = $('#collapsegodot').attr('data-src');if($('#collapsegodot div iframe').attr('src')==''){$('#collapsegodot div iframe').attr('src',src);}}); $('#tgl6').click(function() {$('#tglcr6').toggleClass( 'upcaret' );});$('#tgl6').click(function() {src = $('#collapsemalonemeurt').attr('data-src');if($('#collapsemalonemeurt div iframe').attr('src')==''){$('#collapsemalonemeurt div iframe').attr('src',src);}}); $('#tgl5').click(function() {$('#tglcr5').toggleClass( 'upcaret' );});$('#tgl5').click(function() {src = $('#collapsemolloy').attr('data-src');if($('#collapsemolloy div iframe').attr('src')==''){$('#collapsemolloy div iframe').attr('src',src);}}); $('#tgl4').click(function() {$('#tglcr4').toggleClass( 'upcaret' );});$('#tgl4').click(function() {src = $('#collapsekrapp').attr('data-src');if($('#collapsekrapp div iframe').attr('src')==''){$('#collapsekrapp div iframe').attr('src',src);}}); $('#tgl3').click(function() {$('#tglcr3').toggleClass( 'upcaret' );});$('#tgl3').click(function() {src = $('#collapseinnommable').attr('data-src');if($('#collapseinnommable div iframe').attr('src')==''){$('#collapseinnommable div iframe').attr('src',src);}}); $('#tgl12').click(function() {$('#tglcr12').toggleClass( 'upcaret' );});$('#tgl12').click(function() {src = $('#collapsemurphy').attr('data-src');if($('#collapsemurphy div iframe').attr('src')==''){$('#collapsemurphy div iframe').attr('src',src);}}); $('#tgl9').click(function() {$('#tglcr9').toggleClass( 'upcaret' );});$('#tgl9').click(function() {src = $('#collapsenoti').attr('data-src');if($('#collapsenoti div iframe').attr('src')==''){$('#collapsenoti div iframe').attr('src',src);}}); $('#tgl10').click(function() {$('#tglcr10').toggleClass( 'upcaret' );});$('#tgl10').click(function() {src = $('#collapsethattime').attr('data-src');if($('#collapsethattime div iframe').attr('src')==''){$('#collapsethattime div iframe').attr('src',src);}}); $('#tgl11').click(function() {$('#tglcr11').toggleClass( 'upcaret' );});$('#tgl11').click(function() {src = $('#collapsefootfalls').attr('data-src');if($('#collapsefootfalls div iframe').attr('src')==''){$('#collapsefootfalls div iframe').attr('src',src);}}); $('#tgl1').click(function() {$('#tglcr1').toggleClass( 'upcaret' );});$('#tgl1').click(function() {src = $('#collapsestirringsstill').attr('data-src');if($('#collapsestirringsstill div iframe').attr('src')==''){$('#collapsestirringsstill div iframe').attr('src',src);}}); $('#tgl2').click(function() {$('#tglcr2').toggleClass( 'upcaret' );});$('#tgl2').click(function() {src = $('#collapsecommentdire').attr('data-src');if($('#collapsecommentdire div iframe').attr('src')==''){$('#collapsecommentdire div iframe').attr('src',src);}});
             
                         });
         </script>
@@ -91,34 +93,31 @@
         <h1>Please log in</h1>
     
         <p>
-        <form name="Form1" method="post">    
+        <form name="Form1" method="post" autocomplete="off">
             <br>
-            
             <table width="400">
                 <tr>
-                <td width="100">Login:</td>
-                    <td><input type="text" size="30" name="user"></td>
+                    <td width="100">Access Code:</td>
+                    <td><input type="password" size="30" name="password" autocomplete="off"></td>
                 </tr>
-                <tr>
-                    <td width="100">Password:</td>
-                    <td> <input type="password" size="30" name="password"></td>
-                </tr>
-            </table><br>
-            <button type="submit">Login</button> 
+            </table>
+            <input type="hidden" name="user" value="subscriber">
+            <br>
+            <button type="submit">Login</button>
             
+
             <!--<span data-template="templates:if-parameter-unset" data-template-param="org.exist-db.bdmp.user">Bad attempt.</span>-->
-            <br><br><br>
-            Forgot your password? Send an email to <a class="green" href="mailto:info@aspeditions.be">info@aspeditions.be</a>.
+
             <br><br><br>
             Cookies need to be enabled to log in.<br>
-            Click <a class="green" href="getlogin.html">here</a> for information on how to obtain a login/password.
+            Click <a class="green" href="getlogin.html">here</a> for information on how to obtain an access code.
         </form>
         </p><br><br><br><br><br><br><br><br>
 </div>
                 </div>
                 
                 <div class="copyright">
-                    <p class="copyright">© 2025 Samuel Beckett Digital Manuscript Project<br>
+                    <p class="copyright">© 2026 Samuel Beckett Digital Manuscript Project<br>
                         Directors: Dirk Van Hulle and Mark Nixon | Technical realisation: Vincent
                         Neyt</p>
                 </div>
@@ -147,7 +146,9 @@
         <i>That Time / Cette fois</i> © Samuel Beckett 1976 and the Estate of Samuel
         Beckett.<br><br>
         <i>Footfalls / Pas</i> © Samuel Beckett 1976 and the Estate of Samuel
-        Beckett.<br><br> No part of this publication may be reproduced in any form by any
+        Beckett.<br><br>
+        <i>Murphy</i> © Samuel Beckett 1938 and the Estate of Samuel
+        Beckett.<br><br>No part of this publication may be reproduced in any form by any
         electronic or mechanical means without permission in writing from the publisher and from the
         Estate of Samuel Beckett.<br></p>
     <table class="logos">

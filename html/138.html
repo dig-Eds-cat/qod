@@ -1,18 +1,14 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
-<head>
-  <script type="application/vnd.locksmith+json" data-locksmith>{"version":"v281","locked":false,"initialized":true,"scope":"404","access_granted":true,"access_denied":false,"requires_customer":false,"manual_lock":false,"remote_lock":false,"has_timeout":false,"remote_rendered":null,"hide_resource":false,"hide_links_to_resource":false,"transparent":true,"locks":{"all":[],"opened":[]},"keys":[],"keys_signature":"efa5feebae506536bd9bbc9c9c5e7c9f23a12c8dd1f311927465df313d39f638","state":{"template":"404","theme":192480706935,"product":null,"collection":null,"page":null,"blog":null,"article":null,"app":null},"now":1776920176,"path":null,"locale_root_url":"\/","canonical_url":"https:\/\/bodleianshop.co.uk\/404","customer_id":null,"customer_id_signature":"efa5feebae506536bd9bbc9c9c5e7c9f23a12c8dd1f311927465df313d39f638","cart":null}</script><script data-locksmith>!function(){undefined;!function(){var s=window.Locksmith={},e=document.querySelector('script[type="application/vnd.locksmith+json"]'),n=e&&e.innerHTML;if(s.state={},s.util={},s.loading=!1,n)try{s.state=JSON.parse(n)}catch(d){}if(document.addEventListener&&document.querySelector){var o,a,i,t=[76,79,67,75,83,77,73,84,72,49,49],c=function(){a=t.slice(0)},l="style",r=function(e){e&&27!==e.keyCode&&"click"!==e.type||(document.removeEventListener("keydown",r),document.removeEventListener("click",r),o&&document.body.removeChild(o),o=null)};c(),document.addEventListener("keyup",function(e){if(e.keyCode===a[0]){if(clearTimeout(i),a.shift(),0<a.length)return void(i=setTimeout(c,1e3));c(),r(),(o=document.createElement("div"))[l].width="50%",o[l].maxWidth="1000px",o[l].height="85%",o[l].border="1px rgba(0, 0, 0, 0.2) solid",o[l].background="rgba(255, 255, 255, 0.99)",o[l].borderRadius="4px",o[l].position="fixed",o[l].top="50%",o[l].left="50%",o[l].transform="translateY(-50%) translateX(-50%)",o[l].boxShadow="0 2px 5px rgba(0, 0, 0, 0.3), 0 0 100vh 100vw rgba(0, 0, 0, 0.5)",o[l].zIndex="2147483645";var t=document.createElement("textarea");t.value=JSON.stringify(JSON.parse(n),null,2),t[l].border="none",t[l].display="block",t[l].boxSizing="border-box",t[l].width="100%",t[l].height="100%",t[l].background="transparent",t[l].padding="22px",t[l].fontFamily="monospace",t[l].fontSize="14px",t[l].color="#333",t[l].resize="none",t[l].outline="none",t.readOnly=!0,o.appendChild(t),document.body.appendChild(o),t.addEventListener("click",function(e){e.stopImmediatePropagation()}),t.select(),document.addEventListener("keydown",r),document.addEventListener("click",r)}})}s.isEmbedded=-1!==window.location.search.indexOf("_ab=0&_fd=0&_sc=1"),s.path=s.state.path||window.location.pathname,s.basePath=s.state.locale_root_url.concat("/apps/locksmith").replace(/^\/\//,"/"),s.reloading=!1,s.util.console=window.console||{log:function(){},error:function(){}},s.util.makeUrl=function(e,t){var n,o=s.basePath+e,a=[],i=s.cache();for(n in i)a.push(n+"="+encodeURIComponent(i[n]));for(n in t)a.push(n+"="+encodeURIComponent(t[n]));return s.state.customer_id&&(a.push("customer_id="+encodeURIComponent(s.state.customer_id)),a.push("customer_id_signature="+encodeURIComponent(s.state.customer_id_signature))),o+=(-1===o.indexOf("?")?"?":"&")+a.join("&")},s._initializeCallbacks=[],s.on=function(e,t){if("initialize"!==e)throw'Locksmith.on() currently only supports the "initialize" event';s._initializeCallbacks.push(t)},s.initializeSession=function(e){if(!s.isEmbedded){var t=!1,n=!0,o=!0;(e=e||{}).silent&&(o=n=!(t=!0)),s.ping({silent:t,spinner:n,reload:o,callback:function(){s._initializeCallbacks.forEach(function(e){e()})}})}},s.cache=function(e){var t={};try{var n=function a(e){return(document.cookie.match("(^|; )"+e+"=([^;]*)")||0)[2]};t=JSON.parse(decodeURIComponent(n("locksmith-params")||"{}"))}catch(d){}if(e){for(var o in e)t[o]=e[o];document.cookie="locksmith-params=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/",document.cookie="locksmith-params="+encodeURIComponent(JSON.stringify(t))+"; path=/"}return t},s.cache.cart=s.state.cart,s.cache.cartLastSaved=null,s.params=s.cache(),s.util.reload=function(){s.reloading=!0;try{window.location.href=window.location.href.replace(/#.*/,"")}catch(d){s.util.console.error("Preferred reload method failed",d),window.location.reload()}},s.cache.saveCart=function(e){if(!s.cache.cart||s.cache.cart===s.cache.cartLastSaved)return e?e():null;var t=s.cache.cartLastSaved;s.cache.cartLastSaved=s.cache.cart,fetch("/cart/update.js",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({attributes:{locksmith:s.cache.cart}})}).then(function(e){if(!e.ok)throw new Error("Cart update failed: "+e.status);return e.json()}).then(function(){e&&e()})["catch"](function(e){if(s.cache.cartLastSaved=t,!s.reloading)throw e})},s.util.spinnerHTML='<style>body{background:#FFF}@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}#loading{display:flex;width:100%;height:50vh;color:#777;align-items:center;justify-content:center}#loading .spinner{display:block;animation:spin 600ms linear infinite;position:relative;width:50px;height:50px}#loading .spinner-ring{stroke:currentColor;stroke-dasharray:100%;stroke-width:2px;stroke-linecap:round;fill:none}</style><div id="loading"><div class="spinner"><svg width="100%" height="100%"><svg preserveAspectRatio="xMinYMin"><circle class="spinner-ring" cx="50%" cy="50%" r="45%"></circle></svg></svg></div></div>',s.util.clobberBody=function(e){document.body.innerHTML=e},s.util.clobberDocument=function(e){e.responseText&&(e=e.responseText),document.documentElement&&document.removeChild(document.documentElement);var t=document.open("text/html","replace");t.writeln(e),t.close(),setTimeout(function(){var e=t.querySelector("[autofocus]");e&&e.focus()},100)},s.util.serializeForm=function(e){if(e&&"FORM"===e.nodeName){var t,n,o={};for(t=e.elements.length-1;0<=t;t-=1)if(""!==e.elements[t].name)switch(e.elements[t].nodeName){case"INPUT":switch(e.elements[t].type){default:case"text":case"hidden":case"password":case"button":case"reset":case"submit":o[e.elements[t].name]=e.elements[t].value;break;case"checkbox":case"radio":e.elements[t].checked&&(o[e.elements[t].name]=e.elements[t].value);break;case"file":}break;case"TEXTAREA":o[e.elements[t].name]=e.elements[t].value;break;case"SELECT":switch(e.elements[t].type){case"select-one":o[e.elements[t].name]=e.elements[t].value;break;case"select-multiple":for(n=e.elements[t].options.length-1;0<=n;n-=1)e.elements[t].options[n].selected&&(o[e.elements[t].name]=e.elements[t].options[n].value)}break;case"BUTTON":switch(e.elements[t].type){case"reset":case"submit":case"button":o[e.elements[t].name]=e.elements[t].value}}return o}},s.util.on=function(e,i,s,t){t=t||document;var c="locksmith-"+e+i,n=function(e){var t=e.target,n=e.target.parentElement,o=t&&t.className&&(t.className.baseVal||t.className)||"",a=n&&n.className&&(n.className.baseVal||n.className)||"";("string"==typeof o&&-1!==o.split(/\s+/).indexOf(i)||"string"==typeof a&&-1!==a.split(/\s+/).indexOf(i))&&!e[c]&&(e[c]=!0,s(e))};t.attachEvent?t.attachEvent(e,n):t.addEventListener(e,n,!1)},s.util.enableActions=function(e){s.util.on("click","locksmith-action",function(e){e.preventDefault();var t=e.target;t.dataset.confirmWith&&!confirm(t.dataset.confirmWith)||(t.disabled=!0,t.innerText=t.dataset.disableWith,s.post("/action",t.dataset.locksmithParams,{spinner:!1,type:"text",success:function(e){(e=JSON.parse(e.responseText)).message&&alert(e.message),s.util.reload()}}))},e)},s.util.inject=function(e,t){var n=["data","locksmith","append"];if(-1!==t.indexOf(n.join("-"))){var o=document.createElement("div");o.innerHTML=t,e.appendChild(o)}else e.innerHTML=t;var a,i,s=e.querySelectorAll("script");for(i=0;i<s.length;++i){a=s[i];var c=document.createElement("script");if(a.type&&(c.type=a.type),a.src)c.src=a.src;else{var l=document.createTextNode(a.innerHTML);c.appendChild(l)}e.appendChild(c)}var r=e.querySelector("[autofocus]");r&&r.focus()},s.post=function(e,t,n){!1!==(n=n||{}).spinner&&s.util.clobberBody(s.util.spinnerHTML);var o={};n.container===document?(o.layout=1,n.success=function(e){s.util.clobberDocument(e)}):n.container&&(o.layout=0,n.success=function(e){var t=document.getElementById(n.container);s.util.inject(t,e),t.id===t.firstChild.id&&t.parentElement.replaceChild(t.firstChild,t)}),n.form_type&&(t.form_type=n.form_type),n.include_layout_classes!==undefined&&(t.include_layout_classes=n.include_layout_classes),n.lock_id!==undefined&&(t.lock_id=n.lock_id),s.loading=!0;var a=s.util.makeUrl(e,o),i="json"===n.type||"text"===n.type;fetch(a,{method:"POST",headers:{"Content-Type":"application/json",Accept:i?"application/json":"text/html"},body:JSON.stringify(t)}).then(function(e){if(!e.ok)throw new Error("Request failed: "+e.status);return e.text()}).then(function(e){var t=n.success||s.util.clobberDocument;t(i?{responseText:e}:e)})["catch"](function(e){if(!s.reloading)if("dashboard.weglot.com"!==window.location.host){if(!n.silent)throw alert("Something went wrong! Please refresh and try again."),e;console.error(e)}else console.error(e)})["finally"](function(){s.loading=!1})},s.postResource=function(e,t){e.path=s.path,e.search=window.location.search,e.state=s.state,e.passcode&&(e.passcode=e.passcode.trim()),e.email&&(e.email=e.email.trim()),e.state.cart=s.cache.cart,e.locksmith_json=s.jsonTag,e.locksmith_json_signature=s.jsonTagSignature,s.post("/resource",e,t)},s.ping=function(e){if(!s.isEmbedded){e=e||{};var t=function(){e.reload?s.util.reload():"function"==typeof e.callback&&e.callback()};s.post("/ping",{path:s.path,search:window.location.search,state:s.state},{spinner:!!e.spinner,silent:"undefined"==typeof e.silent||e.silent,type:"text",success:function(e){e&&e.responseText?((e=JSON.parse(e.responseText)).messages&&0<e.messages.length&&s.showMessages(e.messages),e.cart&&s.cache.cart!==e.cart?(s.cache.cart=e.cart,s.cache.saveCart(function(){t(),e.cart&&e.cart.match(/^.+:/)&&s.util.reload()})):t()):console.error("[Locksmith] Invalid result in ping callback:",e)}})}},s.timeoutMonitor=function(){var e=s.cache.cart;s.ping({callback:function(){e!==s.cache.cart||setTimeout(function(){s.timeoutMonitor()},6e4)}})},s.showMessages=function(e){var t=document.createElement("div");t.style.position="fixed",t.style.left=0,t.style.right=0,t.style.bottom="-50px",t.style.opacity=0,t.style.background="#191919",t.style.color="#ddd",t.style.transition="bottom 0.2s, opacity 0.2s",t.style.zIndex=999999,t.innerHTML="        <style>          .locksmith-ab .locksmith-b { display: none; }          .locksmith-ab.toggled .locksmith-b { display: flex; }          .locksmith-ab.toggled .locksmith-a { display: none; }          .locksmith-flex { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 10px 20px; }          .locksmith-message + .locksmith-message { border-top: 1px #555 solid; }          .locksmith-message a { color: inherit; font-weight: bold; }          .locksmith-message a:hover { color: inherit; opacity: 0.8; }          a.locksmith-ab-toggle { font-weight: inherit; text-decoration: underline; }          .locksmith-text { flex-grow: 1; }          .locksmith-cta { flex-grow: 0; text-align: right; }          .locksmith-cta button { transform: scale(0.8); transform-origin: left; }          .locksmith-cta > * { display: block; }          .locksmith-cta > * + * { margin-top: 10px; }          .locksmith-message a.locksmith-close { flex-grow: 0; text-decoration: none; margin-left: 15px; font-size: 30px; font-family: monospace; display: block; padding: 2px 10px; }                    @media screen and (max-width: 600px) {            .locksmith-wide-only { display: none !important; }            .locksmith-flex { padding: 0 15px; }            .locksmith-flex > * { margin-top: 5px; margin-bottom: 5px; }            .locksmith-cta { text-align: left; }          }                    @media screen and (min-width: 601px) {            .locksmith-narrow-only { display: none !important; }          }        </style>      "+e.map(function(e){return'<div class="locksmith-message">'+e+"</div>"}).join(""),document.body.appendChild(t),document.body.style.position="relative",document.body.parentElement.style.paddingBottom=t.offsetHeight+"px",setTimeout(function(){t.style.bottom=0,t.style.opacity=1},50),s.util.on("click","locksmith-ab-toggle",function(e){e.preventDefault();for(var t=e.target.parentElement;-1===t.className.split(" ").indexOf("locksmith-ab");)t=t.parentElement;-1!==t.className.split(" ").indexOf("toggled")?t.className=t.className.replace("toggled",""):t.className=t.className+" toggled"}),s.util.enableActions(t)}}()}();</script>
-      <script data-locksmith>Locksmith.cache.cart=null</script>
-
-  <script data-locksmith>Locksmith.jsonTag="{\"version\":\"v281\",\"locked\":false,\"initialized\":true,\"scope\":\"404\",\"access_granted\":true,\"access_denied\":false,\"requires_customer\":false,\"manual_lock\":false,\"remote_lock\":false,\"has_timeout\":false,\"remote_rendered\":null,\"hide_resource\":false,\"hide_links_to_resource\":false,\"transparent\":true,\"locks\":{\"all\":[],\"opened\":[]},\"keys\":[],\"keys_signature\":\"efa5feebae506536bd9bbc9c9c5e7c9f23a12c8dd1f311927465df313d39f638\",\"state\":{\"template\":\"404\",\"theme\":192480706935,\"product\":null,\"collection\":null,\"page\":null,\"blog\":null,\"article\":null,\"app\":null},\"now\":1776920176,\"path\":null,\"locale_root_url\":\"\\\/\",\"canonical_url\":\"https:\\\/\\\/bodleianshop.co.uk\\\/404\",\"customer_id\":null,\"customer_id_signature\":\"efa5feebae506536bd9bbc9c9c5e7c9f23a12c8dd1f311927465df313d39f638\",\"cart\":null}";Locksmith.jsonTagSignature="de2e781942cc5d897374dd3f4b21916b4033242d528d2b49e4c635d736937c5c"</script>
-<meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>404 Not Found &ndash; Bodleian Libraries</title><link rel="canonical" href="https://bodleianshop.co.uk/404"><link rel="icon" href="//bodleianshop.co.uk/cdn/shop/files/Bodleian_Favicon_ac55216c-2855-47bc-9eb1-7da41e7457d1.jpg?crop=center&height=48&v=1775826737&width=48" type="image/jpg">
   <link rel="apple-touch-icon" href="//bodleianshop.co.uk/cdn/shop/files/Bodleian_Favicon_ac55216c-2855-47bc-9eb1-7da41e7457d1.jpg?crop=center&height=180&v=1775826737&width=180"><meta property="og:site_name" content="Bodleian Libraries">
-<meta property="og:url" content="https://bodleianshop.co.uk/404"><meta property="og:title" content="404 Not Found">
+<meta property="og:url" content="https://bodleianshop.co.uk/404">
+<meta property="og:title" content="404 Not Found">
 <meta property="og:type" content="website">
-<meta property="og:description" content="The official online shop of the Bodleian Libraries, University of Oxford. The Bodleian Libraries online store sells a range of gifts and books inspired by the historic Bodleian Library architecture, the Weston Library exhibitions programme and the world-renowned Bodleian collections.">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="404 Not Found">
+<meta property="og:description" content="The official online shop of the Bodleian Libraries, University of Oxford. The Bodleian Libraries online store sells a range of gifts and books inspired by the historic Bodleian Library architecture, the Weston Library exhibitions programme and the world-renowned Bodleian collections."><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="404 Not Found">
 <meta name="twitter:description" content="The official online shop of the Bodleian Libraries, University of Oxford. The Bodleian Libraries online store sells a range of gifts and books inspired by the historic Bodleian Library architecture, the Weston Library exhibitions programme and the world-renowned Bodleian collections.">
 <link rel="preload" href="//bodleianshop.co.uk/cdn/shop/t/20/assets/main.css?v=63805396931780531031774276446" as="style"><style data-shopify>
 @font-face {
@@ -76,7 +72,7 @@
       --sale-price-color: 210 0 20;--swatch-border-color-default: 221 221 221;
         --swatch-border-color-active: 170 170 170;
         --swatch-card-size: 24px;
-        --swatch-variant-picker-size: 64px;--color-scheme-1-bg: 238 238 238 / 1.0;
+        --swatch-variant-picker-size: 64px;--color-scheme-1-bg: 255 255 255 / 1.0;
       --color-scheme-1-grad: ;
       --color-scheme-1-heading: 51 51 51;
       --color-scheme-1-text: 51 51 51;
@@ -130,8 +126,8 @@
       --body-font-family: Cabin, sans-serif;
       --body-font-style: normal;
       --body-font-weight: 400;
-      --body-font-size: 16;
-      --body-font-size-px: 16px;
+      --body-font-size: 18;
+      --body-font-size-px: 18px;
       --body-letter-spacing: 0.0em;
 
       --section-gap: 32;
@@ -141,9 +137,9 @@
       --btn-text-color: 255 255 255;
       --btn-bg-color-og: 51 51 51;
       --btn-text-color-og: 255 255 255;
-      --btn-alt-bg-color: 255 255 255;
+      --btn-alt-bg-color: 130 175 189;
       --btn-alt-bg-alpha: 1.0;
-      --btn-alt-text-color: 51 51 51;
+      --btn-alt-text-color: 255 255 255;
       --btn-border-width: 1px;
       --btn-padding-y: 12px;
       --btn-text-size: 0.92em;
@@ -217,13 +213,22 @@ Shopify.theme.style = {"id":null,"handle":null};
 Shopify.cdnHost = "bodleianshop.co.uk/cdn";
 Shopify.routes = Shopify.routes || {};
 Shopify.routes.root = "/";
-Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";</script>
+Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";
+Shopify.SignInWithShop = Shopify.SignInWithShop || {};
+Shopify.SignInWithShop.User = Shopify.SignInWithShop.User || {};
+Shopify.SignInWithShop.User.recognized = false;</script>
 <script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
 <script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
 <script>
   window.ShopifyPay = window.ShopifyPay || {};
   window.ShopifyPay.apiHost = "shop.app\/pay";
   window.ShopifyPay.redirectState = null;
+</script>
+<script>
+  window.Shopify = window.Shopify || {};
+  window.Shopify.SignInWithShop = window.Shopify.SignInWithShop || {};
+  window.Shopify.SignInWithShop.assetMetrics = { sampleRate: 0.01 };
+  window.Shopify.SignInWithShop.eligible = true;
 </script>
 <script id="shop-js-analytics" type="application/json">{"pageType":"404"}</script>
 <script defer="defer" async type="module" src="//bodleianshop.co.uk/cdn/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js"></script>
@@ -236,7 +241,7 @@ Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";</scri
 <script>
   window.Shopify = window.Shopify || {};
   if (!window.Shopify.featureAssets) window.Shopify.featureAssets = {};
-  window.Shopify.featureAssets['shop-js'] = {"shop-toast-manager":["modules/v2/loader.shop-toast-manager.en.esm.js"],"init-shop-user-recognition":["modules/v2/loader.init-shop-user-recognition.en.esm.js"],"init-windoid":["modules/v2/loader.init-windoid.en.esm.js"],"shop-button":["modules/v2/loader.shop-button.en.esm.js"],"init-shop-cart-sync":["modules/v2/loader.init-shop-cart-sync.en.esm.js"],"init-shop-email-lookup-coordinator":["modules/v2/loader.init-shop-email-lookup-coordinator.en.esm.js"],"shop-cash-offers":["modules/v2/loader.shop-cash-offers.en.esm.js"],"init-fed-cm":["modules/v2/loader.init-fed-cm.en.esm.js"],"avatar":["modules/v2/loader.avatar.en.esm.js"],"checkout-modal":["modules/v2/loader.checkout-modal.en.esm.js"],"init-shop-for-new-customer-accounts":["modules/v2/loader.init-shop-for-new-customer-accounts.en.esm.js"],"init-customer-accounts-sign-up":["modules/v2/loader.init-customer-accounts-sign-up.en.esm.js"],"shop-login-button":["modules/v2/loader.shop-login-button.en.esm.js"],"shop-user-recognition":["modules/v2/loader.shop-user-recognition.en.esm.js"],"shop-cart-sync":["modules/v2/loader.shop-cart-sync.en.esm.js"],"init-customer-accounts":["modules/v2/loader.init-customer-accounts.en.esm.js"],"pay-button":["modules/v2/loader.pay-button.en.esm.js"],"shop-login":["modules/v2/loader.shop-login.en.esm.js"],"shop-follow-button":["modules/v2/loader.shop-follow-button.en.esm.js"],"lead-capture":["modules/v2/loader.lead-capture.en.esm.js"],"payment-terms":["modules/v2/loader.payment-terms.en.esm.js"]};
+  window.Shopify.featureAssets['shop-js'] = {"shop-toast-manager":["modules/v2/loader.shop-toast-manager.en.esm.js"],"shop-cash-offers":["modules/v2/loader.shop-cash-offers.en.esm.js"],"listener":["modules/v2/loader.listener.en.esm.js"],"shop-button":["modules/v2/loader.shop-button.en.esm.js"],"init-windoid":["modules/v2/loader.init-windoid.en.esm.js"],"checkout-modal":["modules/v2/loader.checkout-modal.en.esm.js"],"init-shop-email-lookup-coordinator":["modules/v2/loader.init-shop-email-lookup-coordinator.en.esm.js"],"init-fed-cm":["modules/v2/loader.init-fed-cm.en.esm.js"],"init-shop-user-recognition":["modules/v2/loader.init-shop-user-recognition.en.esm.js"],"avatar":["modules/v2/loader.avatar.en.esm.js"],"init-shop-cart-sync":["modules/v2/loader.init-shop-cart-sync.en.esm.js"],"init-customer-accounts":["modules/v2/loader.init-customer-accounts.en.esm.js"],"init-customer-accounts-sign-up":["modules/v2/loader.init-customer-accounts-sign-up.en.esm.js"],"shop-user-recognition":["modules/v2/loader.shop-user-recognition.en.esm.js"],"pay-button":["modules/v2/loader.pay-button.en.esm.js"],"shop-cart-sync":["modules/v2/loader.shop-cart-sync.en.esm.js"],"shop-login":["modules/v2/loader.shop-login.en.esm.js"],"shop-follow-button":["modules/v2/loader.shop-follow-button.en.esm.js"],"shop-login-button":["modules/v2/loader.shop-login-button.en.esm.js"],"init-shop-for-new-customer-accounts":["modules/v2/loader.init-shop-for-new-customer-accounts.en.esm.js"],"lead-capture":["modules/v2/loader.lead-capture.en.esm.js"],"payment-terms":["modules/v2/loader.payment-terms.en.esm.js"]};
 </script>
 <script>(function() {
   var isLoaded = false;
@@ -259,7 +264,7 @@ Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";</scri
     window.addEventListener('load', asyncLoad, false);
   }
 })();</script>
-<script id="__st">var __st={"a":2018508859,"offset":0,"reqid":"f04a51e2-d6d8-405e-9140-65ed8c9e6884-1776920175","pageurl":"bodleianshop.co.uk\/404","u":"7d1d1caaf68d"};</script>
+<script id="__st">var __st={"a":2018508859,"offset":0,"reqid":"2d37a212-4faf-4637-b46c-98e1f38153fd-1780293980","pageurl":"bodleianshop.co.uk\/404","u":"e999ce2b8ed7"};</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(','),a=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];function s(){const t=[...o],e=r(t);return a(e)}const i='password',u='form_key',d=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',i],f=()=>{try{return window.sessionStorage}catch{return}},m='__shopify_v',_=t=>t.elements[u];function p(t,e,n=!1){try{const o=window.sessionStorage,c=JSON.parse(o.getItem(e)),{data:r}=function(t){const{data:e,action:n}=t;return t[m]||n?{data:e,action:n}:{data:t,action:n}}(c);for(const[e,n]of Object.entries(r))t.elements[e]&&(t.elements[e].value=n);n&&o.removeItem(e)}catch(o){console.error('form repopulation failed',{error:o})}}const l='form_type',E='cptcha';function T(t){t.dataset[E]=!0}const w=window,h=w.document,L='Shopify',v='ce_forms',y='captcha';let A=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe',I='https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.5.2.iife.js',D={infoText:'Protected by hCaptcha',privacyText:'Privacy',termsText:'Terms'},(t,e,n)=>{const o=w[L][v],c=o.bindForm;if(c)return c(t,g,e,D).then(n);var r;o.q.push([[t,g,e,D],n]),r=I,A||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:r})),A=!0)});var g,I,D;w[L]=w[L]||{},w[L][v]=w[L][v]||{},w[L][v].q=[],w[L][y]=w[L][y]||{},w[L][y].protect=function(t,e){n(t,void 0,e),T(t)},Object.freeze(w[L][y]),function(t,e,n,w,h,L){const[v,y,A,g]=function(t,e,n){const i=e?o:[],u=t?c:[],d=[...i,...u],f=r(d),m=r(i),_=r(d.filter((([t,e])=>n.includes(e))));return[a(f),a(m),a(_),s()]}(w,h,L),I=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},D=t=>v().includes(t);t.addEventListener('submit',(t=>{const e=I(t);if(!e)return;const n=D(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=_(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!f())return;!function(t){const e=f();if(!e)return;const n=_(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){_(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:u})),t.elements[u].value=e}(t,e),function(t,e){const n=f();if(!n)return;const o=[...t.querySelectorAll(`input[type='${i}']`)].map((({name:t})=>t)),c=[...d,...o],r={};for(const[a,s]of new FormData(t).entries())c.includes(a)||(r[a]=s);n.setItem(e,JSON.stringify({[m]:1,action:t.action,data:r}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const S=(t,e)=>{t&&!t.dataset[E]&&(n(t,e.some((e=>e===t))),T(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=I(t);D(e)&&S(e,y())}));const B=e.get('form_key'),M=e.get(l),P=B&&M;t.addEventListener('DOMContentLoaded',(()=>{const t=y();if(P)for(const e of t)e.elements[l].value===M&&p(e,B);[...new Set([...A(),...v().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>S(e,t)))}))}(h,new URLSearchParams(w.location.search),n,t,e,['guest_login'])})(!0,!0)}();</script>
 <script integrity="sha256-JjoPp5ZfB1sSAs5SQaol1x1GgvveM+BgmRzyDexInEQ=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//bodleianshop.co.uk/cdn/shopifycloud/storefront/assets/storefront/load_feature-1bd60354.js" crossorigin="anonymous"></script>
@@ -271,6 +276,7 @@ Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";</scri
 </script>
 <script data-source-attribution="shopify.dynamic_checkout.cart.bootstrap">document.addEventListener("DOMContentLoaded",(function(){function t(){return document.querySelector("shopify-accelerated-checkout-cart, shopify-accelerated-checkout")}if(t())Shopify.PaymentButton.init();else{new MutationObserver((function(e,n){t()&&(Shopify.PaymentButton.init(),n.disconnect())})).observe(document.body,{childList:!0,subtree:!0})}}));
 </script>
+<script async="async" integrity="sha256-haKOhzT83GjvO3v6qzDZfOsoJVFdXid/w2WH/c5LJ+s=" src="//cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-0583672e.js" crossorigin="anonymous"></script>
 <script id='scb4127' type='text/javascript' async='' src='https://bodleianshop.co.uk/cdn/shopifycloud/privacy-banner/storefront-banner.js'></script><link id="shopify-accelerated-checkout-styles" rel="stylesheet" media="screen" href="https://bodleianshop.co.uk/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css" crossorigin="anonymous">
 <style id="shopify-accelerated-checkout-cart">
         #shopify-buyer-consent {
@@ -298,7 +304,7 @@ Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";</scri
 
       </style>
 <script id="sections-script" data-sections="header" defer="defer" src="//bodleianshop.co.uk/cdn/shop/t/20/compiled_assets/scripts.js?v=132263383497981015851774276511"></script>
-<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+<script id="shopify-cfh-end">window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
 
 
   <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script><!-- CC Custom Head Start --><!-- CC Custom Head End --><link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
@@ -306,11 +312,11 @@ Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";</scri
 <script>
   window.__TREKKIE_SHIM_QUEUE = window.__TREKKIE_SHIM_QUEUE || [];
 </script>
-<script id="web-pixels-manager-setup">(function e(e,d,r,n,o){if(void 0===o&&(o={}),!Boolean(null===(a=null===(i=window.Shopify)||void 0===i?void 0:i.analytics)||void 0===a?void 0:a.replayQueue)){var i,a;window.Shopify=window.Shopify||{};var t=window.Shopify;t.analytics=t.analytics||{};var s=t.analytics;s.replayQueue=[],s.publish=function(e,d,r){return s.replayQueue.push([e,d,r]),!0};try{self.performance.mark("wpm:start")}catch(e){}var l=function(){var e={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/},d=e.modern,r=e.legacy,n=navigator.userAgent;return n.match(d)?"modern":n.match(r)?"legacy":"unknown"}(),u="modern"===l?"modern":"legacy",c=(null!=n?n:{modern:"",legacy:""})[u],f=function(e){return[e.baseUrl,"/wpm","/b",e.hashVersion,"modern"===e.buildTarget?"m":"l",".js"].join("")}({baseUrl:d,hashVersion:r,buildTarget:u}),m=function(e){var d=e.version,r=e.bundleTarget,n=e.surface,o=e.pageUrl,i=e.monorailEndpoint;return{emit:function(e){var a=e.status,t=e.errorMsg,s=(new Date).getTime(),l=JSON.stringify({metadata:{event_sent_at_ms:s},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:d,bundle_target:r,page_url:o,status:a,surface:n,error_msg:t},metadata:{event_created_at_ms:s}}]});if(!i)return console&&console.warn&&console.warn("[Web Pixels Manager] No Monorail endpoint provided, skipping logging."),!1;try{return self.navigator.sendBeacon.bind(self.navigator)(i,l)}catch(e){}var u=new XMLHttpRequest;try{return u.open("POST",i,!0),u.setRequestHeader("Content-Type","text/plain"),u.send(l),!0}catch(e){return console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging to Monorail."),!1}}}}({version:r,bundleTarget:l,surface:e.surface,pageUrl:self.location.href,monorailEndpoint:e.monorailEndpoint});try{o.browserTarget=l,function(e){var d=e.src,r=e.async,n=void 0===r||r,o=e.onload,i=e.onerror,a=e.sri,t=e.scriptDataAttributes,s=void 0===t?{}:t,l=document.createElement("script"),u=document.querySelector("head"),c=document.querySelector("body");if(l.async=n,l.src=d,a&&(l.integrity=a,l.crossOrigin="anonymous"),s)for(var f in s)if(Object.prototype.hasOwnProperty.call(s,f))try{l.dataset[f]=s[f]}catch(e){}if(o&&l.addEventListener("load",o),i&&l.addEventListener("error",i),u)u.appendChild(l);else{if(!c)throw new Error("Did not find a head or body element to append the script");c.appendChild(l)}}({src:f,async:!0,onload:function(){if(!function(){var e,d;return Boolean(null===(d=null===(e=window.Shopify)||void 0===e?void 0:e.analytics)||void 0===d?void 0:d.initialized)}()){var d=window.webPixelsManager.init(e)||void 0;if(d){var r=window.Shopify.analytics;r.replayQueue.forEach((function(e){var r=e[0],n=e[1],o=e[2];d.publishCustomEvent(r,n,o)})),r.replayQueue=[],r.publish=d.publishCustomEvent,r.visitor=d.visitor,r.initialized=!0}}},onerror:function(){return m.emit({status:"failed",errorMsg:"".concat(f," has failed to load")})},sri:function(e){var d=/^sha384-[A-Za-z0-9+/=]+$/;return"string"==typeof e&&d.test(e)}(c)?c:"",scriptDataAttributes:o}),m.emit({status:"loading"})}catch(e){m.emit({status:"failed",errorMsg:(null==e?void 0:e.message)||"Unknown error"})}}})({shopId: 2018508859,storefrontBaseUrl: "https://bodleianshop.co.uk",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",monorailEndpoint: "https://monorail-edge.shopifysvc.com/unstable/produce_batch",surface: "storefront-renderer",enabledBetaFlags: ["72028870","2dca8a86","d5bdd5d0","5476ea20"],webPixelsConfigList: [{"id":"3143893367","configuration":"{\"projectId\":\"uyaefunscm\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"3f95c569dcd8d256ed20e00a12567bee","type":"APP","apiClientId":240074326017,"privacyPurposes":[],"capabilities":["advanced_dom_events"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_personal_data"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"942440823","configuration":"{\"config\":\"{\\\"google_tag_ids\\\":[\\\"G-QHZFLG3E7D\\\"],\\\"gtag_events\\\":[{\\\"type\\\":\\\"begin_checkout\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"search\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"view_item\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"purchase\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"page_view\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"add_payment_info\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"add_to_cart\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"}],\\\"enable_monitoring_mode\\\":false}\"}","eventPayloadVersion":"v1","runtimeContext":"OPEN","scriptVersion":"5a723296a9ab7d2cddda5d574ded9c79","type":"APP","apiClientId":1780363,"privacyPurposes":[],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized","enabledFlags":["9a3ed68a"]},{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0450","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0450","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,initData: {"shop":{"name":"Bodleian Libraries","paymentSettings":{"currencyCode":"GBP"},"myshopifyDomain":"bodleian-library.myshopify.com","countryCode":"GB","storefrontUrl":"https:\/\/bodleianshop.co.uk"},"customer":null,"cart":null,"checkout":null,"productVariants":[],"purchasingCompany":null},},"https://bodleianshop.co.uk/cdn","5153dfa3wa14e0a32p72aa89e7m94579b79",{"modern":"","legacy":""},{"trekkieShim":true,"shopId":"2018508859","storefrontBaseUrl":"https:\/\/bodleianshop.co.uk","extensionBaseUrl":"https:\/\/extensions.shopifycdn.com\/cdn\/shopifycloud\/web-pixels-manager","surface":"storefront-renderer","enabledBetaFlags":"[\"72028870\", \"2dca8a86\", \"d5bdd5d0\", \"5476ea20\"]","isMerchantRequest":"false","hashVersion":"5153dfa3wa14e0a32p72aa89e7m94579b79","publish":"custom","events":"[[\"page_viewed\",{}]]"});</script><script>
+<script id="web-pixels-manager-setup">(function(){var wpmLoader=function(){"use strict";return function(e,d,r,n){var o=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{};if(!Boolean(null==(i=null==(a=window.Shopify)?void 0:a.analytics)?void 0:i.replayQueue)){var a,i;window.Shopify=window.Shopify||{};var t=window.Shopify;t.analytics=t.analytics||{};var s=t.analytics;s.replayQueue=[],s.publish=function(e,d,r){return s.replayQueue.push([e,d,r]),!0};try{self.performance.mark("wpm:start")}catch(e){}var l,u,c,m,p,f,h,g,y,w,v,b,S,P=(u=(l={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/}).modern,c=l.legacy,(m=navigator.userAgent).match(u)?"modern":m.match(c)?"legacy":"unknown"),C="modern"===P?"modern":"legacy",_=(null!=n?n:{modern:"",legacy:""})[C],O=[(p={baseUrl:d,hashVersion:r,buildTarget:C}).baseUrl,"/wpm","/b",p.hashVersion,"modern"===p.buildTarget?"m":"l",".js"].join(""),U=(f={version:r,bundleTarget:P,surface:e.surface,pageUrl:self.location.href,monorailEndpoint:e.monorailEndpoint},h=f.version,g=f.bundleTarget,y=f.surface,w=f.pageUrl,v=f.monorailEndpoint,{emit:function(e){var d=e.status,r=e.errorMsg,n=(new Date).getTime(),o=JSON.stringify({metadata:{event_sent_at_ms:n},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:h,bundle_target:g,page_url:w,status:d,surface:y,error_msg:r},metadata:{event_created_at_ms:n}}]});if(!v)return console&&console.warn&&console.warn("[Web Pixels Manager] No Monorail endpoint provided, skipping logging."),!1;try{return self.navigator.sendBeacon.bind(self.navigator)(v,o)}catch(e){}var a=new XMLHttpRequest;try{return a.open("POST",v,!0),a.setRequestHeader("Content-Type","text/plain"),a.send(o),!0}catch(e){return console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging to Monorail."),!1}}});try{o.browserTarget=P,function(e){var d=e.src,r=e.async,n=void 0===r||r,o=e.onload,a=e.onerror,i=e.sri,t=e.scriptDataAttributes,s=void 0===t?{}:t,l=document.createElement("script"),u=document.querySelector("head"),c=document.querySelector("body");if(l.async=n,l.src=d,i&&(l.integrity=i,l.crossOrigin="anonymous"),s)for(var m in s)if(Object.prototype.hasOwnProperty.call(s,m))try{l.dataset[m]=s[m]}catch(e){}if(o&&l.addEventListener("load",o),a&&l.addEventListener("error",a),u)u.appendChild(l);else{if(!c)throw new Error("Did not find a head or body element to append the script");c.appendChild(l)}}({src:O,async:!0,onload:function(){if(!function(){var e,d;return Boolean(null==(d=null==(e=window.Shopify)?void 0:e.analytics)?void 0:d.initialized)}()){var d=window.webPixelsManager.init(e)||void 0;if(d){var r=window.Shopify.analytics;r.replayQueue.forEach(function(e){var r=e[0],n=e[1],o=e[2];d.publishCustomEvent(r,n,o)}),r.replayQueue=[],r.publish=d.publishCustomEvent,r.visitor=d.visitor,r.initialized=!0}}},onerror:function(){return U.emit({status:"failed",errorMsg:"".concat(O," has failed to load")})},sri:(b=_,S=/^sha384-[A-Za-z0-9+/=]+$/,"string"==typeof b&&S.test(b)?_:""),scriptDataAttributes:o}),U.emit({status:"loading"})}catch(e){U.emit({status:"failed",errorMsg:(null==e?void 0:e.message)||"Unknown error"})}}}}();wpmLoader({shopId: 2018508859,storefrontBaseUrl: "https://bodleianshop.co.uk",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",monorailEndpoint: "https://monorail-edge.shopifysvc.com/unstable/produce_batch",surface: "storefront-renderer",enabledBetaFlags: ["2dca8a86","d5bdd5d0","5acaffe6","3b3c7daf","6faea013"],webPixelsConfigList: [{"id":"3143893367","configuration":"{\"projectId\":\"uyaefunscm\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"ee6b6e3b9753873d6a9bf4fb40951aba","type":"APP","apiClientId":240074326017,"privacyPurposes":[],"capabilities":["advanced_dom_events"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_personal_data"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"942440823","configuration":"{\"config\":\"{\\\"google_tag_ids\\\":[\\\"G-QHZFLG3E7D\\\"],\\\"gtag_events\\\":[{\\\"type\\\":\\\"begin_checkout\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"search\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"view_item\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"purchase\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"page_view\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"add_payment_info\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"},{\\\"type\\\":\\\"add_to_cart\\\",\\\"action_label\\\":\\\"G-QHZFLG3E7D\\\"}],\\\"enable_monitoring_mode\\\":false}\"}","eventPayloadVersion":"v1","runtimeContext":"OPEN","scriptVersion":"f15305aac1e98c5c26a7c80e7bc37bde","type":"APP","apiClientId":1780363,"privacyPurposes":[],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized","enabledFlags":["9a3ed68a"]},{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0460","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0460","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,initData: {"shop":{"name":"Bodleian Libraries","paymentSettings":{"currencyCode":"GBP"},"myshopifyDomain":"bodleian-library.myshopify.com","countryCode":"GB","storefrontUrl":"https:\/\/bodleianshop.co.uk"},"customer":null,"cart":null,"checkout":null,"productVariants":[],"products":null,"purchasingCompany":null,"page":null},},"https://bodleianshop.co.uk/cdn","c5a2dbecw2e5701dcp16d0b08em93d9521b",{"modern":"","legacy":""},{"trekkieShim":true,"shopId":"2018508859","storefrontBaseUrl":"https:\/\/bodleianshop.co.uk","extensionBaseUrl":"https:\/\/extensions.shopifycdn.com\/cdn\/shopifycloud\/web-pixels-manager","surface":"storefront-renderer","enabledBetaFlags":"[\"2dca8a86\", \"d5bdd5d0\", \"5acaffe6\", \"3b3c7daf\", \"6faea013\"]","isMerchantRequest":"false","hashVersion":"c5a2dbecw2e5701dcp16d0b08em93d9521b","publish":"custom","events":"[[\"page_viewed\",{}]]"});})();</script><script>
   window.ShopifyAnalytics = window.ShopifyAnalytics || {};
   window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
   window.ShopifyAnalytics.meta.currency = 'GBP';
-  var meta = {"page":{"requestId":"f04a51e2-d6d8-405e-9140-65ed8c9e6884-1776920175"}};
+  var meta = {"page":{"requestId":"2d37a212-4faf-4637-b46c-98e1f38153fd-1780293980"}};
   for (var attr in meta) {
     window.ShopifyAnalytics.meta[attr] = meta[attr];
   }
@@ -441,20 +447,20 @@ script.onerror = function(e) {
       theme_id: 192480706935,
       app_name: "storefront",
       context_url: window.location.href,
-      source_url: "//bodleianshop.co.uk/cdn/s/trekkie.storefront.853740ed6e9bdebbd97573c5bbdd9cfe5fb59a39.min.js"});
+      source_url: "//bodleianshop.co.uk/cdn/s/trekkie.storefront.f7140b8b25ae1195cf346a36a85e3e4bcf46adb3.min.js"});
 
   };
   scriptFallback.async = true;
-  scriptFallback.src = '//bodleianshop.co.uk/cdn/s/trekkie.storefront.853740ed6e9bdebbd97573c5bbdd9cfe5fb59a39.min.js';
+  scriptFallback.src = '//bodleianshop.co.uk/cdn/s/trekkie.storefront.f7140b8b25ae1195cf346a36a85e3e4bcf46adb3.min.js';
   first.parentNode.insertBefore(scriptFallback, first);
 };
 script.async = true;
-script.src = '//bodleianshop.co.uk/cdn/s/trekkie.storefront.853740ed6e9bdebbd97573c5bbdd9cfe5fb59a39.min.js';
+script.src = '//bodleianshop.co.uk/cdn/s/trekkie.storefront.f7140b8b25ae1195cf346a36a85e3e4bcf46adb3.min.js';
 first.parentNode.insertBefore(script, first);
 
     };
     trekkie.load(
-      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":2018508859,"isMerchantRequest":null,"themeId":192480706935,"themeCityHash":"4933930008477757704","contentLanguage":"en","currency":"GBP","eventMetadataId":"5d6da7e0-dc77-4ec5-9e9b-f044bc915214"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain","enabledBetaFlags":["b5387b81","d5bdd5d0"]},"Session Attribution":{},"S2S":{"facebookCapiEnabled":false,"source":"trekkie-storefront-renderer","apiClientId":580111}}
+      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":2018508859,"isMerchantRequest":null,"themeId":192480706935,"themeCityHash":"15441133667304321768","contentLanguage":"en","currency":"GBP","eventMetadataId":"e08caf63-ffdc-4551-8a74-1eb95f6f6ff4"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain","enabledBetaFlags":["b5387b81","d5bdd5d0"]},"Session Attribution":{},"S2S":{"facebookCapiEnabled":false,"source":"trekkie-storefront-renderer","apiClientId":580111}}
     );
 
     var loaded = false;
@@ -469,7 +475,7 @@ first.parentNode.insertBefore(script, first);
       try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
       document.write = originalDocumentWrite;
 
-      window.ShopifyAnalytics.lib.page(null,{"requestId":"f04a51e2-d6d8-405e-9140-65ed8c9e6884-1776920175","shopifyEmitted":true});
+      window.ShopifyAnalytics.lib.page(null,{"requestId":"2d37a212-4faf-4637-b46c-98e1f38153fd-1780293980","shopifyEmitted":true});
 
       var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
       var token = match? match[1]: undefined;
@@ -481,7 +487,7 @@ first.parentNode.insertBefore(script, first);
 
     var eventsListenerScript = document.createElement('script');
     eventsListenerScript.async = true;
-    eventsListenerScript.src = "//bodleianshop.co.uk/cdn/shopifycloud/storefront/assets/shop_events_listener-3da45d37.js";
+    eventsListenerScript.src = "//bodleianshop.co.uk/cdn/shopifycloud/storefront/assets/shop_events_listener-4e26a9ce.js";
     document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
 })();</script>
   <script>
@@ -500,7 +506,7 @@ first.parentNode.insertBefore(script, first);
 </script>
 <script
   defer
-  src="https://bodleianshop.co.uk/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.3.1.min.js"
+  src="https://bodleianshop.co.uk/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.5.0.min.js"
   data-application="storefront-renderer"
   data-shop-id="2018508859"
   data-render-region="gcp-us-east1"
@@ -689,103 +695,103 @@ first.parentNode.insertBefore(script, first);
           </li><li class="custom-select__option flex items-center js-option"
             id="product_types-opt-19"
             role="option"
-            data-value="Chocolate Truffles">
-          <span class="pointer-events-none">Chocolate Truffles</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-20"
-            role="option"
             data-value="Christmas Card Pack">
           <span class="pointer-events-none">Christmas Card Pack</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-21"
+            id="product_types-opt-20"
             role="option"
             data-value="Coaster">
           <span class="pointer-events-none">Coaster</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-22"
+            id="product_types-opt-21"
             role="option"
             data-value="Coin">
           <span class="pointer-events-none">Coin</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-23"
+            id="product_types-opt-22"
             role="option"
             data-value="Colouring Pencils">
           <span class="pointer-events-none">Colouring Pencils</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-24"
+            id="product_types-opt-23"
             role="option"
             data-value="Craft Kits">
           <span class="pointer-events-none">Craft Kits</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-25"
+            id="product_types-opt-24"
             role="option"
             data-value="Cufflinks">
           <span class="pointer-events-none">Cufflinks</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-26"
+            id="product_types-opt-25"
             role="option"
             data-value="Cushion">
           <span class="pointer-events-none">Cushion</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-27"
+            id="product_types-opt-26"
             role="option"
             data-value="Decoration">
           <span class="pointer-events-none">Decoration</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-28"
+            id="product_types-opt-27"
             role="option"
             data-value="Dog Treats">
           <span class="pointer-events-none">Dog Treats</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-29"
+            id="product_types-opt-28"
             role="option"
             data-value="Earrings">
           <span class="pointer-events-none">Earrings</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-30"
+            id="product_types-opt-29"
             role="option"
             data-value="Eraser">
           <span class="pointer-events-none">Eraser</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-31"
+            id="product_types-opt-30"
             role="option"
             data-value="Exhibition Catalogue">
           <span class="pointer-events-none">Exhibition Catalogue</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-32"
+            id="product_types-opt-31"
             role="option"
             data-value="Figurine">
           <span class="pointer-events-none">Figurine</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-33"
+            id="product_types-opt-32"
             role="option"
             data-value="Fridge Magnet">
           <span class="pointer-events-none">Fridge Magnet</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-34"
+            id="product_types-opt-33"
             role="option"
             data-value="Furniture">
           <span class="pointer-events-none">Furniture</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-35"
+            id="product_types-opt-34"
             role="option"
             data-value="Game">
           <span class="pointer-events-none">Game</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-36"
+            id="product_types-opt-35"
             role="option"
             data-value="Gift Tag">
           <span class="pointer-events-none">Gift Tag</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-37"
+            id="product_types-opt-36"
             role="option"
             data-value="Glasses Case">
           <span class="pointer-events-none">Glasses Case</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-38"
+            id="product_types-opt-37"
             role="option"
             data-value="GREETINGS CARD">
           <span class="pointer-events-none">GREETINGS CARD</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-38"
+            role="option"
+            data-value="Glasses Case">
+          <span class="pointer-events-none">Glasses Case</span>
           </li><li class="custom-select__option flex items-center js-option"
             id="product_types-opt-39"
             role="option"
@@ -844,218 +850,258 @@ first.parentNode.insertBefore(script, first);
           </li><li class="custom-select__option flex items-center js-option"
             id="product_types-opt-50"
             role="option"
+            data-value="Mirror">
+          <span class="pointer-events-none">Mirror</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-51"
+            role="option"
             data-value="Model">
           <span class="pointer-events-none">Model</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-51"
+            id="product_types-opt-52"
             role="option"
             data-value="Mug">
           <span class="pointer-events-none">Mug</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-52"
+            id="product_types-opt-53"
             role="option"
             data-value="Napkins">
           <span class="pointer-events-none">Napkins</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-53"
+            id="product_types-opt-54"
             role="option"
             data-value="Necklace">
           <span class="pointer-events-none">Necklace</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-54"
+            id="product_types-opt-55"
             role="option"
             data-value="Notebook">
           <span class="pointer-events-none">Notebook</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-55"
+            id="product_types-opt-56"
             role="option"
             data-value="Notecard">
           <span class="pointer-events-none">Notecard</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-56"
+            id="product_types-opt-57"
             role="option"
             data-value="Pen">
           <span class="pointer-events-none">Pen</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-57"
+            id="product_types-opt-58"
             role="option"
             data-value="Pencil Case">
           <span class="pointer-events-none">Pencil Case</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-58"
+            id="product_types-opt-59"
             role="option"
             data-value="Pin Badge">
           <span class="pointer-events-none">Pin Badge</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-59"
+            id="product_types-opt-60"
             role="option"
             data-value="Postcard">
           <span class="pointer-events-none">Postcard</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-60"
+            id="product_types-opt-61"
             role="option"
             data-value="Postcard Pack">
           <span class="pointer-events-none">Postcard Pack</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-61"
-            role="option"
-            data-value="Print">
-          <span class="pointer-events-none">Print</span>
           </li><li class="custom-select__option flex items-center js-option"
             id="product_types-opt-62"
             role="option"
-            data-value="notepad">
-          <span class="pointer-events-none">notepad</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-63"
-            role="option"
-            data-value="Paper Bookmark">
-          <span class="pointer-events-none">Paper Bookmark</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-64"
-            role="option"
-            data-value="Pen">
-          <span class="pointer-events-none">Pen</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-65"
-            role="option"
-            data-value="pen pot">
-          <span class="pointer-events-none">pen pot</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-66"
-            role="option"
-            data-value="Pencil">
-          <span class="pointer-events-none">Pencil</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-67"
-            role="option"
-            data-value="Pencil Case">
-          <span class="pointer-events-none">Pencil Case</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-68"
-            role="option"
-            data-value="Pin Badge">
-          <span class="pointer-events-none">Pin Badge</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-69"
-            role="option"
-            data-value="Postcard Pack">
-          <span class="pointer-events-none">Postcard Pack</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-70"
-            role="option"
             data-value="Print">
           <span class="pointer-events-none">Print</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-71"
-            role="option"
-            data-value="Print Books">
-          <span class="pointer-events-none">Print Books</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-72"
-            role="option"
-            data-value="Prints">
-          <span class="pointer-events-none">Prints</span>
-          </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-73"
+            id="product_types-opt-63"
             role="option"
             data-value="Purse">
           <span class="pointer-events-none">Purse</span>
           </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-64"
+            role="option"
+            data-value="notepad">
+          <span class="pointer-events-none">notepad</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-65"
+            role="option"
+            data-value="Paper Bookmark">
+          <span class="pointer-events-none">Paper Bookmark</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-66"
+            role="option"
+            data-value="Pen">
+          <span class="pointer-events-none">Pen</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-67"
+            role="option"
+            data-value="pen pot">
+          <span class="pointer-events-none">pen pot</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-68"
+            role="option"
+            data-value="Pencil">
+          <span class="pointer-events-none">Pencil</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-69"
+            role="option"
+            data-value="Pencil Case">
+          <span class="pointer-events-none">Pencil Case</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-70"
+            role="option"
+            data-value="Pin Badge">
+          <span class="pointer-events-none">Pin Badge</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-71"
+            role="option"
+            data-value="Postcard">
+          <span class="pointer-events-none">Postcard</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-72"
+            role="option"
+            data-value="Postcard Pack">
+          <span class="pointer-events-none">Postcard Pack</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-73"
+            role="option"
+            data-value="Print">
+          <span class="pointer-events-none">Print</span>
+          </li><li class="custom-select__option flex items-center js-option"
             id="product_types-opt-74"
+            role="option"
+            data-value="Print Books">
+          <span class="pointer-events-none">Print Books</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-75"
+            role="option"
+            data-value="Prints">
+          <span class="pointer-events-none">Prints</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-76"
+            role="option"
+            data-value="Purse">
+          <span class="pointer-events-none">Purse</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-77"
             role="option"
             data-value="Puzzle Book">
           <span class="pointer-events-none">Puzzle Book</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-75"
+            id="product_types-opt-78"
             role="option"
             data-value="Scarf">
           <span class="pointer-events-none">Scarf</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-76"
+            id="product_types-opt-79"
             role="option"
             data-value="Scarves">
           <span class="pointer-events-none">Scarves</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-77"
+            id="product_types-opt-80"
             role="option"
             data-value="Sign">
           <span class="pointer-events-none">Sign</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-78"
+            id="product_types-opt-81"
             role="option"
             data-value="Socks">
           <span class="pointer-events-none">Socks</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-79"
+            id="product_types-opt-82"
             role="option"
             data-value="Stationary">
           <span class="pointer-events-none">Stationary</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-80"
+            id="product_types-opt-83"
             role="option"
             data-value="Stickers">
           <span class="pointer-events-none">Stickers</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-81"
+            id="product_types-opt-84"
             role="option"
             data-value="Sweatshirt">
           <span class="pointer-events-none">Sweatshirt</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-82"
+            id="product_types-opt-85"
             role="option"
             data-value="T-Shirt">
           <span class="pointer-events-none">T-Shirt</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-83"
+            id="product_types-opt-86"
             role="option"
             data-value="Tape Dispenser">
           <span class="pointer-events-none">Tape Dispenser</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-84"
+            id="product_types-opt-87"
             role="option"
             data-value="Tea Towel">
           <span class="pointer-events-none">Tea Towel</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-85"
+            id="product_types-opt-88"
             role="option"
             data-value="Tie">
           <span class="pointer-events-none">Tie</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-86"
+            id="product_types-opt-89"
             role="option"
             data-value="Tie Slide">
           <span class="pointer-events-none">Tie Slide</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-87"
+            id="product_types-opt-90"
             role="option"
             data-value="Umbrella">
           <span class="pointer-events-none">Umbrella</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-88"
+            id="product_types-opt-91"
             role="option"
             data-value="Wash Bag">
           <span class="pointer-events-none">Wash Bag</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-89"
+            id="product_types-opt-92"
             role="option"
             data-value="Wine Gums">
           <span class="pointer-events-none">Wine Gums</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-90"
+            id="product_types-opt-93"
             role="option"
             data-value="Wrapping Paper">
           <span class="pointer-events-none">Wrapping Paper</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-91"
+            id="product_types-opt-94"
+            role="option"
+            data-value="card game">
+          <span class="pointer-events-none">card game</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-95"
             role="option"
             data-value="greetings card">
           <span class="pointer-events-none">greetings card</span>
           </li><li class="custom-select__option flex items-center js-option"
-            id="product_types-opt-92"
+            id="product_types-opt-96"
             role="option"
             data-value="keyring">
           <span class="pointer-events-none">keyring</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-97"
+            role="option"
+            data-value="personal correspondence">
+          <span class="pointer-events-none">personal correspondence</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-98"
+            role="option"
+            data-value="purse">
+          <span class="pointer-events-none">purse</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-99"
+            role="option"
+            data-value="tea">
+          <span class="pointer-events-none">tea</span>
+          </li><li class="custom-select__option flex items-center js-option"
+            id="product_types-opt-100"
+            role="option"
+            data-value="tea strainer">
+          <span class="pointer-events-none">tea strainer</span>
           </li></ul>
   </div></custom-select>
         <input type="hidden" id="product_type_input" name="filter.p.product_type"/><button type="button" class="search__reset text-current vertical-center absolute focus-inset js-search-reset" hidden>
@@ -1111,7 +1157,6 @@ first.parentNode.insertBefore(script, first);
                                         </summary>
 
                                         <div class="disclosure__panel has-motion"><ul class="main-nav__grandchild has-motion  " role="list" style=""><li><a class="grandchild-nav__item main-nav__item" href="/collections/coming-soon">Coming Soon</a>
-                                              </li><li><a class="grandchild-nav__item main-nav__item" href="/collections/book-of-the-month">Book of the Month</a>
                                               </li><li><a class="grandchild-nav__item main-nav__item" href="/collections/bodleian-publishing-copy">All Bodleian Publishing Books</a>
                                               </li><li><a class="grandchild-nav__item main-nav__item" href="/pages/catalogue">Publications Catalogue</a>
                                               </li><li class="col-start-1 col-end-3">
@@ -1259,6 +1304,7 @@ first.parentNode.insertBefore(script, first);
                                         </summary>
 
                                         <div class="disclosure__panel has-motion"><ul class="main-nav__grandchild has-motion  " role="list" style=""><li><a class="grandchild-nav__item main-nav__item" href="/collections/pets-their-people">Pets &amp; their People</a>
+                                              </li><li><a class="grandchild-nav__item main-nav__item" href="/collections/wonder-of-birds">Wonder of Birds</a>
                                               </li><li class="col-start-1 col-end-3">
                                                 <a href="/collections/current-exhibitions-auto" class="main-nav__item--go">Go to Current Exhibitions<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon"><path d="m9.693 4.5 7.5 7.5-7.5 7.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
                                                 </a>
@@ -1620,7 +1666,6 @@ first.parentNode.insertBefore(script, first);
 
 
 <style> #shopify-section-sections--28239704260983__header nav {margin: auto;} #shopify-section-sections--28239704260983__header .main-nav__item svg {display: none;} @media (min-width: 769px) {#shopify-section-sections--28239704260983__header .main-menu__content.header__logo--bottom-leftspecificity: (0, #shopify-section-sections--28239704260983__header 2, #shopify-section-sections--28239704260983__header 0) {margin: 0px; }} </style></div><div id="shopify-section-sections--28239704260983__blocks_jD8z6P" class="shopify-section shopify-section-group-header-group">
-
 
 <style data-shopify>
   .ai-promo-bar-aeth5bhb5rmjkd29arbodpromobargycpie {
@@ -2145,37 +2190,7 @@ font-size:16px;
 </div>
 
 
-</div><script data-locksmith>
-    var load = function () {
-
-          Locksmith.ping();
-
-
-      Locksmith.util.on('submit', 'locksmith-resource-form', function (event) {
-        event.preventDefault();
-        var data = Locksmith.util.serializeForm(event.target);
-        Locksmith.postResource(data, { spinner: false, container: 'locksmith-content' });
-      });
-
-      Locksmith.util.on('click', 'locksmith-manual-trigger', function (event) {
-        event.preventDefault();
-        Locksmith.postResource({}, { spinner: true, container: document });
-      });
-
-      Locksmith.submitPasscode = function (passcode) {
-        Locksmith.postResource(
-          { passcode: passcode },
-          { spinner: false, container: 'locksmith-content' }
-        );
-      };
-    };
-
-    if (typeof Locksmith !== 'undefined') {
-      load();
-    } else {
-      window.addEventListener('load', load);
-    }
-  </script>
+</div>
   </main><!-- BEGIN sections: overlay-group -->
 <div id="shopify-section-sections--28239704293751__cart-drawer" class="shopify-section shopify-section-group-overlay-group cc-cart-drawer"><link rel="stylesheet" href="//bodleianshop.co.uk/cdn/shop/t/20/assets/cart-items.css?v=143229255006742226271774276422" media="print" onload="this.media='all'">
 <script src="//bodleianshop.co.uk/cdn/shop/t/20/assets/cart-drawer.js?v=43986109057971355761774276421" defer="defer"></script><script src="//bodleianshop.co.uk/cdn/shop/t/20/assets/cart-note.js?v=126131321468449833931774276423" defer="defer"></script><cart-drawer class="drawer drawer--cart fixed top-0 right-0 flex flex-col w-full has-motion" data-name="cart-drawer" id="cart-drawer" role="dialog" aria-label="Your cart" aria-modal="true" aria-hidden="true" tabindex="-1" data-shipping-calculator="false" data-css-var-height=".cart-drawer__checkout-buttons,.cart-drawer__summary">

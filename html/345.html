@@ -56,45 +56,28 @@
    </head>
    <body class="d-flex flex-column h-100">
       <header>
-         <nav class="navbar navbar-expand-lg">
-            <div class="container"><a class="navbar-brand" href="index.html" data-i18n="navbar__brand"></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <nav class="navbar navbar-expand-lg"><a class="navbar-brand fs-3 ps-3" href="index.html" data-i18n="navbar__brand"></a><div class="container"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1 fs-4">
                      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__project" aria-expanded="false"></a><ul class=" dropdown-menu" role="menu">
                            <li><a class="dropdown-item" data-i18n="navbar__about" href="projekt.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__tradition" href="ueberlieferung.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__cipher" href="chiffre.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__edition" href="richtlinien.html"></a></li>
-                           <li><a class="dropdown-item" data-i18n="navbar__team" href="team.html"></a></li>
-                           <li><a class="dropdown-item" data-i18n="navbar__blog" href="https://kaiserin.hypotheses.org/"></a></li>
                            <li>
                               <hr class="dropdown-divider">
                            </li>
                            <li>
-                              <h6 class="dropdown-header" data-i18n="navbar__biography"></h6>
+                              <h6 class="dropdown-header" data-i18n="navbar__biogen"></h6>
                            </li>
                            <li><a class="dropdown-item" data-i18n="navbar__eleonora" href="eleonora.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__johannwilhelm" href="johannwilhelm.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar_philippwilhelm" href="philippwilhelm.html"></a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li>
-                              <h6 class="dropdown-header">Genealogien</h6>
-                           </li>
                            <li><a class="dropdown-item" data-i18n="navbar_gen" href="genealogies.html"></a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" data-i18n="navbar__sourcecode" href="https://github.com/emt-project/emt-static/"></a></li>
-                           <li>
-                              <hr class="dropdown-divider">
-                           </li>
-                           <li><a class="dropdown-item" data-i18n="navbar_imprint" href="imprint.html"></a></li>
                         </ul>
                      </li>
                      <li class="nav-item"><a class="nav-link" href="calendar.html" data-i18n="navbar__calendar"></a></li>
                      <li class="nav-item"><a title="Briefverzeichnis" href="toc.html" class="nav-link" data-i18n="navbar__letterindex"></a></li>
-                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__register" aria-expanded="false"></a><ul class=" dropdown-menu" role="menu">
+                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__register" aria-expanded="false"></a><ul class="dropdown-menu" role="menu">
                            <li><a class="dropdown-item" data-i18n="navbar__persons" href="listperson.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__places" href="listplace.html"></a></li>
                            <li><a class="dropdown-item" data-i18n="navbar__orgs" href="listorg.html"></a></li>
@@ -106,7 +89,19 @@
                            <li><a class="dropdown-item" href="cmif.xml">Correspondence Metadata Interchange Format (XML)</a></li>
                         </ul>
                      </li>
-                  </ul><a title="Suche" href="search.html" class="nav-link pe-3 fs-2"><i class="bi bi-search"></i></a><button type="button" class="btn nav-link" id="lang-switch-de">DE</button><button type="button" class="btn nav-link ps-3" id="lang-switch-en">EN</button></div>
+                     <li class="nav-item"><a title="Team" href="team.html" class="nav-link" data-i18n="navbar__team"></a></li>
+                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-i18n="navbar__publications" aria-expanded="false"></a><ul class="dropdown-menu" role="menu">
+                           <li><a class="dropdown-item" data-i18n="navbar__blog" href="https://kaiserin.hypotheses.org/"></a></li>
+                        </ul>
+                     </li>
+                  </ul>
+                  <div class="d-flex align-items-center ms-2 gap-3"><a title="Suche" href="search.html" class="btn nav-link fs-3"><i class="bi bi-search"></i></a><div class="dropdown"><button class="btn nav-link fs-3 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language switcher"><i class="bi bi-globe"></i></button><ul class="dropdown-menu dropdown-menu-end">
+                           <li><button class="dropdown-item" id="lang-switch-de">Deutsch</button></li>
+                           <li><button class="dropdown-item" id="lang-switch-en">English</button></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
             </div>
          </nav>
       </header>
@@ -148,7 +143,7 @@
             <div class="row">
                <div class="col-md-5">
                   <div class="pt-5 pb-5">
-                     <h2 class="display-5" data-i18n="navbar__biography"></h2>
+                     <h2 class="display-5" data-i18n="index__biography"></h2>
                      <p class="text-start fs-5" data-i18n="[html]index__biograpy_teaser"></p>
                   </div>
                </div>
@@ -208,6 +203,7 @@
                </div>
             </div>
          </div>
-         <div class="text-center"><a href="https://github.com/emt-project/emt-static-dev"><i aria-hidden="true" class="bi bi-github fs-2"></i><span class="visually-hidden">GitHub repo</span></a></div>
+         <div class="text-center py-2"><a href="https://github.com/emt-project/emt-static-dev"><i aria-hidden="true" class="bi bi-github fs-2"></i><span class="visually-hidden">GitHub repo</span></a></div>
+         <div class="text-center pb-2"><a href="imprint.html" data-i18n="navbar_imprint"></a></div>
       </footer><script src="vendor/jquery/jquery-3.6.3.min.js"></script><script src="vendor/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script><script src="js/i18n.js"></script></body>
 </html>
